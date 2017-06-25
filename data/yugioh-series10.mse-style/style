@@ -29,7 +29,7 @@ card dpi: 152.6265
 styling field:
 	type: choice
 	name: language
-	description: Language of the card, supports English, Japanese and Chinese (Simplified or Traditional).
+	description: 卡片语言 Language of the card, supports English, Japanese and Chinese (Simplified or Traditional).
 	initial: english
 	choice: english
 	choice: japanese
@@ -38,14 +38,14 @@ styling field:
 styling field:
 	type: choice
 	name: template style
-	description: Style of the template, Proxy-Like is the style featured in INFDEV version while Actual Style is closer to real life Series 10 cards.
+	description: 模板样式 Style of the template, Proxy-Like is the style featured in INFDEV version while Actual Style is closer to real life Series 10 cards.
 	initial: proxy-like
 	choice: proxy-like
 	choice: actual style
 styling field:
 	type: choice
 	name: rules alignment
-	description: Should the rules text be justified or stretched (mainly for Chinese/Japanese cards)?
+	description: 文字对齐模式 英文卡用justified 其他用stetched Should the rules text be justified or stretched (mainly for Chinese/Japanese cards)?
 	initial: justified
 	choice: not justified
 	choice: justified
@@ -53,46 +53,46 @@ styling field:
 styling field:
 	type: boolean
 	name: foil texture
-	description: Disabling this will allow the rarity to only affect the name and not the image.
+	description: 闪膜开启 Disabling this will allow the rarity to only affect the name and not the image.
 	initial: yes
 styling field:
 	type: boolean
 	name: image frame
-	description: Choosing "yes" will omit the image frame like on Anniversary Edition cards.
+	description: 周年卡款式 Choosing "yes" will omit the image frame like on Anniversary Edition cards. cannot co-exist with extended art
 	initial: no
 styling field:
 	type: choice
 	name: artwork size
-	description: Choosing "Extended" will extend the non-pendulum artwork to semi-full-art with transparency on lorebox. (Warning: This will change image size and maybe break the unofficial card types.)
+	description: 卡图大小 Choosing "Extended" will extend the non-pendulum artwork to semi-full-art with transparency on lorebox. (Warning: This will change image size and maybe break the unofficial card types.)
 	initial: normal
 	choice: normal
 	choice: extended
 styling field:
 	type: boolean
 	name: bold effect text
-	description: Should effect text be bold as seen on some cards such as those from The Dark Emperor?
+	description: 效果字体加粗 TCG帝王SD的排版效果 Should effect text be bold as seen on some cards such as those from The Dark Emperor?
 	initial: no
 styling field:
 	type: boolean
 	name: large type
-	description: For monster cards only: make the monster type large, as on the newer Series 9 cards, or keep it small.
+	description: 9期TCG种族大字号 For monster cards only: make the monster type large, as on the newer Series 9 cards, or keep it small.
 	initial: no
 styling field:
 	type: choice
 	name: text size
-	description: Make the font size larger, if there is less flavor text.
+	description: 效果文字体大小 Make the font size larger, if there is less flavor text.
 	initial: small
 	choice: small
 	choice: large
 styling field:
 	type: boolean
 	name: max line space
-	description: Fill the entire text box vertically
+	description: 加大行距 Fill the entire text box vertically
 	initial: no
 styling field:
 	type: boolean
 	name: disable hologram
-	description: Disable the Eye of Anubis hologram, to make it more similar to Konami's official proxies.
+	description: 移除右下标识 Disable the Eye of Anubis hologram, to make it more similar to Konami's official proxies.
 	initial: no
 ###Come to think of it, any pendulum cards that don't have transparency? This will also cause some unknown problems, Function Removed until further notice.
 #styling field:
@@ -109,7 +109,7 @@ styling field:
 styling field:
 	type: choice
 	name: pendulum size
-	description: Pick one of three available sizes for pendulum monsters (Warning, this may change image size.)
+	description: 灵摆区域大小 TCG用 Pick one of three available sizes for pendulum monsters (Warning, this may change image size.)
 	initial: default
 	choice: default
 	choice: less
@@ -117,8 +117,26 @@ styling field:
 styling field:
 	type: boolean
 	name: pendulum text centering
-	description: Center the pendulum text in the box.
+	description: 灵摆区域排版居中 TCG用 Center the pendulum text in the box.
 	initial: no
+styling style:
+	language:
+		render style: both
+		choice images:
+			english: /yugioh.mse-game/icons/language-en.png
+			japanese: /yugioh.mse-game/icons/language-ja.png
+			chinese simplified: /yugioh.mse-game/icons/language-zh.png
+			chinese traditional: /yugioh.mse-game/icons/language-tw.png
+	template style:
+		render style: both
+		choice images:
+			proxy-like: /yugioh.mse-game/icons/proxylike.png
+			actual style: /yugioh.mse-game/icons/actualstyle.png
+	artwork size:
+		render style: both
+		choice images:
+			normal: /yugioh.mse-game/icons/small-image.png
+			extended: /yugioh.mse-game/icons/large-image.png
 ############################################################## Card fields
 card style:
 	############################# Background stuff
