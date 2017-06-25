@@ -1,14 +1,14 @@
 ﻿
 ############################################################## Card pack items
 pack type:
-	name: rare
+	name: common
 	filter: card.rarity != "common"
 pack type:
-	name: common
-	filter: card.rarity == "common"
+	name: rare
+	filter: card.rarity != "rare"
 pack type:
 	name: gold
-	filter: card.rarity == "gold tech"
+	filter: card.rarity != "gold rare"
 pack type:
 	name: card
 	filter: card.number != ""

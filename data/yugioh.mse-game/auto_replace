@@ -14,3 +14,9 @@ auto replace:
 auto replace:
 	match: ~
 	replace: CARDNAME
+auto replace:
+	match: 1E
+	replace: 1st Edition
+auto replace:
+	match: DT
+	replace: DUEL TERMINAL

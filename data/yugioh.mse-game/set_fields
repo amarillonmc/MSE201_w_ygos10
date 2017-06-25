@@ -10,11 +10,15 @@ set field:
 set field:
 	type: text
 	name: code
-	description: Recommended only 3 Capital digits. Will appear before card number. ex: LOB-XX101
+	description: Recommended only 2 Capital digits. Will appear before card language. ex: XXX-EN101
 set field:
 	type: text
 	name: language
-	description: Recommended 2 - 3 Captital digits. Will appear before the card number, after the code. ex: XXX-EN101
+	description: Recommended 2 - 4 Captital digits. Will appear before the card number, after the code. ex: LOB-XX101
+set field:
+	type: text
+	name: number
+	description: Recommended only 3 Captital digits. Will appear after the card language. ex: LOB-ENXXX
 set field:
 	type: text
 	name: description
@@ -32,7 +36,7 @@ set field:
 	type: boolean
 	name: gods have effects
 	description: Should god cards have effects?
-	initial: yes
+	initial: no
 ############################# Default style
 default set style:
 	title:

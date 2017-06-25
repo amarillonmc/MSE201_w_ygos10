@@ -8,6 +8,15 @@
 	#  - adds level symbols
 	#  - adds infinity symbols
 	#  - makes text in parentheses italic
+####################################### Circled Numbers Script
+	circled_numbers := 
+		# step 1 : remove all automatic tags
+		tag_remove_rule(tag: "<sym-auto>") +
+		# step 2 : symbols
+		replace_rule(
+			match: "[|¹|²|³|£|¢|~|?|*|]",
+			replace: "<sym-auto>&</sym-auto>" );
+####################################### End of circled numbers script
 	text_filter := 
 		# step 1 : remove all automatic tags
 		tag_remove_rule(tag: "<sym-auto>") +
@@ -24,7 +33,7 @@
 			) +
 		# step 4 : symbols
 		replace_rule(
-			match: "[|@|*|?|]",
+			match: "[|¹|²|³|£|¢|?|*|]",
 			replace: "<sym-auto>&</sym-auto>" );
 	level_filter := 
 		# step 1 : remove all automatic tags
@@ -73,19 +82,20 @@
 		else if	contains(card.level, match:"Spell Card")						then "spell card"
 		else if card.attribute	== "trap"								then "trap card"
 		else if	contains(card.level, match:"Trap Card")							then "trap card"
-		else if card.type_1	== "<word-list-monster>Divine-Beast</word-list-monster>"		then "obelisk"
-		else if card.type_1	== "<word-list-monster>Legendary Dragon</word-list-monster>"		then "legendary dragons"
+		else if	contains(card.monster_type, match:"Pendulum")						then "pendulum effect monster"
+		else if	contains(card.monster_type, match:"Xyz")						then "xyz monster"
+		else if	contains(card.monster_type, match:"Dark Synchro")					then "dark synchro monster"
+		else if	contains(card.monster_type, match:"Synchro")						then "synchro monster"
 		else if	contains(card.monster_type, match:"Fusion")						then "fusion monster"
 		else if	contains(card.monster_type, match:"Ritual")						then "ritual monster"
-		else if	contains(card.monster_type, match:"Dark Synchro")					then "dark synchro monster"
 		else if	contains(card.monster_type, match:"Dark Tuner")						then "effect monster"
-		else if	contains(card.monster_type, match:"Synchro")						then "synchro monster"
-		else if	contains(card.monster_type, match:"Effect")						then "effect monster"
+		else if	contains(card.monster_type, match:"Gemini")						then "effect monster"
+		else if	contains(card.monster_type, match:"Union")						then "effect monster"
 		else if	contains(card.monster_type, match:"Spirit")						then "effect monster"
 		else if	contains(card.monster_type, match:"Toon")						then "effect monster"
-		else if	contains(card.monster_type, match:"Tuner")						then "effect monster"
-		else if	contains(card.monster_type, match:"Union")						then "effect monster"
-		else                                         	 							"normal monster"
+		else if	contains(card.monster_type, match:"Flip")						then "effect monster"
+		else if	contains(card.monster_type, match:"Effect")						then "effect monster"
+		else                                    	 							"normal monster"
 	}
 	# Default 'attribute' of card
 	attribute := {
@@ -98,10 +108,12 @@
 		if	card.rarity == "super rare"	then "holo image"
 		else if card.rarity == "ultra rare"	then "holo image"
 		else if card.rarity == "secret rare"	then "secret holo image"
-		else if card.rarity == "ultimate rare"	then "holo image"
+		else if card.rarity == "ultimate rare"	then "ultimate holo image"
 		else if card.rarity == "parallel rare"	then "parallel holo image"
-		else if card.rarity == "gold tech"	then "gold tech holo image"
-		else if card.rarity == "promo"		then "secret holo image"
+		else if card.rarity == "gold rare"	then "gold holo image"
+		else if card.rarity == "promo"		then "holo image"
+		else if card.rarity == "star rare"	then "star holo image"
+		else if card.rarity == "mosaic rare"	then "mosaic holo image"
 		else					     "none"
 	}
 	
@@ -113,27 +125,43 @@
 	}
 	is_nmonster := {
 		card.card_type == "spell card" or
-	        card.card_type == "trap card"
+	        card.card_type == "trap card" or
+	        card.card_type == "trell card"
 	}
 	is_monster := {
-		card.card_type == "normal monster" or
-	        card.card_type == "effect monster" or
-	        card.card_type == "ritual monster" or
-		card.card_type == "dark synchro monster" or
-	        card.card_type == "synchro monster" or
-	        card.card_type == "fusion monster" or
-	        card.card_type == "token monster" or
-		card.card_type == "obelisk"        or
-		card.card_type == "slifer"	   or
-		card.card_type == "ra"		   or
-		card.card_type == "legendary dragons"
+		card.card_type == "normal monster"          or
+		card.card_type == "effect monster"          or
+		card.card_type == "ritual monster"          or 
+		card.card_type == "synchro monster"         or
+		card.card_type == "dark synchro monster"    or
+		card.card_type == "xyz monster"             or
+		card.card_type == "pendulum normal monster" or
+		card.card_type == "pendulum effect monster" or
+		card.card_type == "pendulum fusion monster" or
+		card.card_type == "pendulum ritual monster" or
+		card.card_type == "pendulum synchro monster" or
+		card.card_type == "pendulum dark synchro monster" or
+		card.card_type == "pendulum xyz monster"    or
+		card.card_type == "pandemonium monster" or
+		card.card_type == "dlc monster" or
+		card.card_type == "fusion monster"          or
+		card.card_type == "token monster"           or
+		card.card_type == "obelisk card"            or
+		card.card_type == "slifer card"             or
+		card.card_type == "ra card"
+	}
+	is_pendulum := {
+		card.card_type == "pendulum normal monster" or
+		card.card_type == "pendulum effect monster" or
+		card.card_type == "pendulum fusion monster" or
+		card.card_type == "pendulum ritual monster" or
+		card.card_type == "pendulum synchro monster" or
+		card.card_type == "pendulum dark synchro monster" or
+		card.card_type == "pendulum xyz monster" or
+		card.card_type == "pandemonium monster"
 	}
 	is_normal_monster_extended := {
-		card.card_type == "normal monster" or
-		card.card_type == "obelisk"        or
-		card.card_type == "slifer"	   or
-		card.card_type == "ra"		   or
-		card.card_type == "legendary dragons"
+		card.card_type == "normal monster"
 	}
 	is_normal_monster := {
 		card.card_type == "normal monster"
@@ -153,19 +181,26 @@
 	type_sort := {
 		type := card.card_type
 		if chosen(choice:"normal monster", type) then "A"
-		else if chosen(choice:"ra", type) then "B"
-		else if chosen(choice:"effect monster", type) then "C"
-		else if chosen(choice:"slifer", type) then "D"
-		else if chosen(choice:"ritual monster", type) then "E"
-		else if chosen(choice:"obelisk", type) then "F"
-		else if chosen(choice:"fusion monster", type) then "G"
-		else if chosen(choice:"synchro monster", type) then "H"
-		else if chosen(choice:"dark synchro monster", type) then "I"
-		else if chosen(choice:"token monster", type) then "J"
-		else if chosen(choice:"legendary dragons", type) then "K"
-		else if chosen(choice:"spell card", type) then "L"
-		else if chosen(choice:"trap card", type) then "M"
-		else "N"
+		else if chosen(choice:"effect monster", type) then "B"
+		else if chosen(choice:"ritual monster", type) then "C"
+		else if chosen(choice:"fusion monster", type) then "D"
+		else if chosen(choice:"synchro monster", type) then "E"
+		else if chosen(choice:"dark synchro monster", type) then "F"
+		else if chosen(choice:"xyz monster", type) then "G"
+		else if chosen(choice:"pendulum normal monster", type) then "H"
+		else if chosen(choice:"pendulum effect monster", type) then "I"
+		else if chosen(choice:"pendulum fusion monster", type) then "J"
+		else if chosen(choice:"pendulum ritual monster", type) then "K"
+		else if chosen(choice:"pendulum synchro monster", type) then "L"
+		else if chosen(choice:"pendulum dark synchro monster", type) then "M"
+		else if chosen(choice:"pendulum xyz monster", type) then "N"
+		else if chosen(choice:"token monster", type) then "O"
+		else if chosen(choice:"obelisk card", type) then "P"
+		else if chosen(choice:"slifer card", type) then "Q"
+		else if chosen(choice:"ra card", type) then "R"
+		else if chosen(choice:"spell card", type) then "S"
+		else if chosen(choice:"trap card", type) then "T"
+		else "U"
 	}
 	
 	pos_of_card := {

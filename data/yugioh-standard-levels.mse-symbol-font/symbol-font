@@ -1,31 +1,36 @@
-﻿mse version: 0.3.6
-version: 2008-10-27
+﻿mse version: 0.3.8
+version: 2014-04-11
 short name: Standard
 position hint: 001
 icon: star.png
 installer group: Yugioh/Symbol Fonts/Standard
 # Symbol font for level symbols
 
-image font size: 16
-horizontal space: 3
+horizontal space: 2.85
 symbol:
 	code: %
 	image: continuous.png
+	image font size: 85
 symbol:
 	code: !
 	image: counter.png
+	image font size: 85
 symbol:
 	code: +
 	image: equipment.png
+	image font size: 85
 symbol:
 	code: &
 	image: field.png
+	image font size: 85
 symbol:
 	code: $
 	image: quickplay.png
+	image font size: 85
 symbol:
 	code: #
 	image: ritual.png
+	image font size: 85
 symbol:
 	code: [
 	image: leftbracket.png
@@ -36,13 +41,38 @@ symbol:
 	image font size: 28
 symbol:
 	code: *
+	image: uestar.png
+	enabled: {card.rarity=="ultimate rare" and card.card_type=="xyz monster"}
+	image font size: 15.5
+symbol:
+	code: *
+	image: ustar.png
+	enabled: {card.rarity=="ultimate rare"}
+	image font size: 15.5
+symbol:
+	code: *
+	image: estar.png
+	enabled: {card.card_type=="xyz monster"}
+	image font size: 17
+symbol:
+	code: *
+	image: estar.png
+	enabled: {card.card_type=="pendulum xyz monster"}
+	image font size: 17
+symbol:
+	code: *
+	image: dstar.png
+	enabled: {card.card_type=="pendulum dark synchro monster"}
+	image font size: 13.5
+symbol:
+	code: *
 	image: dstar.png
 	enabled: {card.card_type=="dark synchro monster"}
-	image font size: 20
+	image font size: 13.5
 symbol:
 	code: *
 	image: star.png
-	image font size: 20
+	image font size: 17
 
 ##############################################################
 # Insert-symbol menu
