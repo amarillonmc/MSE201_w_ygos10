@@ -172,7 +172,14 @@ card field:
 	name: level
 	description: `=] * = star, % = continuous, ! = counter, + = equipment, & = field, $ = quickplay, # = ritual
 	script: level_filter(value)
-
+#	script: 
+#			forward_editor(
+#				field: card.level,
+#				prefix: if is_nmonster() and remove_tags(card.level)=="    " then "" else if is_nmonster() and (is_jp() or is_cn() or is_tw() ) then "【" else if is_nmonster() and is_en() then "[" else "",
+#				suffix: if is_nmonster() and remove_tags(card.level)=="    " then "" else if is_nmonster() and (is_jp() or is_cn() or is_tw() ) then "】" else if is_nmonster() and is_en() then "]" else "",
+#				soft_before_empty: true,
+#				hide_when_empty: true
+#				)
 ############################# Image
 card field:
 	type: image

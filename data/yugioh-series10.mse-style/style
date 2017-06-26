@@ -27,6 +27,9 @@ card dpi: 152.6265
 ############################################################## Extra scripts
 ############################################################## Extra style
 styling field:
+	type: info
+	name: Look & Feel
+styling field:
 	type: choice
 	name: language
 	description: 卡片语言 Language of the card, supports English, Japanese and Chinese (Simplified or Traditional).
@@ -42,6 +45,9 @@ styling field:
 	initial: proxy-like
 	choice: proxy-like
 	choice: actual style
+styling field:
+	type: info
+	name: Customizations
 styling field:
 	type: boolean
 	name: name color override
@@ -99,15 +105,6 @@ styling field:
 		name: gold
 		color: rgb(216,199,53)
 styling field:
-	type: choice
-	name: rules alignment
-	description: 文字对齐模式 英文卡用justified 其他语言看情况用stetched或者justified-all Should the rules text be justified or stretched (mainly for Chinese/Japanese cards)?
-	initial: justified
-	choice: not justified
-	choice: justified
-	choice: justified-all
-	choice: stretched
-styling field:
 	type: boolean
 	name: foil texture
 	description: 闪膜开启 Disabling this will allow the rarity to only affect the name and not the image.
@@ -152,6 +149,18 @@ styling field:
 	choice: no
 	choice: yes
 styling field:
+	type: info
+	name: Text Formatting
+styling field:
+	type: choice
+	name: rules alignment
+	description: 文字对齐模式 英文卡用justified 其他语言看情况用stetched或者justified-all Should the rules text be justified or stretched (mainly for Chinese/Japanese cards)?
+	initial: justified
+	choice: not justified
+	choice: justified
+	choice: justified-all
+	choice: stretched
+styling field:
 	type: boolean
 	name: bold effect text
 	description: 效果字体加粗 TCG帝王SD的排版效果 Should effect text be bold as seen on some cards such as those from The Dark Emperor?
@@ -184,6 +193,9 @@ styling field:
 #	name: pendulum transparency
 #	description: Enable transparency in pendulum monsters? (Warning, this changes image size.)
 #	initial: yes
+styling field:
+	type: info
+	name: Pendulum Options
 styling field:
 	type: choice
 	name: pendulum transparency
@@ -429,7 +441,8 @@ card style:
 	level:
 		left: { if is_nmonster() then 42 else 43 }
 		top : { if is_nmonster() or card.card_type=="pandemonium monster" then 74 else if styling.template_style=="actual style" then 73 else 76}
-		width: { if is_nmonster() then 327 else if card.card_type=="link monster" then 0 else 334 }
+		#width: { if is_nmonster() then 327 else if card.card_type=="link monster" then 0 else 334 }
+		width: { if is_nmonster() then 335 else if card.card_type=="link monster" then 0 else 334 }
 		height: { if is_nmonster() then 28 else 28 }
 		alignment: {if card.card_type=="xyz monster" or card.card_type=="dark synchro monster" or card.card_type=="pendulum xyz monster" or card.card_type=="pendulum dark synchro monster" then "middle left shrink-overflow" else "middle right shrink-overflow" }
 		z index: 2
