@@ -19,6 +19,8 @@ $RECYCLE.BIN/
 
 # MSE Backups
 *.bak
+# Artifacts
+*.psd
 
 # =========================
 # Operating System Files
