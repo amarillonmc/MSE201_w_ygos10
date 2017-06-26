@@ -43,6 +43,62 @@ styling field:
 	choice: proxy-like
 	choice: actual style
 styling field:
+	type: boolean
+	name: name color override
+	description: 使用以下的颜色替换卡名颜色 Override the default card name color with the settings below.
+	initial: no
+styling field:
+	type: color
+	name: name color
+	description: 卡片名颜色设置 Customize the color of the card name.
+	initial: rgb(254,254,254)
+	choice: 
+		name: default
+		color:rgb(254,254,254)
+	choice: 
+		name: white
+		color: rgb(255,255,255)
+	choice: 
+		name: red
+		color: rgb(60,0,0)
+	choice: 
+		name: silver
+		color: rgb(230,230,230)
+	choice:
+		name: light blue
+		color: rgb(211,252,252)
+	choice: 
+		name: gold
+		color: rgb(216,199,53)
+styling field:
+	type: boolean
+	name: shadow override
+	initial: no
+	description: 使用以下的颜色替换卡名阴影颜色 Override the default card shadow color with the settings below
+styling field:
+	type: color
+	name: shadow color
+	description: 卡片名阴影颜色设置 The shadow color for card name.
+	initial: rgb(1,1,1)
+	choice: 
+		name: default
+		color: rgb(1,1,1)
+	choice: 
+		name: black
+		color: rgb(0,0,0)
+	choice: 
+		name: white
+		color: rgb(255,255,255)
+	choice: 
+		name: red
+		color: rgb(60,0,0)
+	choice: 
+		name: silver
+		color: rgb(230,230,230)
+	choice: 
+		name: gold
+		color: rgb(216,199,53)
+styling field:
 	type: choice
 	name: rules alignment
 	description: 文字对齐模式 英文卡用justified 其他用stetched Should the rules text be justified or stretched (mainly for Chinese/Japanese cards)?
@@ -212,7 +268,8 @@ card style:
 		z index: 2
 		font:
 			shadow color: 
-				script: if card.rarity=="star rare" and card.card_type=="xyz monster" then rgb(255,255,255)
+				script: if styling.shadow_override then styling.shadow_color 
+				else if card.rarity=="star rare" and card.card_type=="xyz monster" then rgb(255,255,255)
 				else if card.rarity=="star rare" and card.card_type=="dark synchro monster" then rgb(255,255,255)
 				else if card.rarity=="star rare" and card.card_type=="pendulum xyz monster" then rgb(255,255,255)
 				else if card.rarity=="star rare" and card.card_type=="pendulum dark synchro monster" then rgb(255,255,255)
@@ -254,7 +311,8 @@ card style:
 			size: 
 				script: if styling.language=="japanese" or styling.language=="chinese simplified" or styling.language=="chinese traditional" then 27 else 35
 			color:
-				script: if card.rarity=="rare" then rgb(133,168,169)
+				script: if styling.name_color_override then styling.name_color 
+				else if card.rarity=="rare" then rgb(133,168,169)
 				else if card.rarity=="star rare" and card.card_type=="xyz monster" then rgb(255,255,255)
 				else if card.rarity=="star rare" and card.card_type=="dark synchro monster" then rgb(255,255,255)
 				else if card.rarity=="star rare" and card.card_type=="pendulum xyz monster" then rgb(255,255,255)
@@ -266,7 +324,7 @@ card style:
 				else if card.rarity=="mosaic rare" and card.card_type=="pendulum dark synchro monster" then rgb(255,255,255)
 				else if card.rarity=="mosaic rare" then rgb(10,10,10)
 				else if card.rarity=="promo" then rgb(60,0,0)
-				else if card.rarity=="secret rare" then rgb(133,168,169)
+				else if card.rarity=="secret rare" then rgb(211,252,252)
 				#else if card.rarity=="ultra rare" then rgb(228,190,005)
 				else if card.rarity=="ultimate rare" or card.rarity=="ultra rare" then rgb(88,76,12)
 				else if card.rarity=="ultimate rare (No foil)" then rgb(69,60,0)
