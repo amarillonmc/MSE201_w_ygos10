@@ -101,7 +101,7 @@ styling field:
 styling field:
 	type: choice
 	name: rules alignment
-	description: 文字对齐模式 英文卡用justified 其他用stetched Should the rules text be justified or stretched (mainly for Chinese/Japanese cards)?
+	description: 文字对齐模式 英文卡用justified 其他语言看情况用stetched或者justified-all Should the rules text be justified or stretched (mainly for Chinese/Japanese cards)?
 	initial: justified
 	choice: not justified
 	choice: justified
@@ -115,7 +115,7 @@ styling field:
 styling field:
 	type: boolean
 	name: foil texture override
-	description: 闪膜自定义 Overriding the foil texture to use one from the next setting.
+	description: 闪膜自定义 Overriding the foil texture to use one from the next setting. Also overrides the previous setting.
 	initial: no
 styling field:
 	type: choice

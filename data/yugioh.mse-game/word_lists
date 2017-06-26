@@ -79,6 +79,31 @@ word list:
 	word: 創造神族
 	word: 幻龍族
 	word: 電子界族
+	word: 水族
+	word: 炎族
+	word: 獣族
+	word: 獣戦士族
+	word: ドラゴン族
+	word: 恐竜族
+	word: 海竜族
+	word: 天使族
+	word: 悪魔族
+	word: 魚族
+	word: 昆虫族
+	word: 機械族
+	word: 植物族
+	word: 岩石族
+	word: 雷族
+	word: 戦士族
+	word: 魔法使い族
+	word: 鳥獣族
+	word: 爬虫類族
+	word: サイキック族
+	word: アンデット族
+	word: 幻神獣族
+	word: 創造神族
+	word: 幻竜族
+	word: サイバース族
 word list:
 	name: card
 	word: Dark Synchro
@@ -131,3 +156,18 @@ word list:
 	word: 特殊召喚
 	word: 衍生物
 	word: 萬魔
+	word: ダークシンクロ
+	word: ダークチューナー
+	word: 効果
+	word: 融合
+	word: デュアル
+	word: 儀式
+	word: スピリット
+	word: シンクロ
+	word: エクシーズ
+	word: トゥーン
+	word: ユニオン
+	word: ペンデュラム
+	word: 特殊召喚
+	word: トークン
+	word: リバース
