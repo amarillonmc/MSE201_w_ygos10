@@ -1,11 +1,11 @@
-﻿mse version: 0.3.8
+﻿mse version: 2.0.0
 full name: Yu-Gi-Oh!
-short name: Yu-Gi-Oh!
+short name: 遊☆戯☆王
 installer group: Yugioh/game files
 icon: card-back.png
 position hint: 4
 
-version: 2014-04-11
+version: 2017-06-26
 
 ############################################################## The script
 
@@ -20,3 +20,29 @@ include file: word_lists
 include file: auto_replace
 
 ############################################################## Other stuff
+################## Colored List moved here?! ##########################
+
+card list color script:
+	input := card.card_type
+	if input == "normal monster" then rgb(197,179,53)
+	else if input == "effect monster" then rgb(208,109,41)
+	else if input == "fusion monster" then rgb(90,45,150)
+	else if input == "ritual monster" then rgb(55,77,197)
+	else if input == "synchro monster" then rgb(215,215,215)
+	else if input == "dark synchro monster" then rgb(92,64,51)
+	else if input == "xyz monster" then rgb(21,261,21)
+	else if input == "pendulum normal monster" then rgb(197,179,53)
+	else if input == "pendulum effect monster" then rgb(208,109,41)
+	else if input == "pendulum fusion monster" then rgb(90,45,150)
+	else if input == "pendulum ritual monster" then rgb(55,77,197)
+	else if input == "pendulum synchro monster" then rgb(215,215,215)
+	else if input == "pendulum dark synchro monster" then rgb(92,64,51)
+	else if input == "pendulum xyz monster" then rgb(21,261,21)
+	else if input == "pandemonium monster" then rgb(121,121,121)
+	else if input == "bigbang monster" then rgb(121,121,121)
+	else if input == "token monster" then rgb(121,121,121)
+	else if input == "link monster" then rgb(89,89,171)
+	else if input == "spell card" then rgb(67,161,99)
+	else if input == "trap card" then rgb(148,54,128)
+	else rgb(0,0,0)
+	

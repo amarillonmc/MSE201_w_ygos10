@@ -1,0 +1,140 @@
+﻿mse version: 2.0.0
+short name: Forum Text
+full name: 导出文字信息
+position hint: 001
+icon: icon.jpg
+version: 2014-01-01
+installer group: Yugioh/Export/Forum Text
+
+depends on:
+	package: yugioh.mse-game
+	version: 2009-01-01
+game: yugioh
+file type: Text file(*.txt)|*.txt|*.*|*.*
+create directory:false
+
+
+option field:
+	type:choice
+	name:格式
+	initial: NW论坛
+	choice: NW论坛
+	choice: IDuel论坛
+	choice: IDuel录入
+	choice: Ourocg卡查
+
+option field:
+	type:text
+	name:YGO系列编号
+option style:
+	格式:
+		alignment:middle center
+		font:
+			size:12
+			color: rgb(0,0,128)
+
+script:
+	spelltrap:={
+		if contains(input, match:"!") then "速攻"
+		else if contains(input, match:"+") then "装备"
+		else if contains(input, match:"&") then "场地"
+		else if contains(input, match:"$") then "反击"
+		else if contains(input, match:"#") then "仪式"
+		else if contains(input, match:"%") then "永续"
+		else "通常"
+	}
+	rep:=remove_tags+
+		replace@(match:"@", replace:"∞")+
+		replace@(match:"\\^", replace:" ")+
+		replace@(match:"・", replace:"·")+
+		replace@(match:"=", replace:"·")+
+		replace@(match:"%", replace:"●")+
+		trim
+	write_monster_ourocg := {
+		"\n\n中文名："+card.name+""
+		+"\n卡片密码："+card.gamecode
+		+"\n卡片种类："+card.card_type
+		+"\n编号："+card.number
+		+"\n属性："+card.attribute
+		+"\n星级："+length(remove_tags(card.level))
+		+"\n类型："+replace(match:"・", replace:"·",card.monster_type)
+		+"\n攻击："+replace(match: "@", replace: "∞",card.attack)
+		+"\n防御："+replace(match: "@", replace: "∞",card.defense)
+		+"\n效果："+rep(card.rule_text)
+		}
+	write_nonmonster_ourocg := {
+		"\n\n中文名："+card.name+""
+		+"\n卡片密码："+card.gamecode
+		+"\n卡片种类："+spelltrap()+card.card_type
+		+"\n编号："+card.number
+		+"\n效果："+rep(card.rule_text)
+		}
+	write_monster_NWforum := {
+		"\n\n"+card.number
+		+"  "+card.name
+		+"  "+card.card_type
+		+"  "+card.attribute
+		+"  "+length(remove_tags(card.level))+"星"
+		+"  "+replace(match: "族", replace: "",card.type_1)
+		+"  "+replace(match: "@", replace: "∞",card.attack)
+		+"  "+replace(match: "@", replace: "∞",card.defense)
+		+"  "+card.gamecode
+		+"\n"+rep(card.rule_text)
+		}
+	write_nonmonster_NWforum := {
+		"\n\n"+card.number
+		+"  "+card.name
+		+"  "+spelltrap()+card.card_type
+		+"  "+card.gamecode
+		+"\n"+rep(card.rule_text)
+		}
+	write_monster_IDforum := {
+		"\n\n["+card.name+"]"
+		+"\n"+card.card_type
+		+"\n种族："+card.type_1
+		+"\n属性："+card.attribute
+		+"\n星级："+length(remove_tags(card.level))
+		+"\n攻击："+replace(match: "@", replace: "∞",card.attack)
+		+"\n防御："+replace(match: "@", replace: "∞",card.defense)
+		+"\n效果："+rep(card.rule_text)
+		}
+	write_nonmonster_IDforum := {
+		"\n\n["+card.name+"]"
+		+"\n"+card.card_type
+		+"种类："+spelltrap()
+		+"\n效果:"+rep(card.rule_text)
+		}
+	write_monster_IDdll := {
+		"\n\n["+card.name+"]"
+		+"\n"+card.card_type
+		+",种族："+card.type_1
+		+",属性："+card.attribute
+		+",星级："+length(remove_tags(card.level))
+		+",攻击："+replace(match: "@", replace: "∞",card.attack)
+		+",防御："+replace(match: "@", replace: "∞",card.defense)
+		+",效果："+rep(card.rule_text)
+		}
+	write_nonmonster_IDdll := {
+		"\n\n["+card.name+"]"
+		+"\n"+card.card_type
+		+"种类："+spelltrap()
+		+",效果:"+rep(card.rule_text)
+		}
+	ad:={
+		if contains(a, match:"?") then "-2" 
+		else if contains(a, match:"？") then "-2" 
+		else if contains(a, match:"@") then "-2" 
+		else to_int(a) or else 0
+		}
+	code:={
+		to_int(card.gamecode) or else 0 
+	}
+	write_card := { 
+		if options.格式=="IDuel论坛" then if is_monster() then write_monster_IDforum() else write_nonmonster_IDforum() 
+		else if options.格式=="NW论坛" then if is_monster() then write_monster_NWforum() else write_nonmonster_NWforum() 
+		else if options.格式=="IDuel录入" then if is_monster() then write_monster_IDdll() else write_nonmonster_IDdll() 
+		else if is_monster() then write_monster_ourocg() else write_nonmonster_ourocg() 
+	}
+
+	write_cards := to_text(for each card in sort_list(cards, order_by: {card.number+card.name}) do write_card())
+	to_string(write_cards)

@@ -1,4 +1,4 @@
-﻿mse version: 0.3.8
+﻿mse version: 2.0.0
 game: yugioh
 short name: Series10 Extra
 full name: With Extended Art & i18n
@@ -6,10 +6,10 @@ installer group: Yugioh/Series10
 icon: card-sample.png
 position hint: 01
 
-version: 2014-04-11
+version: 2017-06-26
 depends on:
 	package: yugioh.mse-game
-	version: 2014-04-11
+	version: 2017-06-26
 depends on:
 	package: yugioh-standard-levels.mse-symbol-font
 	version: 2014-04-11
