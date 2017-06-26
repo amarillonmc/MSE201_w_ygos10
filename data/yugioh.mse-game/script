@@ -1,4 +1,17 @@
-﻿	# the rule text filter
+﻿	is_link := {card.card_type == "link monster"}
+	is_tw := { styling.language == "chinese traditional" }
+	is_cn := { styling.language == "chinese simplified" }
+	is_en := { styling.language == "english" }
+	is_jp := { styling.language == "japanese" }
+
+	get_sep := {if is_en() then "<color:black>/</color:black>" else if is_cn() then "<i>／</i>" else "／" }
+	get_sepex := {
+		class :=remove_tags(input);
+		if class == "" then "" else get_sep()
+	}
+
+
+	# the rule text filter
 	#  - adds continuous symbols
 	#  - adds counter symbols
 	#  - adds equipment symbols

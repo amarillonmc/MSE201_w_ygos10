@@ -180,11 +180,75 @@ card field:
 	show statistics: false
 ############################# Card type
 # Keep type1, type2, and separator fields for backwards compatibility until two or three versions after 0.3.8.
+#card field:
+#	type: text
+#	name: type1
+#	script: monster_type_filter(value)
+#	default: "   "
+#	editable: false
+#	show statistics: false
+#card field:
+#	type: text
+#	name: type2
+#	script: card_class_filter(value)
+#	editable: false
+#	show statistics: false
+#card field:
+#	type: text
+#	name: separator
+#	script: "/"
+#	editable: false
+#	save value: false
+#	show statistics: false
+# These are the new type fields.
+#card field:
+#	type: text
+#	name: type 1
+#	script: monster_type_filter(value)
+#	default: card.type1 # Remove when card.type1 is removed.
+#card field:
+#	type: text
+#	name: type 2
+#	script: card_class_filter(value)
+#	default: split_text(match:"/ ", card.type2).0 # Remove when card.type2 is removed.
+#card field:
+#	type: text
+#	name: type 3
+#	script: card_class_filter(value)
+#	default: if contains(card.type2, match:" / ") then split_text(match:" / ", card.type2).1 else "" # Remove when card.type2 is removed.
+#card field:
+#	type: text
+#	name: type 4
+#	script: card_class_filter(value)
+#	default: if contains(card.type2, match:" / ") then split_text(match:" / ", card.type3).2 else "" # Remove when card.type3 is removed.
+#card field:
+#	type: text
+#	name: monster type
+#	script:
+#		# Either just monster, monster / type1
+#		combined_editor(
+#			field1: card.type_1,
+#			separator1: "/",
+#			field2: card.type_2,
+#			separator2: "/",
+#			field3: card.type_3,
+#			separator3: "/",
+#			field4: card.type_4,
+#			prefix: if remove_tags(card.type_1)=="    " then "" else if is_jp() then "【" else if is_en() then "[" else "<sym-auto>[</sym-auto>",
+#			suffix: if remove_tags(card.type_1)=="    " then "" else if is_jp() then "】" else if is_en() then "]" else "<sym-auto>]</sym-auto>",
+#			soft_before_empty: true,
+#			hide_when_empty: true
+#		)
+#	card list visible: true
+#	card list column: 3
+#	show statistics: false
+############################# Card type
+# Keep type1, type2, and separator fields for backwards compatibility until two or three versions after 0.3.8.
 card field:
 	type: text
 	name: type1
 	script: monster_type_filter(value)
-	default: "   "
+	default: "    "
 	editable: false
 	show statistics: false
 card field:
@@ -196,7 +260,7 @@ card field:
 card field:
 	type: text
 	name: separator
-	script: "/"
+	script: get_sep()
 	editable: false
 	save value: false
 	show statistics: false
@@ -210,30 +274,57 @@ card field:
 	type: text
 	name: type 2
 	script: card_class_filter(value)
-	default: split_text(match:"/ ", card.type2).0 # Remove when card.type2 is removed.
+	default: if contains(card.type2, match:get_sep()) then split_text(match:get_sep(), card.type2).0 else "" # Remove when card.type2 is removed.
 card field:
 	type: text
 	name: type 3
 	script: card_class_filter(value)
-	default: if contains(card.type2, match:" / ") then split_text(match:" / ", card.type2).1 else "" # Remove when card.type2 is removed.
+	default: if contains(card.type2, match:get_sep()) then split_text(match:get_sep(), card.type2).1 else "" # Remove when card.type2 is removed.
 card field:
 	type: text
 	name: type 4
 	script: card_class_filter(value)
-	default: if contains(card.type2, match:" / ") then split_text(match:" / ", card.type3).2 else "" # Remove when card.type3 is removed.
+	default: if contains(card.type2, match:get_sep()) then split_text(match:get_sep(), card.type2).2 else "" # Remove when card.type2 is removed.
+card field:
+	type: text
+	name: type 5
+	script: card_class_filter(value)
+	default: if contains(card.type2, match:get_sep()) then split_text(match:get_sep(), card.type3).3 else "" # Remove when card.type2 is removed.
 card field:
 	type: text
 	name: monster type
+	description: If no Combobox, please input space.如果看不到下拉框，请输入空格
 	script:
 		# Either just monster, monster / type1
+		# prefix: "<sym-auto>[</sym-auto>",
+		# suffix: "<sym-auto>]</sym-auto>",
+		# 用来选择
 		combined_editor(
 			field1: card.type_1,
-			separator1: "/",
+			separator1: get_sep(),
 			field2: card.type_2,
-			separator2: "/",
+			separator2: get_sep(),
 			field3: card.type_3,
-			separator3: "/",
+			separator3: get_sep(),
 			field4: card.type_4,
+			separator4: get_sep(),
+			field5: card.type_5,
+			soft_before_empty: true,
+			hide_when_empty: true
+		)
+		#用来调整格式
+		combined_editor(
+			field1: card.type_1,
+			separator1: get_sepex(card.type_2),
+			field2: card.type_2,
+			separator2: get_sepex(card.type_3),
+			field3: card.type_3,
+			separator3: get_sepex(card.type_4),
+			field4: card.type_4,
+			separator4: get_sepex(card.type_5),
+			field5: card.type_5,
+			prefix: if remove_tags(card.type_1)=="    " then "" else if is_jp() or is_cn() or is_tw() then "【" else if is_en() then "[" else "<sym-auto>[</sym-auto>",
+			suffix: if remove_tags(card.type_1)=="    " then "" else if is_jp() or is_cn() or is_tw() then "】" else if is_en() then "]" else "<sym-auto>]</sym-auto>",
 			soft_before_empty: true,
 			hide_when_empty: true
 		)

@@ -326,7 +326,7 @@ card style:
 	name:
 		left: 31
 		#top : 25
-		top : { if styling.language=="chinese traditional" or styling.language=="chinese simplified" then 27 else if styling.template_style=="actual style" then 25 else 25 }
+		top : { if styling.language=="chinese traditional" or styling.language=="chinese simplified" then 27 else if styling.template_style=="actual style" then 24 else 25 }
 		width: 319
 		height: 41
 		alignment: middle shrink-overflow
@@ -595,7 +595,8 @@ card style:
 			on: {if styling.extended_artwork=="yes" then "linkdronex.png" else if styling.template_style=="actual style" then "new/linkdron.png" else "linkdron.png" }
 	############################# Card type
 	monster type:
-		left: { if styling.template_style=="actual style" then 38 else 40 }
+		#left: { if styling.template_style=="actual style" then 38 else 40 }
+		left: { if is_nmonster() then (359 - card_style.level.content_width) else if is_tw() or is_cn() then 28 else if styling.template_style=="actual style" and (is_tw() or is_cn() ) then 25 else if styling.template_style=="actual style" then 30 else 32 }
 		top : { if is_pendulum() and ( styling.template_style=="actual style" and styling.pendulum_size=="more" ) then 477 else if is_pendulum() and styling.pendulum_size=="more" then 476 else if styling.template_style=="actual style" then 463 else 462 }
 		width: { if styling.large_type then card_style.monster_type.content_width + 8 else card_style.monster_type.content_width + 6 }
 		height: 15
@@ -888,36 +889,36 @@ extra card style:
 		choice images:
 			bar: bar.png
 		visible: script: if is_nmonster() then false else true
-	leftbracket:
-		left: { if is_nmonster() then (359 - card_style.level.content_width) else if styling.template_style=="actual style" then 30 else 32 }
-		top : { if is_nmonster() then 80 else if styling.pendulum_size=="more" then 479 else if styling.large_type then 464  else 464 }
-		width: { if is_nmonster() then 6 else 6 }
-		height: { if is_nmonster() then 19 else if styling.large_type then 15 else 14 }
-		z index: 2
-		render style: image list
-		choice images:
-			#lbracket: /yugioh-standard-levels.mse-symbol-font/leftbracket.png
-			lbracket: 
-				script:
-					if styling.language=="japanese" then "/yugioh-standard-levels.mse-symbol-font/leftbracket_jp.png" 
-					else if styling.language=="chinese simplified" then "/yugioh-standard-levels.mse-symbol-font/leftbracket_sc.png" 
-					else if styling.language=="chinese traditional" then "/yugioh-standard-levels.mse-symbol-font/leftbracket_tc.png" 
-					else "/yugioh-standard-levels.mse-symbol-font/leftbracket.png"
-	rightbracket:
-		left: { if is_nmonster() then 372  else if styling.large_type then (card_style.monster_type.content_width + 42) else (card_style.monster_type.content_width + 42) }
-		top : { if is_nmonster() then 80 else if styling.pendulum_size=="more" then 479 else if styling.large_type then 464 else 464 }
-		width: { if is_nmonster() then 6 else 6 }
-		height: { if is_nmonster() then 19 else if styling.large_type then 15  else 14 }
-		z index: 4
-		render style: image list
-		choice images:
-			#rbracket: /yugioh-standard-levels.mse-symbol-font/rightbracket.png
-			rbracket: 
-				script:
-					if styling.language=="japanese" then "/yugioh-standard-levels.mse-symbol-font/rightbracket_jp.png" 
-					else if styling.language=="chinese simplified" then "/yugioh-standard-levels.mse-symbol-font/rightbracket_sc.png" 
-					else if styling.language=="chinese traditional" then "/yugioh-standard-levels.mse-symbol-font/rightbracket_tc.png" 
-					else "/yugioh-standard-levels.mse-symbol-font/rightbracket.png"
+#	leftbracket:
+#		left: { if is_nmonster() then (359 - card_style.level.content_width) else if styling.template_style=="actual style" then 30 else 32 }
+#		top : { if is_nmonster() then 80 else if styling.pendulum_size=="more" then 479 else if styling.large_type then 464  else 464 }
+#		width: { if is_nmonster() then 6 else 6 }
+#		height: { if is_nmonster() then 19 else if styling.large_type then 15 else 14 }
+#		z index: 2
+#		render style: image list
+#		choice images:
+#			#lbracket: /yugioh-standard-levels.mse-symbol-font/leftbracket.png
+#			lbracket: 
+#				script:
+#					if styling.language=="japanese" then "/yugioh-standard-levels.mse-symbol-font/leftbracket_jp.png" 
+#					else if styling.language=="chinese simplified" then "/yugioh-standard-levels.mse-symbol-font/leftbracket_sc.png" 
+#					else if styling.language=="chinese traditional" then "/yugioh-standard-levels.mse-symbol-font/leftbracket_tc.png" 
+#					else "/yugioh-standard-levels.mse-symbol-font/leftbracket.png"
+#	rightbracket:
+#		left: { if is_nmonster() then 372  else if styling.large_type then (card_style.monster_type.content_width + 42) else (card_style.monster_type.content_width + 42) }
+#		top : { if is_nmonster() then 80 else if styling.pendulum_size=="more" then 479 else if styling.large_type then 464 else 464 }
+#		width: { if is_nmonster() then 6 else 6 }
+#		height: { if is_nmonster() then 19 else if styling.large_type then 15  else 14 }
+#		z index: 4
+#		render style: image list
+#		choice images:
+#			#rbracket: /yugioh-standard-levels.mse-symbol-font/rightbracket.png
+#			rbracket: 
+#				script:
+#					if styling.language=="japanese" then "/yugioh-standard-levels.mse-symbol-font/rightbracket_jp.png" 
+#					else if styling.language=="chinese simplified" then "/yugioh-standard-levels.mse-symbol-font/rightbracket_sc.png" 
+#					else if styling.language=="chinese traditional" then "/yugioh-standard-levels.mse-symbol-font/rightbracket_tc.png" 
+#					else "/yugioh-standard-levels.mse-symbol-font/rightbracket.png"
 	atkoverlay:
 		left: { if card.card_type=="pendulum normal monster" or card.card_type=="pendulum effect monster" or card.card_type=="pendulum fusion monster" or card.card_type=="pendulum ritual monster" or card.card_type=="pendulum synchro monster" or card.card_type=="pendulum dark synchro monster" or card.card_type=="pendulum xyz monster" then 213 else 209 }
 		top: { if card.card_type=="pendulum normal monster" or card.card_type=="pendulum effect monster" or card.card_type=="pendulum fusion monster" or card.card_type=="pendulum ritual monster" or card.card_type=="pendulum synchro monster" or card.card_type=="pendulum dark synchro monster" or card.card_type=="pendulum xyz monster" then 562 else 558 }
