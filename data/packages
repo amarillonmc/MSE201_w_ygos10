@@ -1,0 +1,2893 @@
+﻿mse_version: 2.0.1
+package:
+	name: archenemy-forum.mse-export-template
+	version: 2010-05-17
+	status: 34
+	file: A20140804T131024 export-template
+	file: A20140804T131024 icon.png
+package:
+	name: archenemy-standard.mse-style
+	version: 2010-05-20
+	status: 34
+	file: A20140804T131044 card-sample.png
+	file: A20140804T131044 card.png
+	file: A20140804T131044 image_mask.png
+	file: A20140804T131044 style
+package:
+	name: archenemy.mse-game
+	version: 2011-01-10
+	status: 34
+	file: A20140804T131038 card-sample.png
+	file: A20140804T131038 game
+	file: A20140804T131038 stats/illustrator.png
+	file: A20140804T131038 stats/keywords.png
+	file: A20140804T131038 stats/rarity.png
+	file: A20140804T131038 stats/stylesheet.png
+	file: A20140804T131038 stats/text_length.png
+	file: A20140804T131038 stats/type.png
+package:
+	name: chs.mse-locale
+	version: 2009-01-15
+	status: 34
+	file: A20140804T131046 cn.png
+	file: A20140804T131046 locale
+package:
+	name: cht.mse-locale
+	version: 2009-01-15
+	status: 34
+	file: A20140804T131036 cn.png
+	file: A20140804T131036 locale
+package:
+	name: cns.mse-locale
+	version: 2014-01-04
+	status: 34
+	file: A20170328T120700 cn.png
+	file: A20170328T120700 locale
+package:
+	name: cnt.mse-locale
+	version: 2013-08-13
+	status: 34
+	file: A20170328T120700 cn.png
+	file: A20170328T120701 locale
+package:
+	name: da.mse-locale
+	version: 2009-01-18
+	status: 34
+	file: A20140804T131038 dk.png
+	file: A20140804T131038 locale
+package:
+	name: de.mse-locale
+	version: 2009-01-15
+	status: 34
+	file: A20140804T131038 de.png
+	file: A20140804T131038 locale
+package:
+	name: en.mse-locale
+	version: 2011-01-22
+	status: 34
+	file: A20140804T131034 locale
+	file: A20140804T131034 usgb.png
+package:
+	name: es.mse-locale
+	version: 2009-01-15
+	status: 34
+	file: A20140804T131027 es.png
+	file: A20140804T131027 locale
+package:
+	name: fr.mse-locale
+	version: 2009-01-18
+	status: 34
+	file: A20140804T131035 fr.png
+	file: A20140804T131035 locale
+package:
+	name: it.mse-locale
+	version: 2009-02-02
+	status: 34
+	file: A20140804T131019 it.png
+	file: A20140804T131019 locale
+package:
+	name: jp.mse-locale
+	version: 2009-01-15
+	status: 34
+	file: A20140804T131018 jp.png
+	file: A20140804T131018 locale
+package:
+	name: magic-blends.mse-include
+	version: 2011-09-11
+	status: 34
+	file: A20140804T131027 include
+	file: A20140804T131027 new-blends
+package:
+	name: magic-counter.mse-style
+	version: 2011-01-23
+	status: 34
+	file: A20140804T131024 blank.png
+	file: A20140804T131024 card-sample.png
+	file: A20140804T131024 default.jpg
+	file: A20140804T131024 frame.png
+	file: A20140804T131024 frame_mask.png
+	file: A20140804T131024 futsymbol_artifact.png
+	file: A20140804T131024 futsymbol_creature.png
+	file: A20140804T131024 futsymbol_enchantment.png
+	file: A20140804T131024 futsymbol_instant.png
+	file: A20140804T131024 futsymbol_land.png
+	file: A20140804T131024 futsymbol_multiple.png
+	file: A20140804T131024 futsymbol_planeswalker.png
+	file: A20140804T131024 futsymbol_sorcery.png
+	file: A20140804T131024 image_mask.png
+	file: A20140804T131024 style
+	file: A20140804T131024 watermark_azorius.png
+	file: A20140804T131024 watermark_b.png
+	file: A20140804T131024 watermark_bgmana.png
+	file: A20140804T131024 watermark_boros.png
+	file: A20140804T131024 watermark_brmana.png
+	file: A20140804T131024 watermark_dimir.png
+	file: A20140804T131024 watermark_g.png
+	file: A20140804T131024 watermark_golgari.png
+	file: A20140804T131024 watermark_gruul.png
+	file: A20140804T131024 watermark_gumana.png
+	file: A20140804T131024 watermark_gwmana.png
+	file: A20140804T131024 watermark_izzet.png
+	file: A20140804T131024 watermark_mirrodin.png
+	file: A20140804T131024 watermark_orzhov.png
+	file: A20140804T131024 watermark_phyrexia.png
+	file: A20140804T131024 watermark_r.png
+	file: A20140804T131024 watermark_rakados.png
+	file: A20140804T131024 watermark_rgmana.png
+	file: A20140804T131024 watermark_rwmana.png
+	file: A20140804T131024 watermark_s.png
+	file: A20140804T131024 watermark_selesnya.png
+	file: A20140804T131024 watermark_simic.png
+	file: A20140804T131024 watermark_u.png
+	file: A20140804T131024 watermark_ubmana.png
+	file: A20140804T131024 watermark_urmana.png
+	file: A20140804T131024 watermark_w.png
+	file: A20140804T131024 watermark_wbmana.png
+	file: A20140804T131024 watermark_wumana.png
+	file: A20140804T131024 watermarks
+package:
+	name: magic-default-image.mse-include
+	version: 2007-09-23
+	status: 34
+	file: A20140804T131015 artifact.jpg
+	file: A20140804T131015 black.jpg
+	file: A20140804T131015 blue.jpg
+	file: A20140804T131015 colorless.jpg
+	file: A20140804T131015 green.jpg
+	file: A20140804T131015 include
+	file: A20140804T131015 land.jpg
+	file: A20140804T131015 multicolor.jpg
+	file: A20140804T131015 red.jpg
+	file: A20140804T131015 scripts
+	file: A20140804T131015 white.jpg
+package:
+	name: magic-embossedletters.mse-symbol-font
+	version: 2009-03-25
+	status: 34
+	file: A20140804T131040 a.png
+	file: A20140804T131040 ae.png
+	file: A20140804T131040 ampersand.png
+	file: A20140804T131040 apostrophe.png
+	file: A20140804T131040 b.png
+	file: A20140804T131040 c.png
+	file: A20140804T131040 comma.png
+	file: A20140804T131040 d.png
+	file: A20140804T131040 dash.png
+	file: A20140804T131040 e.png
+	file: A20140804T131040 f.png
+	file: A20140804T131040 g.png
+	file: A20140804T131040 h.png
+	file: A20140804T131040 i.png
+	file: A20140804T131040 j.png
+	file: A20140804T131040 k.png
+	file: A20140804T131040 l.png
+	file: A20140804T131040 m.png
+	file: A20140804T131040 n.png
+	file: A20140804T131040 o.png
+	file: A20140804T131040 p.png
+	file: A20140804T131040 q.png
+	file: A20140804T131040 r.png
+	file: A20140804T131040 s.png
+	file: A20140804T131040 space.png
+	file: A20140804T131040 symbol-font
+	file: A20140804T131040 t.png
+	file: A20140804T131040 u.png
+	file: A20140804T131040 v.png
+	file: A20140804T131040 w.png
+	file: A20140804T131040 x.png
+	file: A20140804T131040 y.png
+	file: A20140804T131040 z.png
+package:
+	name: magic-extended-art.mse-style
+	version: 2010-03-26
+	status: 34
+	file: A20140804T131015 acard.jpg
+	file: A20140804T131015 apt.jpg
+	file: A20140804T131015 artifact_blend_card.png
+	file: A20140804T131015 artifact_blend_pt.png
+	file: A20140804T131015 bcard.jpg
+	file: A20140804T131015 blcard.jpg
+	file: A20140804T131015 blpt.jpg
+	file: A20140804T131015 bpt.jpg
+	file: A20140804T131015 card-sample.png
+	file: A20140804T131015 ccard.jpg
+	file: A20140804T131015 clcard.jpg
+	file: A20140804T131015 clpt.jpg
+	file: A20140804T131015 cpt.jpg
+	file: A20140804T131015 gcard.jpg
+	file: A20140804T131015 glcard.jpg
+	file: A20140804T131015 glpt.jpg
+	file: A20140804T131015 gpt.jpg
+	file: A20140804T131015 hpt.jpg
+	file: A20140804T131015 hybrid_blend_card.png
+	file: A20140804T131015 hybrid_blend_pt.png
+	file: A20140804T131015 mask_pt.png
+	file: A20140804T131015 mcard.jpg
+	file: A20140804T131015 mlcard.jpg
+	file: A20140804T131015 mlpt.jpg
+	file: A20140804T131015 mpt.jpg
+	file: A20140804T131015 multicolor_blend_card.png
+	file: A20140804T131015 multicolor_blend_pt.png
+	file: A20140804T131015 oacard.jpg
+	file: A20140804T131015 oapt.jpg
+	file: A20140804T131015 omcard.jpg
+	file: A20140804T131015 omlcard.jpg
+	file: A20140804T131015 omlpt.jpg
+	file: A20140804T131015 ompt.jpg
+	file: A20140804T131015 rcard.jpg
+	file: A20140804T131015 rlcard.jpg
+	file: A20140804T131015 rlpt.jpg
+	file: A20140804T131015 rpt.jpg
+	file: A20140804T131015 style
+	file: A20140804T131015 tombstone.png
+	file: A20140804T131015 ucard.jpg
+	file: A20140804T131015 ulcard.jpg
+	file: A20140804T131015 ulpt.jpg
+	file: A20140804T131015 upt.jpg
+	file: A20140804T131015 wcard.jpg
+	file: A20140804T131015 wlcard.jpg
+	file: A20140804T131015 wlpt.jpg
+	file: A20140804T131015 wpt.jpg
+package:
+	name: magic-firepenguinmaster-flip.mse-style
+	version: 2010-04-07
+	status: 34
+	file: A20140804T131032 acard.jpg
+	file: A20140804T131032 artifact_blend_card.png
+	file: A20140804T131032 bcard.jpg
+	file: A20140804T131032 card-sample.png
+	file: A20140804T131032 ccard.jpg
+	file: A20140804T131032 gcard.jpg
+	file: A20140804T131032 imagemask.png
+	file: A20140804T131032 mcard.jpg
+	file: A20140804T131032 multicolor_blend_card.png
+	file: A20140804T131032 ptshieldsword.png
+	file: A20140804T131032 rcard.jpg
+	file: A20140804T131032 style
+	file: A20140804T131032 tombstone.png
+	file: A20140804T131032 ucard.jpg
+	file: A20140804T131032 wcard.jpg
+package:
+	name: magic-firepenguinmaster-planeswalker.mse-style
+	version: 2010-03-26
+	status: 34
+	file: A20140804T131031 acard.jpg
+	file: A20140804T131031 artifact_blend_card.png
+	file: A20140804T131031 bcard.jpg
+	file: A20140804T131031 blcard.jpg
+	file: A20140804T131031 card-sample.png
+	file: A20140804T131031 ccard.jpg
+	file: A20140804T131031 clcard.jpg
+	file: A20140804T131031 elcard.jpg
+	file: A20140804T131031 gcard.jpg
+	file: A20140804T131031 glcard.jpg
+	file: A20140804T131031 imagemask.png
+	file: A20140804T131031 lgcard.jpg
+	file: A20140804T131031 lglcard.jpg
+	file: A20140804T131031 loyalty.png
+	file: A20140804T131031 loyaltydown.png
+	file: A20140804T131031 loyaltynaught.png
+	file: A20140804T131031 loyaltyup.png
+	file: A20140804T131031 mcard.jpg
+	file: A20140804T131031 mlcard.jpg
+	file: A20140804T131031 multicolor_blend_card.png
+	file: A20140804T131031 rcard.jpg
+	file: A20140804T131031 rlcard.jpg
+	file: A20140804T131031 style
+	file: A20140804T131031 tombstone.png
+	file: A20140804T131031 ucard.jpg
+	file: A20140804T131031 ulcard.jpg
+	file: A20140804T131031 wcard.jpg
+	file: A20140804T131031 wlcard.jpg
+package:
+	name: magic-firepenguinmaster.mse-style
+	version: 2010-03-26
+	status: 34
+	file: A20140804T131035 acard.jpg
+	file: A20140804T131035 artifact_blend_card.png
+	file: A20140804T131035 bcard.jpg
+	file: A20140804T131035 blcard.jpg
+	file: A20140804T131035 card-sample.png
+	file: A20140804T131035 ccard.jpg
+	file: A20140804T131035 clcard.jpg
+	file: A20140804T131035 elcard.jpg
+	file: A20140804T131035 gcard.jpg
+	file: A20140804T131035 glcard.jpg
+	file: A20140804T131035 imagemask.png
+	file: A20140804T131035 lgcard.jpg
+	file: A20140804T131035 lglcard.jpg
+	file: A20140804T131035 mcard.jpg
+	file: A20140804T131035 mlcard.jpg
+	file: A20140804T131035 multicolor_blend_card.png
+	file: A20140804T131035 ptshieldsword.png
+	file: A20140804T131035 rcard.jpg
+	file: A20140804T131035 rlcard.jpg
+	file: A20140804T131035 style
+	file: A20140804T131035 tombstone.png
+	file: A20140804T131035 ucard.jpg
+	file: A20140804T131035 ulcard.jpg
+	file: A20140804T131035 wcard.jpg
+	file: A20140804T131035 wlcard.jpg
+package:
+	name: magic-firepenguinmasterpromo.mse-style
+	version: 2010-03-26
+	status: 34
+	file: A20140804T131022 acard.jpg
+	file: A20140804T131022 artifact_blend_card.png
+	file: A20140804T131022 bcard.jpg
+	file: A20140804T131022 blcard.jpg
+	file: A20140804T131022 card-sample.png
+	file: A20140804T131022 ccard.jpg
+	file: A20140804T131022 clcard.jpg
+	file: A20140804T131022 clear.png
+	file: A20140804T131022 elcard.jpg
+	file: A20140804T131022 gcard.jpg
+	file: A20140804T131022 glcard.jpg
+	file: A20140804T131022 imagemask.png
+	file: A20140804T131022 lgcard.jpg
+	file: A20140804T131022 lglcard.jpg
+	file: A20140804T131022 mcard.jpg
+	file: A20140804T131022 mlcard.jpg
+	file: A20140804T131022 multicolor_blend_card.png
+	file: A20140804T131022 ptshieldsword.png
+	file: A20140804T131022 rcard.jpg
+	file: A20140804T131022 rlcard.jpg
+	file: A20140804T131022 style
+	file: A20140804T131022 tombstone.png
+	file: A20140804T131022 ucard.jpg
+	file: A20140804T131022 ulcard.jpg
+	file: A20140804T131022 wcard.jpg
+	file: A20140804T131022 wlcard.jpg
+package:
+	name: magic-firepenguinmastersplit.mse-style
+	version: 2010-03-26
+	status: 34
+	file: A20140804T131038 acard.jpg
+	file: A20140804T131038 artifact_blend_card.png
+	file: A20140804T131038 bcard.jpg
+	file: A20140804T131038 blcard.jpg
+	file: A20140804T131038 card-sample.png
+	file: A20140804T131038 ccard.jpg
+	file: A20140804T131038 clcard.jpg
+	file: A20140804T131038 elcard.jpg
+	file: A20140804T131038 gcard.jpg
+	file: A20140804T131038 glcard.jpg
+	file: A20140804T131038 imagemask.png
+	file: A20140804T131038 lgcard.jpg
+	file: A20140804T131038 lglcard.jpg
+	file: A20140804T131038 mcard.jpg
+	file: A20140804T131038 mlcard.jpg
+	file: A20140804T131038 multicolor_blend_card.png
+	file: A20140804T131038 ptshieldsword.png
+	file: A20140804T131038 rcard.jpg
+	file: A20140804T131038 rlcard.jpg
+	file: A20140804T131038 style
+	file: A20140804T131038 tombstone.png
+	file: A20140804T131038 ucard.jpg
+	file: A20140804T131038 ulcard.jpg
+	file: A20140804T131038 wcard.jpg
+	file: A20140804T131038 wlcard.jpg
+package:
+	name: magic-firepenguinmastertokens.mse-style
+	version: 2010-03-26
+	status: 34
+	file: A20140804T131055 acard.jpg
+	file: A20140804T131055 artifact_blend_card.png
+	file: A20140804T131055 artifact_blend_textbox.png
+	file: A20140804T131055 artifact_blend_typeline.png
+	file: A20140804T131055 atextbox.png
+	file: A20140804T131055 atypeline.png
+	file: A20140804T131055 bcard.jpg
+	file: A20140804T131055 blcard.jpg
+	file: A20140804T131055 bltextbox.png
+	file: A20140804T131055 bltypeline.png
+	file: A20140804T131055 btextbox.png
+	file: A20140804T131055 btypeline.png
+	file: A20140804T131055 card-sample.png
+	file: A20140804T131055 ccard.jpg
+	file: A20140804T131055 clcard.jpg
+	file: A20140804T131055 cltextbox.png
+	file: A20140804T131055 cltypeline.png
+	file: A20140804T131055 ctextbox.png
+	file: A20140804T131055 ctypeline.png
+	file: A20140804T131055 elcard.jpg
+	file: A20140804T131055 eltextbox.png
+	file: A20140804T131055 eltypeline.png
+	file: A20140804T131055 gcard.jpg
+	file: A20140804T131055 glcard.jpg
+	file: A20140804T131055 gltextbox.png
+	file: A20140804T131055 gltypeline.png
+	file: A20140804T131055 gtextbox.png
+	file: A20140804T131055 gtypeline.png
+	file: A20140804T131055 imagemask.png
+	file: A20140804T131055 lgcard.jpg
+	file: A20140804T131055 lglcard.jpg
+	file: A20140804T131055 lgltextbox.png
+	file: A20140804T131055 lgltypeline.png
+	file: A20140804T131055 lgtextbox.png
+	file: A20140804T131055 lgtypeline.png
+	file: A20140804T131055 mcard.jpg
+	file: A20140804T131055 mlcard.jpg
+	file: A20140804T131055 mltextbox.png
+	file: A20140804T131055 mltypeline.png
+	file: A20140804T131055 mtextbox.png
+	file: A20140804T131055 mtypeline.png
+	file: A20140804T131055 multicolor_blend_card.png
+	file: A20140804T131055 multicolor_blend_textbox.png
+	file: A20140804T131055 multicolor_blend_typeline.png
+	file: A20140804T131055 ptshieldsword.png
+	file: A20140804T131055 rcard.jpg
+	file: A20140804T131055 rlcard.jpg
+	file: A20140804T131055 rltextbox.png
+	file: A20140804T131055 rltypeline.png
+	file: A20140804T131055 rtextbox.png
+	file: A20140804T131055 rtypeline.png
+	file: A20140804T131055 style
+	file: A20140804T131055 textboxmask.png
+	file: A20140804T131055 tombstone.png
+	file: A20140804T131055 ucard.jpg
+	file: A20140804T131055 ulcard.jpg
+	file: A20140804T131055 ultextbox.png
+	file: A20140804T131055 ultypeline.png
+	file: A20140804T131055 utextbox.png
+	file: A20140804T131055 utypeline.png
+	file: A20140804T131055 wcard.jpg
+	file: A20140804T131055 wlcard.jpg
+	file: A20140804T131055 wltextbox.png
+	file: A20140804T131055 wltypeline.png
+	file: A20140804T131055 wtextbox.png
+	file: A20140804T131055 wtypeline.png
+package:
+	name: magic-forum.mse-export-template
+	version: 2010-06-06
+	status: 34
+	file: A20140804T131034 export-template
+	file: A20140804T131034 icon.png
+package:
+	name: magic-future-common.mse-include
+	version: 2008-05-21
+	status: 34
+	file: A20140804T131025 artifact_black.png
+	file: A20140804T131025 artifact_white.png
+	file: A20140804T131025 creature_black.png
+	file: A20140804T131025 creature_white.png
+	file: A20140804T131025 enchantment_black.png
+	file: A20140804T131025 enchantment_white.png
+	file: A20140804T131025 include
+	file: A20140804T131025 instant_black.png
+	file: A20140804T131025 instant_white.png
+	file: A20140804T131025 land_black.png
+	file: A20140804T131025 land_white.png
+	file: A20140804T131025 multitype_black.png
+	file: A20140804T131025 multitype_white.png
+	file: A20140804T131025 paintbrush_black.png
+	file: A20140804T131025 paintbrush_white.png
+	file: A20140804T131025 planeswalker_black.png
+	file: A20140804T131025 planeswalker_white.png
+	file: A20140804T131025 sorcery_black.png
+	file: A20140804T131025 sorcery_white.png
+package:
+	name: magic-future-split.mse-style
+	version: 2010-03-26
+	status: 34
+	file: A20140804T131021 acard.jpg
+	file: A20140804T131021 apt.png
+	file: A20140804T131021 artifact_blend_card.png
+	file: A20140804T131020 artifact_blend_pt.png
+	file: A20140804T131021 artifact_blend_textbox.png
+	file: A20140804T131021 artifact_blend_typeline.png
+	file: A20140804T131021 atextbox.png
+	file: A20140804T131021 atypeline.png
+	file: A20140804T131021 bcard.jpg
+	file: A20140804T131021 blcard.jpg
+	file: A20140804T131021 blpt.png
+	file: A20140804T131021 bltextbox.png
+	file: A20140804T131021 bltypeline.png
+	file: A20140804T131021 bordermask.png
+	file: A20140804T131021 bpt.png
+	file: A20140804T131021 btextbox.png
+	file: A20140804T131021 btypeline.png
+	file: A20140804T131021 card-sample.png
+	file: A20140804T131021 ccard.jpg
+	file: A20140804T131021 clcard.jpg
+	file: A20140804T131021 clpt.png
+	file: A20140804T131021 cltextbox.png
+	file: A20140804T131021 cltypeline.png
+	file: A20140804T131021 costmask.png
+	file: A20140804T131021 cpt.png
+	file: A20140804T131020 ctextbox.png
+	file: A20140804T131020 ctypeline.png
+	file: A20140804T131021 gcard.jpg
+	file: A20140804T131021 glcard.jpg
+	file: A20140804T131021 glpt.png
+	file: A20140804T131021 gltextbox.png
+	file: A20140804T131021 gltypeline.png
+	file: A20140804T131021 gpt.png
+	file: A20140804T131020 gtextbox.png
+	file: A20140804T131020 gtypeline.png
+	file: A20140804T131021 hybrid_blend_card.png
+	file: A20140804T131021 hybrid_blend_pt.png
+	file: A20140804T131021 hybrid_blend_textbox.png
+	file: A20140804T131021 hybrid_blend_typeline.png
+	file: A20140804T131021 mask_image.png
+	file: A20140804T131021 mcard.jpg
+	file: A20140804T131021 mlcard.jpg
+	file: A20140804T131021 mlpt.png
+	file: A20140804T131021 mltextbox.png
+	file: A20140804T131021 mltypeline.png
+	file: A20140804T131020 mpt.png
+	file: A20140804T131021 mtextbox.png
+	file: A20140804T131021 mtypeline.png
+	file: A20140804T131021 multicolor_blend_card.png
+	file: A20140804T131020 multicolor_blend_pt.png
+	file: A20140804T131021 multicolor_blend_textbox.png
+	file: A20140804T131021 multicolor_blend_typeline.png
+	file: A20140804T131021 rcard.jpg
+	file: A20140804T131020 rlcard.jpg
+	file: A20140804T131021 rlpt.png
+	file: A20140804T131021 rltextbox.png
+	file: A20140804T131021 rltypeline.png
+	file: A20140804T131021 rpt.png
+	file: A20140804T131021 rtextbox.png
+	file: A20140804T131021 rtypeline.png
+	file: A20140804T131021 style
+	file: A20140804T131021 tombstone.png
+	file: A20140804T131021 ucard.jpg
+	file: A20140804T131021 ulcard.jpg
+	file: A20140804T131021 ulpt.png
+	file: A20140804T131021 ultextbox.png
+	file: A20140804T131021 ultypeline.png
+	file: A20140804T131021 upt.png
+	file: A20140804T131021 utextbox.png
+	file: A20140804T131021 utypeline.png
+	file: A20140804T131021 wcard.jpg
+	file: A20140804T131021 wlcard.jpg
+	file: A20140804T131021 wlpt.png
+	file: A20140804T131021 wltextbox.png
+	file: A20140804T131021 wltypeline.png
+	file: A20140804T131021 wpt.png
+	file: A20140804T131021 wtextbox.png
+	file: A20140804T131021 wtypeline.png
+package:
+	name: magic-future-textless.mse-style
+	version: 2010-03-26
+	status: 34
+	file: A20140804T131042 acard.jpg
+	file: A20140804T131043 apt.jpg
+	file: A20140804T131042 artifact_blend_card.png
+	file: A20140804T131042 artifact_blend_pt.png
+	file: A20140804T131042 bcard.jpg
+	file: A20140804T131043 blcard.jpg
+	file: A20140804T131043 blpt.jpg
+	file: A20140804T131043 bordermask.png
+	file: A20140804T131043 bpt.jpg
+	file: A20140804T131042 card-sample.png
+	file: A20140804T131042 ccard.jpg
+	file: A20140804T131042 clcard.jpg
+	file: A20140804T131042 clpt.jpg
+	file: A20140804T131042 costmask.png
+	file: A20140804T131043 cpt.jpg
+	file: A20140804T131042 gcard.jpg
+	file: A20140804T131042 glcard.jpg
+	file: A20140804T131042 glpt.jpg
+	file: A20140804T131043 gpt.jpg
+	file: A20140804T131043 hybrid_blend_card.png
+	file: A20140804T131042 hybrid_blend_pt.png
+	file: A20140804T131043 mask_image.png
+	file: A20140804T131043 mask_pt.png
+	file: A20140804T131042 mcard.jpg
+	file: A20140804T131043 mlcard.jpg
+	file: A20140804T131042 mlpt.jpg
+	file: A20140804T131042 mpt.jpg
+	file: A20140804T131042 multicolor_blend_card.png
+	file: A20140804T131042 multicolor_blend_pt.png
+	file: A20140804T131042 rcard.jpg
+	file: A20140804T131042 rlcard.jpg
+	file: A20140804T131043 rlpt.jpg
+	file: A20140804T131042 rpt.jpg
+	file: A20140804T131043 style
+	file: A20140804T131043 tombstone.png
+	file: A20140804T131042 ucard.jpg
+	file: A20140804T131043 ulcard.jpg
+	file: A20140804T131042 ulpt.jpg
+	file: A20140804T131042 upt.jpg
+	file: A20140804T131042 wcard.jpg
+	file: A20140804T131043 wlcard.jpg
+	file: A20140804T131042 wlpt.jpg
+	file: A20140804T131042 wpt.jpg
+package:
+	name: magic-future.mse-style
+	version: 2010-03-26
+	status: 34
+	file: A20140804T131054 acard.jpg
+	file: A20140804T131054 apt.png
+	file: A20140804T131054 artifact_blend_card.png
+	file: A20140804T131054 artifact_blend_pt.png
+	file: A20140804T131054 artifact_blend_textbox.png
+	file: A20140804T131054 artifact_blend_typeline.png
+	file: A20140804T131054 atextbox.png
+	file: A20140804T131054 atypeline.png
+	file: A20140804T131054 bcard.jpg
+	file: A20140804T131054 blcard.jpg
+	file: A20140804T131054 blpt.png
+	file: A20140804T131054 bltextbox.png
+	file: A20140804T131054 bltypeline.png
+	file: A20140804T131054 bordermask.png
+	file: A20140804T131054 bpt.png
+	file: A20140804T131054 btextbox.png
+	file: A20140804T131054 btypeline.png
+	file: A20140804T131054 card-sample.png
+	file: A20140804T131054 ccard.jpg
+	file: A20140804T131054 clcard.jpg
+	file: A20140804T131054 clpt.png
+	file: A20140804T131054 cltextbox.png
+	file: A20140804T131054 cltypeline.png
+	file: A20140804T131054 costmask.png
+	file: A20140804T131054 cpt.png
+	file: A20140804T131054 ctextbox.png
+	file: A20140804T131054 ctypeline.png
+	file: A20140804T131054 gcard.jpg
+	file: A20140804T131054 glcard.jpg
+	file: A20140804T131054 glpt.png
+	file: A20140804T131054 gltextbox.png
+	file: A20140804T131054 gltypeline.png
+	file: A20140804T131054 gpt.png
+	file: A20140804T131054 gtextbox.png
+	file: A20140804T131054 gtypeline.png
+	file: A20140804T131054 hybrid_blend_card.png
+	file: A20140804T131054 hybrid_blend_pt.png
+	file: A20140804T131054 hybrid_blend_textbox.png
+	file: A20140804T131054 hybrid_blend_typeline.png
+	file: A20140804T131054 mask_image.png
+	file: A20140804T131054 mcard.jpg
+	file: A20140804T131054 mlcard.jpg
+	file: A20140804T131054 mlpt.png
+	file: A20140804T131054 mltextbox.png
+	file: A20140804T131054 mltypeline.png
+	file: A20140804T131054 mpt.png
+	file: A20140804T131054 mtextbox.png
+	file: A20140804T131054 mtypeline.png
+	file: A20140804T131054 multicolor_blend_card.png
+	file: A20140804T131054 multicolor_blend_pt.png
+	file: A20140804T131054 multicolor_blend_textbox.png
+	file: A20140804T131054 multicolor_blend_typeline.png
+	file: A20140804T131054 rcard.jpg
+	file: A20140804T131054 rlcard.jpg
+	file: A20140804T131054 rlpt.png
+	file: A20140804T131054 rltextbox.png
+	file: A20140804T131054 rltypeline.png
+	file: A20140804T131054 rpt.png
+	file: A20140804T131054 rtextbox.png
+	file: A20140804T131054 rtypeline.png
+	file: A20140804T131054 style
+	file: A20140804T131054 tombstone.png
+	file: A20140804T131054 ucard.jpg
+	file: A20140804T131054 ulcard.jpg
+	file: A20140804T131054 ulpt.png
+	file: A20140804T131054 ultextbox.png
+	file: A20140804T131054 ultypeline.png
+	file: A20140804T131054 upt.png
+	file: A20140804T131054 utextbox.png
+	file: A20140804T131054 utypeline.png
+	file: A20140804T131054 wcard.jpg
+	file: A20140804T131054 wlcard.jpg
+	file: A20140804T131054 wlpt.png
+	file: A20140804T131054 wltextbox.png
+	file: A20140804T131054 wltypeline.png
+	file: A20140804T131054 wpt.png
+	file: A20140804T131054 wtextbox.png
+	file: A20140804T131054 wtypeline.png
+package:
+	name: magic-mana-beveled.mse-symbol-font
+	version: 2009-08-10
+	status: 34
+	file: A20140804T131017 mana_1_half.png
+	file: A20140804T131017 mana_b.png
+	file: A20140804T131017 mana_b_half.png
+	file: A20140804T131017 mana_bg.png
+	file: A20140804T131017 mana_bgw.png
+	file: A20140804T131017 mana_br.png
+	file: A20140804T131017 mana_brg.png
+	file: A20140804T131017 mana_chaos.png
+	file: A20140804T131017 mana_circle.png
+	file: A20140804T131017 mana_g.png
+	file: A20140804T131017 mana_g_half.png
+	file: A20140804T131017 mana_gu.png
+	file: A20140804T131017 mana_gub.png
+	file: A20140804T131017 mana_guild_bg.png
+	file: A20140804T131017 mana_guild_br.png
+	file: A20140804T131017 mana_guild_gu.png
+	file: A20140804T131017 mana_guild_gw.png
+	file: A20140804T131017 mana_guild_rg.png
+	file: A20140804T131017 mana_guild_rw.png
+	file: A20140804T131017 mana_guild_ub.png
+	file: A20140804T131017 mana_guild_ur.png
+	file: A20140804T131017 mana_guild_wb.png
+	file: A20140804T131017 mana_guild_wu.png
+	file: A20140804T131017 mana_gw.png
+	file: A20140804T131017 mana_gwu.png
+	file: A20140804T131017 mana_infinite.png
+	file: A20140804T131017 mana_nb.png
+	file: A20140804T131017 mana_ng.png
+	file: A20140804T131017 mana_nr.png
+	file: A20140804T131017 mana_nu.png
+	file: A20140804T131017 mana_nw.png
+	file: A20140804T131017 mana_q.png
+	file: A20140804T131017 mana_q_old.png
+	file: A20140804T131017 mana_q_older.png
+	file: A20140804T131017 mana_r.png
+	file: A20140804T131017 mana_r_half.png
+	file: A20140804T131017 mana_rg.png
+	file: A20140804T131017 mana_rgw.png
+	file: A20140804T131017 mana_rw.png
+	file: A20140804T131017 mana_rwu.png
+	file: A20140804T131017 mana_s.png
+	file: A20140804T131017 mana_s_half.png
+	file: A20140804T131017 mana_t.png
+	file: A20140804T131017 mana_t_old.png
+	file: A20140804T131017 mana_t_older.png
+	file: A20140804T131017 mana_u.png
+	file: A20140804T131017 mana_u_half.png
+	file: A20140804T131017 mana_ub.png
+	file: A20140804T131017 mana_ubr.png
+	file: A20140804T131017 mana_ur.png
+	file: A20140804T131017 mana_urg.png
+	file: A20140804T131017 mana_w.png
+	file: A20140804T131017 mana_w_half.png
+	file: A20140804T131017 mana_wb.png
+	file: A20140804T131017 mana_wbr.png
+	file: A20140804T131017 mana_wu.png
+	file: A20140804T131017 mana_wub.png
+	file: A20140804T131017 mana_x.png
+	file: A20140804T131017 mana_y.png
+	file: A20140804T131017 mana_z.png
+	file: A20140804T131017 symbol-font
+package:
+	name: magic-mana-future.mse-symbol-font
+	version: 2009-08-11
+	status: 34
+	file: A20140804T131046 mana_1_half.png
+	file: A20140804T131046 mana_b.png
+	file: A20140804T131046 mana_b_half.png
+	file: A20140804T131046 mana_bg.png
+	file: A20140804T131046 mana_br.png
+	file: A20140804T131046 mana_chaos.png
+	file: A20140804T131046 mana_circle.png
+	file: A20140804T131046 mana_circle_b.png
+	file: A20140804T131046 mana_circle_g.png
+	file: A20140804T131046 mana_circle_mask.png
+	file: A20140804T131046 mana_circle_r.png
+	file: A20140804T131046 mana_circle_u.png
+	file: A20140804T131046 mana_circle_w.png
+	file: A20140804T131046 mana_g.png
+	file: A20140804T131046 mana_g_half.png
+	file: A20140804T131046 mana_gu.png
+	file: A20140804T131046 mana_guild_bg.png
+	file: A20140804T131046 mana_guild_br.png
+	file: A20140804T131046 mana_guild_gu.png
+	file: A20140804T131046 mana_guild_gw.png
+	file: A20140804T131046 mana_guild_rg.png
+	file: A20140804T131046 mana_guild_rw.png
+	file: A20140804T131046 mana_guild_ub.png
+	file: A20140804T131046 mana_guild_ur.png
+	file: A20140804T131046 mana_guild_wb.png
+	file: A20140804T131046 mana_guild_wu.png
+	file: A20140804T131046 mana_gw.png
+	file: A20140804T131046 mana_infinite.png
+	file: A20140804T131046 mana_nb.png
+	file: A20140804T131046 mana_ng.png
+	file: A20140804T131046 mana_nr.png
+	file: A20140804T131046 mana_nu.png
+	file: A20140804T131046 mana_nw.png
+	file: A20140804T131046 mana_q.png
+	file: A20140804T131046 mana_r.png
+	file: A20140804T131046 mana_r_half.png
+	file: A20140804T131046 mana_rg.png
+	file: A20140804T131046 mana_rw.png
+	file: A20140804T131046 mana_s.png
+	file: A20140804T131046 mana_s_half.png
+	file: A20140804T131046 mana_t.png
+	file: A20140804T131046 mana_u.png
+	file: A20140804T131046 mana_u_half.png
+	file: A20140804T131046 mana_ub.png
+	file: A20140804T131046 mana_ur.png
+	file: A20140804T131046 mana_w.png
+	file: A20140804T131046 mana_w_half.png
+	file: A20140804T131046 mana_wb.png
+	file: A20140804T131046 mana_wu.png
+	file: A20140804T131046 symbol-font
+package:
+	name: magic-mana-large.mse-symbol-font
+	version: 2011-04-11
+	status: 34
+	file: A20140804T131040 mana_1_half.png
+	file: A20140804T131040 mana_b.png
+	file: A20140804T131040 mana_b_half.png
+	file: A20140804T131040 mana_bg.png
+	file: A20140804T131039 mana_bgw.png
+	file: A20140804T131039 mana_br.png
+	file: A20140804T131040 mana_brg.png
+	file: A20140804T131039 mana_chaos.png
+	file: A20140804T131040 mana_circle.png
+	file: A20140804T131040 mana_g.png
+	file: A20140804T131040 mana_g_half.png
+	file: A20140804T131039 mana_gu.png
+	file: A20140804T131039 mana_gub.png
+	file: A20140804T131039 mana_guild_bg.png
+	file: A20140804T131039 mana_guild_br.png
+	file: A20140804T131040 mana_guild_gu.png
+	file: A20140804T131040 mana_guild_gw.png
+	file: A20140804T131040 mana_guild_rg.png
+	file: A20140804T131040 mana_guild_rw.png
+	file: A20140804T131039 mana_guild_ub.png
+	file: A20140804T131039 mana_guild_ur.png
+	file: A20140804T131040 mana_guild_wb.png
+	file: A20140804T131040 mana_guild_wu.png
+	file: A20140804T131039 mana_gw.png
+	file: A20140804T131040 mana_gwu.png
+	file: A20140804T131040 mana_infinite.png
+	file: A20140804T131040 mana_nb.png
+	file: A20140804T131039 mana_ng.png
+	file: A20140804T131039 mana_nr.png
+	file: A20140804T131039 mana_nu.png
+	file: A20140804T131039 mana_nw.png
+	file: A20140804T131040 mana_phyb.png
+	file: A20140804T131040 mana_phyc.png
+	file: A20140804T131040 mana_phyg.png
+	file: A20140804T131040 mana_phyr.png
+	file: A20140804T131040 mana_phyu.png
+	file: A20140804T131040 mana_phyw.png
+	file: A20140804T131040 mana_q.png
+	file: A20140804T131040 mana_q_old.png
+	file: A20140804T131039 mana_q_older.png
+	file: A20140804T131040 mana_r.png
+	file: A20140804T131040 mana_r_half.png
+	file: A20140804T131039 mana_rg.png
+	file: A20140804T131039 mana_rgw.png
+	file: A20140804T131039 mana_rw.png
+	file: A20140804T131039 mana_rwu.png
+	file: A20140804T131040 mana_s.png
+	file: A20140804T131040 mana_s_half.png
+	file: A20140804T131040 mana_t.png
+	file: A20140804T131040 mana_t_old.png
+	file: A20140804T131040 mana_t_older.png
+	file: A20140804T131040 mana_u.png
+	file: A20140804T131040 mana_u_half.png
+	file: A20140804T131040 mana_ub.png
+	file: A20140804T131039 mana_ubr.png
+	file: A20140804T131040 mana_ur.png
+	file: A20140804T131040 mana_urg.png
+	file: A20140804T131040 mana_w.png
+	file: A20140804T131039 mana_w_half.png
+	file: A20140804T131039 mana_wb.png
+	file: A20140804T131039 mana_wbr.png
+	file: A20140804T131039 mana_wu.png
+	file: A20140804T131039 mana_wub.png
+	file: A20140804T131040 mana_x.png
+	file: A20140804T131040 mana_y.png
+	file: A20140804T131040 mana_z.png
+	file: A20140804T131039 symbol-font
+package:
+	name: magic-mana-small-grey.mse-symbol-font
+	version: 2009-08-10
+	status: 34
+	file: A20140804T131019 mana_1_half.png
+	file: A20140804T131019 mana_b.png
+	file: A20140804T131019 mana_b_half.png
+	file: A20140804T131019 mana_bg.png
+	file: A20140804T131019 mana_bgw.png
+	file: A20140804T131019 mana_br.png
+	file: A20140804T131019 mana_brg.png
+	file: A20140804T131019 mana_chaos.png
+	file: A20140804T131019 mana_circle.png
+	file: A20140804T131019 mana_g.png
+	file: A20140804T131019 mana_g_half.png
+	file: A20140804T131019 mana_gu.png
+	file: A20140804T131019 mana_gub.png
+	file: A20140804T131019 mana_guild_bg.png
+	file: A20140804T131019 mana_guild_br.png
+	file: A20140804T131019 mana_guild_gu.png
+	file: A20140804T131019 mana_guild_gw.png
+	file: A20140804T131019 mana_guild_rg.png
+	file: A20140804T131019 mana_guild_rw.png
+	file: A20140804T131019 mana_guild_ub.png
+	file: A20140804T131019 mana_guild_ur.png
+	file: A20140804T131019 mana_guild_wb.png
+	file: A20140804T131019 mana_guild_wu.png
+	file: A20140804T131019 mana_gw.png
+	file: A20140804T131019 mana_gwu.png
+	file: A20140804T131019 mana_infinite.png
+	file: A20140804T131019 mana_nb.png
+	file: A20140804T131019 mana_ng.png
+	file: A20140804T131019 mana_nr.png
+	file: A20140804T131019 mana_nu.png
+	file: A20140804T131019 mana_nw.png
+	file: A20140804T131019 mana_q.png
+	file: A20140804T131019 mana_q_old.png
+	file: A20140804T131019 mana_q_older.png
+	file: A20140804T131019 mana_r.png
+	file: A20140804T131019 mana_r_half.png
+	file: A20140804T131019 mana_rg.png
+	file: A20140804T131019 mana_rgw.png
+	file: A20140804T131019 mana_rw.png
+	file: A20140804T131019 mana_rwu.png
+	file: A20140804T131019 mana_s.png
+	file: A20140804T131019 mana_s_half.png
+	file: A20140804T131019 mana_t.png
+	file: A20140804T131019 mana_t_old.png
+	file: A20140804T131019 mana_t_older.png
+	file: A20140804T131019 mana_u.png
+	file: A20140804T131019 mana_u_half.png
+	file: A20140804T131019 mana_ub.png
+	file: A20140804T131019 mana_ubr.png
+	file: A20140804T131019 mana_ur.png
+	file: A20140804T131019 mana_urg.png
+	file: A20140804T131019 mana_w.png
+	file: A20140804T131019 mana_w_half.png
+	file: A20140804T131019 mana_wb.png
+	file: A20140804T131019 mana_wbr.png
+	file: A20140804T131019 mana_wu.png
+	file: A20140804T131019 mana_wub.png
+	file: A20140804T131019 mana_x.png
+	file: A20140804T131019 mana_y.png
+	file: A20140804T131019 mana_z.png
+	file: A20140804T131019 symbol-font
+package:
+	name: magic-mana-small.mse-symbol-font
+	version: 2011-04-11
+	status: 34
+	file: A20140804T131036 mana_1_half.png
+	file: A20140804T131036 mana_b.png
+	file: A20140804T131036 mana_b_half.png
+	file: A20140804T131036 mana_bg.png
+	file: A20140804T131036 mana_bgw.png
+	file: A20140804T131036 mana_br.png
+	file: A20140804T131036 mana_brg.png
+	file: A20140804T131036 mana_chaos.png
+	file: A20140804T131036 mana_circle.png
+	file: A20140804T131036 mana_g.png
+	file: A20140804T131036 mana_g_half.png
+	file: A20140804T131036 mana_gu.png
+	file: A20140804T131036 mana_gub.png
+	file: A20140804T131036 mana_guild_bg.png
+	file: A20140804T131036 mana_guild_br.png
+	file: A20140804T131036 mana_guild_gu.png
+	file: A20140804T131036 mana_guild_gw.png
+	file: A20140804T131036 mana_guild_rg.png
+	file: A20140804T131036 mana_guild_rw.png
+	file: A20140804T131036 mana_guild_ub.png
+	file: A20140804T131036 mana_guild_ur.png
+	file: A20140804T131036 mana_guild_wb.png
+	file: A20140804T131036 mana_guild_wu.png
+	file: A20140804T131036 mana_gw.png
+	file: A20140804T131036 mana_gwu.png
+	file: A20140804T131036 mana_infinite.png
+	file: A20140804T131036 mana_nb.png
+	file: A20140804T131036 mana_ng.png
+	file: A20140804T131036 mana_nr.png
+	file: A20140804T131036 mana_nu.png
+	file: A20140804T131036 mana_nw.png
+	file: A20140804T131036 mana_phyb.png
+	file: A20140804T131036 mana_phyc.png
+	file: A20140804T131036 mana_phyg.png
+	file: A20140804T131036 mana_phyr.png
+	file: A20140804T131036 mana_phyu.png
+	file: A20140804T131036 mana_phyw.png
+	file: A20140804T131036 mana_q.png
+	file: A20140804T131036 mana_q_old.png
+	file: A20140804T131036 mana_q_older.png
+	file: A20140804T131036 mana_r.png
+	file: A20140804T131036 mana_r_half.png
+	file: A20140804T131036 mana_rg.png
+	file: A20140804T131036 mana_rgw.png
+	file: A20140804T131036 mana_rw.png
+	file: A20140804T131036 mana_rwu.png
+	file: A20140804T131036 mana_s.png
+	file: A20140804T131036 mana_s_half.png
+	file: A20140804T131036 mana_t.png
+	file: A20140804T131036 mana_t_old.png
+	file: A20140804T131036 mana_t_older.png
+	file: A20140804T131036 mana_u.png
+	file: A20140804T131036 mana_u_half.png
+	file: A20140804T131036 mana_ub.png
+	file: A20140804T131036 mana_ubr.png
+	file: A20140804T131036 mana_ur.png
+	file: A20140804T131036 mana_urg.png
+	file: A20140804T131036 mana_w.png
+	file: A20140804T131036 mana_w_half.png
+	file: A20140804T131036 mana_wb.png
+	file: A20140804T131036 mana_wbr.png
+	file: A20140804T131036 mana_wu.png
+	file: A20140804T131036 mana_wub.png
+	file: A20140804T131036 mana_x.png
+	file: A20140804T131036 mana_y.png
+	file: A20140804T131036 mana_z.png
+	file: A20140804T131036 symbol-font
+package:
+	name: magic-new-clear.mse-style
+	version: 2010-04-01
+	status: 34
+	file: A20140804T131031 border_mask.png
+	file: A20140804T131031 card-sample.png
+	file: A20140804T131031 frame.png
+	file: A20140804T131031 image_mask.png
+	file: A20140804T131031 imageborder.png
+	file: A20140804T131031 pt_box.png
+	file: A20140804T131031 style
+	file: A20140804T131031 tombstone.png
+package:
+	name: magic-new-common.mse-include
+	version: 2011-09-11
+	status: 34
+	file: A20140804T131020 aidentity.png
+	file: A20140804T131019 artifact_blend_identity.png
+	file: A20140804T131019 baidentity.png
+	file: A20140804T131020 bidentity.png
+	file: A20140804T131019 cidentity.png
+	file: A20140804T131020 dartifact_blend_identity.png
+	file: A20140804T131019 dmulticolor_blend_identity.png
+	file: A20140804T131019 gidentity.png
+	file: A20140804T131019 hybrid_blend_identity.png
+	file: A20140804T131019 include
+	file: A20140804T131020 inverse_blend_identity.png
+	file: A20140804T131019 midentity.png
+	file: A20140804T131019 multicolor_blend_identity.png
+	file: A20140804T131020 nartifact_blend_identity.png
+	file: A20140804T131020 nmulticolor_blend_identity.png
+	file: A20140804T131020 omidentity.png
+	file: A20140804T131019 paintbrush_black.png
+	file: A20140804T131020 paintbrush_white.png
+	file: A20140804T131019 ridentity.png
+	file: A20140804T131019 uidentity.png
+	file: A20140804T131020 widentity.png
+package:
+	name: magic-new-flip.mse-style
+	version: 2010-12-17
+	status: 34
+	file: A20140804T131033 acard.jpg
+	file: A20140804T131034 apt.jpg
+	file: A20140804T131033 apt2.jpg
+	file: A20140804T131034 artifact_blend_card.png
+	file: A20140804T131033 artifact_blend_pt.png
+	file: A20140804T131034 artifact_blend_pt2.png
+	file: A20140804T131033 bcard.jpg
+	file: A20140804T131034 blcard.jpg
+	file: A20140804T131034 blpt.jpg
+	file: A20140804T131033 blpt2.jpg
+	file: A20140804T131034 bpt.jpg
+	file: A20140804T131034 bpt2.jpg
+	file: A20140804T131034 card-sample.png
+	file: A20140804T131033 ccard.jpg
+	file: A20140804T131033 clcard.jpg
+	file: A20140804T131033 clpt.jpg
+	file: A20140804T131033 clpt2.jpg
+	file: A20140804T131034 cpt.jpg
+	file: A20140804T131033 cpt2.jpg
+	file: A20140804T131033 gcard.jpg
+	file: A20140804T131034 glcard.jpg
+	file: A20140804T131033 glpt.jpg
+	file: A20140804T131034 glpt2.jpg
+	file: A20140804T131034 gpt.jpg
+	file: A20140804T131033 gpt2.jpg
+	file: A20140804T131034 hybrid_blend_card.png
+	file: A20140804T131034 hybrid_blend_pt.png
+	file: A20140804T131034 hybrid_blend_pt2.png
+	file: A20140804T131034 imgmask.png
+	file: A20140804T131034 mask_pt.png
+	file: A20140804T131034 mask_pt2.png
+	file: A20140804T131033 mcard.jpg
+	file: A20140804T131033 mpt.jpg
+	file: A20140804T131033 mpt2.jpg
+	file: A20140804T131034 multicolor_blend_card.png
+	file: A20140804T131033 multicolor_blend_pt.png
+	file: A20140804T131033 multicolor_blend_pt2.png
+	file: A20140804T131034 rcard.jpg
+	file: A20140804T131033 rlcard.jpg
+	file: A20140804T131034 rlpt.jpg
+	file: A20140804T131034 rlpt2.jpg
+	file: A20140804T131033 rpt.jpg
+	file: A20140804T131034 rpt2.jpg
+	file: A20140804T131034 style
+	file: A20140804T131034 tombstone.png
+	file: A20140804T131034 ucard.jpg
+	file: A20140804T131034 ulcard.jpg
+	file: A20140804T131033 ulpt.jpg
+	file: A20140804T131034 ulpt2.jpg
+	file: A20140804T131033 upt.jpg
+	file: A20140804T131034 upt2.jpg
+	file: A20140804T131034 wcard.jpg
+	file: A20140804T131034 wlcard.jpg
+	file: A20140804T131033 wlpt.jpg
+	file: A20140804T131034 wlpt2.jpg
+	file: A20140804T131033 wpt.jpg
+	file: A20140804T131034 wpt2.jpg
+package:
+	name: magic-new-leveler.mse-style
+	version: 2010-04-06
+	status: 34
+	file: A20140804T131027 acard.jpg
+	file: A20140804T131027 apt.jpg
+	file: A20140804T131027 artifact_blend_card.png
+	file: A20140804T131027 artifact_blend_pt.png
+	file: A20140804T131027 bacard.jpg
+	file: A20140804T131027 bapt.jpg
+	file: A20140804T131027 bcard.jpg
+	file: A20140804T131027 blcard.jpg
+	file: A20140804T131027 blpt.jpg
+	file: A20140804T131027 bpt.jpg
+	file: A20140804T131027 card-sample.png
+	file: A20140804T131027 ccard.jpg
+	file: A20140804T131027 clcard.jpg
+	file: A20140804T131026 clpt.jpg
+	file: A20140804T131027 cpt.jpg
+	file: A20140804T131027 gcard.jpg
+	file: A20140804T131027 glcard.jpg
+	file: A20140804T131027 glpt.jpg
+	file: A20140804T131027 gpt.jpg
+	file: A20140804T131027 hybrid_blend_card.png
+	file: A20140804T131027 hybrid_blend_pt.png
+	file: A20140804T131027 imagemask_extended.png
+	file: A20140804T131027 imagemask_standard.png
+	file: A20140804T131027 lvlup_multiply_1.png
+	file: A20140804T131027 lvlup_multiply_2.png
+	file: A20140804T131027 lvlup_texture_1.png
+	file: A20140804T131027 lvlup_texture_2.png
+	file: A20140804T131027 mcard.jpg
+	file: A20140804T131027 mlcard.jpg
+	file: A20140804T131027 mlpt.jpg
+	file: A20140804T131026 mpt.jpg
+	file: A20140804T131027 multicolor_blend_card.png
+	file: A20140804T131026 multicolor_blend_pt.png
+	file: A20140804T131027 oacard.jpg
+	file: A20140804T131026 oapt.jpg
+	file: A20140804T131027 omcard.jpg
+	file: A20140804T131027 omlcard.jpg
+	file: A20140804T131027 omlpt.jpg
+	file: A20140804T131027 ompt.jpg
+	file: A20140804T131027 ptbox_multiply_1.png
+	file: A20140804T131027 ptbox_multiply_2.png
+	file: A20140804T131027 ptbox_shadow.png
+	file: A20140804T131026 ptmask.png
+	file: A20140804T131027 rcard.jpg
+	file: A20140804T131027 rlcard.jpg
+	file: A20140804T131027 rlpt.jpg
+	file: A20140804T131027 rpt.jpg
+	file: A20140804T131027 style
+	file: A20140804T131027 tombstone.png
+	file: A20140804T131027 ucard.jpg
+	file: A20140804T131027 ulcard.jpg
+	file: A20140804T131027 ulpt.jpg
+	file: A20140804T131027 upt.jpg
+	file: A20140804T131027 wcard.jpg
+	file: A20140804T131027 wlcard.jpg
+	file: A20140804T131027 wlpt.jpg
+	file: A20140804T131027 wpt.jpg
+package:
+	name: magic-new-planeswalker-4abil.mse-style
+	version: 2009-12-18
+	status: 34
+	file: A20140804T131023 acard.jpg
+	file: A20140804T131023 artifact_blend_card.png
+	file: A20140804T131023 bcard.jpg
+	file: A20140804T131023 border_mask.png
+	file: A20140804T131023 card-sample.png
+	file: A20140804T131023 ccard.jpg
+	file: A20140804T131023 gcard.jpg
+	file: A20140804T131023 hybrid_blend_card.png
+	file: A20140804T131023 image_mask.png
+	file: A20140804T131023 loyalty.png
+	file: A20140804T131023 loyaltydown.png
+	file: A20140804T131023 loyaltynaught.png
+	file: A20140804T131023 loyaltyup.png
+	file: A20140804T131023 mcard.jpg
+	file: A20140804T131023 multicolor_blend_card.png
+	file: A20140804T131023 rcard.jpg
+	file: A20140804T131023 style
+	file: A20140804T131023 text_mask.png
+	file: A20140804T131023 tombstone.png
+	file: A20140804T131023 ucard.jpg
+	file: A20140804T131023 wcard.jpg
+package:
+	name: magic-new-planeswalker.mse-style
+	version: 2009-12-18
+	status: 34
+	file: A20140804T131033 acard.jpg
+	file: A20140804T131033 artifact_blend_card.png
+	file: A20140804T131033 bcard.jpg
+	file: A20140804T131033 border_mask.png
+	file: A20140804T131033 card-sample.png
+	file: A20140804T131033 ccard.jpg
+	file: A20140804T131033 gcard.jpg
+	file: A20140804T131033 hybrid_blend_card.png
+	file: A20140804T131033 image_mask.png
+	file: A20140804T131033 loyalty.png
+	file: A20140804T131033 loyaltydown.png
+	file: A20140804T131033 loyaltynaught.png
+	file: A20140804T131033 loyaltyup.png
+	file: A20140804T131033 mcard.jpg
+	file: A20140804T131033 multicolor_blend_card.png
+	file: A20140804T131033 rcard.jpg
+	file: A20140804T131033 style
+	file: A20140804T131033 text_mask.png
+	file: A20140804T131033 tombstone.png
+	file: A20140804T131033 ucard.jpg
+	file: A20140804T131033 wcard.jpg
+package:
+	name: magic-new-promo.mse-style
+	version: 2009-07-07
+	status: 34
+	file: A20140804T131025 acard.jpg
+	file: A20140804T131025 apt.jpg
+	file: A20140804T131025 artifact_blend_card.png
+	file: A20140804T131025 artifact_blend_pt.png
+	file: A20140804T131025 bcard.jpg
+	file: A20140804T131025 blcard.jpg
+	file: A20140804T131025 blpt.jpg
+	file: A20140804T131025 bpt.jpg
+	file: A20140804T131025 card-sample.png
+	file: A20140804T131025 ccard.jpg
+	file: A20140804T131025 clcard.jpg
+	file: A20140804T131025 clpt.jpg
+	file: A20140804T131025 cpt.jpg
+	file: A20140804T131025 gcard.jpg
+	file: A20140804T131025 glcard.jpg
+	file: A20140804T131025 glpt.jpg
+	file: A20140804T131025 gpt.jpg
+	file: A20140804T131025 hybrid_blend_card.png
+	file: A20140804T131025 hybrid_blend_pt.png
+	file: A20140804T131025 mask_pt.png
+	file: A20140804T131025 mcard.jpg
+	file: A20140804T131025 mlcard.jpg
+	file: A20140804T131025 mlpt.jpg
+	file: A20140804T131025 mpt.jpg
+	file: A20140804T131025 multicolor_blend_card.png
+	file: A20140804T131025 multicolor_blend_pt.png
+	file: A20140804T131025 oacard.jpg
+	file: A20140804T131025 oapt.jpg
+	file: A20140804T131025 omcard.jpg
+	file: A20140804T131025 omlcard.jpg
+	file: A20140804T131025 omlpt.jpg
+	file: A20140804T131025 ompt.jpg
+	file: A20140804T131025 rcard.jpg
+	file: A20140804T131025 rlcard.jpg
+	file: A20140804T131025 rlpt.jpg
+	file: A20140804T131025 rpt.jpg
+	file: A20140804T131025 style
+	file: A20140804T131025 tombstone.png
+	file: A20140804T131025 ucard.jpg
+	file: A20140804T131025 ulcard.jpg
+	file: A20140804T131025 ulpt.jpg
+	file: A20140804T131025 upt.jpg
+	file: A20140804T131025 wcard.jpg
+	file: A20140804T131025 wlcard.jpg
+	file: A20140804T131025 wlpt.jpg
+	file: A20140804T131025 wpt.jpg
+package:
+	name: magic-new-split.mse-style
+	version: 2009-07-06
+	status: 34
+	file: A20140804T131041 acard.jpg
+	file: A20140804T131041 apt.jpg
+	file: A20140804T131041 artifact_blend_card.png
+	file: A20140804T131041 artifact_blend_pt.png
+	file: A20140804T131041 bcard.jpg
+	file: A20140804T131041 blcard.jpg
+	file: A20140804T131041 blpt.jpg
+	file: A20140804T131041 bpt.jpg
+	file: A20140804T131041 card-sample.png
+	file: A20140804T131041 ccard.jpg
+	file: A20140804T131041 clcard.jpg
+	file: A20140804T131041 clpt.jpg
+	file: A20140804T131041 cpt.jpg
+	file: A20140804T131041 gcard.jpg
+	file: A20140804T131041 glcard.jpg
+	file: A20140804T131041 glpt.jpg
+	file: A20140804T131041 gpt.jpg
+	file: A20140804T131041 hybrid_blend_card.png
+	file: A20140804T131041 hybrid_blend_pt.png
+	file: A20140804T131041 mcard.jpg
+	file: A20140804T131041 mlcard.jpg
+	file: A20140804T131041 mlpt.jpg
+	file: A20140804T131041 mpt.jpg
+	file: A20140804T131041 multicolor_blend_card.png
+	file: A20140804T131041 multicolor_blend_pt.png
+	file: A20140804T131041 oacard.jpg
+	file: A20140804T131041 oapt.jpg
+	file: A20140804T131041 omcard.jpg
+	file: A20140804T131041 omlcard.jpg
+	file: A20140804T131041 omlpt.jpg
+	file: A20140804T131041 ompt.jpg
+	file: A20140804T131041 rcard.jpg
+	file: A20140804T131041 rlcard.jpg
+	file: A20140804T131041 rlpt.jpg
+	file: A20140804T131041 rpt.jpg
+	file: A20140804T131041 style
+	file: A20140804T131041 tombstone.png
+	file: A20140804T131041 ucard.jpg
+	file: A20140804T131041 ulcard.jpg
+	file: A20140804T131041 ulpt.jpg
+	file: A20140804T131041 upt.jpg
+	file: A20140804T131041 wcard.jpg
+	file: A20140804T131041 wlcard.jpg
+	file: A20140804T131041 wlpt.jpg
+	file: A20140804T131041 wpt.jpg
+package:
+	name: magic-new-textless-land.mse-style
+	version: 2009-08-10
+	status: 34
+	file: A20140804T131031 artifact_blend_card.png
+	file: A20140804T131031 blcard.jpg
+	file: A20140804T131031 card-sample.png
+	file: A20140804T131031 clcard.jpg
+	file: A20140804T131031 glcard.jpg
+	file: A20140804T131031 hybrid_blend_card.png
+	file: A20140804T131031 image_mask.png
+	file: A20140804T131031 mlcard.jpg
+	file: A20140804T131031 multicolor_blend_card.png
+	file: A20140804T131031 rlcard.jpg
+	file: A20140804T131031 style
+	file: A20140804T131031 ulcard.jpg
+	file: A20140804T131031 wlcard.jpg
+package:
+	name: magic-new-token-clear.mse-style
+	version: 2010-04-01
+	status: 34
+	file: A20140804T131027 border_mask.png
+	file: A20140804T131027 card-sample.png
+	file: A20140804T131027 frame0.png
+	file: A20140804T131027 frame1.png
+	file: A20140804T131027 frame2.png
+	file: A20140804T131027 image_mask.png
+	file: A20140804T131027 name-left.png
+	file: A20140804T131027 name-mid.png
+	file: A20140804T131027 name-right.png
+	file: A20140804T131027 pt_box.png
+	file: A20140804T131027 style
+package:
+	name: magic-new-token.mse-style
+	version: 2010-07-25
+	status: 34
+	file: A20140804T131050 acard0.jpg
+	file: A20140804T131050 acard1.jpg
+	file: A20140804T131051 acard2.jpg
+	file: A20140804T131051 apt.png
+	file: A20140804T131050 artifact_blend_card0.png
+	file: A20140804T131050 artifact_blend_card1.png
+	file: A20140804T131050 artifact_blend_card2.png
+	file: A20140804T131050 artifact_blend_pt.png
+	file: A20140804T131051 bcard0.jpg
+	file: A20140804T131051 bcard1.jpg
+	file: A20140804T131051 bcard2.jpg
+	file: A20140804T131050 blcard0.jpg
+	file: A20140804T131050 blcard1.jpg
+	file: A20140804T131050 blcard2.jpg
+	file: A20140804T131050 bpt.png
+	file: A20140804T131050 card-sample.png
+	file: A20140804T131050 ccard0.jpg
+	file: A20140804T131050 ccard1.jpg
+	file: A20140804T131050 ccard2.jpg
+	file: A20140804T131051 clcard0.jpg
+	file: A20140804T131051 clcard1.jpg
+	file: A20140804T131051 clcard2.jpg
+	file: A20140804T131051 cpt.png
+	file: A20140804T131050 gcard0.jpg
+	file: A20140804T131050 gcard1.jpg
+	file: A20140804T131050 gcard2.jpg
+	file: A20140804T131051 glcard0.jpg
+	file: A20140804T131051 glcard1.jpg
+	file: A20140804T131051 glcard2.jpg
+	file: A20140804T131051 gpt.png
+	file: A20140804T131050 hybrid_blend_card0.png
+	file: A20140804T131050 hybrid_blend_card1.png
+	file: A20140804T131050 hybrid_blend_card2.png
+	file: A20140804T131051 hybrid_blend_pt.png
+	file: A20140804T131050 imagemask0.png
+	file: A20140804T131050 imagemask1.png
+	file: A20140804T131050 imagemask2.png
+	file: A20140804T131051 mcard0.jpg
+	file: A20140804T131051 mcard1.jpg
+	file: A20140804T131051 mcard2.jpg
+	file: A20140804T131051 mlcard0.jpg
+	file: A20140804T131051 mlcard1.jpg
+	file: A20140804T131051 mlcard2.jpg
+	file: A20140804T131050 mpt.png
+	file: A20140804T131050 multicolor_blend_card0.png
+	file: A20140804T131050 multicolor_blend_card1.png
+	file: A20140804T131050 multicolor_blend_card2.png
+	file: A20140804T131050 multicolor_blend_pt.png
+	file: A20140804T131050 name-left.png
+	file: A20140804T131051 name-mid.png
+	file: A20140804T131051 name-right.png
+	file: A20140804T131050 rcard0.jpg
+	file: A20140804T131050 rcard1.jpg
+	file: A20140804T131050 rcard2.jpg
+	file: A20140804T131050 rlcard0.jpg
+	file: A20140804T131050 rlcard1.jpg
+	file: A20140804T131050 rlcard2.jpg
+	file: A20140804T131050 rpt.png
+	file: A20140804T131051 style
+	file: A20140804T131051 ucard0.jpg
+	file: A20140804T131051 ucard1.jpg
+	file: A20140804T131051 ucard2.jpg
+	file: A20140804T131051 ulcard0.jpg
+	file: A20140804T131051 ulcard1.jpg
+	file: A20140804T131051 ulcard2.jpg
+	file: A20140804T131050 upt.png
+	file: A20140804T131050 wcard0.jpg
+	file: A20140804T131050 wcard1.jpg
+	file: A20140804T131050 wcard2.jpg
+	file: A20140804T131051 wlcard0.jpg
+	file: A20140804T131051 wlcard1.jpg
+	file: A20140804T131051 wlcard2.jpg
+	file: A20140804T131050 wpt.png
+package:
+	name: magic-new-transform.mse-style
+	version: 2011-09-15
+	status: 34
+	file: A20140804T131048 artifact_blend_pt.png
+	file: A20140804T131048 border-mask.png
+	file: A20140804T131048 card-sample.png
+	file: A20140804T131048 dacard.jpg
+	file: A20140804T131048 dapt.jpg
+	file: A20140804T131048 dartifact_blend_card.png
+	file: A20140804T131048 dartifact_blend_pt.png
+	file: A20140804T131048 dbacard.jpg
+	file: A20140804T131048 dbapt.jpg
+	file: A20140804T131048 dbcard.jpg
+	file: A20140804T131048 dblcard.jpg
+	file: A20140804T131048 dblpt.jpg
+	file: A20140804T131048 dbpt.jpg
+	file: A20140804T131048 dccard.jpg
+	file: A20140804T131048 dclcard.jpg
+	file: A20140804T131048 dclpt.jpg
+	file: A20140804T131048 dcpt.jpg
+	file: A20140804T131048 dgcard.jpg
+	file: A20140804T131048 dglcard.jpg
+	file: A20140804T131048 dglpt.jpg
+	file: A20140804T131048 dgpt.jpg
+	file: A20140804T131048 dmcard.jpg
+	file: A20140804T131048 dmlcard.jpg
+	file: A20140804T131048 dmlpt.jpg
+	file: A20140804T131048 dmpt.jpg
+	file: A20140804T131048 dmulticolor_blend_card.png
+	file: A20140804T131048 dmulticolor_blend_pt.png
+	file: A20140804T131048 domcard.jpg
+	file: A20140804T131048 domlcard.jpg
+	file: A20140804T131048 domlpt.jpg
+	file: A20140804T131048 dompt.jpg
+	file: A20140804T131048 drcard.jpg
+	file: A20140804T131048 drlcard.jpg
+	file: A20140804T131048 drlpt.jpg
+	file: A20140804T131048 drpt.jpg
+	file: A20140804T131048 ducard.jpg
+	file: A20140804T131048 dulcard.jpg
+	file: A20140804T131048 dulpt.jpg
+	file: A20140804T131048 dupt.jpg
+	file: A20140804T131048 dwcard.jpg
+	file: A20140804T131048 dwlcard.jpg
+	file: A20140804T131048 dwlpt.jpg
+	file: A20140804T131048 dwpt.jpg
+	file: A20140804T131048 hybrid_blend_card.png
+	file: A20140804T131048 hybrid_blend_pt.png
+	file: A20140804T131048 imagemask_extended.png
+	file: A20140804T131048 imagemask_standard.png
+	file: A20140804T131048 multicolor_blend_pt.png
+	file: A20140804T131048 nacard.jpg
+	file: A20140804T131048 napt.jpg
+	file: A20140804T131048 nartifact_blend_card.png
+	file: A20140804T131048 nartifact_blend_pt.png
+	file: A20140804T131048 nbacard.jpg
+	file: A20140804T131048 nbapt.jpg
+	file: A20140804T131048 nbcard.jpg
+	file: A20140804T131048 nblcard.jpg
+	file: A20140804T131048 nblpt.jpg
+	file: A20140804T131048 nbpt.jpg
+	file: A20140804T131048 nccard.jpg
+	file: A20140804T131048 nclcard.jpg
+	file: A20140804T131048 nclpt.jpg
+	file: A20140804T131048 ncpt.jpg
+	file: A20140804T131048 ngcard.jpg
+	file: A20140804T131048 nglcard.jpg
+	file: A20140804T131048 nglpt.jpg
+	file: A20140804T131048 ngpt.jpg
+	file: A20140804T131048 night_circle.png
+	file: A20140804T131048 nmcard.jpg
+	file: A20140804T131048 nmlcard.jpg
+	file: A20140804T131048 nmlpt.jpg
+	file: A20140804T131048 nmpt.jpg
+	file: A20140804T131048 nmulticolor_blend_card.png
+	file: A20140804T131048 nmulticolor_blend_pt.png
+	file: A20140804T131048 nomcard.jpg
+	file: A20140804T131048 nomlcard.jpg
+	file: A20140804T131048 nomlpt.jpg
+	file: A20140804T131048 nompt.jpg
+	file: A20140804T131048 nrcard.jpg
+	file: A20140804T131048 nrlcard.jpg
+	file: A20140804T131048 nrlpt.jpg
+	file: A20140804T131048 nrpt.jpg
+	file: A20140804T131048 nucard.jpg
+	file: A20140804T131048 nulcard.jpg
+	file: A20140804T131048 nulpt.jpg
+	file: A20140804T131048 nupt.jpg
+	file: A20140804T131048 nwcard.jpg
+	file: A20140804T131048 nwlcard.jpg
+	file: A20140804T131048 nwlpt.jpg
+	file: A20140804T131048 nwpt.jpg
+	file: A20140804T131048 ptmask.png
+	file: A20140804T131048 style
+	file: A20140804T131048 sun_circle.png
+	file: A20140804T131048 tombstone.png
+package:
+	name: magic-new.mse-style
+	version: 2011-09-15
+	status: 34
+	file: A20140804T131018 acard.jpg
+	file: A20140804T131018 apt.jpg
+	file: A20140804T131018 artifact_blend_card.png
+	file: A20140804T131018 artifact_blend_pt.png
+	file: A20140804T131018 bacard.jpg
+	file: A20140804T131018 bapt.jpg
+	file: A20140804T131018 bcard.jpg
+	file: A20140804T131018 blcard.jpg
+	file: A20140804T131018 blpt.jpg
+	file: A20140804T131018 bpt.jpg
+	file: A20140804T131018 card-sample.png
+	file: A20140804T131018 ccard.jpg
+	file: A20140804T131018 clcard.jpg
+	file: A20140804T131018 clpt.jpg
+	file: A20140804T131018 cpt.jpg
+	file: A20140804T131018 gcard.jpg
+	file: A20140804T131018 glcard.jpg
+	file: A20140804T131018 glpt.jpg
+	file: A20140804T131018 gpt.jpg
+	file: A20140804T131018 hybrid_blend_card.png
+	file: A20140804T131018 hybrid_blend_pt.png
+	file: A20140804T131018 imagemask_extended.png
+	file: A20140804T131018 imagemask_standard.png
+	file: A20140804T131018 mcard.jpg
+	file: A20140804T131018 mlcard.jpg
+	file: A20140804T131018 mlpt.jpg
+	file: A20140804T131018 mpt.jpg
+	file: A20140804T131018 multicolor_blend_card.png
+	file: A20140804T131018 multicolor_blend_pt.png
+	file: A20140804T131018 oacard.jpg
+	file: A20140804T131018 oapt.jpg
+	file: A20140804T131018 omcard.jpg
+	file: A20140804T131018 omlcard.jpg
+	file: A20140804T131018 omlpt.jpg
+	file: A20140804T131018 ompt.jpg
+	file: A20140804T131018 ptmask.png
+	file: A20140804T131018 rcard.jpg
+	file: A20140804T131018 rlcard.jpg
+	file: A20140804T131018 rlpt.jpg
+	file: A20140804T131018 rpt.jpg
+	file: A20140804T131018 style
+	file: A20140804T131018 tombstone.png
+	file: A20140804T131018 ucard.jpg
+	file: A20140804T131018 ulcard.jpg
+	file: A20140804T131018 ulpt.jpg
+	file: A20140804T131018 upt.jpg
+	file: A20140804T131018 wcard.jpg
+	file: A20140804T131018 wlcard.jpg
+	file: A20140804T131018 wlpt.jpg
+	file: A20140804T131018 wpt.jpg
+package:
+	name: magic-old-promo.mse-style
+	version: 2009-07-09
+	status: 34
+	file: A20140804T131029 acard.png
+	file: A20140804T131029 bcard.png
+	file: A20140804T131029 card-sample.png
+	file: A20140804T131029 gcard.png
+	file: A20140804T131029 mcard.png
+	file: A20140804T131029 multicolor_blend_card.png
+	file: A20140804T131029 multicolor_blend_card2.png
+	file: A20140804T131029 rcard.png
+	file: A20140804T131029 style
+	file: A20140804T131029 tombstone.png
+	file: A20140804T131029 ucard.png
+	file: A20140804T131029 wcard.png
+package:
+	name: magic-old-split.mse-style
+	version: 2009-07-09
+	status: 34
+	file: A20140804T131050 acard.jpg
+	file: A20140804T131050 bcard.jpg
+	file: A20140804T131050 blcard.jpg
+	file: A20140804T131050 card-sample.png
+	file: A20140804T131050 ccard.jpg
+	file: A20140804T131050 clcard.jpg
+	file: A20140804T131050 gcard.jpg
+	file: A20140804T131050 glcard.jpg
+	file: A20140804T131050 land_blend_card.png
+	file: A20140804T131050 mcard.jpg
+	file: A20140804T131050 mlcard.jpg
+	file: A20140804T131050 multicolor_blend_card.png
+	file: A20140804T131050 multicolor_blend_card2.png
+	file: A20140804T131050 oacard.jpg
+	file: A20140804T131050 rcard.jpg
+	file: A20140804T131050 rlcard.jpg
+	file: A20140804T131050 style
+	file: A20140804T131050 tombstone.png
+	file: A20140804T131050 ucard.jpg
+	file: A20140804T131050 ulcard.jpg
+	file: A20140804T131050 wcard.jpg
+	file: A20140804T131050 wlcard.jpg
+package:
+	name: magic-old-textless.mse-style
+	version: 2009-07-09
+	status: 34
+	file: A20140804T131035 acard.png
+	file: A20140804T131035 bcard.png
+	file: A20140804T131035 card-sample.png
+	file: A20140804T131035 gcard.png
+	file: A20140804T131035 mcard.png
+	file: A20140804T131035 multicolor_blend_card.png
+	file: A20140804T131035 multicolor_blend_card2.png
+	file: A20140804T131035 rcard.png
+	file: A20140804T131035 style
+	file: A20140804T131035 tombstone.png
+	file: A20140804T131035 ucard.png
+	file: A20140804T131035 wcard.png
+package:
+	name: magic-old-token.mse-style
+	version: 2009-07-09
+	status: 34
+	file: A20140804T131018 acard.jpg
+	file: A20140804T131018 bcard.jpg
+	file: A20140804T131019 card-sample.png
+	file: A20140804T131019 ccard.jpg
+	file: A20140804T131018 gcard.jpg
+	file: A20140804T131018 mcard.jpg
+	file: A20140804T131018 multicolor_blend_card.png
+	file: A20140804T131019 multicolor_blend_card2.png
+	file: A20140804T131019 rcard.jpg
+	file: A20140804T131018 style
+	file: A20140804T131019 ucard.jpg
+	file: A20140804T131018 wcard.jpg
+package:
+	name: magic-old.mse-style
+	version: 2009-07-09
+	status: 34
+	file: A20140804T131041 acard.jpg
+	file: A20140804T131041 alpha_blend.png
+	file: A20140804T131041 bcard.jpg
+	file: A20140804T131041 blcard.jpg
+	file: A20140804T131041 card-sample.png
+	file: A20140804T131041 ccard.jpg
+	file: A20140804T131041 clcard.jpg
+	file: A20140804T131041 gcard.jpg
+	file: A20140804T131041 glcard.jpg
+	file: A20140804T131041 land_blend_card.png
+	file: A20140804T131041 mcard.jpg
+	file: A20140804T131041 mlcard.jpg
+	file: A20140804T131041 multicolor_blend_card.png
+	file: A20140804T131041 multicolor_blend_card2.png
+	file: A20140804T131041 rcard.jpg
+	file: A20140804T131041 rlcard.jpg
+	file: A20140804T131041 style
+	file: A20140804T131041 tombstone.png
+	file: A20140804T131041 ucard.jpg
+	file: A20140804T131041 ulcard.jpg
+	file: A20140804T131041 wcard.jpg
+	file: A20140804T131041 wlcard.jpg
+package:
+	name: magic-overlay-foil-normal.mse-include
+	version: 2008-08-31
+	status: 34
+	file: A20140804T131024 include
+	file: A20140804T131024 overlay.png
+package:
+	name: magic-planeshifted-split.mse-style
+	version: 2010-03-26
+	status: 34
+	file: A20140804T131037 acard.jpg
+	file: A20140804T131038 apt.png
+	file: A20140804T131038 artifact_blend_card.png
+	file: A20140804T131037 artifact_blend_pt.png
+	file: A20140804T131037 bcard.jpg
+	file: A20140804T131038 blcard.jpg
+	file: A20140804T131038 blpt.png
+	file: A20140804T131038 bpt.png
+	file: A20140804T131038 card-sample.png
+	file: A20140804T131037 ccard.jpg
+	file: A20140804T131038 clcard.jpg
+	file: A20140804T131037 clpt.png
+	file: A20140804T131038 cpt.png
+	file: A20140804T131038 gcard.jpg
+	file: A20140804T131038 glcard.jpg
+	file: A20140804T131037 glpt.png
+	file: A20140804T131038 gpt.png
+	file: A20140804T131038 hybrid_blend_card.png
+	file: A20140804T131038 hybrid_blend_pt.png
+	file: A20140804T131038 mcard.jpg
+	file: A20140804T131038 mlcard.jpg
+	file: A20140804T131037 mlpt.png
+	file: A20140804T131037 mpt.png
+	file: A20140804T131038 multicolor_blend_card.png
+	file: A20140804T131037 multicolor_blend_pt.png
+	file: A20140804T131038 rcard.jpg
+	file: A20140804T131037 rlcard.jpg
+	file: A20140804T131038 rlpt.png
+	file: A20140804T131037 rpt.png
+	file: A20140804T131038 style
+	file: A20140804T131038 tombstone.png
+	file: A20140804T131038 ucard.jpg
+	file: A20140804T131038 ulcard.jpg
+	file: A20140804T131038 ulpt.png
+	file: A20140804T131037 upt.png
+	file: A20140804T131038 wcard.jpg
+	file: A20140804T131038 wlcard.jpg
+	file: A20140804T131038 wlpt.png
+	file: A20140804T131037 wpt.png
+package:
+	name: magic-planeshifted.mse-style
+	version: 2010-02-02
+	status: 34
+	file: A20140804T131028 acard.jpg
+	file: A20140804T131028 apt.png
+	file: A20140804T131028 artifact_blend_card.png
+	file: A20140804T131028 artifact_blend_pt.png
+	file: A20140804T131028 bcard.jpg
+	file: A20140804T131028 blcard.jpg
+	file: A20140804T131028 blpt.png
+	file: A20140804T131028 bpt.png
+	file: A20140804T131028 card-sample.png
+	file: A20140804T131028 ccard.jpg
+	file: A20140804T131028 clcard.jpg
+	file: A20140804T131028 clpt.png
+	file: A20140804T131028 cpt.png
+	file: A20140804T131028 gcard.jpg
+	file: A20140804T131028 glcard.jpg
+	file: A20140804T131028 glpt.png
+	file: A20140804T131028 gpt.png
+	file: A20140804T131028 hybrid_blend_card.png
+	file: A20140804T131028 hybrid_blend_pt.png
+	file: A20140804T131028 imagemask_extended.png
+	file: A20140804T131028 imagemask_standard.png
+	file: A20140804T131028 mcard.jpg
+	file: A20140804T131028 mlcard.jpg
+	file: A20140804T131028 mlpt.png
+	file: A20140804T131028 mpt.png
+	file: A20140804T131028 multicolor_blend_card.png
+	file: A20140804T131028 multicolor_blend_pt.png
+	file: A20140804T131028 rcard.jpg
+	file: A20140804T131028 rlcard.jpg
+	file: A20140804T131028 rlpt.png
+	file: A20140804T131028 rpt.png
+	file: A20140804T131028 style
+	file: A20140804T131028 tombstone.png
+	file: A20140804T131028 ucard.jpg
+	file: A20140804T131028 ulcard.jpg
+	file: A20140804T131028 ulpt.png
+	file: A20140804T131028 upt.png
+	file: A20140804T131028 wcard.jpg
+	file: A20140804T131028 wlcard.jpg
+	file: A20140804T131028 wlpt.png
+	file: A20140804T131028 wpt.png
+package:
+	name: magic-spoiler.mse-export-template
+	version: 2008-08-07
+	status: 34
+	file: A20140804T131022 blank.gif
+	file: A20140804T131022 export-template
+	file: A20140804T131022 preview.png
+	file: A20140804T131022 sans-serif.png
+	file: A20140804T131022 script.js
+	file: A20140804T131022 serif.png
+	file: A20140804T131022 style.css
+package:
+	name: magic-textless.mse-style
+	version: 2009-07-07
+	status: 34
+	file: A20140804T131030 acard.jpg
+	file: A20140804T131030 apt.jpg
+	file: A20140804T131030 artifact_blend_card.png
+	file: A20140804T131030 artifact_blend_pt.png
+	file: A20140804T131030 bcard.jpg
+	file: A20140804T131030 blpt.jpg
+	file: A20140804T131030 bpt.jpg
+	file: A20140804T131030 card-sample.png
+	file: A20140804T131030 ccard.jpg
+	file: A20140804T131030 clpt.jpg
+	file: A20140804T131030 cpt.jpg
+	file: A20140804T131030 gcard.jpg
+	file: A20140804T131030 glpt.jpg
+	file: A20140804T131030 gpt.jpg
+	file: A20140804T131030 hpt.jpg
+	file: A20140804T131030 hybrid_blend_card.png
+	file: A20140804T131030 hybrid_blend_pt.png
+	file: A20140804T131030 mask_image.png
+	file: A20140804T131030 mask_pt.png
+	file: A20140804T131030 mcard.jpg
+	file: A20140804T131030 mlpt.jpg
+	file: A20140804T131030 mpt.jpg
+	file: A20140804T131030 multicolor_blend_card.png
+	file: A20140804T131030 multicolor_blend_pt.png
+	file: A20140804T131030 oacard.jpg
+	file: A20140804T131030 oapt.jpg
+	file: A20140804T131030 rcard.jpg
+	file: A20140804T131030 rlpt.jpg
+	file: A20140804T131030 rpt.jpg
+	file: A20140804T131030 style
+	file: A20140804T131030 tombstone.png
+	file: A20140804T131030 ucard.jpg
+	file: A20140804T131030 ulpt.jpg
+	file: A20140804T131030 upt.jpg
+	file: A20140804T131030 wcard.jpg
+	file: A20140804T131030 wlpt.jpg
+	file: A20140804T131030 wpt.jpg
+package:
+	name: magic-watermarks.mse-include
+	version: 2010-08-27
+	status: 34
+	file: A20140804T131049 futsymbol_artifact.png
+	file: A20140804T131049 futsymbol_creature.png
+	file: A20140804T131049 futsymbol_enchantment.png
+	file: A20140804T131049 futsymbol_instant.png
+	file: A20140804T131049 futsymbol_land.png
+	file: A20140804T131049 futsymbol_multiple.png
+	file: A20140804T131049 futsymbol_planeswalker.png
+	file: A20140804T131049 futsymbol_sorcery.png
+	file: A20140804T131049 include
+	file: A20140804T131049 watermark-names
+	file: A20140804T131049 watermark_azorius.png
+	file: A20140804T131049 watermark_b.png
+	file: A20140804T131049 watermark_b_old.png
+	file: A20140804T131049 watermark_bgmana.png
+	file: A20140804T131049 watermark_bgmana_colored.png
+	file: A20140804T131049 watermark_boros.png
+	file: A20140804T131049 watermark_brmana.png
+	file: A20140804T131049 watermark_brmana_colored.png
+	file: A20140804T131049 watermark_dimir.png
+	file: A20140804T131049 watermark_g.png
+	file: A20140804T131049 watermark_g_old.png
+	file: A20140804T131049 watermark_golgari.png
+	file: A20140804T131049 watermark_gruul.png
+	file: A20140804T131049 watermark_gumana.png
+	file: A20140804T131049 watermark_gumana_colored.png
+	file: A20140804T131049 watermark_gwmana.png
+	file: A20140804T131049 watermark_gwmana_colored.png
+	file: A20140804T131049 watermark_izzet.png
+	file: A20140804T131049 watermark_mirrodin.png
+	file: A20140804T131049 watermark_orzhov.png
+	file: A20140804T131049 watermark_phyrexia.png
+	file: A20140804T131049 watermark_r.png
+	file: A20140804T131049 watermark_r_old.png
+	file: A20140804T131049 watermark_rakados.png
+	file: A20140804T131049 watermark_rgmana.png
+	file: A20140804T131049 watermark_rgmana_colored.png
+	file: A20140804T131049 watermark_rwmana.png
+	file: A20140804T131049 watermark_rwmana_colored.png
+	file: A20140804T131049 watermark_s.png
+	file: A20140804T131049 watermark_selesnya.png
+	file: A20140804T131049 watermark_simic.png
+	file: A20140804T131049 watermark_u.png
+	file: A20140804T131049 watermark_u_old.png
+	file: A20140804T131049 watermark_ubmana.png
+	file: A20140804T131049 watermark_ubmana_colored.png
+	file: A20140804T131049 watermark_urmana.png
+	file: A20140804T131049 watermark_urmana_colored.png
+	file: A20140804T131049 watermark_w.png
+	file: A20140804T131049 watermark_w_old.png
+	file: A20140804T131049 watermark_wbmana.png
+	file: A20140804T131049 watermark_wbmana_colored.png
+	file: A20140804T131049 watermark_wumana.png
+	file: A20140804T131049 watermark_wumana_colored.png
+	file: A20140804T131049 watermarks
+	file: A20140804T131049 watermarks-old
+package:
+	name: magic.mse-game
+	version: 2011-09-10
+	status: 34
+	file: A20140804T131039 add_cards_scripts
+	file: A20140804T131039 auto_replace
+	file: A20140804T131039 card-back.png
+	file: A20140804T131039 card_fields
+	file: A20140804T131039 game
+	file: A20140804T131039 icons/center-all-text.png
+	file: A20140804T131039 icons/center-no-text.png
+	file: A20140804T131039 icons/center-short-text.png
+	file: A20140804T131039 icons/common.png
+	file: A20140804T131039 icons/language-en.png
+	file: A20140804T131039 icons/language-fr.png
+	file: A20140804T131039 icons/large-image.png
+	file: A20140804T131039 icons/mythicrare.png
+	file: A20140804T131039 icons/number_cards_after.png
+	file: A20140804T131039 icons/number_cards_mixed.png
+	file: A20140804T131039 icons/number_cards_separate.png
+	file: A20140804T131039 icons/rare.png
+	file: A20140804T131039 icons/small-image.png
+	file: A20140804T131039 icons/special.png
+	file: A20140804T131039 icons/uncommon.png
+	file: A20140804T131039 keywords
+	file: A20140804T131038 language
+	file: A20140804T131038 magic-words.en_us.dic
+	file: A20140804T131039 packs
+	file: A20140804T131039 script
+	file: A20140804T131038 set_fields
+	file: A20140804T131039 statistics
+	file: A20140804T131039 stats/card_color.png
+	file: A20140804T131039 stats/card_symbol.png
+	file: A20140804T131039 stats/card_type.png
+	file: A20140804T131039 stats/casting_cost.png
+	file: A20140804T131039 stats/color_colored_cost.png
+	file: A20140804T131039 stats/color_cost.png
+	file: A20140804T131039 stats/color_rarity.png
+	file: A20140804T131039 stats/colored_casting_cost.png
+	file: A20140804T131039 stats/cost_colored_cost.png
+	file: A20140804T131039 stats/creature_class.png
+	file: A20140804T131039 stats/creature_race.png
+	file: A20140804T131039 stats/creature_type.png
+	file: A20140804T131039 stats/illustrator.png
+	file: A20140804T131039 stats/keywords.png
+	file: A20140804T131039 stats/power.png
+	file: A20140804T131039 stats/pt.png
+	file: A20140804T131039 stats/rarity.png
+	file: A20140804T131039 stats/stylesheet.png
+	file: A20140804T131039 stats/text_length.png
+	file: A20140804T131039 stats/toughness.png
+	file: A20140804T131039 stats/watermark.png
+	file: A20140804T131039 unit_tests
+	file: A20140804T131038 word_lists
+	file: A20140804T131038 word_lists_fr
+package:
+	name: pl.mse-locale
+	version: 2009-03-05
+	status: 34
+	file: A20140804T131019 locale
+	file: A20140804T131019 pl.png
+package:
+	name: planechase-forum.mse-export-template
+	version: 2010-05-11
+	status: 34
+	file: A20140804T131049 export-template
+	file: A20140804T131049 icon.png
+package:
+	name: planechase-standard.mse-style
+	version: 2010-05-18
+	status: 34
+	file: A20140804T131034 card-sample.png
+	file: A20140804T131034 card.png
+	file: A20140804T131034 image_mask.png
+	file: A20140804T131034 style
+	file: A20140804T131034 textbox_mask.png
+package:
+	name: planechase.mse-game
+	version: 2011-01-10
+	status: 34
+	file: A20140804T131027 card-sample.png
+	file: A20140804T131027 game
+	file: A20140804T131027 stats/card_type.png
+	file: A20140804T131027 stats/illustrator.png
+	file: A20140804T131027 stats/keywords.png
+	file: A20140804T131027 stats/rarity.png
+	file: A20140804T131027 stats/stylesheet.png
+	file: A20140804T131027 stats/text_length.png
+package:
+	name: pt-br.mse-locale
+	version: 2009-07-23
+	status: 34
+	file: A20140804T131049 br.png
+	file: A20140804T131049 locale
+package:
+	name: vanguard-forum.mse-export-template
+	version: 2010-05-11
+	status: 34
+	file: A20140804T131029 export-template
+	file: A20140804T131029 icon.png
+package:
+	name: vanguard-standard.mse-style
+	version: 2010-03-22
+	status: 34
+	file: A20140804T131015 card-sample.png
+	file: A20140804T131015 card.jpg
+	file: A20140804T131015 cost_a.png
+	file: A20140804T131015 cost_b.png
+	file: A20140804T131015 cost_g.png
+	file: A20140804T131015 cost_m.png
+	file: A20140804T131015 cost_r.png
+	file: A20140804T131015 cost_u.png
+	file: A20140804T131015 cost_w.png
+	file: A20140804T131015 style
+package:
+	name: vanguard.mse-game
+	version: 2011-01-10
+	status: 34
+	file: A20140804T131049 card-sample.png
+	file: A20140804T131049 game
+	file: A20140804T131049 stats/card_type.png
+	file: A20140804T131049 stats/illustrator.png
+	file: A20140804T131049 stats/keywords.png
+	file: A20140804T131049 stats/number.png
+	file: A20140804T131049 stats/stylesheet.png
+	file: A20140804T131049 stats/text_length.png
+package:
+	name: vs-alter.mse-style
+	version: 2010-08-13
+	status: 34
+	file: A20140804T131031 card-sample.png
+	file: A20140804T131031 card.jpg
+	file: A20140804T131031 marvel.png
+	file: A20140804T131031 overlay.png
+	file: A20140804T131031 style
+package:
+	name: vs-common.mse-include
+	version: 2011-01-08
+	status: 34
+	file: A20140804T131043 affiliations
+	file: A20140804T131043 apocalypse.png
+	file: A20140804T131043 avengers.png
+	file: A20140804T131043 blank.png
+	file: A20140804T131043 bprd.png
+	file: A20140804T131043 brotherhood.png
+	file: A20140804T131043 crimelords.png
+	file: A20140804T131043 dcnew.png
+	file: A20140804T131043 dcold.png
+	file: A20140804T131043 defenders.png
+	file: A20140804T131043 doom.png
+	file: A20140804T131043 dual-affiliation
+	file: A20140804T131043 f4.png
+	file: A20140804T131043 first-edition.png
+	file: A20140804T131043 flight.png
+	file: A20140804T131043 flight2.png
+	file: A20140804T131043 foil.png
+	file: A20140804T131043 gothamknights.png
+	file: A20140804T131043 greenlantern.png
+	file: A20140804T131043 hellboy.png
+	file: A20140804T131043 hellfire.png
+	file: A20140804T131043 heralds.png
+	file: A20140804T131043 include
+	file: A20140804T131043 jla.png
+	file: A20140804T131043 jsa.png
+	file: A20140804T131043 marvel.png
+	file: A20140804T131043 marvelknights.png
+	file: A20140804T131043 mastersofevil.png
+	file: A20140804T131043 negativezone.png
+	file: A20140804T131043 old-to-new
+	file: A20140804T131043 ongoing.png
+	file: A20140804T131043 ongoing2.png
+	file: A20140804T131043 other.png
+	file: A20140804T131043 range.png
+	file: A20140804T131043 range2.png
+	file: A20140804T131043 rarity-common.png
+	file: A20140804T131043 rarity-promo.png
+	file: A20140804T131043 rarity-rare.png
+	file: A20140804T131043 rarity-uncommon.png
+	file: A20140804T131043 shadowpact.png
+	file: A20140804T131043 shiar.png
+	file: A20140804T131043 shield.png
+	file: A20140804T131043 sinistersyndicate.png
+	file: A20140804T131043 speedforce.png
+	file: A20140804T131043 spiderman.png
+	file: A20140804T131043 superman.png
+	file: A20140804T131043 thule.png
+	file: A20140804T131043 thunderbolts.png
+	file: A20140804T131043 titans.png
+	file: A20140804T131043 underworld.png
+	file: A20140804T131043 warbound.png
+	file: A20140804T131043 watermark-names
+	file: A20140804T131043 watermarks
+	file: A20140804T131043 xmen.png
+package:
+	name: vs-extended-art.mse-style
+	version: 2008-10-26
+	status: 34
+	file: A20140804T131044 card-sample.png
+	file: A20140804T131044 chcocard.jpg
+	file: A20140804T131044 choncard.jpg
+	file: A20140804T131044 cvchcard.jpg
+	file: A20140804T131044 cvcncard.jpg
+	file: A20140804T131044 eveqcard.jpg
+	file: A20140804T131044 flavor-text-mask.png
+	file: A20140804T131044 image-mask-dual.png
+	file: A20140804T131044 image-mask.png
+	file: A20140804T131044 locard.jpg
+	file: A20140804T131044 ptcard.jpg
+	file: A20140804T131044 style
+	file: A20140804T131044 text-mask.png
+	file: A20140804T131044 type-bar-dual.png
+	file: A20140804T131044 type-bar.png
+package:
+	name: vs-extended-hellboy.mse-style
+	version: 2008-10-26
+	status: 34
+	file: A20140804T131021 card-sample.png
+	file: A20140804T131021 chcocard.jpg
+	file: A20140804T131021 choncard.jpg
+	file: A20140804T131021 cvchcard.jpg
+	file: A20140804T131021 cvcncard.jpg
+	file: A20140804T131021 eveqcard.jpg
+	file: A20140804T131021 flavor-text-mask.png
+	file: A20140804T131021 image-mask-dual.png
+	file: A20140804T131021 image-mask.png
+	file: A20140804T131021 locard.jpg
+	file: A20140804T131021 ptcard.jpg
+	file: A20140804T131021 style
+	file: A20140804T131021 text-mask.png
+	file: A20140804T131021 type-bar-dual.png
+	file: A20140804T131021 type-bar.png
+package:
+	name: vs-hellboy.mse-style
+	version: 2008-10-26
+	status: 34
+	file: A20140804T131029 card-sample.png
+	file: A20140804T131029 chcocard.jpg
+	file: A20140804T131029 chodcard.jpg
+	file: A20140804T131029 choncard.jpg
+	file: A20140804T131029 cvcdcard.jpg
+	file: A20140804T131029 cvchcard.jpg
+	file: A20140804T131029 cvcncard.jpg
+	file: A20140804T131029 eveqcard.jpg
+	file: A20140804T131029 flavor-text-mask.png
+	file: A20140804T131029 image-mask-dual.png
+	file: A20140804T131029 image-mask.png
+	file: A20140804T131029 locard.jpg
+	file: A20140804T131029 ptcard.jpg
+	file: A20140804T131029 style
+	file: A20140804T131029 text-mask.png
+	file: A20140804T131029 type-bar.png
+package:
+	name: vs-insanity.mse-style
+	version: 2008-10-26
+	status: 34
+	file: A20140804T131027 card-sample.png
+	file: A20140804T131027 chcocard.jpg
+	file: A20140804T131027 chodcard.jpg
+	file: A20140804T131027 choncard.jpg
+	file: A20140804T131027 cvcdcard.jpg
+	file: A20140804T131027 cvchcard.jpg
+	file: A20140804T131027 cvcncard.jpg
+	file: A20140804T131027 eveqcard.jpg
+	file: A20140804T131027 flavor-text-mask.png
+	file: A20140804T131027 image-mask-dual.png
+	file: A20140804T131027 image-mask.png
+	file: A20140804T131027 locard.jpg
+	file: A20140804T131027 ptcard.jpg
+	file: A20140804T131027 style
+	file: A20140804T131027 text-mask.png
+	file: A20140804T131027 type-bar.png
+package:
+	name: vs-new.mse-style
+	version: 2010-07-30
+	status: 34
+	file: A20140804T131046 card-sample.png
+	file: A20140804T131046 ccoccard.png
+	file: A20140804T131046 ccoccard2.png
+	file: A20140804T131046 chcocard.png
+	file: A20140804T131046 concealed.png
+	file: A20140804T131046 concealop.png
+	file: A20140804T131046 cvchcard.png
+	file: A20140804T131046 dcnew.png
+	file: A20140804T131046 eceqcard.png
+	file: A20140804T131046 eoeqcard.png
+	file: A20140804T131046 eveqcard.png
+	file: A20140804T131046 flight.png
+	file: A20140804T131046 flightrange.png
+	file: A20140804T131046 hellboy.png
+	file: A20140804T131046 image-mask.png
+	file: A20140804T131046 locard.png
+	file: A20140804T131046 marvel.png
+	file: A20140804T131046 ongoing.png
+	file: A20140804T131046 plcard.png
+	file: A20140804T131046 ptcard.png
+	file: A20140804T131046 range.png
+	file: A20140804T131046 style
+	file: A20140804T131046 type-bar.png
+	file: A20140804T131046 visible.png
+package:
+	name: vs-oversize.mse-style
+	version: 2010-08-13
+	status: 34
+	file: A20140804T131040 card-sample.png
+	file: A20140804T131040 card.png
+	file: A20140804T131040 image-mask.png
+	file: A20140804T131040 style
+package:
+	name: vs-spoiler.mse-export-template
+	version: 2008-10-19
+	status: 34
+	file: A20140804T131055 blank.gif
+	file: A20140804T131055 export-template
+	file: A20140804T131055 preview.png
+	file: A20140804T131055 sans-serif.png
+	file: A20140804T131055 script.js
+	file: A20140804T131055 serif.png
+	file: A20140804T131055 style.css
+package:
+	name: vs-standard-arrow.mse-symbol-font
+	version: 2008-10-06
+	status: 34
+	file: A20140804T131038 arrow.png
+	file: A20140804T131038 diamond.png
+	file: A20140804T131038 symbol-font
+package:
+	name: vs-standard-new.mse-symbol-font
+	version: 2010-05-17
+	status: 34
+	file: A20140804T131053 0.png
+	file: A20140804T131052 1.png
+	file: A20140804T131052 10.png
+	file: A20140804T131053 11.png
+	file: A20140804T131052 12.png
+	file: A20140804T131053 13.png
+	file: A20140804T131052 14.png
+	file: A20140804T131053 15.png
+	file: A20140804T131053 2.png
+	file: A20140804T131052 3.png
+	file: A20140804T131053 4.png
+	file: A20140804T131052 5.png
+	file: A20140804T131053 6.png
+	file: A20140804T131052 7.png
+	file: A20140804T131053 8.png
+	file: A20140804T131052 9.png
+	file: A20140804T131052 activate.png
+	file: A20140804T131053 agencyx.png
+	file: A20140804T131053 agentsofatlas.png
+	file: A20140804T131053 aim.png
+	file: A20140804T131052 alphaflight.png
+	file: A20140804T131052 anti-matter.png
+	file: A20140804T131052 apocalypse.png
+	file: A20140804T131053 arkhaminmates.png
+	file: A20140804T131053 arrow.png
+	file: A20140804T131053 asgardians.png
+	file: A20140804T131053 assassin.png
+	file: A20140804T131052 assassins.png
+	file: A20140804T131052 atlantis.png
+	file: A20140804T131052 autobots.png
+	file: A20140804T131053 avengers.png
+	file: A20140804T131053 birdsofprey.png
+	file: A20140804T131052 blackglove.png
+	file: A20140804T131052 blacklantern.png
+	file: A20140804T131053 blank.png
+	file: A20140804T131052 bluelantern.png
+	file: A20140804T131052 bprd.png
+	file: A20140804T131053 britcit.png
+	file: A20140804T131053 brood.png
+	file: A20140804T131052 brotherhood.png
+	file: A20140804T131053 captainamerica.png
+	file: A20140804T131053 challengersofthefantastic.png
+	file: A20140804T131052 checkmate.png
+	file: A20140804T131052 crimelords.png
+	file: A20140804T131053 crisis.png
+	file: A20140804T131052 cursedearth.png
+	file: A20140804T131052 darkclaw.png
+	file: A20140804T131053 darkjudges.png
+	file: A20140804T131053 darkseid.png
+	file: A20140804T131052 deadpool.png
+	file: A20140804T131052 decepticons.png
+	file: A20140804T131052 defenders.png
+	file: A20140804T131053 diamond.png
+	file: A20140804T131053 doom.png
+	file: A20140804T131053 doompatrol.png
+	file: A20140804T131053 emeraldarchers.png
+	file: A20140804T131053 emeraldenemies.png
+	file: A20140804T131052 excalibur.png
+	file: A20140804T131052 exiles.png
+	file: A20140804T131053 f4.png
+	file: A20140804T131053 fearsomefive.png
+	file: A20140804T131052 femizons.png
+	file: A20140804T131052 futurefoes.png
+	file: A20140804T131053 generationx.png
+	file: A20140804T131052 gothamknights.png
+	file: A20140804T131053 greenlantern.png
+	file: A20140804T131053 guardiansofthegalaxy.png
+	file: A20140804T131053 hand.png
+	file: A20140804T131052 hellfire.png
+	file: A20140804T131053 heralds.png
+	file: A20140804T131053 heroesforhire.png
+	file: A20140804T131052 heroesofearth.png
+	file: A20140804T131052 hydra.png
+	file: A20140804T131053 indigolantern.png
+	file: A20140804T131053 infinitywatch.png
+	file: A20140804T131052 inhumans.png
+	file: A20140804T131053 injusticegang.png
+	file: A20140804T131052 invaders.png
+	file: A20140804T131053 ironlantern.png
+	file: A20140804T131052 jla.png
+	file: A20140804T131052 jlavengers.png
+	file: A20140804T131052 jli.png
+	file: A20140804T131053 jlx.png
+	file: A20140804T131053 jsa.png
+	file: A20140804T131052 kangcouncil.png
+	file: A20140804T131053 kree.png
+	file: A20140804T131053 legion.png
+	file: A20140804T131052 magneticmen.png
+	file: A20140804T131052 manhunters.png
+	file: A20140804T131053 marauders.png
+	file: A20140804T131053 marvelknights.png
+	file: A20140804T131053 mastersofevil.png
+	file: A20140804T131052 megacityone.png
+	file: A20140804T131053 morlocks.png
+	file: A20140804T131052 negativezone.png
+	file: A20140804T131053 newgods.png
+	file: A20140804T131052 newuniversal.png
+	file: A20140804T131052 newwarriors.png
+	file: A20140804T131053 nextwave.png
+	file: A20140804T131053 novacorps.png
+	file: A20140804T131053 omegaflight.png
+	file: A20140804T131052 orangelantern.png
+	file: A20140804T131052 outsiders.png
+	file: A20140804T131052 phalanx.png
+	file: A20140804T131052 planet.png
+	file: A20140804T131052 projectspitfire.png
+	file: A20140804T131052 purifiers.png
+	file: A20140804T131053 quintessons.png
+	file: A20140804T131052 rann.png
+	file: A20140804T131053 redlantern.png
+	file: A20140804T131052 revengesquad.png
+	file: A20140804T131053 runaways.png
+	file: A20140804T131052 secretsix.png
+	file: A20140804T131052 secretsociety.png
+	file: A20140804T131052 secretwarriors.png
+	file: A20140804T131053 sentinels.png
+	file: A20140804T131052 serpentsociety.png
+	file: A20140804T131052 shadowpact.png
+	file: A20140804T131053 shiar.png
+	file: A20140804T131052 shield.png
+	file: A20140804T131053 sinistersyndicate.png
+	file: A20140804T131052 skeletoncrew.png
+	file: A20140804T131052 skrull.png
+	file: A20140804T131052 speedforce.png
+	file: A20140804T131052 spider-boy.png
+	file: A20140804T131053 spiderman.png
+	file: A20140804T131052 squadronsupreme.png
+	file: A20140804T131053 starjammers.png
+	file: A20140804T131052 starkindustries.png
+	file: A20140804T131052 starsapphires.png
+	file: A20140804T131053 strangefate.png
+	file: A20140804T131052 suicidesquad.png
+	file: A20140804T131052 superman.png
+	file: A20140804T131052 sword.png
+	file: A20140804T131052 symbol-font
+	file: A20140804T131052 thanagar.png
+	file: A20140804T131053 themyscira.png
+	file: A20140804T131053 theorder.png
+	file: A20140804T131052 therogues.png
+	file: A20140804T131052 thor.png
+	file: A20140804T131052 thule.png
+	file: A20140804T131052 thunderbolts.png
+	file: A20140804T131052 titans.png
+	file: A20140804T131053 ultimates.png
+	file: A20140804T131053 underworld.png
+	file: A20140804T131052 unitedfront.png
+	file: A20140804T131053 villainsofearth.png
+	file: A20140804T131052 villainsunited.png
+	file: A20140804T131053 wakanda.png
+	file: A20140804T131053 warbound.png
+	file: A20140804T131053 waynefamily.png
+	file: A20140804T131053 weaponx.png
+	file: A20140804T131052 wildpack.png
+	file: A20140804T131053 x.png
+	file: A20140804T131052 xfactor.png
+	file: A20140804T131053 xforce.png
+	file: A20140804T131052 xmen.png
+	file: A20140804T131052 xranch.png
+	file: A20140804T131052 xstatix.png
+package:
+	name: vs-standard-official.mse-symbol-font
+	version: 2010-05-16
+	status: 34
+	file: A20140804T131027 0.png
+	file: A20140804T131027 1.png
+	file: A20140804T131027 10.png
+	file: A20140804T131027 11.png
+	file: A20140804T131027 12.png
+	file: A20140804T131027 13.png
+	file: A20140804T131027 14.png
+	file: A20140804T131027 15.png
+	file: A20140804T131027 2.png
+	file: A20140804T131027 3.png
+	file: A20140804T131027 4.png
+	file: A20140804T131027 5.png
+	file: A20140804T131027 6.png
+	file: A20140804T131027 7.png
+	file: A20140804T131027 8.png
+	file: A20140804T131027 9.png
+	file: A20140804T131027 activate.png
+	file: A20140804T131027 alphaflight.png
+	file: A20140804T131027 anti-matter.png
+	file: A20140804T131027 apocalypse.png
+	file: A20140804T131027 arrow.png
+	file: A20140804T131027 avengers.png
+	file: A20140804T131027 blank.png
+	file: A20140804T131027 bprd.png
+	file: A20140804T131027 brotherhood.png
+	file: A20140804T131027 crimelords.png
+	file: A20140804T131027 defenders.png
+	file: A20140804T131027 diamond.png
+	file: A20140804T131027 doom.png
+	file: A20140804T131027 f4.png
+	file: A20140804T131027 gothamknights.png
+	file: A20140804T131027 greenlantern.png
+	file: A20140804T131027 hellfire.png
+	file: A20140804T131027 heralds.png
+	file: A20140804T131027 jla.png
+	file: A20140804T131027 jsa.png
+	file: A20140804T131027 kree.png
+	file: A20140804T131027 marvelknights.png
+	file: A20140804T131027 mastersofevil.png
+	file: A20140804T131027 negativezone.png
+	file: A20140804T131027 planet.png
+	file: A20140804T131027 shadowpact.png
+	file: A20140804T131027 shiar.png
+	file: A20140804T131027 shield.png
+	file: A20140804T131027 sinistersyndicate.png
+	file: A20140804T131027 skrull.png
+	file: A20140804T131027 speedforce.png
+	file: A20140804T131027 spiderman.png
+	file: A20140804T131027 superman.png
+	file: A20140804T131027 symbol-font
+	file: A20140804T131027 thule.png
+	file: A20140804T131027 thunderbolts.png
+	file: A20140804T131027 titans.png
+	file: A20140804T131027 underworld.png
+	file: A20140804T131027 warbound.png
+	file: A20140804T131027 x.png
+	file: A20140804T131027 xmen.png
+package:
+	name: vs-standard.mse-style
+	version: 2008-10-26
+	status: 34
+	file: A20140804T131024 card-sample.png
+	file: A20140804T131024 chcocard.jpg
+	file: A20140804T131024 chodcard.jpg
+	file: A20140804T131024 choncard.jpg
+	file: A20140804T131024 cvcdcard.jpg
+	file: A20140804T131024 cvchcard.jpg
+	file: A20140804T131024 cvcncard.jpg
+	file: A20140804T131024 eveqcard.jpg
+	file: A20140804T131024 flavor-text-mask.png
+	file: A20140804T131024 image-mask-dual.png
+	file: A20140804T131024 image-mask.png
+	file: A20140804T131024 locard.jpg
+	file: A20140804T131024 ptcard.jpg
+	file: A20140804T131024 style
+	file: A20140804T131024 text-mask.png
+	file: A20140804T131024 type-bar.png
+package:
+	name: vs.mse-game
+	version: 2011-01-08
+	status: 34
+	file: A20140804T131034 auto_replace
+	file: A20140804T131034 card-back.png
+	file: A20140804T131034 card_fields
+	file: A20140804T131034 game
+	file: A20140804T131034 keywords
+	file: A20140804T131034 packs
+	file: A20140804T131034 script
+	file: A20140804T131034 set_fields
+	file: A20140804T131034 statistics
+	file: A20140804T131034 stats/attack.png
+	file: A20140804T131034 stats/cost.png
+	file: A20140804T131034 stats/defence.png
+	file: A20140804T131034 stats/illustrator.png
+	file: A20140804T131034 stats/keywords.png
+	file: A20140804T131034 stats/rarity.png
+	file: A20140804T131034 stats/stylesheet.png
+	file: A20140804T131034 stats/symbols.png
+	file: A20140804T131034 stats/text_length.png
+	file: A20140804T131034 word_lists
+package:
+	name: yugioh-ToText.mse-export-template
+	version: 2014-01-01
+	status: 34
+	file: A20170328T120704 export-template
+	file: A20170328T120704 icon.jpg
+package:
+	name: yugioh-forum.mse-export-template
+	version: 2009-12-18
+	status: 34
+	file: A20150916T234300 export-template
+	file: A20150916T234300 icon.png
+package:
+	name: yugioh-series10.mse-style
+	version: 2017-06-26
+	status: 34
+	file: A20150906T143810 bar.png
+	file: A20150906T143810 blank.png
+	file: A20150906T143810 blank2.png
+	file: A20160331T145352 boss1.png
+	file: A20160331T145444 boss2.png
+	file: A20160331T145432 boss3.png
+	file: A20160331T171620 boss4.png
+	file: A20160331T171832 boss5.png
+	file: A20170309T191014 card-bigbang.png
+	file: A20170321T210344 card-dark-synchro-pendulum-less.png
+	file: A20170321T210346 card-dark-synchro-pendulum-more.png
+	file: A20170321T210348 card-dark-synchro-pendulum.png
+	file: A20170403T165011 card-dlc.png
+	file: A20170321T155101 card-dsynchro.png
+	file: A20170321T210240 card-effect-pendulum-less.png
+	file: A20170321T210242 card-effect-pendulum-more.png
+	file: A20170321T210243 card-effect-pendulum.png
+	file: A20170321T155135 card-effect.png
+	file: A20170321T210303 card-fusion-pendulum-less.png
+	file: A20170321T210311 card-fusion-pendulum-more.png
+	file: A20170321T210323 card-fusion-pendulum.png
+	file: A20170321T155053 card-fusion.png
+	file: A20170324T204333 card-link.png
+	file: A20170321T210107 card-normal-pendulum-less.png
+	file: A20170321T210115 card-normal-pendulum-more.png
+	file: A20170321T210059 card-normal-pendulum.png
+	file: A20170321T155106 card-normal.png
+	file: A20150906T143814 card-obelisk.png
+	file: A20170325T114401 card-pandemonium-large.png
+	file: A20170324T235248 card-pandemonium-medium.png
+	file: A20170325T114552 card-pandemonium-small.png
+	file: A20150906T143814 card-ra.png
+	file: A20170321T210148 card-ritual-pendulum-less.png
+	file: A20170321T210147 card-ritual-pendulum-more.png
+	file: A20170321T210150 card-ritual-pendulum.png
+	file: A20170321T155055 card-ritual.png
+	file: A20170519T015307 card-sample-infdev.png
+	file: A20170521T223150 card-sample-infdev3.png
+	file: A20170626T081911 card-sample.png
+	file: A20170529T230333 card-sampleinfdev6.png
+	file: A20150906T143814 card-slifer.png
+	file: A20170321T205933 card-spell.png
+	file: A20170321T210414 card-synchro-pendulum-less.png
+	file: A20170321T210419 card-synchro-pendulum-more.png
+	file: A20170321T210416 card-synchro-pendulum.png
+	file: A20170321T155130 card-synchro.png
+	file: A20170321T155125 card-token.png
+	file: A20170321T205941 card-trap.png
+	file: A20170422T012435 card-trell.png
+	file: A20170321T210212 card-xyz-pendulum-less.png
+	file: A20170321T210211 card-xyz-pendulum-more.png
+	file: A20170321T210216 card-xyz-pendulum.png
+	file: A20170321T155120 card-xyz.png
+	file: A20150727T123550 cnball/dark.png
+	file: A20150727T123552 cnball/divine.png
+	file: A20150727T123552 cnball/earth.png
+	file: A20150727T123553 cnball/fire.png
+	file: A20150727T123553 cnball/light.png
+	file: A20150727T123553 cnball/spell.png
+	file: A20150727T123553 cnball/trap.png
+	file: A20150727T123553 cnball/water.png
+	file: A20150727T123554 cnball/wind.png
+	file: A20150906T143816 cornerfirst.png
+	file: A20150906T143816 cornerunlimited.png
+	file: A20170626T070700 customfoils/applefoil.png
+	file: A20160229T220337 customfoils/collectborder.png
+	file: A20160228T083742 customfoils/defaultfoil.png
+	file: A20151004T233346 customfoils/egyptfoil.png
+	file: A20160229T223404 customfoils/ghostfoil.png
+	file: A20160228T092222 customfoils/ghostfoil2.png
+	file: A20160228T212020 customfoils/ghostfoil3.png
+	file: A20160421T223536 customfoils/kaibararefoil.png
+	file: A20170626T070646 customfoils/lemonfoil.png
+	file: A20150906T143820 customfoils/mosaicfoil.png
+	file: A20150906T143820 customfoils/parallelfoil.png
+	file: A20141230T090832 customfoils/secretfoil.png
+	file: A20160228T092315 customfoils/secretfoil2.png
+	file: A20150906T143820 customfoils/starfoil.png
+	file: A20160415T113406 customfoils/superfoil.png
+	file: A20160228T092052 customfoils/ultimatefoil.png
+	file: A20160228T092207 customfoils/ultrafoil.png
+	file: A20150906T143818 dark.png
+	file: A20160228T083742 defaultfoil.png
+	file: A20150906T143818 divine.png
+	file: A20150906T143818 earth.png
+	file: A20151004T233346 egyptfoil.png
+	file: A20150906T143818 fire.png
+	file: A20170517T213415 fullart/bonus2ex.png
+	file: A20170517T213415 fullart/bonusex.png
+	file: A20170517T213415 fullart/effectex.png
+	file: A20170517T213416 fullart/fusionex.png
+	file: A20170517T214044 fullart/linkex.png
+	file: A20170517T213416 fullart/normalex.png
+	file: A20170517T213417 fullart/peffectex.png
+	file: A20170517T213417 fullart/pfusionex.png
+	file: A20170517T213418 fullart/pnormalex.png
+	file: A20170517T213418 fullart/pritualex.png
+	file: A20170517T213419 fullart/psynchroex.png
+	file: A20170517T213419 fullart/ptokenex.png
+	file: A20170517T213420 fullart/pxyzex.png
+	file: A20170517T213420 fullart/ritualex.png
+	file: A20170517T213421 fullart/spellex.png
+	file: A20170517T213421 fullart/synchroex.png
+	file: A20170517T213421 fullart/tokenex.png
+	file: A20170517T213422 fullart/trapex.png
+	file: A20170517T213422 fullart/xyzex.png
+	file: A20150906T143818 goldfoil-anniversary.png
+	file: A20150906T143818 goldfoil-pendulum.png
+	file: A20150906T143818 goldfoil-pendulum_less.png
+	file: A20150906T143818 goldfoil-pendulum_more.png
+	file: A20150906T143818 goldfoil.png
+	file: A20150727T123552 jpball/dark.png
+	file: A20150727T123552 jpball/divine.png
+	file: A20150727T123553 jpball/earth.png
+	file: A20150727T123553 jpball/fire.png
+	file: A20150727T123553 jpball/light.png
+	file: A20150727T123553 jpball/spell.png
+	file: A20150727T123553 jpball/trap.png
+	file: A20150727T123553 jpball/water.png
+	file: A20150727T123554 jpball/wind.png
+	file: A20150906T143818 light.png
+	file: A20170222T145046 linkdlon.png
+	file: A20170518T201522 linkdlonex.png
+	file: A20170222T144907 linkdon.png
+	file: A20170518T201554 linkdonex.png
+	file: A20170222T145046 linkdron.png
+	file: A20170518T201716 linkdronex.png
+	file: A20170222T144743 linklon.png
+	file: A20170518T201400 linklonex.png
+	file: A20170324T205128 linkmarker.png
+	file: A20170518T200608 linkmarkerex.png
+	file: A20170222T144743 linkron.png
+	file: A20170518T201434 linkronex.png
+	file: A20170222T145046 linkulon.png
+	file: A20170518T201208 linkulonex.png
+	file: A20170222T144907 linkuon.png
+	file: A20170518T201249 linkuonex.png
+	file: A20170222T145046 linkuron.png
+	file: A20170518T201327 linkuronex.png
+	file: A20170325T131747 mask-p.png
+	file: A20170325T131729 mask-p_less.png
+	file: A20170325T131759 mask-p_more.png
+	file: A20170325T131811 mask-p_opaque.png
+	file: A20170325T131820 mask-p_opaque_less.png
+	file: A20150906T143820 mask.png
+	file: A20170518T193932 maskex.png
+	file: A20170518T194232 maskex1.png
+	file: A20170519T011641 maskex2.png
+	file: A20160415T060021 milleniumrare.png
+	file: A20150906T143820 mosaicfoil.png
+	file: A20170524T173831 new/bigbangnew.png
+	file: A20170626T024849 new/effectnew-p.png
+	file: A20170626T024810 new/effectnew-pl.png
+	file: A20170626T024901 new/effectnew-pm.png
+	file: A20170524T172845 new/effectnew.png
+	file: A20170524T173856 new/evolutenew.png
+	file: A20170529T121136 new/fullart/effectex.png
+	file: A20170529T121217 new/fullart/fusionex.png
+	file: A20170529T120846 new/fullart/linkex.png
+	file: A20170529T121113 new/fullart/normalex.png
+	file: A20170529T121156 new/fullart/ritualex.png
+	file: A20170529T121528 new/fullart/spellex.png
+	file: A20170529T121237 new/fullart/synchroex.png
+	file: A20170529T121307 new/fullart/tokenex.png
+	file: A20170529T121550 new/fullart/trapex.png
+	file: A20170529T121345 new/fullart/xyzex.png
+	file: A20170626T025212 new/fusionnew-p.png
+	file: A20170626T025224 new/fusionnew-pl.png
+	file: A20170626T025153 new/fusionnew-pm.png
+	file: A20170524T173633 new/fusionnew.png
+	file: A20170522T171339 new/linkdlon.png
+	file: A20170522T171405 new/linkdon.png
+	file: A20170522T171459 new/linkdron.png
+	file: A20170522T171204 new/linklon.png
+	file: A20170522T170026 new/linkmarker.png
+	file: A20170529T205745 new/linkmarkerex.png
+	file: A20170521T143953 new/linknew.png
+	file: A20170522T171254 new/linkron.png
+	file: A20170522T170958 new/linkulon.png
+	file: A20170522T171044 new/linkuon.png
+	file: A20170522T171132 new/linkuron.png
+	file: A20170626T031412 new/mask-p.png
+	file: A20170626T033251 new/mask-p_less.png
+	file: A20170626T033041 new/mask-p_more.png
+	file: A20170529T222851 new/maskex.png
+	file: A20170529T222854 new/maskex1.png
+	file: A20170626T032207 new/maskex2.png
+	file: A20170626T032222 new/maskex3.png
+	file: A20170529T225630 new/maskex4.png
+	file: A20170626T024945 new/normalnew-p.png
+	file: A20170626T024959 new/normalnew-pl.png
+	file: A20170626T024928 new/normalnew-pm.png
+	file: A20170524T172912 new/normalnew.png
+	file: A20170524T173725 new/obelisknew.png
+	file: A20170524T173739 new/osirisnew.png
+	file: A20170524T173801 new/ranew.png
+	file: A20170626T025116 new/ritualnew-p.png
+	file: A20170626T025133 new/ritualnew-pl.png
+	file: A20170626T025043 new/ritualnew-pm.png
+	file: A20170524T173517 new/ritualnew.png
+	file: A20170524T173544 new/spellnew.png
+	file: A20170626T025319 new/synchronew-p.png
+	file: A20170626T025332 new/synchronew-pl.png
+	file: A20170626T025248 new/synchronew-pm.png
+	file: A20170524T173654 new/synchronew.png
+	file: A20170524T173815 new/tokennew.png
+	file: A20170524T173601 new/trapnew.png
+	file: A20170626T025517 new/xyznew-p.png
+	file: A20170626T025537 new/xyznew-pl.png
+	file: A20170626T025445 new/xyznew-pm.png
+	file: A20170524T173711 new/xyznew.png
+	file: A20150906T143820 parallelfoil.png
+	file: A20141230T090832 secretfoil.png
+	file: A20150906T143820 spell.png
+	file: A20150906T143820 starfoil.png
+	file: A20160331T145324 start.png
+	file: A20170626T234151 style
+	file: A20160415T113406 superfoil.png
+	file: A20150906T143822 trap.png
+	file: A20170422T013012 trell.png
+	file: A20160416T122538 udark.png
+	file: A20160416T122539 udivine.png
+	file: A20160416T122539 uearth.png
+	file: A20160416T122540 ufire.png
+	file: A20160416T122541 ulight.png
+	file: A20160416T145246 ultimatefoil.png
+	file: A20170518T010009 ultimatefoilex.png
+	file: A20160415T113406 ultrafoil.png
+	file: A20160416T122541 uspell.png
+	file: A20160416T122542 utrap.png
+	file: A20170422T013042 utrell.png
+	file: A20160416T122543 uwater.png
+	file: A20160416T122543 uwind.png
+	file: A20150906T143822 water.png
+	file: A20150906T143822 wind.png
+package:
+	name: yugioh-standard-extra.mse-style
+	version: 2014-01-26
+	status: 34
+	file: A20170209T105139 artmask.png
+	file: A20170209T105139 card-angel.jpg
+	file: A20170209T105139 card-chibi.jpg
+	file: A20170209T105139 card-construct.jpg
+	file: A20170209T105139 card-demon.jpg
+	file: A20170209T105139 card-fire.jpg
+	file: A20170209T105139 card-golden.jpg
+	file: A20170209T105139 card-ice.jpg
+	file: A20170209T105139 card-sample.png
+	file: A20170209T105139 card-spirit.jpg
+	file: A20170209T105139 card-toon.jpg
+	file: A20170209T105139 dragon.png
+	file: A20170209T105139 false.png
+	file: A20170209T105139 grass.png
+	file: A20170209T105140 man.png
+	file: A20170209T105140 style
+package:
+	name: yugioh-standard-levels.mse-symbol-font
+	version: 2014-04-11
+	status: 34
+	file: A20160307T180048 continuous.png
+	file: A20160307T180048 counter.png
+	file: A20160826T154446 dnstar.png
+	file: A20160608T222632 dstar.png
+	file: A20160307T180048 equipment.png
+	file: A20150906T143824 estar.png
+	file: A20150925T020514 evostar.png
+	file: A20160307T180048 field.png
+	file: A20170626T121727 genstar.png
+	file: A20150906T143824 leftbracket.png
+	file: A20170328T120705 leftbracket_jp.png
+	file: A20170328T120705 leftbracket_sc.png
+	file: A20170328T120705 leftbracket_tc.png
+	file: A20150925T005358 mstar.png
+	file: A20160307T180048 quickplay.png
+	file: A20150906T143824 rightbracket.png
+	file: A20170328T120706 rightbracket_jp.png
+	file: A20170328T120706 rightbracket_sc.png
+	file: A20170328T120706 rightbracket_tc.png
+	file: A20160307T180048 ritual.png
+	file: A20160514T173418 splice.png
+	file: A20150906T143824 star.png
+	file: A20170324T200953 symbol-font
+	file: A20160826T143654 tstar.png
+	file: A20160416T122540 uestar.png
+	file: A20160416T122542 ustar.png
+package:
+	name: yugioh-standard.mse-style
+	version: 2009-08-08
+	status: 34
+	file: A20140804T131044 bar.png
+	file: A20140804T131044 blank.png
+	file: A20140804T131044 blank2.png
+	file: A20140804T131044 card-dragons.jpg
+	file: A20140804T131044 card-dsynchro.jpg
+	file: A20140804T131044 card-effect.jpg
+	file: A20140804T131044 card-fusion.jpg
+	file: A20140804T131044 card-normal.jpg
+	file: A20140804T131044 card-obelisk.jpg
+	file: A20140804T131044 card-ra.jpg
+	file: A20140804T131044 card-ritual.jpg
+	file: A20140804T131044 card-sample.png
+	file: A20140804T131044 card-slifer.jpg
+	file: A20140804T131044 card-spell.jpg
+	file: A20140804T131044 card-synchro.jpg
+	file: A20140804T131044 card-token.jpg
+	file: A20140804T131044 card-trap.jpg
+	file: A20140804T131044 cornerfirst.png
+	file: A20140804T131044 cornerunlimited.png
+	file: A20140804T131044 dark.png
+	file: A20140804T131044 divine.png
+	file: A20140804T131044 earth.png
+	file: A20140804T131044 fire.png
+	file: A20140804T131044 goldfoil.png
+	file: A20140804T131044 light.png
+	file: A20140804T131044 parallelfoil.png
+	file: A20140804T131044 secretfoil.png
+	file: A20140804T131044 spell.png
+	file: A20140804T131044 style
+	file: A20140804T131044 superfoil.png
+	file: A20140804T131044 trap.png
+	file: A20140804T131044 water.png
+	file: A20140804T131044 wind.png
+package:
+	name: yugioh-text-numbers.mse-symbol-font
+	version: 2014-04-11
+	status: 34
+	file: A20150906T143824 0dot.png
+	file: A20170215T174424 dot.png
+	file: A20150906T143826 infinity.png
+	file: A20150906T143826 leftbracket.png
+	file: A20150906T143826 n1.png
+	file: A20150906T143826 n2.png
+	file: A20150906T143826 n3.png
+	file: A20150906T143826 n4.png
+	file: A20150906T143826 n5.png
+	file: A20150906T143826 qmark.png
+	file: A20150906T143826 rightbracket.png
+	file: A20150906T143826 symbol-font
+package:
+	name: yugioh-text-replacements.mse-symbol-font
+	version: 2014-04-11
+	status: 34
+	file: A20150906T143826 dot.png
+	file: A20150906T143826 infinity.png
+	file: A20150906T143828 leftbracket.png
+	file: A20150906T143828 qmark.png
+	file: A20150906T143828 rightbracket.png
+	file: A20150906T143828 symbol-font
+package:
+	name: yugioh.mse-game
+	version: 2017-06-26
+	status: 34
+	file: A20150906T143806 auto_replace
+	file: A20150906T143808 card-back.png
+	file: A20170626T165504 card_fields
+	file: A20170626T091855 game
+	file: A20170625T080245 icons/actualstyle.png
+	file: A20170626T071956 icons/applefoilpreview.png
+	file: A20170626T171951 icons/card.png
+	file: A20170626T071956 icons/collectborderpreview.png
+	file: A20170626T071956 icons/defaultfoilpreview.png
+	file: A20170626T071957 icons/egyptfoilpreview.png
+	file: A20170626T071957 icons/ghostfoil2preview.png
+	file: A20170626T071957 icons/ghostfoil3preview.png
+	file: A20170626T071957 icons/ghostfoilpreview.png
+	file: A20170626T073442 icons/kaibararefoilpreview.png
+	file: A20140804T131039 icons/language-en.png
+	file: A20170625T074709 icons/language-gb.png
+	file: A20170625T074720 icons/language-ja.png
+	file: A20170625T074738 icons/language-tw.png
+	file: A20170625T074716 icons/language-zh.png
+	file: A20140804T131039 icons/large-image.png
+	file: A20170626T071957 icons/lemonfoilpreview.png
+	file: A20170626T071957 icons/mosaicfoilpreview.png
+	file: A20170626T071957 icons/parallelfoilpreview.png
+	file: A20170625T080126 icons/proxylike.png
+	file: A20170626T071957 icons/secretfoil2preview.png
+	file: A20170626T071957 icons/secretfoilpreview.png
+	file: A20140804T131039 icons/small-image.png
+	file: A20170626T071958 icons/starfoilpreview.png
+	file: A20170626T071958 icons/superfoilpreview.png
+	file: A20170626T071958 icons/ultimatefoilpreview.png
+	file: A20170626T071958 icons/ultrafoilpreview.png
+	file: A20150924T224708 packs
+	file: A20170626T153202 script
+	file: A20150906T143810 set_fields
+	file: A20170626T081622 word_lists
