@@ -892,16 +892,17 @@ extra card field:
 
 extra card style:
 	bar:
-		left: 33
-		#top: 557
+		#left: 33
+		left: {if styling.template_style=="actual style" then 30 else 33 }
 		top: {if styling.template_style=="actual style" then 560 else 557 }
-		width: 355
+		#width: 355
+		width: {if styling.template_style=="actual style" then 357 else 355 }
 		height: 3
 		z index: 4
 		render style: image list
 		choice images:
 			bar: bar.png
-		visible: script: if is_nmonster() then false else true
+		visible: script: if is_nmonster() or styling.template_style=="actual style" then false else true
 #	leftbracket:
 #		left: { if is_nmonster() then (359 - card_style.level.content_width) else if styling.template_style=="actual style" then 30 else 32 }
 #		top : { if is_nmonster() then 80 else if styling.pendulum_size=="more" then 479 else if styling.large_type then 464  else 464 }
