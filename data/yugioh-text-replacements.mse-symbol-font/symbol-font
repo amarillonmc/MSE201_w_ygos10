@@ -25,6 +25,14 @@ symbol:
 symbol:
 	code: *
 	image: dot.png
+symbol:
+	code: Ｏ
+	image: omote1.png
+	image font size: 25
+symbol:
+	code: Ｒ
+	image: reverse1.png
+	image font size: 25
 
 ##############################################################
 # Insert-symbol menu
@@ -34,3 +42,5 @@ insert symbol menu:
 	item: @
 	item: ?
 	item: *
+	item: Ｏ
+	item: Ｒ
