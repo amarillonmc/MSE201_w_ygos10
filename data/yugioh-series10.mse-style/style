@@ -38,6 +38,8 @@ styling field:
 	choice: japanese
 	choice: chinese simplified
 	choice: chinese traditional
+	choice: chinese duel links traditional
+	choice: chinese duel links simplified
 styling field:
 	type: choice
 	name: template style
@@ -343,7 +345,7 @@ card style:
 	name:
 		left: 31
 		#top : 25
-		top : { if styling.language=="chinese traditional" or styling.language=="chinese simplified" then 27 else if styling.template_style=="actual style" then 24 else 25 }
+		top : { if styling.language=="chinese traditional" or styling.language=="chinese simplified" or styling.language=="chinese duel links traditional" or styling.language=="chinese duel links simplified" then 27 else if styling.template_style=="actual style" then 24 else 25 }
 		width: 319
 		height: 41
 		alignment: middle shrink-overflow
@@ -390,9 +392,11 @@ card style:
 				script: if styling.language=="japanese" then "Yu-Gi-Oh! DFG Leisho 4" 
 				else if styling.language=="chinese simplified" then "方正隶变_GBK" 
 				else if styling.language=="chinese traditional" then "DFPLiShuW5-B5" 
+				else if styling.language=="chinese duel links traditional" then "DFPTanLiW5-B5"
+				else if styling.language=="chinese duel links simplified" then "DFPTanLiW5-GB"
 				else "Yu-Gi-Oh! Matrix Small Caps 2"
 			size: 
-				script: if styling.language=="japanese" or styling.language=="chinese simplified" or styling.language=="chinese traditional" then 27 else 35
+				script: if styling.language=="japanese" or styling.language=="chinese simplified" or styling.language=="chinese traditional" or styling.language=="chinese duel links traditional" or styling.language=="chinese duel links simplified" then 27 else 35
 			color:
 				script: if styling.name_color_override then styling.name_color 
 				else if card.rarity=="rare" then rgb(133,168,169)
@@ -459,7 +463,9 @@ card style:
 				script:
 				if styling.language=="japanese" then "Yu-Gi-Oh! DFG Leisho 4" 
 				else if styling.language=="chinese simplified" then "方正隶变_GBK" 
-				else if styling.language=="chinese traditional" then "DFPLiShuW5-B5" 		
+				else if styling.language=="chinese traditional" then "DFPLiShuW5-B5" 	
+				else if styling.language=="chinese duel links traditional" then "DFPTanLiW5-B5"
+				else if styling.language=="chinese duel links simplified" then "DFPTanLiW5-GB"				
 				else "Stone Serif Sem SC ITC TT"
 			size: 15
 			color: rgb(0,0,0)
@@ -629,8 +635,10 @@ card style:
 				if styling.language=="japanese" then "Yu-Gi-Oh! DFG Leisho 4" 
 				else if styling.language=="chinese simplified" then "方正隶变_GBK" 
 				else if styling.language=="chinese traditional" then "DFPLiShuW5-B5" 
+				else if styling.language=="chinese duel links traditional" then "DFPTanLiW5-B5"
+				else if styling.language=="chinese duel links simplified" then "DFPTanLiW5-GB"
 				else "Yu-Gi-Oh!ITCStoneSerifSmallCaps"
-			size: { if styling.large_type then 13.1 else if styling.language=="japanese" or styling.language=="chinese simplified" or styling.language=="chinese traditional" then 13 else 11.4 }
+			size: { if styling.large_type then 13.1 else if styling.language=="japanese" or styling.language=="chinese simplified" or styling.language=="chinese traditional" or styling.language=="chinese duel links" then 13 else 11.4 }
 			color: rgb(0,0,0)
 		symbol font:
 			name: yugioh-text-replacements
@@ -674,8 +682,10 @@ card style:
 				else if styling.language=="japanese" then "Yu-Gi-Oh! DF Leisho 3" 
 				else if styling.language=="chinese simplified" then "方正隶变_GBK" 
 				else if styling.language=="chinese traditional" then "DFPLiShuW5-B5" 
+				else if styling.language=="chinese duel links traditional" then "DFPTanLiW5-B5"
+				else if styling.language=="chinese duel links simplified" then "DFPTanLiW5-GB"
 				else "Yu-Gi-Oh! Matrix Book"
-			italic name: { if styling.language=="japanese" then "Yu-Gi-Oh! DF Leisho 3" else if styling.language=="chinese simplified" then "方正隶变_GBK" else if styling.language=="chinese traditional" then "DFPLiShuW5-B5" else "Stone Serif ITC Medium Italic" }
+			italic name: { if styling.language=="japanese" then "Yu-Gi-Oh! DF Leisho 3" else if styling.language=="chinese simplified" then "方正隶变_GBK" else if styling.language=="chinese traditional" then "DFPLiShuW5-B5" else if styling.language=="chinese duel links traditional" then "DFPTanLiW5-B5" else if styling.language=="chinese duel links simplified" then "DFPTanLiW5-GB" else "Stone Serif ITC Medium Italic" }
 			size: { if is_nmonster() and styling.text_size=="large" then "10" else if is_nmonster() and styling.text_size=="small" then "9.2" else if styling.bold_effect_text then "8.2" else if styling.text_size=="large" then "9.8" else "9.2" }
 			scale down to: 6
 			color: rgb(0,0,0)
@@ -750,6 +760,8 @@ card style:
 				else if styling.language=="japanese" then "Yu-Gi-Oh! DF Leisho 3" 
 				else if styling.language=="chinese simplified" then "方正隶变_GBK" 
 				else if styling.language=="chinese traditional" then "DFPLiShuW5-B5" 
+				else if styling.language=="chinese duel links traditional" then "DFPTanLiW5-B5"
+				else if styling.language=="chinese duel links simplified" then "DFPTanLiW5-GB"
 				else "Yu-Gi-Oh! Matrix Book"
 			size: { if styling.pendulum_size=="less" then 10.4 else 9.7 }
 			#9.5 for regular, 6.9 for medium size

@@ -62,5 +62,5 @@ script:
 		+(if card.rarity != "common" then "\n"+to_title(card.rarity))
 		}
 	write_card := { if is_monster() then write_monster() else write_nonmonster() }
-	write_cards := to_text(for each card in sort_list(cards, order_by: {card.number}) do write_card())
+	write_cards := to_text(for each card in sort_list(cards, order_by: {card.number+card.name}) do write_card())
 	to_string(set.title+"\n"+set.description+write_cards)
