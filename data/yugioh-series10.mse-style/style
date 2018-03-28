@@ -731,16 +731,17 @@ card style:
 	defense:
 		#left: { if card.card_type=="link monster" then 351 else 348 }
 		left: { if card.card_type=="link monster" and styling.extended_artwork=="yes" then 338 else if card.card_type=="link monster" then 351 else 348 }
-		top: { if card.card_type=="link monster" and ( styling.extended_artwork=="yes" and styling.template_style=="actual style" ) then 562 else if card.card_type=="link monster" and styling.extended_artwork=="yes" then 559 else if card.card_type=="pandemonium monster" then 560 else if styling.template_style=="actual style" then 561 else 558 }
+		top: { if card.card_type=="link monster" and ( styling.extended_artwork=="yes" and styling.template_style=="actual style" ) then 561 else if card.card_type=="link monster" and styling.extended_artwork=="yes" then 559 else if card.card_type=="pandemonium monster" then 560 else if styling.template_style=="actual style" then 561 else 558 }
 		width: 38
 		height: 18
 		z index: 2
 		alignment: right middle
 		font:
 			#name: { if card.card_type=="link monster" then "Eurostile Candy W01 Semibold" else "MatrixBoldFractions" }
-			name: { if card.card_type=="link monster" then "YGOLinkNumber" else "MatrixBoldFractions" }
+			#name: { if card.card_type=="link monster" then "YGOLinkNumber" else "MatrixBoldFractions" }
+			name: { if card.card_type=="link monster" then "IDroid" else "MatrixBoldFractions" }
 			italic name: Matrix-Bold
-			size: { if card.card_type=="link monster" then 13 else 14 }
+			size: { if card.card_type=="link monster" then 14 else 14 }
 			color: rgb(0,0,0)
 		symbol font:
 			name: yugioh-text-replacements
