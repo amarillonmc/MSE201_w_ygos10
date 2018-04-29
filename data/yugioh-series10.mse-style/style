@@ -22,7 +22,7 @@ depends on:
 
 card width: 421
 card height: 614
-card dpi: 152.6265
+card dpi: 178.0156
 
 ############################################################## Extra scripts
 ############################################################## Extra style
@@ -676,7 +676,7 @@ card style:
 	############################# Text box
 	rule text:
 		left: { if styling.template_style=="actual style" then 30 else 32 }
-		top : { if styling.template_style=="actual style" and is_nmonster() then 460 else if is_nmonster() then 458 else if is_pendulum() then ( if styling.pendulum_size=="more" then ( if card.card_type=="pendulum normal monster" then 492 else 490 ) else ( if card.card_type=="pendulum normal monster" then 476 else 474 ) ) else if ( card.card_type=="normal monster" and styling.image_frame=="no" ) then 476 else if styling.template_style=="actual style" then 477 else 474 }
+		top : { if styling.template_style=="actual style" and is_nmonster() then 460 else if is_nmonster() then 458 else if is_pendulum() then ( if styling.pendulum_size=="more" then ( if card.card_type=="pendulum normal monster" then 492 else 490 ) else ( if card.card_type=="pendulum normal monster" then 476 else 474 ) ) else if ( card.card_type=="normal monster" and styling.image_frame=="no" ) then 478 else if styling.template_style=="actual style" then 478 else 474 }
 		width: { if styling.template_style=="actual style" then 358 else 356 }
 		height: { if is_nmonster() then 118 else if is_pendulum() and styling.pendulum_size=="more" then 65 else 82 }
 		font:
