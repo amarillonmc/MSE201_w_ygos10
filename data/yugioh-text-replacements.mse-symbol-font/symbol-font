@@ -23,6 +23,10 @@ symbol:
 	image: qmark.png
 	image font size: 32
 symbol:
+	code: Ｘ
+	image: xmark.png
+	image font size: 22
+symbol:
 	code: *
 	image: dot.png
 symbol:
@@ -42,5 +46,6 @@ insert symbol menu:
 	item: @
 	item: ?
 	item: *
+	item: Ｘ
 	item: Ｏ
 	item: Ｒ

@@ -7,66 +7,136 @@ pack type:
 	name: rare
 	filter: card.rarity != "rare"
 pack type:
+	name: super rare
+	filter: card.rarity != "super rare"
+pack type:
+	name: ultra rare
+	filter: card.rarity != "ultra rare"
+pack type:
+	name: secret rare
+	filter: card.rarity != "secret rare"
+pack type:
+	name: tcg guaranteed foil
+	select: proportional
+	item:
+		name: super rare
+		weight: 12
+	item:
+		name: ultra rare
+		weight: 6
+	item:
+		name: secret rare
+		weight: 1
+pack type:
+	name: tcg guaranteed rare old
+	select: proportional
+	item:
+		name: rare
+		weight: 23
+	item:
+		name: super rare
+		weight: 18
+	item:
+		name: ultra rare
+		weight: 12
+	item:
+		name: secret rare
+		weight: 1
+pack type:
+	name: ultimate rare
+	filter: card.rarity != "ultimate rare"
+pack type:
+	name: starfoil rare
+	filter: card.rarity != "star rare"
+pack type:
+	name: mosaic rare
+	filter: card.rarity != "mosaic rare"
+pack type:
+	name: parallel rare
+	filter: card.rarity != "parallel rare"
+pack type:
 	name: gold
 	filter: card.rarity != "gold rare"
+pack type:
+	name: promo
+	filter: card.rarity != "promo"
 pack type:
 	name: card
 	filter: card.number != ""
 ############################################################## Card packs
 pack type:
-	name: booster pack
+	name: booster pack TCG
+	item:
+		name: tcg guaranteed foil
+		amount: 1
 	item:
 		name: rare
 		amount: 1
 	item:
 		name: common
-		amount: 8
+		amount: 7
 pack type:
-	name: champion pack
+	name: hidden arsenal
 	item:
-		name: rare
+		name: secret rare
 		amount: 1
 	item:
-		name: common
-		amount: 2
+		name: super rare
+		amount: 4
 pack type:
 	name: duelist pack
 	item:
-		name: rare
+		name: tcg guaranteed rare old
 		amount: 1
 	item:
-		name: common
-		amount: 5
-pack type:
-	name: gold series
-	item:
-		name: gold
-		amount: 3
-	item:
-		name: common
-		amount: 22
-pack type:
-	name: movie pack
-	item:
-		name: rare
-		amount: 3
-	item:
-		name: common
-		amount: 5
-pack type:
-	name: premium pack
-	item:
-		name: rare
-		amount: 5
+		name: card
+		amount: 4
 pack type:
 	name: tournament pack
 	item:
 		name: card
 		amount: 3
 pack type:
+	name: tin mega pack
+	item:
+		name: secret rare
+		amount: 1
+	item:
+		name: ultra rare
+		amount: 1
+	item:
+		name: super rare
+		amount: 1
+	item:
+		name: rare
+		amount: 1
+	item:
+		name: common
+		amount: 12
+pack type:
+	name: booster pack OCG
+	item:
+		name: tcg guaranteed rare old
+		amount: 1
+	item:
+		name: common
+		amount: 4
+pack type:
+	name: booster pack TCG legacy
+	item:
+		name: tcg guaranteed rare old
+		amount: 1
+	item:
+		name: common
+		amount: 8
+pack type:
 	name: additional rare
 	item:
 		name: rare
+pack type:
+	name: additional foil
+	item:
+		name: tcg guaranteed foil
 pack type:
 	name: additional common
 	item:

@@ -485,7 +485,7 @@ card style:
 		width: { if is_pendulum() and styling.template_style=="actual style" then 371 else if is_pendulum() then 365 else if styling.image_frame then 333 else if card.card_type=="link monster" and ( styling.extended_artwork=="yes" and styling.template_style=="actual style" ) then 374 else if styling.extended_artwork=="yes" and styling.template_style=="actual style" then 373 else if styling.extended_artwork=="yes" then 366 else if styling.template_style=="actual style" then 326 else 320 }
 		height: { if is_pendulum() then ( if styling.pendulum_transparency then ( if styling.pendulum_size=="more" then 368 else 347 ) ) else if styling.image_frame then 333 else if card.card_type=="link monster" and ( styling.extended_artwork=="yes" and styling.template_style=="actual style" ) then 483 else if card.card_type=="link monster" and styling.extended_artwork=="yes" then 479 else if styling.extended_artwork=="yes" and styling.template_style=="actual style" then 474 else if styling.extended_artwork=="yes" then 470 else if styling.template_style=="actual style" then 326 else 320 }
 		z index: 1
-		mask: { if is_pendulum() and styling.template_style=="actual style" then ( if styling.pendulum_size=="less" then "new/mask-p_less.png" else if styling.pendulum_size=="more" then "new/mask-p_more.png" else "new/mask-p.png" ) else if is_pendulum() and styling.template_style=="proxy-like" then ( if styling.pendulum_transparency then ( if styling.pendulum_size=="less" then "mask-p_less.png" else if styling.pendulum_size=="more" then "mask-p_more.png" else "mask-p.png" ) else ( if styling.pendulum_size=="less" then "mask-p_opaque_less.png" else "mask-p_opaque.png" ) ) else if styling.template_style=="actual style" and styling.extended_artwork=="yes" then ( if card.card_type=="spell card" or card.card_type=="trap card" then "new/maskex5.png" else if card.card_type=="link monster" then "new/maskex1.png" else "new/maskex5.png" ) else if styling.extended_artwork=="yes" then (if card.card_type=="spell card" or card.card_type=="trap card" then "maskex1.png" else if card.card_type=="link monster" then "maskex2.png" else "maskex.png") else "" }
+		mask: { if is_pendulum() and styling.template_style=="actual style" then ( if styling.pendulum_size=="less" then "new/mask-p_less.png" else if styling.pendulum_size=="more" then "new/mask-p_more.png" else "new/mask-p.png" ) else if is_pendulum() and styling.template_style=="proxy-like" then ( if styling.pendulum_transparency then ( if styling.pendulum_size=="less" then "mask-p_less.png" else if styling.pendulum_size=="more" then "mask-p_more.png" else "mask-p.png" ) else ( if styling.pendulum_size=="less" then "mask-p_opaque_less.png" else "mask-p_opaque.png" ) ) else if styling.template_style=="actual style" and styling.extended_artwork=="yes" then ( if card.card_type=="spell card" or card.card_type=="trap card" then "new/maskex5.png" else if card.card_type=="link monster" then "new/maskex3.png" else "new/maskex4.png" ) else if styling.extended_artwork=="yes" then (if card.card_type=="spell card" or card.card_type=="trap card" then "maskex1.png" else if card.card_type=="link monster" then "maskex2.png" else "maskex.png") else "" }
 	############################# Link Marker Border INDENTS MATTER
 	linkborder:
 		left: 
@@ -691,7 +691,7 @@ card style:
 				else "Yu-Gi-Oh! Matrix Book"
 			italic name: { if styling.language=="japanese" then "Yu-Gi-Oh! DF Leisho 3" else if styling.language=="chinese simplified" then "方正隶变_GBK" else if styling.language=="chinese traditional" then "DFPLiShuW5-B5" else if styling.language=="chinese duel links traditional" then "DFPTanLiW5-B5" else if styling.language=="chinese duel links simplified" then "DFPTanLiW5-GB" else "Stone Serif ITC Medium Italic" }
 			size: { if is_nmonster() and styling.text_size=="large" then "10" else if is_nmonster() and styling.text_size=="small" then "9.2" else if styling.bold_effect_text then "8.2" else if styling.text_size=="large" then "9.8" else "9.2" }
-			scale down to: 6
+			scale down to: 4
 			color: rgb(0,0,0)
 		symbol font:
 			name: yugioh-text-numbers
@@ -721,9 +721,10 @@ card style:
 		width: 38
 		height: 18
 		z index: 2
-		alignment: right middle
+		alignment: right middle shrink-overflow
 		font:
-			name: MatrixBoldFractions
+			#name: MatrixBoldFractions
+			name: MatrixBoldSmallCaps
 			italic name: Matrix-Bold
 			size: 14
 			color: rgb(0,0,0)
@@ -739,11 +740,12 @@ card style:
 		width: 38
 		height: 18
 		z index: 2
-		alignment: right middle
+		alignment: right middle shrink-overflow
 		font:
 			#name: { if card.card_type=="link monster" then "Eurostile Candy W01 Semibold" else "MatrixBoldFractions" }
 			#name: { if card.card_type=="link monster" then "YGOLinkNumber" else "MatrixBoldFractions" }
-			name: { if card.card_type=="link monster" then "IDroid" else "MatrixBoldFractions" }
+			#name: { if card.card_type=="link monster" then "IDroid" else "MatrixBoldFractions" }
+			name: { if card.card_type=="link monster" then "IDroid" else "MatrixBoldSmallCaps" }
 			italic name: Matrix-Bold
 			size: { if card.card_type=="link monster" then 14 else 14 }
 			color: rgb(0,0,0)
