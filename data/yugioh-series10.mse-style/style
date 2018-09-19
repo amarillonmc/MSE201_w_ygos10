@@ -330,7 +330,7 @@ card style:
 				) else
 				if card.rarity=="gold rare" and is_pendulum() then ( if styling.pendulum_size=="less" then "goldfoil-pendulum_less.png" else if styling.pendulum_size=="more" then "goldfoil-pendulum_more.png" else "goldfoil-pendulum.png" ) else
 				if card.rarity=="gold rare" and styling.image_frame then "goldfoil-anniversary.png" else
-				if card.rarity=="gold rare" and styling.extended_artwork=="yes" then "goldfoil-anniversary.png"
+				if card.rarity=="gold rare" and styling.extended_artwork=="yes" then "goldfoil-anniversary.png" else
 				if card.rarity=="gold rare" then "goldfoil.png" else
 				if styling.foil_texture then (
 				if card.rarity=="super rare" then "defaultfoil.png" else
