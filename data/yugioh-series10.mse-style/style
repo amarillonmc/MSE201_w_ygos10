@@ -533,9 +533,9 @@ card style:
 	############################# Link Markers
 	linkul:
 		left:
-			script: if card.card_type=="link monster" or styling.is_link_card and ( styling.extended_artwork=="yes" and styling.template_style=="actual style" ) then 14 else if card.card_type=="link monster" or styling.is_link_card and styling.extended_artwork=="yes" then 18 else if card.card_type=="link monster" or styling.is_link_card and styling.template_style=="actual style" then 30 else if card.card_type=="link monster" then 36 else 5
+			script: if card.card_type=="link monster" or styling.is_link_card and ( styling.extended_artwork=="yes" and styling.template_style=="actual style" ) then 14 else if card.card_type=="link monster" or styling.is_link_card and styling.extended_artwork=="yes" then 18 else if card.card_type=="link monster" or styling.is_link_card and styling.template_style=="actual style" then 30 else if card.card_type=="link monster" or styling.is_link_card then 36 else 5
 		top:
-			script: if card.card_type=="link monster" or styling.is_link_card and ( styling.extended_artwork=="yes" and styling.template_style=="actual style" ) then 94 else if card.card_type=="link monster" or styling.is_link_card and styling.extended_artwork=="yes" then 92 else if card.card_type=="link monster" or styling.is_link_card and styling.template_style=="actual style" then 94 else if card.card_type=="link monster" then 99 else 5
+			script: if card.card_type=="link monster" or styling.is_link_card and ( styling.extended_artwork=="yes" and styling.template_style=="actual style" ) then 94 else if card.card_type=="link monster" or styling.is_link_card and styling.extended_artwork=="yes" then 92 else if card.card_type=="link monster" or styling.is_link_card and styling.template_style=="actual style" then 94 else if card.card_type=="link monster" or styling.is_link_card then 99 else 5
 		width:
 			script: if card.card_type=="link monster" or styling.is_link_card and styling.extended_artwork=="yes" then 43 else if card.card_type=="link monster" or styling.is_link_card and styling.template_style=="actual style" then 44 else if card.card_type=="link monster" or styling.is_link_card then 38 else 0
 		height:
@@ -548,9 +548,9 @@ card style:
 			on: {if styling.extended_artwork=="yes" then "linkulonex.png" else if styling.template_style=="actual style" then "new/linkulon.png" else "linkulon.png" }
 	linku:
 		left:
-			script: if card.card_type=="link monster" or styling.is_link_card and ( styling.extended_artwork=="yes" and styling.template_style=="actual style" ) then 162 else if card.card_type=="link monster" or styling.is_link_card and styling.extended_artwork=="yes" then 162 else if card.card_type=="link monster" or styling.is_link_card and styling.template_style=="actual style" then 165 else if card.card_type=="link monster" then 164 else 5
+			script: if card.card_type=="link monster" or styling.is_link_card and ( styling.extended_artwork=="yes" and styling.template_style=="actual style" ) then 162 else if card.card_type=="link monster" or styling.is_link_card and styling.extended_artwork=="yes" then 162 else if card.card_type=="link monster" or styling.is_link_card and styling.template_style=="actual style" then 165 else if card.card_type=="link monster" or styling.is_link_card then 164 else 5
 		top:
-			script: if card.card_type=="link monster" or styling.is_link_card and ( styling.extended_artwork=="yes" and styling.template_style=="actual style" ) then 88 else if card.card_type=="link monster" or styling.is_link_card and styling.extended_artwork=="yes" then 85 else if card.card_type=="link monster" or styling.is_link_card and styling.template_style=="actual style" then 84 else if card.card_type=="link monster" then 92 else 5
+			script: if card.card_type=="link monster" or styling.is_link_card and ( styling.extended_artwork=="yes" and styling.template_style=="actual style" ) then 88 else if card.card_type=="link monster" or styling.is_link_card and styling.extended_artwork=="yes" then 85 else if card.card_type=="link monster" or styling.is_link_card and styling.template_style=="actual style" then 84 else if card.card_type=="link monster" or styling.is_link_card then 92 else 5
 		width:
 			script: if card.card_type=="link monster" or styling.is_link_card and styling.extended_artwork=="yes" then 94 else if card.card_type=="link monster" or styling.is_link_card and styling.template_style=="actual style" then 97 else if card.card_type=="link monster" or styling.is_link_card then 94 else 0
 		height:
