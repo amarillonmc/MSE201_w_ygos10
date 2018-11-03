@@ -106,6 +106,7 @@ word list:
 	word: サイバース族
 word list:
 	name: card
+	word: Normal
 	word: Dark Synchro
 	word: Dark Tuner
 	word: Effect
@@ -122,6 +123,8 @@ word list:
 	word: Union
 	word: Xyz
 	word: Link
+	word: Skill
+	word: 通常
 	word: 同调
 	word: 超量
 	word: 融合
@@ -140,6 +143,7 @@ word list:
 	word: 特殊召唤
 	word: 衍生物
 	word: 万魔
+	word: 通常
 	word: 同調
 	word: 超量
 	word: 融合

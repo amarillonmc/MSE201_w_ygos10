@@ -5,7 +5,7 @@ installer group: Yugioh/game files
 icon: card-back.png
 position hint: 4
 
-version: 2017-06-26
+version: 2018-11-03
 
 ############################################################## The script
 
@@ -44,5 +44,6 @@ card list color script:
 	else if input == "link monster" then rgb(89,89,171)
 	else if input == "spell card" then rgb(67,161,99)
 	else if input == "trap card" then rgb(148,54,128)
+	else if input == "skill card" then rgb(95,95,171)
 	else rgb(0,0,0)
 	

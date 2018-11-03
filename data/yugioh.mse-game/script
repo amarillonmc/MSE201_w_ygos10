@@ -109,6 +109,8 @@
 		else if	contains(card.monster_type, match:"Toon")						then "effect monster"
 		else if	contains(card.monster_type, match:"Flip")						then "effect monster"
 		else if	contains(card.monster_type, match:"Effect")						then "effect monster"
+		else if contains(card.monster_type, match:"Normal")						then "normal monster"
+		else if contains(card.monster_type, match:"Skill")						then "skill card"
 		else                                    	 							"normal monster"
 	}
 	# Default 'attribute' of card

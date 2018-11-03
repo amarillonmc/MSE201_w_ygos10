@@ -153,6 +153,16 @@ styling field:
 	choice: no
 	choice: yes
 styling field:
+	type: boolean
+	name: is speedduel card
+	description: 是否为高速决斗卡 Choosing "Yes" will apply the Speed Duel watermark on the card.
+	initial: no
+styling field:
+	type: boolean
+	name: is link card
+	description: 是否为链接魔陷卡 Choosing "Yes" will apply the Link frame even if it's not a Link Monster, used for Link Spell/Traps.
+	initial: no
+styling field:
 	type: info
 	name: Text Formatting
 styling field:
@@ -297,6 +307,20 @@ card style:
 			spell card             : { if styling.extended_artwork=="yes" and styling.template_style=="actual style" then "new/fullart/spellex.png" else if styling.extended_artwork=="yes" then "fullart/spellex.png" else if styling.template_style=="actual style" then "new/spellnew.png" else "card-spell.png" }
 			trap card              : { if styling.extended_artwork=="yes" and styling.template_style=="actual style" then "new/fullart/trapex.png" else if styling.extended_artwork=="yes" then "fullart/trapex.png" else if styling.template_style=="actual style" then "new/trapnew.png" else "card-trap.png" }
 			trell card             : card-trell.png
+			skill card             : { if styling.extended_artwork=="yes" then "new/fullart/skillex.png" else "new/skill.png"}
+	sdoverlay:
+		left: 0
+		top: 0
+		width: 421
+		height: 614
+		z index: -1
+		render style: image
+		popup style: in place
+		image:
+			script:
+			if styling.is_speedduel_card then "speeddueloverlay.png" 
+			else "blank2.png"
+		combine: normal
 	foils:
 		left: { if card.rarity=="parallel rare" or card.rarity=="star rare" or card.rarity=="mosaic rare" or card.rarity=="gold rare" or card.rarity=="ultimate rare" or styling.custom_foil=="ygojpoverlay" or styling.custom_foil=="ygojpoverlayp" then 0 else if card.rarity=="promo" or card.rarity=="secret rare" or card.rarity=="ultra rare" or card.rarity=="super rare" and styling.template_style=="actual style" and is_pendulum() then 25 else if is_pendulum() then 28 else if card.card_type=="link monster" and ( styling.extended_artwork=="yes" and styling.template_style=="actual style" ) then 23 else if card.card_type=="link monster" and styling.extended_artwork=="yes" then 28 else if styling.extended_artwork=="yes" and styling.template_style=="actual style" then 24 else if styling.image_frame then 44 else if styling.extended_artwork=="yes" then 28 else if styling.template_style=="actual style" then 47 else 51 }
 		top: { if card.rarity=="parallel rare" or card.rarity=="star rare" or card.rarity=="mosaic rare" or card.rarity=="gold rare" or card.rarity=="ultimate rare" or styling.custom_foil=="ygojpoverlay" or styling.custom_foil=="ygojpoverlayp" then 0 else if card.rarity=="promo" or card.rarity=="secret rare" or card.rarity=="ultra rare" or card.rarity=="super rare" and is_pendulum() and styling.template_style=="actual style" then 109.5 else if is_pendulum() then 110 else if styling.image_frame then 106 else if card.card_type=="link monster" and ( styling.extended_artwork=="yes" and styling.template_style=="actual style" ) then 102 else if card.card_type=="link monster" and styling.extended_artwork=="yes" then 99 else if styling.extended_artwork=="yes" then 110 else if styling.extended_artwork=="yes" and styling.template_style=="actual style" then 111 else if styling.template_style=="actual style" then 110 else 113 }
@@ -349,7 +373,7 @@ card style:
 	name:
 		left: 31
 		#top : 25
-		top : { if styling.language=="chinese traditional" or styling.language=="chinese simplified" or styling.language=="chinese duel links traditional" or styling.language=="chinese duel links simplified" then 27 else if styling.template_style=="actual style" then 24 else 25 }
+		top : { if styling.language=="chinese traditional" or styling.language=="chinese simplified" or styling.language=="chinese duel links traditional" or styling.language=="chinese duel links simplified" then 27 else if styling.template_style=="actual style" or card.card_type=="skill card" then 24 else 25 }
 		width: 319
 		height: 41
 		alignment: middle shrink-overflow
@@ -385,6 +409,7 @@ card style:
 				else if card.card_type=="dark synchro monster" then rgb(255,255,255)
 				else if card.card_type=="pendulum xyz monster" then rgb(255,255,255)
 				else if card.card_type=="pendulum dark synchro monster" then rgb(255,255,255)
+				else if card.card_type=="skill card" then rgb(0,0,0)
 				else if is_nmonster() then "transparent"
 				else "transparent"
 
@@ -398,9 +423,10 @@ card style:
 				else if styling.language=="chinese traditional" then "DFPLiShuW5-B5" 
 				else if styling.language=="chinese duel links traditional" then "DFPTanLiW5-B5"
 				else if styling.language=="chinese duel links simplified" then "DFPTanLiW5-GB"
+				else if card.card_type=="skill card" then "Arial Narrow"
 				else "Yu-Gi-Oh! Matrix Small Caps 2"
 			size: 
-				script: if styling.language=="japanese" or styling.language=="chinese simplified" or styling.language=="chinese traditional" or styling.language=="chinese duel links traditional" or styling.language=="chinese duel links simplified" then 27 else 35
+				script: if styling.language=="japanese" or styling.language=="chinese simplified" or styling.language=="chinese traditional" or styling.language=="chinese duel links traditional" or styling.language=="chinese duel links simplified" or card.card_type=="skill card" then 27 else 35
 			color:
 				script: if styling.name_color_override then styling.name_color 
 				else if card.rarity=="rare" then rgb(133,168,169)
@@ -426,6 +452,7 @@ card style:
 				else if card.card_type=="pendulum xyz monster" then rgb(255,255,255)
 				else if card.card_type=="pendulum dark synchro monster" then rgb(255,255,255)
 				else if card.card_type=="bigbang monster" then rgb(255,255,255)
+				else if card.card_type=="skill card" then rgb(255,255,255)
 				else if is_nmonster() then rgb(255,255,255)
 				else rgb(0,0,0)
 		symbol font:
@@ -489,13 +516,13 @@ card style:
 	############################# Link Marker Border INDENTS MATTER
 	linkborder:
 		left: 
-			script: if card.card_type=="link monster" then 0 else 5 # 50
+			script: if card.card_type=="link monster" or styling.is_link_card then 0 else 5 # 50
 		top: 
-			script: if card.card_type=="link monster" then 0 else 5 # 113
+			script: if card.card_type=="link monster" or styling.is_link_card then 0 else 5 # 113
 		width: 
-			script: if card.card_type=="link monster" then 422 else 0 # 322
+			script: if card.card_type=="link monster" or styling.is_link_card then 422 else 0 # 322
 		height: 
-			script: if card.card_type=="link monster" then 615 else 0 # 321
+			script: if card.card_type=="link monster" or styling.is_link_card then 615 else 0 # 321
 		z index: 6
 		render style: image
 		popup style: in place
@@ -506,13 +533,13 @@ card style:
 	############################# Link Markers
 	linkul:
 		left:
-			script: if card.card_type=="link monster" and ( styling.extended_artwork=="yes" and styling.template_style=="actual style" ) then 14 else if card.card_type=="link monster" and styling.extended_artwork=="yes" then 18 else if card.card_type=="link monster" and styling.template_style=="actual style" then 30 else if card.card_type=="link monster" then 36 else 5
+			script: if card.card_type=="link monster" or styling.is_link_card and ( styling.extended_artwork=="yes" and styling.template_style=="actual style" ) then 14 else if card.card_type=="link monster" or styling.is_link_card and styling.extended_artwork=="yes" then 18 else if card.card_type=="link monster" or styling.is_link_card and styling.template_style=="actual style" then 30 else if card.card_type=="link monster" then 36 else 5
 		top:
-			script: if card.card_type=="link monster" and ( styling.extended_artwork=="yes" and styling.template_style=="actual style" ) then 94 else if card.card_type=="link monster" and styling.extended_artwork=="yes" then 92 else if card.card_type=="link monster" and styling.template_style=="actual style" then 94 else if card.card_type=="link monster" then 99 else 5
+			script: if card.card_type=="link monster" or styling.is_link_card and ( styling.extended_artwork=="yes" and styling.template_style=="actual style" ) then 94 else if card.card_type=="link monster" or styling.is_link_card and styling.extended_artwork=="yes" then 92 else if card.card_type=="link monster" or styling.is_link_card and styling.template_style=="actual style" then 94 else if card.card_type=="link monster" then 99 else 5
 		width:
-			script: if card.card_type=="link monster" and styling.extended_artwork=="yes" then 43 else if card.card_type=="link monster" and styling.template_style=="actual style" then 44 else if card.card_type=="link monster" then 38 else 0
+			script: if card.card_type=="link monster" or styling.is_link_card and styling.extended_artwork=="yes" then 43 else if card.card_type=="link monster" or styling.is_link_card and styling.template_style=="actual style" then 44 else if card.card_type=="link monster" or styling.is_link_card then 38 else 0
 		height:
-			script: if card.card_type=="link monster" and styling.extended_artwork=="yes" then 43 else if card.card_type=="link monster" and styling.template_style=="actual style" then 43 else if card.card_type=="link monster" then 38 else 0
+			script: if card.card_type=="link monster" or styling.is_link_card and styling.extended_artwork=="yes" then 43 else if card.card_type=="link monster" or styling.is_link_card and styling.template_style=="actual style" then 43 else if card.card_type=="link monster" or styling.is_link_card then 38 else 0
 		z index: 7
 		render style: image
 		popup style: in place
@@ -521,13 +548,13 @@ card style:
 			on: {if styling.extended_artwork=="yes" then "linkulonex.png" else if styling.template_style=="actual style" then "new/linkulon.png" else "linkulon.png" }
 	linku:
 		left:
-			script: if card.card_type=="link monster" and ( styling.extended_artwork=="yes" and styling.template_style=="actual style" ) then 162 else if card.card_type=="link monster" and styling.extended_artwork=="yes" then 162 else if card.card_type=="link monster" and styling.template_style=="actual style" then 165 else if card.card_type=="link monster" then 164 else 5
+			script: if card.card_type=="link monster" or styling.is_link_card and ( styling.extended_artwork=="yes" and styling.template_style=="actual style" ) then 162 else if card.card_type=="link monster" or styling.is_link_card and styling.extended_artwork=="yes" then 162 else if card.card_type=="link monster" or styling.is_link_card and styling.template_style=="actual style" then 165 else if card.card_type=="link monster" then 164 else 5
 		top:
-			script: if card.card_type=="link monster" and ( styling.extended_artwork=="yes" and styling.template_style=="actual style" ) then 88 else if card.card_type=="link monster" and styling.extended_artwork=="yes" then 85 else if card.card_type=="link monster" and styling.template_style=="actual style" then 84 else if card.card_type=="link monster" then 92 else 5
+			script: if card.card_type=="link monster" or styling.is_link_card and ( styling.extended_artwork=="yes" and styling.template_style=="actual style" ) then 88 else if card.card_type=="link monster" or styling.is_link_card and styling.extended_artwork=="yes" then 85 else if card.card_type=="link monster" or styling.is_link_card and styling.template_style=="actual style" then 84 else if card.card_type=="link monster" then 92 else 5
 		width:
-			script: if card.card_type=="link monster" and styling.extended_artwork=="yes" then 94 else if card.card_type=="link monster" and styling.template_style=="actual style" then 97 else if card.card_type=="link monster" then 94 else 0
+			script: if card.card_type=="link monster" or styling.is_link_card and styling.extended_artwork=="yes" then 94 else if card.card_type=="link monster" or styling.is_link_card and styling.template_style=="actual style" then 97 else if card.card_type=="link monster" or styling.is_link_card then 94 else 0
 		height:
-			script: if card.card_type=="link monster" and styling.extended_artwork=="yes" then 19 else if card.card_type=="link monster" and styling.template_style=="actual style" then 24 else if card.card_type=="link monster" then 22 else 0
+			script: if card.card_type=="link monster" or styling.is_link_card and styling.extended_artwork=="yes" then 19 else if card.card_type=="link monster" or styling.is_link_card and styling.template_style=="actual style" then 24 else if card.card_type=="link monster" or styling.is_link_card then 22 else 0
 		z index: 7
 		render style: image
 		popup style: in place
@@ -536,13 +563,13 @@ card style:
 			on: {if styling.extended_artwork=="yes" then "linkuonex.png" else if styling.template_style=="actual style" then "new/linkuon.png" else "linkuon.png" }
 	linkur:
 		left:
-			script: if card.card_type=="link monster" and ( styling.extended_artwork=="yes" and styling.template_style=="actual style" ) then 362 else if card.card_type=="link monster" and styling.extended_artwork=="yes" then 359 else if card.card_type=="link monster" and styling.template_style=="actual style" then 347 else if card.card_type=="link monster" then 349 else 5
+			script: if card.card_type=="link monster" or styling.is_link_card and ( styling.extended_artwork=="yes" and styling.template_style=="actual style" ) then 362 else if card.card_type=="link monster" or styling.is_link_card and styling.extended_artwork=="yes" then 359 else if card.card_type=="link monster" or styling.is_link_card and styling.template_style=="actual style" then 347 else if card.card_type=="link monster" or styling.is_link_card then 349 else 5
 		top:
-			script: if card.card_type=="link monster" and ( styling.extended_artwork=="yes" and styling.template_style=="actual style" ) then 94 else if card.card_type=="link monster" and styling.extended_artwork=="yes" then 92 else if card.card_type=="link monster" and styling.template_style=="actual style" then 94 else if card.card_type=="link monster" then 99 else 5
+			script: if card.card_type=="link monster" or styling.is_link_card and ( styling.extended_artwork=="yes" and styling.template_style=="actual style" ) then 94 else if card.card_type=="link monster" or styling.is_link_card and styling.extended_artwork=="yes" then 92 else if card.card_type=="link monster" or styling.is_link_card and styling.template_style=="actual style" then 94 else if card.card_type=="link monster" or styling.is_link_card then 99 else 5
 		width:
-			script: if card.card_type=="link monster" and styling.extended_artwork=="yes" then 44 else if card.card_type=="link monster" and styling.template_style=="actual style" then 45 else if card.card_type=="link monster" then 38 else 0
+			script: if card.card_type=="link monster" or styling.is_link_card and styling.extended_artwork=="yes" then 44 else if card.card_type=="link monster" or styling.is_link_card and styling.template_style=="actual style" then 45 else if card.card_type=="link monster" or styling.is_link_card then 38 else 0
 		height:
-			script: if card.card_type=="link monster" and styling.extended_artwork=="yes" then 43 else if card.card_type=="link monster" and styling.template_style=="actual style" then 43 else if card.card_type=="link monster" then 38 else 0
+			script: if card.card_type=="link monster" or styling.is_link_card and styling.extended_artwork=="yes" then 43 else if card.card_type=="link monster" or styling.is_link_card and styling.template_style=="actual style" then 43 else if card.card_type=="link monster" or styling.is_link_card then 38 else 0
 		z index: 7
 		render style: image
 		popup style: in place
@@ -551,13 +578,13 @@ card style:
 			on: {if styling.extended_artwork=="yes" then "linkuronex.png" else if styling.template_style=="actual style" then "new/linkuron.png" else "linkuron.png" }
 	linkl:
 		left:
-			script: if card.card_type=="link monster" and ( styling.extended_artwork=="yes" and styling.template_style=="actual style" ) then 8 else if card.card_type=="link monster" and styling.extended_artwork=="yes" then 13 else if card.card_type=="link monster" and styling.template_style=="actual style" then 24 else if card.card_type=="link monster" then 30 else 5
+			script: if card.card_type=="link monster" or styling.is_link_card and ( styling.extended_artwork=="yes" and styling.template_style=="actual style" ) then 8 else if card.card_type=="link monster" or styling.is_link_card and styling.extended_artwork=="yes" then 13 else if card.card_type=="link monster" or styling.is_link_card and styling.template_style=="actual style" then 24 else if card.card_type=="link monster" or styling.is_link_card then 30 else 5
 		top:
-			script: if card.card_type=="link monster" and ( styling.extended_artwork=="yes" and styling.template_style=="actual style" ) then 287 else if card.card_type=="link monster" and styling.extended_artwork=="yes" then 284 else if card.card_type=="link monster" and styling.template_style=="actual style" then 225 else if card.card_type=="link monster" then 225 else 5
+			script: if card.card_type=="link monster" or styling.is_link_card and ( styling.extended_artwork=="yes" and styling.template_style=="actual style" ) then 287 else if card.card_type=="link monster" or styling.is_link_card and styling.extended_artwork=="yes" then 284 else if card.card_type=="link monster" or styling.is_link_card and styling.template_style=="actual style" then 225 else if card.card_type=="link monster" or styling.is_link_card then 225 else 5
 		width:
-			script: if card.card_type=="link monster" and styling.extended_artwork=="yes" then 18 else if card.card_type=="link monster" and styling.template_style=="actual style" then 24 else if card.card_type=="link monster" then 22 else 0
+			script: if card.card_type=="link monster" or styling.is_link_card and styling.extended_artwork=="yes" then 18 else if card.card_type=="link monster" or styling.is_link_card and styling.template_style=="actual style" then 24 else if card.card_type=="link monster" or styling.is_link_card then 22 else 0
 		height:
-			script: if card.card_type=="link monster" and styling.extended_artwork=="yes" then 96 else if card.card_type=="link monster" and styling.template_style=="actual style" then 97 else if card.card_type=="link monster" then 94 else 0
+			script: if card.card_type=="link monster" or styling.is_link_card and styling.extended_artwork=="yes" then 96 else if card.card_type=="link monster" or styling.is_link_card and styling.template_style=="actual style" then 97 else if card.card_type=="link monster" or styling.is_link_card then 94 else 0
 		z index: 7
 		render style: image
 		popup style: in place
@@ -566,13 +593,13 @@ card style:
 			on: {if styling.extended_artwork=="yes" then "linklonex.png" else if styling.template_style=="actual style" then "new/linklon.png" else "linklon.png" }
 	linkdl:
 		left:
-			script: if card.card_type=="link monster" and ( styling.extended_artwork=="yes" and styling.template_style=="actual style" ) then 14 else if card.card_type=="link monster" and styling.extended_artwork=="yes" then 18 else if card.card_type=="link monster" and styling.template_style=="actual style" then 30 else if card.card_type=="link monster" then 36 else 5
+			script: if card.card_type=="link monster" or styling.is_link_card and ( styling.extended_artwork=="yes" and styling.template_style=="actual style" ) then 14 else if card.card_type=="link monster" or styling.is_link_card and styling.extended_artwork=="yes" then 18 else if card.card_type=="link monster" or styling.is_link_card and styling.template_style=="actual style" then 30 else if card.card_type=="link monster" or styling.is_link_card then 36 else 5
 		top:
-			script: if card.card_type=="link monster" and ( styling.extended_artwork=="yes" and styling.template_style=="actual style" ) then 547 else if card.card_type=="link monster" and styling.extended_artwork=="yes" then 545 else if card.card_type=="link monster" and styling.template_style=="actual style" then 408 else if card.card_type=="link monster" then 409 else 5
+			script: if card.card_type=="link monster" or styling.is_link_card and ( styling.extended_artwork=="yes" and styling.template_style=="actual style" ) then 547 else if card.card_type=="link monster" or styling.is_link_card and styling.extended_artwork=="yes" then 545 else if card.card_type=="link monster" or styling.is_link_card and styling.template_style=="actual style" then 408 else if card.card_type=="link monster" or styling.is_link_card then 409 else 5
 		width:
-			script: if card.card_type=="link monster" and styling.extended_artwork=="yes" then 42 else if card.card_type=="link monster" and styling.template_style=="actual style" then 43 else if card.card_type=="link monster" then 38 else 0
+			script: if card.card_type=="link monster" or styling.is_link_card and styling.extended_artwork=="yes" then 42 else if card.card_type=="link monster" or styling.is_link_card and styling.template_style=="actual style" then 43 else if card.card_type=="link monster" or styling.is_link_card then 38 else 0
 		height:
-			script: if card.card_type=="link monster" and styling.extended_artwork=="yes" then 43 else if card.card_type=="link monster" and styling.template_style=="actual style" then 43 else if card.card_type=="link monster" then 38 else 0
+			script: if card.card_type=="link monster" or styling.is_link_card and styling.extended_artwork=="yes" then 43 else if card.card_type=="link monster" or styling.is_link_card and styling.template_style=="actual style" then 43 else if card.card_type=="link monster" or styling.is_link_card then 38 else 0
 		z index: 7
 		render style: image
 		popup style: in place
@@ -581,13 +608,13 @@ card style:
 			on: {if styling.extended_artwork=="yes" then "linkdlonex.png" else if styling.template_style=="actual style" then "new/linkdlon.png" else "linkdlon.png" }
 	linkr:
 		left:
-			script: if card.card_type=="link monster" and ( styling.extended_artwork=="yes" and styling.template_style=="actual style" ) then 393 else if card.card_type=="link monster" and styling.extended_artwork=="yes" then 389 else if card.card_type=="link monster" and styling.template_style=="actual style" then 373 else if card.card_type=="link monster" then 371 else 5
+			script: if card.card_type=="link monster" or styling.is_link_card and ( styling.extended_artwork=="yes" and styling.template_style=="actual style" ) then 393 else if card.card_type=="link monster" or styling.is_link_card and styling.extended_artwork=="yes" then 389 else if card.card_type=="link monster" or styling.is_link_card and styling.template_style=="actual style" then 373 else if card.card_type=="link monster" or styling.is_link_card then 371 else 5
 		top:
-			script: if card.card_type=="link monster" and ( styling.extended_artwork=="yes" and styling.template_style=="actual style" ) then 287 else if card.card_type=="link monster" and styling.extended_artwork=="yes" then 284 else if card.card_type=="link monster" and styling.template_style=="actual style" then 225 else if card.card_type=="link monster" then 225 else 5
+			script: if card.card_type=="link monster" or styling.is_link_card and ( styling.extended_artwork=="yes" and styling.template_style=="actual style" ) then 287 else if card.card_type=="link monster" or styling.is_link_card and styling.extended_artwork=="yes" then 284 else if card.card_type=="link monster" or styling.is_link_card and styling.template_style=="actual style" then 225 else if card.card_type=="link monster" or styling.is_link_card then 225 else 5
 		width:
-			script: if card.card_type=="link monster" and styling.extended_artwork=="yes" then 18 else if card.card_type=="link monster" and styling.template_style=="actual style" then 25 else if card.card_type=="link monster" then 22 else 0
+			script: if card.card_type=="link monster" or styling.is_link_card and styling.extended_artwork=="yes" then 18 else if card.card_type=="link monster" or styling.is_link_card and styling.template_style=="actual style" then 25 else if card.card_type=="link monster" or styling.is_link_card then 22 else 0
 		height:
-			script: if card.card_type=="link monster" and styling.extended_artwork=="yes" then 96 else if card.card_type=="link monster" and styling.template_style=="actual style" then 96 else if card.card_type=="link monster" then 94 else 0
+			script: if card.card_type=="link monster" or styling.is_link_card and styling.extended_artwork=="yes" then 96 else if card.card_type=="link monster" or styling.is_link_card and styling.template_style=="actual style" then 96 else if card.card_type=="link monster" or styling.is_link_card then 94 else 0
 		z index: 7
 		render style: image
 		popup style: in place
@@ -596,13 +623,13 @@ card style:
 			on: {if styling.extended_artwork=="yes" then "linkronex.png" else if styling.template_style=="actual style" then "new/linkron.png" else "linkron.png" }
 	linkd:
 		left:
-			script: if card.card_type=="link monster" and ( styling.extended_artwork=="yes" and styling.template_style=="actual style" ) then 162 else if card.card_type=="link monster" and styling.extended_artwork=="yes" then 162 else if card.card_type=="link monster" and styling.template_style=="actual style" then 164 else if card.card_type=="link monster" then 164 else 5
+			script: if card.card_type=="link monster" or styling.is_link_card and ( styling.extended_artwork=="yes" and styling.template_style=="actual style" ) then 162 else if card.card_type=="link monster" or styling.is_link_card and styling.extended_artwork=="yes" then 162 else if card.card_type=="link monster" or styling.is_link_card and styling.template_style=="actual style" then 164 else if card.card_type=="link monster" or styling.is_link_card then 164 else 5
 		top:
-			script: if card.card_type=="link monster" and ( styling.extended_artwork=="yes" and styling.template_style=="actual style" ) then 578 else if card.card_type=="link monster" and styling.extended_artwork=="yes" then 575 else if card.card_type=="link monster" and styling.template_style=="actual style" then 434 else if card.card_type=="link monster" then 431 else 5
+			script: if card.card_type=="link monster" or styling.is_link_card and ( styling.extended_artwork=="yes" and styling.template_style=="actual style" ) then 578 else if card.card_type=="link monster" or styling.is_link_card and styling.extended_artwork=="yes" then 575 else if card.card_type=="link monster" or styling.is_link_card and styling.template_style=="actual style" then 434 else if card.card_type=="link monster" or styling.is_link_card then 431 else 5
 		width:
-			script: if card.card_type=="link monster" and styling.extended_artwork=="yes" then 94 else if card.card_type=="link monster" and styling.template_style=="actual style" then 97 else if card.card_type=="link monster" then 94 else 0
+			script: if card.card_type=="link monster" or styling.is_link_card and styling.extended_artwork=="yes" then 94 else if card.card_type=="link monster" or styling.is_link_card and styling.template_style=="actual style" then 97 else if card.card_type=="link monster" or styling.is_link_card then 94 else 0
 		height:
-			script: if card.card_type=="link monster" and styling.extended_artwork=="yes" then 18 else if card.card_type=="link monster" and styling.template_style=="actual style" then 24 else if card.card_type=="link monster" then 22 else 0
+			script: if card.card_type=="link monster" or styling.is_link_card and styling.extended_artwork=="yes" then 18 else if card.card_type=="link monster" or styling.is_link_card and styling.template_style=="actual style" then 24 else if card.card_type=="link monster" or styling.is_link_card then 22 else 0
 		z index: 7
 		render style: image
 		popup style: in place
@@ -611,13 +638,13 @@ card style:
 			on: {if styling.extended_artwork=="yes" then "linkdonex.png" else if styling.template_style=="actual style" then "new/linkdon.png" else "linkdon.png" }
 	linkdr:
 		left:
-			script: if card.card_type=="link monster" and ( styling.extended_artwork=="yes" and styling.template_style=="actual style" ) then 363 else if card.card_type=="link monster" and styling.extended_artwork=="yes" then 359 else if card.card_type=="link monster" and styling.template_style=="actual style" then 347 else if card.card_type=="link monster" then 349 else 5
+			script: if card.card_type=="link monster" or styling.is_link_card and ( styling.extended_artwork=="yes" and styling.template_style=="actual style" ) then 363 else if card.card_type=="link monster" or styling.is_link_card and styling.extended_artwork=="yes" then 359 else if card.card_type=="link monster" or styling.is_link_card and styling.template_style=="actual style" then 347 else if card.card_type=="link monster" or styling.is_link_card then 349 else 5
 		top:
-			script: if card.card_type=="link monster" and ( styling.extended_artwork=="yes" and styling.template_style=="actual style" ) then 548 else if card.card_type=="link monster" and styling.extended_artwork=="yes" then 545 else if card.card_type=="link monster" and styling.template_style=="actual style" then 408 else if card.card_type=="link monster" then 409 else 5
+			script: if card.card_type=="link monster" or styling.is_link_card and ( styling.extended_artwork=="yes" and styling.template_style=="actual style" ) then 548 else if card.card_type=="link monster" or styling.is_link_card and styling.extended_artwork=="yes" then 545 else if card.card_type=="link monster" or styling.is_link_card and styling.template_style=="actual style" then 408 else if card.card_type=="link monster" or styling.is_link_card then 409 else 5
 		width:
-			script: if card.card_type=="link monster" and styling.extended_artwork=="yes" then 44 else if card.card_type=="link monster" and styling.template_style=="actual style" then 45 else if card.card_type=="link monster" then 38 else 0
+			script: if card.card_type=="link monster" or styling.is_link_card and styling.extended_artwork=="yes" then 44 else if card.card_type=="link monster" or styling.is_link_card and styling.template_style=="actual style" then 45 else if card.card_type=="link monster" or styling.is_link_card then 38 else 0
 		height:
-			script: if card.card_type=="link monster" and styling.extended_artwork=="yes" then 42 else if card.card_type=="link monster" and styling.template_style=="actual style" then 44 else if card.card_type=="link monster" then 38 else 0
+			script: if card.card_type=="link monster" or styling.is_link_card and styling.extended_artwork=="yes" then 42 else if card.card_type=="link monster" or styling.is_link_card and styling.template_style=="actual style" then 44 else if card.card_type=="link monster" or styling.is_link_card then 38 else 0
 		z index: 7
 		render style: image
 		popup style: in place
@@ -929,7 +956,7 @@ extra card style:
 		render style: image list
 		choice images:
 			bar: bar.png
-		visible: script: if is_nmonster() or styling.template_style=="actual style" then false else true
+		visible: script: if is_nmonster() or styling.template_style=="actual style" or card.card_type=="skill card" then false else true
 #	leftbracket:
 #		left: { if is_nmonster() then (359 - card_style.level.content_width) else if styling.template_style=="actual style" then 30 else 32 }
 #		top : { if is_nmonster() then 80 else if styling.pendulum_size=="more" then 479 else if styling.large_type then 464  else 464 }

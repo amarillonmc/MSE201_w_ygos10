@@ -26,6 +26,7 @@ card field:
 	choice: spell card
 	choice: trap card
 	choice: trell card
+	choice: skill card
 	default: card_type()
 	choice colors cardlist:
 		normal monster         :  rgb(197,179,53)
@@ -48,6 +49,7 @@ card field:
 		link monster           :  rgb(89,89,171)
 		spell card             :  rgb(67,161,99)
 		trap card              :  rgb(148,54,128)
+		skill card             : rgb(95,95,171)
 card field:
 	type: choice
 	name: foils
@@ -61,6 +63,12 @@ card field:
 	choice: star holo image
 	choice: mosaic holo image
 	default: foil()
+card field:
+	type: choice
+	name: sdoverlay
+	editable: false
+	choice: none
+	choice: sdoverlay image
 
 ############################# Link Marker Border
 card field:
