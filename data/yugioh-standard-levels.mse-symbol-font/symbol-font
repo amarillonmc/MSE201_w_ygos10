@@ -8,6 +8,66 @@ installer group: Yugioh/Symbol Fonts/Standard
 
 horizontal space: 2.85
 symbol:
+	code: 0
+	image: stage/0.png
+	enabled: {card.card_type == "evolute monster" or card.card_type=="conjoint spell card" or card.card_type == "conjoint trap card" or card.card_type == "evolute conjoint monster"}
+	image font size: 33
+symbol:
+	code: 1
+	image: stage/1.png
+	enabled: {card.card_type == "evolute monster" or card.card_type=="conjoint spell card" or card.card_type == "conjoint trap card" or card.card_type == "evolute conjoint monster"}
+	image font size: 33
+symbol:
+	code: 2
+	image: stage/2.png
+	enabled: {card.card_type == "evolute monster" or card.card_type=="conjoint spell card" or card.card_type == "conjoint trap card" or card.card_type == "evolute conjoint monster"}
+	image font size: 33
+symbol:
+	code: 3
+	image: stage/3.png
+	enabled: {card.card_type == "evolute monster" or card.card_type=="conjoint spell card" or card.card_type == "conjoint trap card" or card.card_type == "evolute conjoint monster"}
+	image font size: 33
+symbol:
+	code: 4
+	image: stage/4.png
+	enabled: {card.card_type == "evolute monster" or card.card_type=="conjoint spell card" or card.card_type == "conjoint trap card" or card.card_type == "evolute conjoint monster"}
+	image font size: 33
+symbol:
+	code: 5
+	image: stage/5.png
+	enabled: {card.card_type == "evolute monster" or card.card_type=="conjoint spell card" or card.card_type == "conjoint trap card" or card.card_type == "evolute conjoint monster"}
+	image font size: 33
+symbol:
+	code: 6
+	image: stage/6.png
+	enabled: {card.card_type == "evolute monster" or card.card_type=="conjoint spell card" or card.card_type == "conjoint trap card" or card.card_type == "evolute conjoint monster"}
+	image font size: 33
+symbol:
+	code: 7
+	image: stage/7.png
+	enabled: {card.card_type == "evolute monster" or card.card_type=="conjoint spell card" or card.card_type == "conjoint trap card" or card.card_type == "evolute conjoint monster"}
+	image font size: 33
+symbol:
+	code: 8
+	image: stage/8.png
+	enabled: {card.card_type == "evolute monster" or card.card_type=="conjoint spell card" or card.card_type == "conjoint trap card" or card.card_type == "evolute conjoint monster"}
+	image font size: 33
+symbol:
+	code: 9
+	image: stage/9.png
+	enabled: {card.card_type == "evolute monster" or card.card_type=="conjoint spell card" or card.card_type == "conjoint trap card" or card.card_type == "evolute conjoint monster"}
+	image font size: 33
+symbol:
+	code: A
+	image: stage/10.png
+	enabled: {card.card_type == "evolute monster" or card.card_type=="conjoint spell card" or card.card_type == "conjoint trap card" or card.card_type == "evolute conjoint monster"}
+	image font size: 33
+symbol:
+	code: C
+	image: stage/12.png
+	enabled: {card.card_type == "evolute monster" or card.card_type=="conjoint spell card" or card.card_type == "conjoint trap card" or card.card_type == "evolute conjoint monster"}
+	image font size: 33
+symbol:
 	code: %
 	image: continuous.png
 	image font size: 85
@@ -61,6 +121,11 @@ symbol:
 	image font size: 17
 symbol:
 	code: *
+	image: estar.png
+	enabled: {card.card_type=="xyz conjoint monster"}
+	image font size: 17
+symbol:
+	code: *
 	image: dstar.png
 	enabled: {card.card_type=="pendulum dark synchro monster"}
 	image font size: 13.5
@@ -71,12 +136,29 @@ symbol:
 	image font size: 13.5
 symbol:
 	code: *
+	image: TP_Level2.png
+	enabled: {card.card_type=="time leap monster"}
+	image font size: 17
+symbol:
+	code: *
 	image: star.png
 	image font size: 17
 
 ##############################################################
 # Insert-symbol menu
 insert symbol menu:
+	item: 0
+	item: 1
+	item: 2
+	item: 3
+	item: 4
+	item: 5
+	item: 6
+	item: 7
+	item: 8
+	item: 9
+	item: A
+	item: C
 	item: %
 	item: !
 	item: +
