@@ -142,6 +142,8 @@
 	is_nmonster := {
 		card.card_type == "spell card" or
 	        card.card_type == "trap card" or
+			card.card_type == "conjoint spell card" or
+			card.card_type == "conjoint trap card" or
 	        card.card_type == "trell card"
 	}
 	is_monster := {
