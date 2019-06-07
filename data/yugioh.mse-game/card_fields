@@ -23,6 +23,19 @@ card field:
 	choice: dlc monster
 	choice: token monster
 	choice: link monster
+	choice: evolute monster
+	choice: evolute conjoint monster
+	choice: enhance monster
+	choice: time leap monster
+	choice: normal conjoint monster
+	choice: effect conjoint monster
+	choice: ritual conjoint monster
+	choice: fusion conjoint monster
+	choice: synchro conjoint monster
+	choice: xyz conjoint monster
+	choice: link conjoint monster
+	choice: conjoint spell card
+	choice: conjoint trap card
 	choice: spell card
 	choice: trap card
 	choice: trell card
@@ -175,6 +188,24 @@ card field:
 	default: attribute()
 	card list visible: true
 	card list column: 2
+card field:
+	type: choice
+	name: conjoint_val
+	choice: none
+	choice: 1
+	choice: 2
+	choice: 3
+	choice: 4
+	choice: 5
+	choice: 6
+	choice: 7
+	choice: 8
+	choice: 9
+	choice: 10
+	choice: 11
+	choice: 12
+	card list visible: false
+	card list column: 0
 card field:
 	type: text
 	name: level
