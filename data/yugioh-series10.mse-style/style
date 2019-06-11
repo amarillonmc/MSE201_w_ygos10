@@ -78,6 +78,15 @@ styling field:
 	choice: 
 		name: gold
 		color: rgb(216,199,53)
+	choice: 
+		name: TCG Proxy - Rare
+		color: rgb(133,131,132)
+	choice: 
+		name: TCG Proxy - Ultra Rare
+		color: rgb(245,178,126)
+	choice: 
+		name: TCG Proxy - Secret Rare
+		color: rgb(136,147,175)
 styling field:
 	type: boolean
 	name: shadow override
