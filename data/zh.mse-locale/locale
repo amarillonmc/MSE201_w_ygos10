@@ -1,11 +1,12 @@
 mse version: 2.0.0
 installer group: translations/chinese/simplified
 full name: 简体中文(Simplified Chinese)
-version: 2014-01-04
+version: 2019-06-12
 icon: cn.png
 
 #############################################################
 #	由slimeking，星际之迷217，247321453（菜菜） 汉化翻译
+#	Nemoma追加游戏王10期模板部分翻译
 ############################################################## Menu items
 menu:
 	file:			文件
@@ -969,3 +970,29 @@ package:
 		menu item B/G/W:	黑/绿/白 法术力	 B/G/W
 		menu item R/W/U:	红/白/蓝 法术力	 R/W/U
 		menu item G/U/B:	绿/蓝/黑 法术力	 G/U/B
+
+		
+		############################################################## Yugioh
+#game:
+	yugioh.mse-game:
+		# Card fields
+		card type:		卡种
+		attribute:		属性
+		type1:		种族
+		type2:		类别
+		type3:		类别
+		type4:		类别
+		
+		# Set info
+		Set Information:		卡包信息
+		title:		卡包名称
+		code:		卡包缩写
+		language:		卡包语言
+		number:		卡包编号
+		description:		卡包备注
+		edition:		印刷版本
+		copyright:		卡包作者
+		gods have effects:		埃及神卡有效果文本
+		
+		# descriptions/help text
+		Look & Feel:		卡模选择
