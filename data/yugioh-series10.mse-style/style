@@ -78,6 +78,15 @@ styling field:
 	choice: 
 		name: gold
 		color: rgb(216,199,53)
+	choice: 
+		name: TCG Proxy - Rare
+		color: rgb(133,131,132)
+	choice: 
+		name: TCG Proxy - Ultra Rare
+		color: rgb(245,178,126)
+	choice: 
+		name: TCG Proxy - Secret Rare
+		color: rgb(136,147,175)
 styling field:
 	type: boolean
 	name: shadow override
@@ -103,6 +112,34 @@ styling field:
 	choice: 
 		name: silver
 		color: rgb(230,230,230)
+	choice: 
+		name: gold
+		color: rgb(216,199,53)
+styling field:
+	type: boolean
+	name: copyright color override
+	description: 使用以下的颜色替换编号·密码·版权颜色 Override the default color of card password/SetID/Set Code with the settings below.
+	initial: no
+styling field:
+	type: color
+	name: copyright color
+	description: 编号·密码·版权颜色设置 Customize the color of the card password/SetID/Set Code fields.
+	initial: rgb(254,254,254)
+	choice: 
+		name: default
+		color:rgb(254,254,254)
+	choice: 
+		name: white
+		color: rgb(255,255,255)
+	choice: 
+		name: red
+		color: rgb(60,0,0)
+	choice: 
+		name: silver
+		color: rgb(230,230,230)
+	choice:
+		name: light blue
+		color: rgb(211,252,252)
 	choice: 
 		name: gold
 		color: rgb(216,199,53)
@@ -140,6 +177,8 @@ styling field:
 	choice: ultrafoil
 	choice: ygojpoverlay
 	choice: ygojpoverlayp
+	choice: 20thser
+	choice: 20thserpendulum
 styling field:
 	type: boolean
 	name: image frame
@@ -152,11 +191,26 @@ styling field:
 	initial: no
 	choice: no
 	choice: yes
+#combine this field into lorebox watermark, ooooh yeah!!
+#styling field:
+#	type: boolean
+#	name: is speedduel card
+#	description: 是否为高速决斗卡 Choosing "Yes" will apply the Speed Duel watermark on the card.
+#	initial: no
 styling field:
 	type: boolean
-	name: is speedduel card
-	description: 是否为高速决斗卡 Choosing "Yes" will apply the Speed Duel watermark on the card.
+	name: lorebox watermark
+	description: 效果框内是否有水印 Choosing "Yes" will apply A custom watermark on the card, used for making 20thser or Speed Duel Cards.
 	initial: no
+styling field:
+	type: choice
+	name: custom watermark
+	description: 选择效果框水印 Choose from 1 of the following watermark to display in the lorebox.
+	initial: speedduel
+	choice: speedduel
+	choice: 20thser
+	choice: custom1
+	choice: customvirtualsan
 styling field:
 	type: boolean
 	name: is link card
@@ -242,6 +296,8 @@ styling style:
 			japanese: /yugioh.mse-game/icons/language-ja.png
 			chinese simplified: /yugioh.mse-game/icons/language-zh.png
 			chinese traditional: /yugioh.mse-game/icons/language-tw.png
+			chinese duel links traditional: /yugioh.mse-game/icons/language-tw.png
+			chinese duel links simplified: /yugioh.mse-game/icons/language-zh.png
 	template style:
 		render style: both
 		choice images:
@@ -272,6 +328,8 @@ styling style:
 			superfoil: /yugioh.mse-game/icons/superfoilpreview.png
 			ultimatefoil: /yugioh.mse-game/icons/ultimatefoilpreview.png
 			ultrafoil: /yugioh.mse-game/icons/ultrafoilpreview.png
+			20thser: /yugioh.mse-game/icons/collectborderpreview.png
+			20thserpendulum: /yugioh.mse-game/icons/collectborderpreview.png
 ############################################################## Card fields
 card style:
 	############################# Background stuff
@@ -318,7 +376,14 @@ card style:
 		popup style: in place
 		image:
 			script:
-			if styling.is_speedduel_card then "speeddueloverlay.png" 
+			#if styling.is_speedduel_card then "speeddueloverlay.png" 
+			if styling.lorebox_watermark then(
+				if styling.custom_watermark=="speedduel" then "lorebox/speeddueloverlay.png" else
+				if styling.custom_watermark=="20thser" then "lorebox/20seroverlay.png" else
+				if styling.custom_watermark=="custom1" then "lorebox/customoverlay_1.png" else
+				if styling.custom_watermark=="customvirtualsan" then "lorebox/customoverlay_virtualsan.png" else
+				"speeddueloverlay.png"
+			)
 			else "blank2.png"
 		combine: normal
 	foils:
@@ -350,6 +415,8 @@ card style:
 					if styling.custom_foil=="ultrafoil" then "customfoils/ultrafoil.png" else
 					if styling.custom_foil=="ygojpoverlay" then "customfoils/ygojpoverlay.png" else
 					if styling.custom_foil=="ygojpoverlayp" then "customfoils/ygojpoverlayp.png" else
+					if styling.custom_foil=="20thser" then "customfoils/20thser.png" else
+					if styling.custom_foil=="20thserpendulum" then "customfoils/20thserpendulum.png" else
 					"customfoils/defaultfoil.png"
 				) else
 				if card.rarity=="gold rare" and is_pendulum() then ( if styling.pendulum_size=="less" then "goldfoil-pendulum_less.png" else if styling.pendulum_size=="more" then "goldfoil-pendulum_more.png" else "goldfoil-pendulum.png" ) else
@@ -374,7 +441,9 @@ card style:
 		left: 31
 		#top : 25
 		top : { if styling.language=="chinese traditional" or styling.language=="chinese simplified" or styling.language=="chinese duel links traditional" or styling.language=="chinese duel links simplified" then 27 else if styling.template_style=="actual style" or card.card_type=="skill card" then 24 else 25 }
-		width: 319
+		#width: 319
+		#Requested by Hinoko-Honenoken of DeviantArt, if attribute is None then card name is wider for skill cards.
+		width: { if card.attribute=="none" then 359 else 319 }
 		height: 41
 		alignment: middle shrink-overflow
 		padding bottom: 0
@@ -687,7 +756,7 @@ card style:
 		font:
 			name: Stone Serif
 			size: 8.5
-			color: { if card.card_type=="xyz monster" and styling.extended_artwork=="yes" then rgb(0,0,0) else if card.card_type=="xyz monster" or card.card_type=="dark synchro monster" or card.card_type=="bigbang monster" then rgb(255,255,255) else rgb(0,0,0) }
+			color: { if styling.copyright_color_override then styling.copyright_color else if card.card_type=="xyz monster" and styling.extended_artwork=="yes" then rgb(0,0,0) else if card.card_type=="xyz monster" or card.card_type=="dark synchro monster" or card.card_type=="bigbang monster" then rgb(255,255,255) else rgb(0,0,0) }
 	edition:
 		left: 78
 		top: { if styling.template_style=="actual style" then 586 else 584 }
@@ -699,7 +768,7 @@ card style:
 		font:
 			name: { if card.edition=="DUEL TERMINAL" then "BankGothic Md BT" else "Palatino Linotype" }
 			size: { if card.edition=="DUEL TERMINAL" then "11.5" else "9.5" }
-			color: { if card.card_type=="xyz monster" or card.card_type=="dark synchro monster" or card.card_type=="bigbang monster" then rgb(255,255,255) else rgb(0,0,0) }
+			color: { if styling.copyright_color_override then styling.copyright_color else if card.card_type=="xyz monster" or card.card_type=="dark synchro monster" or card.card_type=="bigbang monster" then rgb(255,255,255) else rgb(0,0,0) }
 	############################# Text box
 	rule text:
 		left: { if styling.template_style=="actual style" then 30 else 32 }
@@ -856,7 +925,7 @@ card style:
 		font:
 			name: Stone Serif
 			size: 8.5
-			color: { if card.card_type=="xyz monster" or card.card_type=="dark synchro monster" or card.card_type=="bigbang monster" then rgb(255,255,255) else rgb(0,0,0) }
+			color: { if styling.copyright_color_override then styling.copyright_color else if card.card_type=="xyz monster" or card.card_type=="dark synchro monster" or card.card_type=="bigbang monster" then rgb(255,255,255) else rgb(0,0,0) }
 	rarity:
 		left: 388
 		top : 580
@@ -896,7 +965,7 @@ card style:
 		font:
 			name: Stone Serif
 			size: 8.5
-			color: { if card.card_type=="xyz monster" or card.card_type=="dark synchro monster" or card.card_type=="bigbang monster" then rgb(255,255,255) else rgb(0,0,0) }
+			color: { if styling.copyright_color_override then styling.copyright_color else if card.card_type=="xyz monster" or card.card_type=="dark synchro monster" or card.card_type=="bigbang monster" then rgb(255,255,255) else rgb(0,0,0) }
 ############################################extra card field:
 extra card field:
 	type: choice
