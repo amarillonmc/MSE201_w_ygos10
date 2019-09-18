@@ -1,0 +1,608 @@
+mse version: 0.3.8
+game: YugiohZen
+short name: Zen Template
+full name: YugiohZen
+icon: icon.png
+position hint: 02
+installer group: yugiohzen/style
+
+version: 2014-04-11
+depends on:
+	package: yugiohzen.mse-game
+	version: 2016-11-24
+depends on:
+	package: YugiohZen.mse-game
+	version: 2016-11-24
+depends on:
+	package: yugiohzen-text-numbers.mse-symbol-font
+	version: 2014-04-11
+
+card width: 421
+card height: 614
+card dpi: 300
+card background: rgb(200,200,200)
+
+styling field:
+	type: info
+	name: Look & Feel
+styling field:
+	type: choice
+	name: language
+	description: 卡片语言 Language of the card, supports English, Japanese and Chinese (Simplified or Traditional).
+	initial: english
+	choice: english
+	choice: japanese
+	choice: chinese simplified
+	choice: chinese traditional
+	choice: chinese duel links traditional
+	choice: chinese duel links simplified
+styling field:
+	type: info
+	name: Customizations
+styling field:
+	type: boolean
+	name: name color override
+	description: 使用以下的颜色替换卡名颜色 Override the default card name color with the settings below.
+	initial: no
+styling field:
+	type: color
+	name: name color
+	description: 卡片名颜色设置 Customize the color of the card name.
+	initial: rgb(254,254,254)
+	choice: 
+		name: default
+		color:rgb(254,254,254)
+	choice: 
+		name: white
+		color: rgb(255,255,255)
+	choice: 
+		name: red
+		color: rgb(60,0,0)
+	choice: 
+		name: silver
+		color: rgb(230,230,230)
+	choice:
+		name: light blue
+		color: rgb(211,252,252)
+	choice: 
+		name: gold
+		color: rgb(216,199,53)
+styling field:
+	type: boolean
+	name: shadow override
+	initial: no
+	description: 使用以下的颜色替换卡名阴影颜色 Override the default card shadow color with the settings below
+styling field:
+	type: color
+	name: shadow color
+	description: 卡片名阴影颜色设置 The shadow color for card name.
+	initial: rgb(1,1,1)
+	choice: 
+		name: default
+		color: rgb(1,1,1)
+	choice: 
+		name: black
+		color: rgb(0,0,0)
+	choice: 
+		name: white
+		color: rgb(255,255,255)
+	choice: 
+		name: red
+		color: rgb(60,0,0)
+	choice: 
+		name: silver
+		color: rgb(230,230,230)
+	choice: 
+		name: gold
+		color: rgb(216,199,53)
+styling style:
+	language:
+		render style: both
+		choice images:
+			english: /yugiohzen.mse-game/icons/language-en.png
+			japanese: /yugiohzen.mse-game/icons/language-ja.png
+			chinese simplified: /yugiohzen.mse-game/icons/language-zh.png
+			chinese traditional: /yugiohzen.mse-game/icons/language-tw.png
+
+card style:
+
+	card_image:
+		top: 0
+		left: 0
+		width: 421
+		height: 614
+		z index: -5
+		mask: { if is_link() then "ZEN_mask-link.png" }
+
+	type_control:
+		top: 0
+		left: 160
+		height: 25
+		width: 100
+		z index: 0
+		render style: image
+
+	card_type:
+		top: 0
+		left: 0
+		width: 421
+		height: 614
+		z index: -3
+		render style: image
+		choice images:
+			normal normal_monster										: ZEN_Normal.png
+			normal fusion_normal_monster								: ZEN_Fusion_Normal.png
+			normal ritual_normal_monster								: ZEN_Ritual_Normal.png
+			normal synchro_normal_monster								: ZEN_Synchro_Normal.png
+			normal xyz_normal_monster									: ZEN_Xyz_Normal.png
+			normal link_normal_monster									: ZEN_Link_Normal.png
+			normal evolute_normal_monster								: ZEN_Evolute_Normal.png
+			normal token												: ZEN_Token.png
+			effect effect_monster										: ZEN_Effect.png
+			effect fusion_effect_monster								: ZEN_Fusion_Effect.png
+			effect ritual_effect_monster								: ZEN_Ritual_Effect.png
+			effect synchro_effect_monster								: ZEN_Synchro_Effect.png
+			effect xyz_effect_monster									: ZEN_Xyz_Effect.png
+			effect link_effect_monster									: ZEN_Link_Effect.png
+			effect evolute_effect_monster								: ZEN_Evolute_Effect.png
+			normal pendulum pendulum_normal_monster						: ZEN_Pendulum_Normal.png
+			normal pendulum fusion_pendulum_normal_monster				: ZEN_Fusion_Pendulum_Normal.png
+			normal pendulum ritual_pendulum_normal_monster				: ZEN_Ritual_Pendulum_Normal.png
+			normal pendulum synchro_pendulum_normal_monster				: ZEN_Synchro_Pendulum_Normal.png
+			normal pendulum xyz_pendulum_normal_monster					: ZEN_Xyz_Pendulum_Normal.png
+			effect pendulum pendulum_effect_monster						: ZEN_Pendulum_Effect.png
+			effect pendulum fusion_pendulum_effect_monster				: ZEN_Fusion_Pendulum_Effect.png
+			effect pendulum ritual_pendulum_effect_monster				: ZEN_Ritual_Pendulum_Effect.png
+			effect pendulum synchro_pendulum_effect_monster				: ZEN_Synchro_Pendulum_Effect.png
+			effect pendulum xyz_pendulum_effect_monster					: ZEN_Xyz_Pendulum_Effect.png
+			normal pandemonium pandemonium_normal_monster				: ZEN_Pandemonium_Normal.png
+			normal pandemonium fusion_pandemonium_normal_monster		: ZEN_Fusion_Pandemonium_Normal.png
+			normal pandemonium ritual_pandemonium_normal_monster		: ZEN_Ritual_Pandemonium_Normal.png
+			normal pandemonium synchro_pandemonium_normal_monster		: ZEN_Synchro_Pandemonium_Normal.png
+			normal pandemonium xyz_pandemonium_normal_monster			: ZEN_Xyz_Pandemonium_Normal.png
+			effect pandemonium pandemonium_effect_monster				: ZEN_Pandemonium_Effect.png
+			effect pandemonium fusion_pandemonium_effect_monster		: ZEN_Fusion_Pandemonium_Effect.png
+			effect pandemonium ritual_pandemonium_effect_monster		: ZEN_Ritual_Pandemonium_Effect.png
+			effect pandemonium synchro_pandemonium_effect_monster		: ZEN_Synchro_Pandemonium_Effect.png
+			effect pandemonium xyz_pandemonium_effect_monster			: ZEN_Xyz_Pandemonium_Effect.png
+			spell normal 												: ZEN_Spell_Normal.png
+			spell continuous											: ZEN_Spell_Continuous.png
+			spell quick-play											: ZEN_Spell_Quick-Play.png
+			spell equip 												: ZEN_Spell_Equip.png
+			spell field 												: ZEN_Spell_Field.png
+			spell ritual 												: ZEN_Spell_Ritual.png
+			trap normal													: ZEN_Trap_Normal.png
+			trap continuous												: ZEN_Trap_Continuous.png
+			trap counter												: ZEN_Trap_Counter.png
+			
+	attribute_control:
+		top: 26
+		left: 341
+		height: 40
+		width: 60
+		z index: 0
+		render style: image
+
+	card_attribute:
+		top: 0
+		left: 0
+		width: 421
+		height: 614
+		z index: -2
+		render style: image
+		choice images:
+			earth: Zen_Earth.png
+			water: Zen_Water.png
+			fire: ZEN_Fire.png
+			wind: ZEN_Wind.png
+			light: ZEN_Light.png
+			dark: ZEN_Dark.png
+			divine: ZEN_Divine.png
+			spell: ZEN_Spell.png
+			trap: ZEN_Trap.png
+			
+	card_name:
+		top: { if is_link() then 32 else 26 }
+		left: 24
+		height: 37
+		width: 317
+		alignment: Left middle shrink-overflow
+		z index: 0
+		font:
+			name: 
+				script: if styling.language=="japanese" then "Yu-Gi-Oh! DFG Leisho 4" 
+				else if styling.language=="chinese simplified" then "方正隶变_GBK" 
+				else if styling.language=="chinese traditional" then "DFPLiShuW5-B5" 
+				else if styling.language=="chinese duel links traditional" then "DFPTanLiW5-B5"
+				else if styling.language=="chinese duel links simplified" then "DFPTanLiW5-GB"
+				else "Yu-Gi-Oh! Matrix Small Caps 1"
+			size: 
+				script: if styling.language=="japanese" or styling.language=="chinese simplified" or styling.language=="chinese traditional" or styling.language=="chinese duel links traditional" or styling.language=="chinese duel links simplified" then 27 else 35
+			color:
+				script: if styling.name_color_override then styling.name_color 
+				else rgb(250,250,250)
+			shadow color: script: if styling.shadow_override then styling.shadow_color else rgb (0,0,0)
+			shadow displacement x: 3
+			shadow displacement y: 3
+			shadow blur: 2
+			
+	level:
+		left: 59
+		top : 68
+		width: { if is_monster() and not is_link() then 65 else 0 }
+		height: { if is_monster() and not is_link() then 18 else 0 }
+		alignment: middle right shrink-overflow
+		z index: 2
+		font:
+			name: 
+				script: if styling.language=="japanese" then "Yu-Gi-Oh! DFG Leisho 4" 
+				else if styling.language=="chinese simplified" then "方正隶变_GBK" 
+				else if styling.language=="chinese traditional" then "DFPLiShuW5-B5" 
+				else if styling.language=="chinese duel links traditional" then "DFPTanLiW5-B5"
+				else if styling.language=="chinese duel links simplified" then "DFPTanLiW5-GB"
+				else "FOT-Rodin Pro EB"
+			size: 25
+			color:
+				script: if styling.name_color_override then styling.name_color 
+				else rgb(250,250,250)
+			shadow color: script: if styling.shadow_override then styling.shadow_color else rgb (0,0,0)
+			shadow displacement x: 3
+			shadow displacement y: 3
+			shadow blur: 2
+			
+	monster_type:
+		left: 24
+		top : { if is_link() then 454 else 458 }
+		width: {if is_monster() then 143 else 0 }
+		height: { if is_monster() then 20 else 0 }
+		angle: 0.5
+		alignment: left middle shrink-overflow
+		z index: 2
+		font:
+			name: 
+				script:
+				if styling.language=="japanese" then "Yu-Gi-Oh! DFG Leisho 4" 
+				else if styling.language=="chinese simplified" then "方正隶变_GBK" 
+				else if styling.language=="chinese traditional" then "DFPLiShuW5-B5" 
+				else if styling.language=="chinese duel links traditional" then "DFPTanLiW5-B5"
+				else if styling.language=="chinese duel links simplified" then "DFPTanLiW5-GB"
+				else "FOT-Rodin Pro B"
+			size: 10
+			color: rgb(255,255,255)
+			shadow color: rgb(0,0,0)
+			shadow displacement x: 1
+			shadow displacement y: 1
+		symbol font:
+			name: yugioh-text-replacements
+			alignment: middle center
+			size: 3.5
+			
+	card_type_text:
+		left: 167
+		top : { if is_link() then 454 else 458 }
+		width: { if is_monster() then 188 else 0 }
+		height: { if is_monster() then 20 else 0 }
+		angle: 0.5
+		alignment: right middle shrink-overflow
+		z index: 2
+		font:
+			name: 
+				script:
+				if styling.language=="japanese" then "Yu-Gi-Oh! DFG Leisho 4" 
+				else if styling.language=="chinese simplified" then "方正隶变_GBK" 
+				else if styling.language=="chinese traditional" then "DFPLiShuW5-B5" 
+				else if styling.language=="chinese duel links traditional" then "DFPTanLiW5-B5"
+				else if styling.language=="chinese duel links simplified" then "DFPTanLiW5-GB"
+				else "FOT-Rodin Pro B"
+			size: 7
+			color: rgb(255,255,255)
+			shadow color: rgb(0,0,0)
+			shadow displacement x: 1
+			shadow displacement y: 1
+
+	attack:
+		top: { if is_link() then 568 else 575 }
+		right: 297
+		height: 20
+		width: 65
+		angle: 3.5
+		alignment: right middle shrink-overflow
+		z index: 0
+		font:
+			name: FOT-Rodin Pro EB
+			size: 18
+			color: rgb(250,250,250)
+			shadow color: rgb(0,0,0)
+			shadow displacement x: 3
+			shadow displacement y: 3
+			shadow blur: 1
+		visible: script: if is_nmonster() then false else true
+			
+	defence:
+		top: { if is_link() then 556 else 563 }
+		right: 397
+		height: 20
+		width: 65
+		angle: 3.5
+		alignment: right middle shrink-overflow
+		z index: 0
+		font:
+			name: FOT-Rodin Pro EB
+			size: 18
+			color: rgb(250,250,250)
+			shadow color: rgb(0,0,0)
+			shadow displacement x: 3
+			shadow displacement y: 3
+			shadow blur: 1
+		visible: script: if is_nmonster() then false else true
+			
+	card_text:
+		top: { if is_nmonster() then 467 else 478 }
+		left: 28
+		height: { if is_nmonster() then 120 else if is_link() then 86 else 90 }
+		width: 365
+		padding left: 0
+		padding right: 0
+		padding top: 0
+		padding bottom: 0
+		alignment: left shrink-overflow
+		z index: 0
+		#mask: text_mask.png
+		font:
+			name: 
+				script:
+				if styling.language=="japanese" then "Yu-Gi-Oh! DF Leisho 3" 
+				else if styling.language=="chinese simplified" then "方正隶变_GBK" 
+				else if styling.language=="chinese traditional" then "DFPLiShuW5-B5" 
+				else if styling.language=="chinese duel links traditional" then "DFPTanLiW5-B5"
+				else if styling.language=="chinese duel links simplified" then "DFPTanLiW5-GB"
+				else "Yu-Gi-Oh! Matrix Book"
+			italic name: { if styling.language=="japanese" then "Yu-Gi-Oh! DF Leisho 3" else if styling.language=="chinese simplified" then "方正隶变_GBK" else if styling.language=="chinese traditional" then "DFPLiShuW5-B5" else if styling.language=="chinese duel links traditional" then "DFPTanLiW5-B5" else if styling.language=="chinese duel links simplified" then "DFPTanLiW5-GB" else "Yu-Gi-Oh! StoneSerif LT" }
+			size: 11.6
+			color: rgb(0,0,0)
+			shadow color: rgb(250,250,250)
+			shadow displacement x: 0
+			shadow displacement y: 0
+			shadow blur: 2
+			scale down to: 4
+		symbol font:
+			name: yugiohzen-text-numbers
+			alignment: bottom center
+			size: 6
+			
+	pendulum_text:
+		top: 373
+		left: 60
+		height: { if is_pendulum() then 67 else 0 }
+		width: { if is_pendulum() then 300 else 0 }
+		alignment: left shrink-overflow
+		z index: 0
+		font:
+			name:
+				script:
+					if styling.language=="japanese" then "Yu-Gi-Oh! DF Leisho 3" 
+					else if styling.language=="chinese simplified" then "方正隶变_GBK" 
+					else if styling.language=="chinese traditional" then "DFPLiShuW5-B5" 
+					else if styling.language=="chinese duel links traditional" then "DFPTanLiW5-B5"
+					else if styling.language=="chinese duel links simplified" then "DFPTanLiW5-GB"
+					else "Yu-Gi-Oh! Matrix Book"
+			italic name: { "Stone Serif Italic" }
+			size: 11.6
+			color: rgb(0,0,0)
+			shadow color: rgb(250,250,250)
+			shadow displacement x: 0
+			shadow displacement y: 0
+			shadow blur: 2
+			scale down to: 4
+			
+	left_scale:
+		top: 340
+		left: 70
+		height: script: if is_pendulum() then 30 else 0
+		width: script: if is_pendulum() then 40 else 0
+		alignment: center middle shrink-overflow
+		z index: 0
+		font:
+			name: FOT-Rodin Pro EB
+			size: 25
+			color: rgb(250,250,250)
+			shadow color: rgb(0,0,0)
+			shadow displacement x: 3
+			shadow displacement y: 3
+			shadow blur: 1
+			
+	right_scale:
+		top: 420
+		left: 360
+		height: script: if is_pendulum() then 30 else 0
+		width: script: if is_pendulum() then 40 else 0
+		alignment: center middle shrink-overflow
+		z index: 0
+		font:
+			name: FOT-Rodin Pro EB
+			size: 25
+			color: rgb(250,250,250)
+			shadow color: rgb(0,0,0)
+			shadow displacement x: 3
+			shadow displacement y: 3
+			shadow blur: 1
+		
+	line:
+		top: {if is_nmonster() then 453 else if is_link() then 440 else 444 }
+		left: 26
+		height: 14
+		width: { if is_nmonster() then 368 else 281 }
+		angle: 0.25
+		alignment: left middle shrink-overflow
+		z index: 0
+		font:
+			name: FOT-Rodin Pro EB
+			size: 8
+			color: rgb(250,250,250)
+			shadow color: rgb(0,0,0)
+			shadow displacement x: 0
+			shadow displacement y: 0
+			shadow blur: 1
+	
+	illust_by:
+		bottom:{ if is_nmonster() then 607 else if is_link() then 588 else 590 }
+		left: { if is_nmonster() then 297 else 44 }
+		height: 20
+		width: 115
+		angle: -3.5
+		alignment: left middle shrink-overflow
+		z index: 2
+		font:
+			name: FOT-Rodin Pro EB
+			size: 9
+			color: rgb(255,255,255)
+			shadow color: rgb(0,0,0)
+			shadow displacement x: 3
+			shadow displacement y: 3
+			shadow blur: 1
+			
+	set_number:
+		bottom: { if is_link() then 608 else 612 }
+		left: 44
+		height: 20
+		width: 115
+		angle: -3.25
+		alignment: left middle shrink-overflow
+		z index: 2
+		font:
+			name: FOT-Rodin Pro EB
+			size: 12
+			color: rgb(255,255,255)
+			shadow color: rgb(0,0,0)
+			shadow displacement x: 3
+			shadow displacement y: 3
+			shadow blur: 1
+			
+			
+	B_Link:
+		left: 0
+		top: 0
+		width: 421
+		height: 614
+		render style: image
+		choice images:
+			on: Markers/BOTTOM.png
+		
+	bLinkControl:
+		left: 322
+		top: 415
+		width: script: if is_link() then 24 else 0
+		height: script: if is_link() then 10 else 0
+		render style: image
+		
+	T_Link:
+		left: 0
+		top: 0
+		width: 421
+		height: 614
+		render style: image
+		choice images:
+			on: Markers/UP.png
+		
+	tLinkControl:
+		left: 322
+		top: 295
+		width: script: if is_link() then 24 else 0
+		height: script: if is_link() then 10 else 0
+		render style: image
+		
+	BL_Link:
+		left: 0
+		top: 0
+		width: 421
+		height: 614
+		render style: image
+		choice images:
+			on: Markers/BOTTOM-LEFT.png
+		
+	blLinkControl:
+		left: 280
+		top: 397
+		width: script: if is_link() then 15 else 0
+		height: script: if is_link() then 15 else 0
+		render style: image
+		
+	BR_Link:
+		left: 0
+		top: 0
+		width: 421
+		height: 614
+		render style: image
+		choice images:
+			on: Markers/BOTTOM-RIGHT.png
+		
+	brLinkControl:
+		left: 370
+		top: 397
+		width: script: if is_link() then 15 else 0
+		height: script: if is_link() then 15 else 0
+		render style: image
+			
+	L_Link:
+		left: 0
+		top: 0
+		width: 421
+		height: 614
+		render style: image
+		choice images:
+			on: MARKERS/LEFT.png
+		
+	lLinkControl:
+		left: 270
+		top: 349
+		width: script: if is_link() then 8 else 0
+		height: script: if is_link() then 23 else 0
+		render style: image
+		
+	R_Link:
+		left: 0
+		top: 0
+		width: 421
+		height: 614
+		render style: image
+		choice images:
+			on: MARKERS/RIGHT.png
+		
+	rLinkControl:
+		left: 390
+		top: 349
+		width: script: if is_link() then 8 else 0
+		height: script: if is_link() then 23 else 0
+		render style: image
+		
+	TL_Link:
+		left: 0
+		top: 0
+		width: 421
+		height: 614
+		render style: image
+		choice images:
+			on: MARKERS/UP-LEFT.png
+		
+	tlLinkControl:
+		left: 280
+		top: 305
+		width: script: if is_link() then 18 else 0
+		height: script: if is_link() then 18 else 0
+		render style: image
+		
+	TR_Link:
+		left: 0
+		top: 0
+		width: 421
+		height: 614
+		render style: image
+		choice images:
+			on: MARKERS/UP-RIGHT.png
+		
+	trLinkControl:
+		left: 370
+		top: 305
+		width: script: if is_link() then 15 else 0
+		height: script: if is_link() then 15 else 0
+		render style: image

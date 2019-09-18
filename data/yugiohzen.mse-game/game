@@ -1,0 +1,363 @@
+﻿mse version: 0.3.8
+short name: Zen Template
+full name: YugiohZen
+icon: icon.png
+position hint: 2
+installer group: YugiohZen/game
+init script: include file: script
+
+#include file: keywords
+#include file: set_fields
+
+version: 2016-11-24
+
+card field:
+	type: color
+	name: bg_color
+	show statistics: false
+	editable: false
+	default: rgb(255,250,250)
+
+card field:
+	type: image
+	name: card_image
+	show statistics: false
+	description: The card's image.
+	
+card field:
+	type: choice
+	name: type_control
+	description: frame
+	choice:
+		name: normal
+		choice: normal monster
+		choice: fusion normal monster
+		choice: ritual normal monster
+		choice: synchro normal monster
+		choice: xyz normal monster
+		choice: link normal monster
+		choice: evolute normal monster
+		choice: token
+	choice: 
+		name: effect
+		choice: effect monster
+		choice: fusion effect monster
+		choice: ritual effect monster
+		choice: synchro effect monster
+		choice: xyz effect monster
+		choice: link effect monster
+		choice: evolute effect monster
+	choice:
+		name: normal pendulum
+		choice: pendulum normal monster
+		choice: fusion pendulum normal monster
+		choice: ritual pendulum normal monster
+		choice: synchro pendulum normal monster
+		choice: xyz pendulum normal monster
+	choice: 
+		name: effect pendulum
+		choice: pendulum effect monster
+		choice: fusion pendulum effect monster
+		choice: ritual pendulum effect monster
+		choice: synchro pendulum effect monster
+		choice: xyz pendulum effect monster
+	choice: 
+		name: normal pandemonium
+		choice: pandemonium normal monster
+		choice: fusion pandemonium normal monster
+		choice: ritual pandemonium normal monster
+		choice: synchro pandemonium normal monster
+		choice: xyz pandemonium normal monster
+	choice:
+		name: effect pandemonium
+		choice: pandemonium effect monster
+		choice: fusion pandemonium effect monster
+		choice: ritual pandemonium effect monster
+		choice: synchro pandemonium effect monster
+		choice: xyz pandemonium effect monster
+	choice: 
+		name: spell
+		choice: normal
+		choice: continuous
+		choice: quick-play
+		choice: equip
+		choice: field
+		choice: ritual
+	choice: 
+		name: trap
+		choice: normal
+		choice: continuous
+		choice: counter
+
+card field:
+	type: choice
+	name: card_type
+	description: The card's type.
+	card list visible: true
+	card list column: 2
+	editable: false
+	save value: false
+	default: card.type_control
+	
+card field:
+	type: choice
+	name: pendulum_control
+	description: Adds pendulum type.
+	choice: non-pendulum
+	choice: pendulum
+	choice: pandemonium
+	
+card field:
+	type: choice
+	name: pendulum_status
+	editable: false
+	save value: false
+	default: card.pendulum_control
+	
+card field:
+	type: choice
+	name: attribute_control
+	description: frame
+	choice: earth
+	choice: water
+	choice: fire
+	choice: wind
+	choice: light
+	choice: dark
+	choice: divine
+	choice: spell
+	choice: trap
+	choice: none
+
+card field:
+	type: choice
+	name: card_attribute
+	description: The card's attribute.
+	card list visible: true
+	card list column: 3
+	editable: false
+	save value: false
+	default: card.attribute_control
+	
+card field:
+	type: text
+	name: card_name
+	identifying: true
+	show statistics: true
+	description: The card's name.
+	card list visible: true
+	card list column: 1
+	
+card field:
+	type: text
+	name: level
+	description: `=] * = star, % = continuous, ! = counter, + = equipment, & = field, $ = quickplay, # = ritual
+	script: level_filter(value)
+	
+card field:
+	type: text
+	name: monster_type
+	show statistics: true
+	description: The monster's type.
+	card list visible: true
+	card list column: 4
+	
+card field:
+	type: text
+	name: card_type_text
+	show statistics: true
+	description: The card's type.
+	card list visible: true
+	card list column: 4
+	
+card field:
+	type: text
+	name: attack
+	show statistics: true
+	description: The card's attack.
+	card list visible: true
+	card list column: 5
+	
+card field:
+	type: text
+	name: defence
+	show statistics: true
+	description: The card's defence.
+	card list visible: true
+	card list column: 6
+	
+card field:
+	type: text
+	name: card_text
+	description: The card's effects.
+	multi line: true
+	
+card field:
+	type: text
+	name: pendulum_text
+	description: The card's pendulum effects.
+	multi line: true
+	
+card field:
+	type: text
+	name: left_scale
+	show statistics: true
+	description: The card's pendulum scales.
+	card list visible: true
+	card list column: 7
+	
+card field:
+	type: text
+	name: right_scale
+	show statistics: true
+	description: The card's pendulum scales.
+	card list visible: true
+	card list column: 8
+	
+card field:
+	type: text
+	name: line
+	show statistics: true
+	description: The card's extra text.
+	card list visible: true
+	card list column: 9
+card field:
+	type: text
+	name: illust_by
+	show statistics: true
+	description: The maker of the card.
+	card list visible: true
+	card list column: 9
+	
+card field:
+	type: text
+	name: set_number
+	show statistics: true
+	description: The card's ID.
+	card list visible: true
+	card list column: 9
+	
+card field:
+	type: choice
+	name: rarity
+	show statistics: true
+	choice: common
+	choice: rare
+	choice: super rare
+	choice: ultra rare
+	choice: secret rare
+	choice: ultimate rare
+	choice: ultimate rare (No foil)
+	choice: parallel rare
+	choice: ghost rare (No foil)
+	choice: gold rare
+	choice: star rare
+	choice: mosaic rare
+	choice: promo
+	card list visible: true
+	card list column: 10
+	
+	
+card field:
+	type: choice
+	name: B_Link
+	editable: false
+	show statistics: false
+	default: card.bLinkControl
+	
+card field:
+	type: choice
+	name: bLinkControl
+	choice: off
+	choice: on
+	
+card field:
+	type: choice
+	name: T_Link
+	editable: false
+	show statistics: false
+	default: card.tLinkControl
+	
+card field:
+	type: choice
+	name: tLinkControl
+	choice: off
+	choice: on
+	
+card field:
+	type: choice
+	name: L_Link
+	editable: false
+	show statistics: false
+	default: card.lLinkControl
+	
+card field:
+	type: choice
+	name: lLinkControl
+	choice: off
+	choice: on
+	
+card field:
+	type: choice
+	name: R_Link
+	editable: false
+	show statistics: false
+	default: card.rLinkControl
+	
+card field:
+	type: choice
+	name: rLinkControl
+	choice: off
+	choice: on
+	
+card field:
+	type: choice
+	name: TL_Link
+	editable: false
+	show statistics: false
+	default: card.tlLinkControl
+	
+card field:
+	type: choice
+	name: tlLinkControl
+	choice: off
+	choice: on
+	
+card field:
+	type: choice
+	name: TR_Link
+	editable: false
+	show statistics: false
+	default: card.trLinkControl
+	
+card field:
+	type: choice
+	name: trLinkControl
+	choice: off
+	choice: on
+	
+card field:
+	type: choice
+	name: BL_Link
+	editable: false
+	show statistics: false
+	default: card.blLinkControl
+	
+card field:
+	type: choice
+	name: blLinkControl
+	choice: off
+	choice: on
+	
+card field:
+	type: choice
+	name: BR_Link
+	editable: false
+	show statistics: false
+	default: card.brLinkControl
+	
+card field:
+	type: choice
+	name: brLinkControl
+	choice: off
+	choice: on
