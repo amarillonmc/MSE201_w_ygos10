@@ -210,9 +210,9 @@ card style:
 		z index: 0
 		font:
 			name: 
-				script: if styling.language=="japanese" then "Yu-Gi-Oh! DFG Leisho 4" 
-				else if styling.language=="chinese simplified" then "方正隶变_GBK" 
-				else if styling.language=="chinese traditional" then "DFPLiShuW5-B5" 
+				script: if styling.language=="japanese" then "FOT-Rodin PRO EB" 
+				else if styling.language=="chinese simplified" then "FZYunDongHeiS-H-GB" 
+				else if styling.language=="chinese traditional" then "Tensentype JiaLiDaHeiF" 
 				else if styling.language=="chinese duel links traditional" then "DFPTanLiW5-B5"
 				else if styling.language=="chinese duel links simplified" then "DFPTanLiW5-GB"
 				else "Yu-Gi-Oh! Matrix Small Caps 1"
@@ -235,11 +235,11 @@ card style:
 		z index: 2
 		font:
 			name: 
-				script: if styling.language=="japanese" then "Yu-Gi-Oh! DFG Leisho 4" 
-				else if styling.language=="chinese simplified" then "方正隶变_GBK" 
-				else if styling.language=="chinese traditional" then "DFPLiShuW5-B5" 
-				else if styling.language=="chinese duel links traditional" then "DFPTanLiW5-B5"
-				else if styling.language=="chinese duel links simplified" then "DFPTanLiW5-GB"
+				script: if styling.language=="japanese" then "FOT-Rodin PRO EB" 
+				else if styling.language=="chinese simplified" then "FOT-Rodin PRO EB" 
+				else if styling.language=="chinese traditional" then "FOT-Rodin PRO EB" 
+				else if styling.language=="chinese duel links traditional" then "FOT-Rodin PRO EB"
+				else if styling.language=="chinese duel links simplified" then "FOT-Rodin PRO EB"
 				else "FOT-Rodin Pro EB"
 			size: 25
 			color:
@@ -261,9 +261,9 @@ card style:
 		font:
 			name: 
 				script:
-				if styling.language=="japanese" then "Yu-Gi-Oh! DFG Leisho 4" 
-				else if styling.language=="chinese simplified" then "方正隶变_GBK" 
-				else if styling.language=="chinese traditional" then "DFPLiShuW5-B5" 
+				if styling.language=="japanese" then "FOT-Rodin PRO B" 
+				else if styling.language=="chinese simplified" then "FZYunDongHeiS-H-GB" 
+				else if styling.language=="chinese traditional" then "Tensentype JiaLiDaHeiF" 
 				else if styling.language=="chinese duel links traditional" then "DFPTanLiW5-B5"
 				else if styling.language=="chinese duel links simplified" then "DFPTanLiW5-GB"
 				else "FOT-Rodin Pro B"
@@ -288,9 +288,9 @@ card style:
 		font:
 			name: 
 				script:
-				if styling.language=="japanese" then "Yu-Gi-Oh! DFG Leisho 4" 
-				else if styling.language=="chinese simplified" then "方正隶变_GBK" 
-				else if styling.language=="chinese traditional" then "DFPLiShuW5-B5" 
+				if styling.language=="japanese" then "FOT-Rodin PRO B" 
+				else if styling.language=="chinese simplified" then "FZYunDongHeiS-H-GB" 
+				else if styling.language=="chinese traditional" then "Tensentype JiaLiDaHeiF" 
 				else if styling.language=="chinese duel links traditional" then "DFPTanLiW5-B5"
 				else if styling.language=="chinese duel links simplified" then "DFPTanLiW5-GB"
 				else "FOT-Rodin Pro B"
@@ -351,13 +351,13 @@ card style:
 		font:
 			name: 
 				script:
-				if styling.language=="japanese" then "Yu-Gi-Oh! DF Leisho 3" 
-				else if styling.language=="chinese simplified" then "方正隶变_GBK" 
-				else if styling.language=="chinese traditional" then "DFPLiShuW5-B5" 
+				if styling.language=="japanese" then "FOT-Rodin PRO M" 
+				else if styling.language=="chinese simplified" then "Tensentype JiaLiDaHeiJ" 
+				else if styling.language=="chinese traditional" then "Tensentype JiaLiDaHeiF" 
 				else if styling.language=="chinese duel links traditional" then "DFPTanLiW5-B5"
 				else if styling.language=="chinese duel links simplified" then "DFPTanLiW5-GB"
 				else "Yu-Gi-Oh! Matrix Book"
-			italic name: { if styling.language=="japanese" then "Yu-Gi-Oh! DF Leisho 3" else if styling.language=="chinese simplified" then "方正隶变_GBK" else if styling.language=="chinese traditional" then "DFPLiShuW5-B5" else if styling.language=="chinese duel links traditional" then "DFPTanLiW5-B5" else if styling.language=="chinese duel links simplified" then "DFPTanLiW5-GB" else "Yu-Gi-Oh! StoneSerif LT" }
+			italic name: { if styling.language=="japanese" then "FOT-Rodin PRO EB M" else if styling.language=="chinese simplified" then "方正隶变_GBK" else if styling.language=="chinese traditional" then "DFPLiShuW5-B5" else if styling.language=="chinese duel links traditional" then "DFPTanLiW5-B5" else if styling.language=="chinese duel links simplified" then "DFPTanLiW5-GB" else "Yu-Gi-Oh! StoneSerif LT" }
 			size: 11.6
 			color: rgb(0,0,0)
 			shadow color: rgb(250,250,250)
@@ -380,9 +380,9 @@ card style:
 		font:
 			name:
 				script:
-					if styling.language=="japanese" then "Yu-Gi-Oh! DF Leisho 3" 
-					else if styling.language=="chinese simplified" then "方正隶变_GBK" 
-					else if styling.language=="chinese traditional" then "DFPLiShuW5-B5" 
+					if styling.language=="japanese" then "FOT-Rodin PRO M" 
+					else if styling.language=="chinese simplified" then "Tensentype JiaLiDaHeiJ" 
+					else if styling.language=="chinese traditional" then "Tensentype JiaLiDaHeiF" 
 					else if styling.language=="chinese duel links traditional" then "DFPTanLiW5-B5"
 					else if styling.language=="chinese duel links simplified" then "DFPTanLiW5-GB"
 					else "Yu-Gi-Oh! Matrix Book"
@@ -436,7 +436,15 @@ card style:
 		alignment: left middle shrink-overflow
 		z index: 0
 		font:
-			name: FOT-Rodin Pro EB
+			#name: FOT-Rodin Pro EB
+			name:
+				script:
+					if styling.language=="japanese" then "FOT-Rodin PRO M" 
+					else if styling.language=="chinese simplified" then "Tensentype JiaLiDaHeiJ" 
+					else if styling.language=="chinese traditional" then "Tensentype JiaLiDaHeiF" 
+					else if styling.language=="chinese duel links traditional" then "DFPTanLiW5-B5"
+					else if styling.language=="chinese duel links simplified" then "DFPTanLiW5-GB"
+					else " FOT-Rodin Pro EB"
 			size: 8
 			color: rgb(250,250,250)
 			shadow color: rgb(0,0,0)
