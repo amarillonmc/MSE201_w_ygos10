@@ -26,6 +26,7 @@ card field:
 	choice: evolute monster
 	choice: evolute conjoint monster
 	choice: enhance monster
+	choice: dark monster
 	choice: time leap monster
 	choice: normal conjoint monster
 	choice: effect conjoint monster

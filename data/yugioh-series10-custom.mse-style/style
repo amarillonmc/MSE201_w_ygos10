@@ -318,6 +318,7 @@ card style:
 			evolute conjoint monster : { if styling.extended_artwork=="yes" then "fullart/evolutecex.png" else "card-evolute-conjoint.png" }
 			enhance monster : Enhance_s10.png
 			time leap monster : Time_Leap_MSE.png
+			dark monster : card-dark.png
 			skill card             : { if styling.extended_artwork=="yes" then "new/fullart/skillex.png" else "new/skill.png"}
 	sdoverlay:
 		left: 0
