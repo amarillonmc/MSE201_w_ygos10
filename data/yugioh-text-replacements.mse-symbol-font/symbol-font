@@ -16,7 +16,7 @@ symbol:
 	image: rightbracket.png
 symbol:
 	code: @
-	image: infinity.png
+	image: at.png
 	image font size: 25
 symbol:
 	code: ?
@@ -37,6 +37,10 @@ symbol:
 	code: Ｒ
 	image: reverse1.png
 	image font size: 25
+symbol:
+	code: ¢
+	image: infinity.png
+	image font size: 25
 
 ##############################################################
 # Insert-symbol menu
@@ -44,6 +48,7 @@ insert symbol menu:
 	item: [
 	item: ]
 	item: @
+	item: ¢
 	item: ?
 	item: *
 	item: Ｘ
