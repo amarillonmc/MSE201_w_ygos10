@@ -17,6 +17,9 @@ depends on:
 	package: yugioh-text-replacements.mse-symbol-font
 	version: 2014-04-11
 depends on:
+	package: yugioh-text-replacements2.mse-symbol-font
+	version: 2014-04-11
+depends on:
 	package: yugioh-text-numbers.mse-symbol-font
 	version: 2014-04-11
 
@@ -468,7 +471,9 @@ card style:
 				else if is_nmonster() then rgb(255,255,255)
 				else rgb(0,0,0)
 		symbol font:
-			name: yugioh-text-replacements
+			name: 
+				script: if styling.language=="english" then "yugioh-text-replacements"
+				else "yugioh-text-replacements2"				
 			alignment: bottom center
 	attribute:
 		left: 355
