@@ -40,6 +40,9 @@ symbol:
 symbol:
 	code: *
 	image: dot.png
+symbol:
+	code: @
+	image: at.png
 
 ##############################################################
 # Insert-symbol menu
@@ -54,3 +57,4 @@ insert symbol menu:
 	item: ~
 	item: ?
 	item: *
+	item: @
