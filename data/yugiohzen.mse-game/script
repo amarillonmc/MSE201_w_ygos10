@@ -140,7 +140,7 @@
 		card.card_type == "normal normal monster" 									or
 		card.card_type == "effect effect monster" 									or
 		card.card_type == "normal fusion normal monster" 							or
-		card.card_type == "effect fusion  effect monster" 							or
+		card.card_type == "effect fusion effect monster" 							or
 		card.card_type == "normal ritual normal monster"							or
 		card.card_type == "effect ritual effect monster" 							or
 		card.card_type == "normal synchro normal monster"							or
