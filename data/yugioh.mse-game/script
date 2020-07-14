@@ -154,14 +154,6 @@
 		card.card_type == "dark synchro monster"    or
 		card.card_type == "xyz monster"             or
 		card.card_type == "link monster"             or
-		card.card_type == "pendulum normal monster" or
-		card.card_type == "pendulum effect monster" or
-		card.card_type == "pendulum fusion monster" or
-		card.card_type == "pendulum ritual monster" or
-		card.card_type == "pendulum synchro monster" or
-		card.card_type == "pendulum dark synchro monster" or
-		card.card_type == "pendulum xyz monster"    or
-		card.card_type == "pandemonium monster" or
 		card.card_type == "dlc monster" or
 		card.card_type == "fusion monster"          or
 		card.card_type == "token monster"           or
@@ -170,15 +162,11 @@
 		card.card_type == "ra card"
 	}
 	is_pendulum := {
-		card.card_type == "pendulum normal monster" or
-		card.card_type == "pendulum effect monster" or
-		card.card_type == "pendulum fusion monster" or
-		card.card_type == "pendulum ritual monster" or
-		card.card_type == "pendulum synchro monster" or
-		card.card_type == "pendulum dark synchro monster" or
-		card.card_type == "pendulum xyz monster" or
-		card.card_type == "pandemonium monster"
+		card.pendulum == "pendulum" or
+		card.pendulum == "pendulum pandemonium" or
+		card.pendulum == "pandemonium"
 	}
+	is_pandemonium := { card.pendulum == "pandemonium" }
 	is_normal_monster_extended := {
 		card.card_type == "normal monster"
 	}

@@ -117,18 +117,8 @@ symbol:
 symbol:
 	code: *
 	image: estar.png
-	enabled: {card.card_type=="pendulum xyz monster"}
-	image font size: 17
-symbol:
-	code: *
-	image: estar.png
 	enabled: {card.card_type=="xyz conjoint monster"}
 	image font size: 17
-symbol:
-	code: *
-	image: dstar.png
-	enabled: {card.card_type=="pendulum dark synchro monster"}
-	image font size: 13.5
 symbol:
 	code: *
 	image: dstar.png
@@ -138,6 +128,16 @@ symbol:
 	code: *
 	image: TP_Level2.png
 	enabled: {card.card_type=="time leap monster"}
+	image font size: 17
+symbol:
+	code: *
+	image: dimension.png
+	enabled: {card.card_type=="origin spatial monster"}
+	image font size: 17
+symbol:
+	code: *
+	image: negative_dimension.png
+	enabled: {card.card_type=="altered spatial monster"}
 	image font size: 17
 symbol:
 	code: *
