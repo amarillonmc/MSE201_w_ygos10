@@ -31,6 +31,8 @@ card field:
 	choice: altered spatial monster
 	choice: spell card
 	choice: trap card
+	choice: conjoint spell card
+	choice: conjoint trap card
 	choice: trell card
 	choice: skill card
 	default: card_type()
@@ -82,6 +84,11 @@ card field:
 	choice: pandemonium
 	choice: relay
 	choice: pendulum pandemonium
+	choice: conjoint
+	choice: conjoint pendulum
+	choice: conjoint pandemonium
+	choice: conjoint relay
+	choice: conjoint pendulum pandemonium
 
 ############################# Link Marker Border
 card field:
