@@ -516,7 +516,7 @@ card style:
 		left: { if is_nmonster() then 42 else 43 }
 		top : { if is_nmonster() then 74 else if styling.template_style=="actual style" then 73 else 76}
 		#width: { if is_nmonster() then 327 else if card.card_type=="link monster" then 0 else 334 }
-		width: { if is_nmonster() then 338 else if card.card_type=="link monster" or card.card_type == "link monster" and is_conjoint() then 0 else 334 }
+		width: { if is_nmonster() then 338 else if card.card_type=="link monster" or (card.card_type == "link monster" and is_conjoint()) then 0 else 334 }
 		height: 28
 		alignment: {if card.card_type=="xyz monster" or card.card_type=="dark synchro monster" or (is_pendulum() and (card.card_type=="xyz monster" or card.card_type=="dark synchro monster")) then "middle left shrink-overflow" else if card.card_type=="evolute monster" or card.card_type=="evolute conjoint monster" or card.card_type == "conjoint spell card" or card.card_type == "conjoint trap card" or card.card_type == "conjoint trell card" or is_spatial() then "middle center shrink-overflow" else "middle right shrink-overflow" }
 		z index: 2
