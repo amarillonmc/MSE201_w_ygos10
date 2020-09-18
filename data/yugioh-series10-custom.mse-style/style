@@ -1035,17 +1035,17 @@ extra card style:
 					else "blank2.png"
 		visible: script: if is_pendulum() then true else false
 	pendulum border:
-		left: -3
+		left: 0
 		top: 0
-		width: 427
-		height: 617
+		width: 421
+		height: 614
 		z index: 1
 		render style:image
 		choice images:
 			image:
 				script:
-					if contains(card.pendulum, match: "pendulum pandemonium") and styling.pendulum_size == "less" and is_conjoint() then masked_blend(dark: "pendulum/pendulum_csm.png", light: "pendulum/pandemonium_csm.png", mask: "mask-half-h.png")
-					else if contains(card.pendulum, match: "pendulum pandemonium") and is_conjoint() then masked_blend(dark: "pendulum/pendulum_cmd.png", light: "pendulum/pandemonium_cmd.png", mask: "mask-half-h.png")
+					if contains(card.pendulum, match: "pendulum pandemonium") and styling.pendulum_size == "less" and is_conjoint() then masked_blend(dark: "pendulum/pendulum_csm.png", light: "pendulum/pandemonium_csm.png", mask: "mask-half-hp.png")
+					else if contains(card.pendulum, match: "pendulum pandemonium") and is_conjoint() then masked_blend(dark: "pendulum/pendulum_cmd.png", light: "pendulum/pandemonium_cmd.png", mask: "mask-half-hp.png")
 					else if contains(card.pendulum, match: "pendulum") and is_conjoint() and styling.pendulum_size=="more" then "pendulum/pendulum_clg.png" 
 					else if contains(card.pendulum, match: "pandemonium") and is_conjoint() and styling.pendulum_size=="more" then "pendulum/pandemonium_clg.png" 
 					else if contains(card.pendulum, match: "pandemonium") and is_conjoint() and styling.pendulum_size=="less" then "pendulum/pandemonium_csm.png"
@@ -1054,10 +1054,10 @@ extra card style:
 					else if contains(card.pendulum, match: "relay") and is_conjoint() then "pendulum/card-conjoint-relay.png"
 					else if contains(card.pendulum, match: "pandemonium") and is_conjoint() then "pendulum/pandemonium_cmd.png" 
 					else if contains(card.pendulum, match: "pendulum") and is_conjoint() then "pendulum/pendulum_cmd.png"
-					else if card.pendulum == "pendulum pandemonium" and styling.pendulum_size == "more" then masked_blend(dark: "pendulum/pendulum_lg.png", light: "pendulum/pandemonium_lg.png", mask: "mask-half-h.png")
+					else if card.pendulum == "pendulum pandemonium" and styling.pendulum_size == "more" then masked_blend(dark: "pendulum/pendulum_lg.png", light: "pendulum/pandemonium_lg.png", mask: "mask-half-hp.png")
 					else if card.pendulum == "pendulum pandemonium" and styling.pendulum_size == "less" then masked_blend(dark: "pendulum/pendulum_sm.png", light: "pendulum/pandemonium_sm.png", mask: "mask-half-h.png")
-					else if card.pendulum == "pendulum pandemonium" then masked_blend(dark: "pendulum/pendulum_md.png", light: "pendulum/pandemonium_md.png", mask: "mask-half-h.png")
-					else if card.pendulum == "pendulum pandemonium" and styling.pendulum_size == "more" and is_conjoint() then masked_blend(dark: "pendulum/pendulum_clg.png", light: "pendulum/pandemonium_clg.png", mask: "mask-half-h.png")
+					else if card.pendulum == "pendulum pandemonium" then masked_blend(dark: "pendulum/pendulum_md.png", light: "pendulum/pandemonium_md.png", mask: "mask-half-hp.png")
+					else if card.pendulum == "pendulum pandemonium" and styling.pendulum_size == "more" and is_conjoint() then masked_blend(dark: "pendulum/pendulum_clg.png", light: "pendulum/pandemonium_clg.png", mask: "mask-half-hp.png")
 					else if card.pendulum == "pendulum" and styling.pendulum_size=="more" then "pendulum/pendulum_lg.png" 
 					else if card.pendulum == "pandemonium" and styling.pendulum_size=="more" then "pendulum/pandemonium_lg.png" 
 					else if card.pendulum == "pandemonium" and styling.pendulum_size=="less" then "pendulum/pandemonium_sm.png"
