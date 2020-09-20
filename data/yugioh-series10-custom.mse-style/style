@@ -436,33 +436,25 @@ card style:
 			size: 
 				script: if styling.language=="japanese" or styling.language=="chinese simplified" or styling.language=="chinese traditional" or styling.language=="chinese duel links traditional" or styling.language=="chinese duel links simplified" or card.card_type=="skill card" then 27 else 35
 			color:
-				script: if styling.name_color_override then styling.name_color 
-				else if card.rarity=="rare" then rgb(133,168,169)
-				else if card.rarity=="star rare" and card.card_type=="xyz monster" then rgb(255,255,255)
-				else if card.rarity=="star rare" and card.card_type=="dark synchro monster" then rgb(255,255,255)
-				else if card.rarity=="star rare" and is_pendulum() and card.card_type=="xyz monster" then rgb(255,255,255)
-				else if card.rarity=="star rare" and is_pendulum() and card.card_type=="dark synchro monster" then rgb(255,255,255)
-				else if card.rarity=="star rare" then rgb(35,40,49)
-				else if card.rarity=="mosaic rare" and card.card_type=="xyz monster" then rgb(255,255,255)
-				else if card.rarity=="mosaic rare" and card.card_type=="dark synchro monster" then rgb(255,255,255)
-				else if card.rarity=="mosaic rare" and is_pendulum() and card.card_type=="xyz monster" then rgb(255,255,255)
-				else if card.rarity=="mosaic rare" and is_pendulum() and card.card_type=="dark synchro monster" then rgb(255,255,255)
-				else if card.rarity=="mosaic rare" then rgb(10,10,10)
-				else if card.rarity=="promo" then rgb(60,0,0)
-				else if card.rarity=="secret rare" then rgb(211,252,252)
-				#else if card.rarity=="ultra rare" then rgb(228,190,005)
-				else if card.rarity=="ultimate rare" or card.rarity=="ultra rare" then rgb(88,76,12)
-				else if card.rarity=="ultimate rare (No foil)" then rgb(69,60,0)
-				else if card.rarity=="parallel rare" then rgb(88,76,12)
-				else if card.rarity=="gold rare" then rgb(88,76,12)
-				else if card.card_type=="xyz monster" then rgb(255,255,255)
-				else if card.card_type=="dark synchro monster" then rgb(255,255,255)
-				else if is_pendulum() and card.card_type=="xyz monster" then rgb(255,255,255)
-				else if is_pendulum() and card.card_type=="dark synchro monster" then rgb(255,255,255)
-				else if card.card_type=="bigbang monster" then rgb(255,255,255)
-				else if card.card_type=="skill card" then rgb(255,255,255)
-				else if is_nmonster() then rgb(255,255,255)
-				else rgb(0,0,0)
+				script:
+					if styling.name_color_override then styling.name_color 
+					else if card.rarity=="rare" then rgb(133,168,169)
+					else if card.rarity=="star rare" and is_pendulum() and (card.card_type=="xyz monster" or card.card_type=="link monster" or card.card_type=="evolute monster" or card.card_type=="bigbang monster" or card.card_type=="dark synchro monster") then rgb(255,255,255)
+					else if card.rarity=="star rare" and (card.card_type=="xyz monster" or card.card_type=="link monster" or card.card_type=="evolute monster" or card.card_type=="bigbang monster" or card.card_type=="dark synchro monster") then rgb(255,255,255)
+					else if card.rarity=="star rare" then rgb(35,40,49)
+					else if card.rarity=="mosaic rare" and is_pendulum() and (card.card_type=="xyz monster" or card.card_type=="link monster" or card.card_type=="evolute monster" or card.card_type=="bigbang monster" or card.card_type=="dark synchro monster") then rgb(255,255,255)
+					else if card.rarity=="mosaic rare" and (card.card_type=="xyz monster" or card.card_type=="link monster" or card.card_type=="evolute monster" or card.card_type=="bigbang monster" or card.card_type=="dark synchro monster") then rgb(255,255,255)
+					else if card.rarity=="mosaic rare" then rgb(10,10,10)
+					else if card.rarity=="promo" then rgb(60,0,0)
+					else if card.rarity=="secret rare" then rgb(211,252,252)
+					#else if card.rarity=="ultra rare" then rgb(228,190,005)
+					else if card.rarity=="ultimate rare" or card.rarity=="ultra rare" then rgb(88,76,12)
+					else if card.rarity=="ultimate rare (No foil)" then rgb(69,60,0)
+					else if card.rarity=="parallel rare" then rgb(88,76,12)
+					else if card.rarity=="gold rare" then rgb(88,76,12)
+					else if is_pendulum() and (card.card_type=="xyz monster" or card.card_type=="link monster" or card.card_type=="evolute monster" or card.card_type=="bigbang monster" or card.card_type=="dark synchro monster") then rgb(255,255,255)
+					else if card.card_type=="xyz monster" or card.card_type=="dark synchro monster" or card.card_type=="link monster" or card.card_type=="evolute monster" or card.card_type=="bigbang monster" or card.card_type=="skill card" or is_nmonster() then rgb(255,255,255)
+					else rgb(0,0,0)
 		symbol font:
 			name: 
 				script: if styling.language=="english" then "yugioh-text-replacements"
@@ -539,9 +531,9 @@ card style:
 	############################# Image
 	image:
 		left: { if is_pendulum() and styling.template_style=="actual style" then 25 else if is_pendulum() then 28 else if card.card_type=="pandemonium monster" then 27 else if styling.image_frame then 44 else if card.card_type=="link monster" and ( styling.extended_artwork=="yes" and styling.template_style=="actual style" ) then 23 else if card.card_type=="link monster" and styling.extended_artwork=="yes" then 28 else if styling.extended_artwork=="yes" and styling.template_style=="actual style" then 24 else if styling.extended_artwork=="yes" then 28 else if styling.template_style=="actual style" then 47 else 51 }
-		top: { if is_pendulum() and styling.template_style=="actual style" then 109.5 else if is_pendulum() then 110 else if styling.image_frame then 106 else if card.card_type=="link monster" and ( styling.extended_artwork=="yes" and styling.template_style=="actual style" ) then 102 else if card.card_type=="link monster" and styling.extended_artwork=="yes" then 99 else if styling.extended_artwork=="yes" and styling.template_style=="actual style" then 108 else if styling.extended_artwork=="yes" then 110 else if styling.template_style=="actual style" then 110 else 113 }
+		top: { if is_pendulum() and styling.template_style=="actual style" then 107 else if is_pendulum() then 110 else if styling.image_frame then 106 else if card.card_type=="link monster" and ( styling.extended_artwork=="yes" and styling.template_style=="actual style" ) then 102 else if card.card_type=="link monster" and styling.extended_artwork=="yes" then 99 else if styling.extended_artwork=="yes" and styling.template_style=="actual style" then 108 else if styling.extended_artwork=="yes" then 110 else if styling.template_style=="actual style" then 110 else 113 }
 		width: { if is_pendulum() and styling.template_style=="actual style" then 371 else if is_pendulum() then 365 else if styling.image_frame then 333 else if card.card_type=="link monster" and ( styling.extended_artwork=="yes" and styling.template_style=="actual style" ) then 374 else if styling.extended_artwork=="yes" and styling.template_style=="actual style" then 373 else if styling.extended_artwork=="yes" then 366 else if styling.template_style=="actual style" then 326 else 320 }
-		height: { if is_pendulum() then ( if styling.pendulum_transparency then ( if styling.pendulum_size=="more" then 368 else 347 ) ) else if styling.image_frame then 333 else if card.card_type=="link monster" and ( styling.extended_artwork=="yes" and styling.template_style=="actual style" ) then 483 else if card.card_type=="link monster" and styling.extended_artwork=="yes" then 479 else if styling.extended_artwork=="yes" and styling.template_style=="actual style" then 474 else if styling.extended_artwork=="yes" then 470 else if styling.template_style=="actual style" then 326 else 320 }
+		height: { if is_pendulum() then ( if styling.pendulum_transparency then ( if styling.pendulum_size=="more" then 370.5 else 349.5 ) ) else if styling.image_frame then 333 else if card.card_type=="link monster" and ( styling.extended_artwork=="yes" and styling.template_style=="actual style" ) then 483 else if card.card_type=="link monster" and styling.extended_artwork=="yes" then 479 else if styling.extended_artwork=="yes" and styling.template_style=="actual style" then 474 else if styling.extended_artwork=="yes" then 470 else if styling.template_style=="actual style" then 326 else 320 }
 		z index: 1
 		mask: { if is_pendulum() and styling.template_style=="actual style" then "" else if is_pendulum() and styling.template_style=="proxy-like" then ( if styling.pendulum_transparency then ( if styling.pendulum_size=="less" then "mask-p_less.png" else if styling.pendulum_size=="more" then "mask-p_more.png" else "mask-p.png" ) else ( if styling.pendulum_size=="less" then "mask-p_opaque_less.png" else "mask-p_opaque.png" ) ) else if styling.template_style=="actual style" and styling.extended_artwork=="yes" then ( if card.card_type=="spell card" or card.card_type=="trap card" or card.card_type=="conjoint spell card" or card.card_type=="conjoint trap card" or card.card_type=="skill card" then "new/maskex5.png" else if card.card_type=="link monster" then "new/maskex3.png" else "new/maskex4.png" ) else if styling.extended_artwork=="yes" then (if card.card_type=="spell card" or card.card_type=="trap card" then "maskex1.png" else if card.card_type=="link monster" then "maskex2.png" else "maskex.png") else "" }
 	############################# Pendulum Border
