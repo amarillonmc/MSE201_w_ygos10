@@ -48,11 +48,13 @@ styling field:
 	choice: chinese traditional
 	choice: chinese duel links traditional
 	choice: chinese duel links simplified
+	choice: chinese ocg official
 styling field:
 	type: choice
 	name: template style
 	description: 模板样式 Style of the template, Proxy-Like is the style featured in INFDEV version while Actual Style is closer to real life Series 10 cards.
-	initial: actual style
+	initial: proxy-like
+	choice: proxy-like
 	choice: actual style
 styling field:
 	type: info
@@ -85,6 +87,15 @@ styling field:
 	choice: 
 		name: gold
 		color: rgb(216,199,53)
+	choice: 
+		name: TCG Proxy - Rare
+		color: rgb(133,131,132)
+	choice: 
+		name: TCG Proxy - Ultra Rare
+		color: rgb(245,178,126)
+	choice: 
+		name: TCG Proxy - Secret Rare
+		color: rgb(136,147,175)
 styling field:
 	type: boolean
 	name: shadow override
@@ -110,6 +121,34 @@ styling field:
 	choice: 
 		name: silver
 		color: rgb(230,230,230)
+	choice: 
+		name: gold
+		color: rgb(216,199,53)
+styling field:
+	type: boolean
+	name: copyright color override
+	description: 使用以下的颜色替换编号·密码·版权颜色 Override the default color of card password/SetID/Set Code with the settings below.
+	initial: no
+styling field:
+	type: color
+	name: copyright color
+	description: 编号·密码·版权颜色设置 Customize the color of the card password/SetID/Set Code fields.
+	initial: rgb(254,254,254)
+	choice: 
+		name: default
+		color:rgb(254,254,254)
+	choice: 
+		name: white
+		color: rgb(255,255,255)
+	choice: 
+		name: red
+		color: rgb(60,0,0)
+	choice: 
+		name: silver
+		color: rgb(230,230,230)
+	choice:
+		name: light blue
+		color: rgb(211,252,252)
 	choice: 
 		name: gold
 		color: rgb(216,199,53)
@@ -147,6 +186,8 @@ styling field:
 	choice: ultrafoil
 	choice: ygojpoverlay
 	choice: ygojpoverlayp
+	choice: 20thser
+	choice: 20thserpendulum
 styling field:
 	type: boolean
 	name: image frame
@@ -159,11 +200,26 @@ styling field:
 	initial: no
 	choice: no
 	choice: yes
+#combine this field into lorebox watermark, ooooh yeah!!
+#styling field:
+#	type: boolean
+#	name: is speedduel card
+#	description: 是否为高速决斗卡 Choosing "Yes" will apply the Speed Duel watermark on the card.
+#	initial: no
 styling field:
 	type: boolean
-	name: is speedduel card
-	description: 是否为高速决斗卡 Choosing "Yes" will apply the Speed Duel watermark on the card.
+	name: lorebox watermark
+	description: 效果框内是否有水印 Choosing "Yes" will apply A custom watermark on the card, used for making 20thser or Speed Duel Cards.
 	initial: no
+styling field:
+	type: choice
+	name: custom watermark
+	description: 选择效果框水印 Choose from 1 of the following watermark to display in the lorebox.
+	initial: speedduel
+	choice: speedduel
+	choice: 20thser
+	choice: custom1
+	choice: customvirtualsan
 styling field:
 	type: boolean
 	name: is link card
@@ -249,6 +305,9 @@ styling style:
 			japanese: /yugioh.mse-game/icons/language-ja.png
 			chinese simplified: /yugioh.mse-game/icons/language-zh.png
 			chinese traditional: /yugioh.mse-game/icons/language-tw.png
+			chinese duel links traditional: /yugioh.mse-game/icons/language-tw.png
+			chinese duel links simplified: /yugioh.mse-game/icons/language-zh.png
+			chinese ocg official: /yugioh.mse-game/icons/language-zh.png
 	template style:
 		render style: both
 		choice images:
@@ -279,6 +338,8 @@ styling style:
 			superfoil: /yugioh.mse-game/icons/superfoilpreview.png
 			ultimatefoil: /yugioh.mse-game/icons/ultimatefoilpreview.png
 			ultrafoil: /yugioh.mse-game/icons/ultrafoilpreview.png
+			20thser: /yugioh.mse-game/icons/collectborderpreview.png
+			20thserpendulum: /yugioh.mse-game/icons/collectborderpreview.png
 ############################################################## Card fields
 card style:
 	############################# Background stuff
@@ -291,19 +352,19 @@ card style:
 		render style: image
 		popup style: in place
 		choice images:
-			normal monster : { if styling.extended_artwork=="yes" then "fullart/normalex.png" else "new/normalnew.png" }
-			effect monster : { if styling.extended_artwork=="yes" then "fullart/effectex.png" else "new/effectnew.png" }
-			fusion monster : { if styling.extended_artwork=="yes" then "fullart/fusionex.png" else "new/fusionnew.png" }
-			ritual monster : { if styling.extended_artwork=="yes" then "fullart/ritualex.png" else "new/ritualnew.png" }
-			synchro monster : { if styling.extended_artwork=="yes" then "fullart/synchroex.png" else "new/synchronew.png" }
-			dark synchro monster : card-dsynchro.png
-			xyz monster : { if styling.extended_artwork=="yes" then "fullart/xyzex.png" else "new/xyznew.png" }
+			normal monster               : { if styling.extended_artwork=="yes" and styling.template_style=="actual style" then "new/fullart/normalex.png" else if styling.extended_artwork=="yes" then "fullart/normalex.png" else if styling.template_style=="actual style" then "new/normalnew.png" else "card-normal.png" }
+			effect monster               : { if styling.extended_artwork=="yes" and styling.template_style=="actual style" then "new/fullart/effectex.png" else if styling.extended_artwork=="yes" then "fullart/effectex.png" else if styling.template_style=="actual style" then "new/effectnew.png" else "card-effect.png" }
+			fusion monster               : { if styling.extended_artwork=="yes" and styling.template_style=="actual style" then "new/fullart/fusionex.png" else if styling.extended_artwork=="yes" then "fullart/fusionex.png" else if styling.template_style=="actual style" then "new/fusionnew.png" else "card-fusion.png" }
+			ritual monster               : { if styling.extended_artwork=="yes" and styling.template_style=="actual style" then "new/fullart/ritualex.png" else if styling.extended_artwork=="yes" then "fullart/ritualex.png" else if styling.template_style=="actual style" then "new/ritualnew.png" else "card-ritual.png" }
+			synchro monster              : { if styling.extended_artwork=="yes" and styling.template_style=="actual style" then "new/fullart/synchroex.png" else if styling.extended_artwork=="yes" then "fullart/synchroex.png" else if styling.template_style=="actual style" then "new/synchronew.png" else "card-synchro.png" }
+			dark synchro monster         : card-dsynchro.png
+			xyz monster                  : { if styling.extended_artwork=="yes" and styling.template_style=="actual style" then "new/fullart/xyzex.png" else if styling.extended_artwork=="yes" then "fullart/xyzex.png" else if styling.template_style=="actual style" then "new/xyznew.png" else "card-xyz.png" }
 			bigbang monster : { if styling.template_style=="actual style" then "new/bigbangnew.png" else "card-bigbang.png" }
 			dlc monster : card-dlc.png
-			token monster : { if styling.extended_artwork=="yes" then "fullart/tokenex.png" else "new/tokennew.png" }
-			link monster : { if styling.extended_artwork=="yes" then "fullart/linkex.png" else "new/linknew.png" }
-			spell card : { if styling.extended_artwork=="yes" then "fullart/spellex.png" else "new/spellnew.png" }
-			trap card : { if styling.extended_artwork=="yes" then "fullart/trapex.png" else "new/trapnew.png" }
+			token monster                : { if styling.extended_artwork=="yes" and styling.template_style=="actual style" then "new/fullart/tokenex.png" else if styling.extended_artwork=="yes" then "fullart/tokenex.png" else if styling.template_style=="actual style" then "new/tokennew.png" else "card-token.png" }
+			link monster                 : { if styling.extended_artwork=="yes" and styling.template_style=="actual style" then "new/fullart/linkex.png" else if styling.extended_artwork=="yes" then "fullart/linkex.png" else if styling.template_style=="actual style" then "new/linknew.png" else "card-link.png" }
+			spell card                   : { if styling.extended_artwork=="yes" and styling.template_style=="actual style" then "new/fullart/spellex.png" else if styling.extended_artwork=="yes" then "fullart/spellex.png" else if styling.template_style=="actual style" then "new/spellnew.png" else "card-spell.png" }
+			trap card                    : { if styling.extended_artwork=="yes" and styling.template_style=="actual style" then "new/fullart/trapex.png" else if styling.extended_artwork=="yes" then "fullart/trapex.png" else if styling.template_style=="actual style" then "new/trapnew.png" else "card-trap.png" }
 			trell card : card-trell.png
 			conjoint spell card: { if styling.extended_artwork=="yes" then "fullart/spellcex.png" else "card-spell-conjoint.png" }
 			conjoint trap card: { if styling.extended_artwork=="yes" then "fullart/trapcex.png" else "card-trap-conjoint.png" }
@@ -326,8 +387,14 @@ card style:
 		popup style: in place
 		image:
 			script:
-			if styling.is_speedduel_card then "speeddueloverlay.png" 
-			else "blank2.png"
+				if styling.lorebox_watermark then(
+					if styling.custom_watermark=="speedduel" then "lorebox/speeddueloverlay.png" else
+					if styling.custom_watermark=="20thser" then "lorebox/20seroverlay.png" else
+					if styling.custom_watermark=="custom1" then "lorebox/customoverlay_1.png" else
+					if styling.custom_watermark=="customvirtualsan" then "lorebox/customoverlay_virtualsan.png" else
+					"speeddueloverlay.png"
+				)
+				else "blank2.png"
 		combine: normal
 	foils:
 		left: { if card.rarity=="parallel rare" or card.rarity=="star rare" or card.rarity=="mosaic rare" or card.rarity=="gold rare" or card.rarity=="ultimate rare" or styling.custom_foil=="ygojpoverlay" or styling.custom_foil=="ygojpoverlayp" then 0 else if card.rarity=="promo" or card.rarity=="secret rare" or card.rarity=="ultra rare" or card.rarity=="super rare" and styling.template_style=="actual style" and is_pendulum() then 25 else if is_pendulum() then 28 else if card.card_type=="link monster" and ( styling.extended_artwork=="yes" and styling.template_style=="actual style" ) then 23 else if card.card_type=="link monster" and styling.extended_artwork=="yes" then 28 else if styling.extended_artwork=="yes" and styling.template_style=="actual style" then 24 else if styling.image_frame then 44 else if styling.extended_artwork=="yes" then 28 else if styling.template_style=="actual style" then 47 else 51 }
@@ -358,6 +425,8 @@ card style:
 					if styling.custom_foil=="ultrafoil" then "customfoils/ultrafoil.png" else
 					if styling.custom_foil=="ygojpoverlay" then "customfoils/ygojpoverlay.png" else
 					if styling.custom_foil=="ygojpoverlayp" then "customfoils/ygojpoverlayp.png" else
+					if styling.custom_foil=="20thser" then "customfoils/20thser.png" else
+					if styling.custom_foil=="20thserpendulum" then "customfoils/20thserpendulum.png" else
 					"customfoils/defaultfoil.png"
 				) else
 				if card.rarity=="gold rare" and is_pendulum() then ( if styling.pendulum_size=="less" then "goldfoil-pendulum_less.png" else if styling.pendulum_size=="more" then "goldfoil-pendulum_more.png" else "goldfoil-pendulum.png" ) else
@@ -379,10 +448,13 @@ card style:
 		combine: normal
 	############################# Name line
 	name:
-		left: 31
+		#left: 31
+		left: { if styling.language=="chinese ocg official" then 28 else 31 }
 		#top : 25
-		top : { if styling.language=="chinese traditional" or styling.language=="chinese simplified" or styling.language=="chinese duel links traditional" or styling.language=="chinese duel links simplified" then 27 else if styling.template_style=="actual style" or card.card_type=="skill card" then 24 else 25 }
-		width: 319
+		top : { if styling.language=="chinese traditional" or styling.language=="chinese simplified" or styling.language=="chinese duel links traditional" or styling.language=="chinese duel links simplified" or styling.language=="chinese ocg official" then 27 else if styling.template_style=="actual style" or card.card_type=="skill card" then 24 else 25 }
+		#width: 319
+		#Requested by Hinoko-Honenoken of DeviantArt, if attribute is None then card name is wider for skill cards.
+		width: { if card.attribute=="none" then 359 else 319 }
 		height: 41
 		alignment: middle shrink-overflow
 		padding bottom: 0
@@ -392,13 +464,13 @@ card style:
 				script: if styling.shadow_override then styling.shadow_color 
 				else if card.rarity=="star rare" and card.card_type=="xyz monster" then rgb(255,255,255)
 				else if card.rarity=="star rare" and card.card_type=="dark synchro monster" then rgb(255,255,255)
-				else if card.rarity=="star rare" and is_pendulum() and card.card_type=="xyz monster" then rgb(255,255,255)
-				else if card.rarity=="star rare" and is_pendulum() and card.card_type=="dark synchro monster" then rgb(255,255,255)
+				else if card.rarity=="star rare" and (is_pendulum() and card.card_type=="xyz monster" or card.card_type=="pendulum xyz monster") then rgb(255,255,255)
+				else if card.rarity=="star rare" and (is_pendulum() and card.card_type=="dark synchro monster" or card.card_type=="pendulum dark synchro monster") then rgb(255,255,255)
 				else if card.rarity=="star rare" then rgb(255,255,255)
 				else if card.rarity=="mosaic rare" and card.card_type=="xyz monster" then rgb(255,255,255)
 				else if card.rarity=="mosaic rare" and card.card_type=="dark synchro monster" then rgb(255,255,255)
-				else if card.rarity=="mosaic rare" and is_pendulum() and card.card_type=="xyz monster" then rgb(255,255,255)
-				else if card.rarity=="mosaic rare" and is_pendulum() and card.card_type=="dark synchro monster" then rgb(255,255,255)
+				else if card.rarity=="mosaic rare" and (is_pendulum() and card.card_type=="xyz monster" or card.card_type=="pendulum xyz monster") then rgb(255,255,255)
+				else if card.rarity=="mosaic rare" and (is_pendulum() and card.card_type=="dark synchro monster" or card.card_type=="pendulum dark synchro monster") then rgb(255,255,255)
 				else if card.rarity=="mosaic rare" then rgb(255,255,255)
 				else if card.rarity=="promo" then rgb(255,200,210)
 				else if card.rarity=="rare" then rgb(210,235,250)
@@ -411,12 +483,12 @@ card style:
 				else if card.rarity=="super rare" then "transparent"
 				else if card.card_type=="xyz monster" then "transparent"
 				else if card.card_type=="dark synchro monster" then "transparent"
-				else if is_pendulum() and card.card_type=="xyz monster" then "transparent"
-				else if is_pendulum() and card.card_type=="dark synchro monster" then "transparent"
+				else if is_pendulum() and card.card_type=="xyz monster" or card.card_type=="pendulum xyz monster" then "transparent"
+				else if is_pendulum() and card.card_type=="dark synchro monster" or card.card_type=="pendulum dark synchro monster" then "transparent"
 				else if card.card_type=="xyz monster" then rgb(255,255,255)
 				else if card.card_type=="dark synchro monster" then rgb(255,255,255)
-				else if is_pendulum() and card.card_type=="xyz monster" then rgb(255,255,255)
-				else if is_pendulum() and card.card_type=="dark synchro monster" then rgb(255,255,255)
+				else if is_pendulum() and card.card_type=="xyz monster" or card.card_type=="pendulum xyz monster" then rgb(255,255,255)
+				else if is_pendulum() and card.card_type=="dark synchro monster" or card.card_type=="pendulum dark synchro monster" then rgb(255,255,255)
 				else if card.card_type=="skill card" then rgb(0,0,0)
 				else if is_nmonster() then "transparent"
 				else "transparent"
@@ -431,22 +503,33 @@ card style:
 				else if styling.language=="chinese traditional" then "DFPLiShuW5-B5" 
 				else if styling.language=="chinese duel links traditional" then "DFPTanLiW5-B5"
 				else if styling.language=="chinese duel links simplified" then "DFPTanLiW5-GB"
+				else if styling.language=="chinese ocg official" then "DFKaiW5-A"
 				else if card.card_type=="skill card" then "Arial Narrow"
 				else "Yu-Gi-Oh! Matrix Small Caps 2"
 			size: 
-				script: if styling.language=="japanese" or styling.language=="chinese simplified" or styling.language=="chinese traditional" or styling.language=="chinese duel links traditional" or styling.language=="chinese duel links simplified" or card.card_type=="skill card" then 27 else 35
+				script: if styling.language=="japanese" or styling.language=="chinese simplified" or styling.language=="chinese traditional" or styling.language=="chinese duel links traditional" or styling.language=="chinese duel links simplified" or card.card_type=="skill card" then 27 else if styling.language=="chinese ocg official" then 26 else 35
 			color:
 				script: if styling.name_color_override then styling.name_color 
 				else if card.rarity=="rare" then rgb(133,168,169)
+				else if card.rarity=="star rare" and is_pendulum() and (card.card_type=="xyz monster" or card.card_type=="link monster" or card.card_type=="evolute monster" or card.card_type=="bigbang monster" or card.card_type=="dark synchro monster") then rgb(255,255,255)
+				else if card.rarity=="star rare" and (card.card_type=="xyz monster" or card.card_type=="link monster" or card.card_type=="evolute monster" or card.card_type=="bigbang monster" or card.card_type=="dark synchro monster") then rgb(255,255,255)
 				else if card.rarity=="star rare" and card.card_type=="xyz monster" then rgb(255,255,255)
 				else if card.rarity=="star rare" and card.card_type=="dark synchro monster" then rgb(255,255,255)
-				else if card.rarity=="star rare" and is_pendulum() and card.card_type=="xyz monster" then rgb(255,255,255)
-				else if card.rarity=="star rare" and is_pendulum() and card.card_type=="dark synchro monster" then rgb(255,255,255)
+				else if card.rarity=="star rare" and card.card_type=="link monster" then rgb(255,255,255)
+				else if card.rarity=="star rare" and card.card_type=="evolute monster" then rgb(255,255,255)
+				else if card.rarity=="star rare" and card.card_type=="bigbang monster" then rgb(255,255,255)
+				else if card.rarity=="star rare" and card.card_type=="pendulum xyz monster" then rgb(255,255,255)
+				else if card.rarity=="star rare" and card.card_type=="pendulum dark synchro monster" then rgb(255,255,255)
 				else if card.rarity=="star rare" then rgb(35,40,49)
+				else if card.rarity=="mosaic rare" and is_pendulum() and (card.card_type=="xyz monster" or card.card_type=="link monster" or card.card_type=="evolute monster" or card.card_type=="bigbang monster" or card.card_type=="dark synchro monster") then rgb(255,255,255)
+				else if card.rarity=="mosaic rare" and (card.card_type=="xyz monster" or card.card_type=="link monster" or card.card_type=="evolute monster" or card.card_type=="bigbang monster" or card.card_type=="dark synchro monster") then rgb(255,255,255)
 				else if card.rarity=="mosaic rare" and card.card_type=="xyz monster" then rgb(255,255,255)
 				else if card.rarity=="mosaic rare" and card.card_type=="dark synchro monster" then rgb(255,255,255)
-				else if card.rarity=="mosaic rare" and is_pendulum() and card.card_type=="xyz monster" then rgb(255,255,255)
-				else if card.rarity=="mosaic rare" and is_pendulum() and card.card_type=="dark synchro monster" then rgb(255,255,255)
+				else if card.rarity=="mosaic rare" and card.card_type=="link monster" then rgb(255,255,255)
+				else if card.rarity=="mosaic rare" and card.card_type=="evolute monster" then rgb(255,255,255)
+				else if card.rarity=="mosaic rare" and card.card_type=="bigbang monster" then rgb(255,255,255)
+				else if card.rarity=="mosaic rare" and card.card_type=="pendulum xyz monster" then rgb(255,255,255)
+				else if card.rarity=="mosaic rare" and card.card_type=="pendulum dark synchro monster" then rgb(255,255,255)
 				else if card.rarity=="mosaic rare" then rgb(10,10,10)
 				else if card.rarity=="promo" then rgb(60,0,0)
 				else if card.rarity=="secret rare" then rgb(211,252,252)
@@ -457,10 +540,12 @@ card style:
 				else if card.rarity=="gold rare" then rgb(88,76,12)
 				else if card.card_type=="xyz monster" then rgb(255,255,255)
 				else if card.card_type=="dark synchro monster" then rgb(255,255,255)
-				else if is_pendulum() and card.card_type=="xyz monster" then rgb(255,255,255)
-				else if is_pendulum() and card.card_type=="dark synchro monster" then rgb(255,255,255)
+				else if card.card_type=="pendulum xyz monster" then rgb(255,255,255)
+				else if card.card_type=="pendulum dark synchro monster" then rgb(255,255,255)
 				else if card.card_type=="bigbang monster" then rgb(255,255,255)
 				else if card.card_type=="skill card" then rgb(255,255,255)
+				else if is_pendulum() and (card.card_type=="xyz monster" or card.card_type=="link monster" or card.card_type=="evolute monster" or card.card_type=="bigbang monster" or card.card_type=="dark synchro monster") then rgb(255,255,255)
+				else if card.card_type=="xyz monster" or card.card_type=="dark synchro monster" or card.card_type=="link monster" or card.card_type=="evolute monster" or card.card_type=="bigbang monster" or card.card_type=="skill card" or is_nmonster() then rgb(255,255,255)
 				else if is_nmonster() then rgb(255,255,255)
 				else rgb(0,0,0)
 		symbol font:
@@ -469,24 +554,26 @@ card style:
 				else "yugioh-text-replacements2"				
 			alignment: bottom center
 	attribute:
-		left: 355
-		top : 27
+		#left: 351
+		#top : 29
+		left: {if styling.template_style=="actual style" then 355 else 351 }
+		top: {if styling.template_style=="actual style" then 27 else 29 }
 		width: 40
 		height: 40
 		z index: 2
 		render style: image
 		popup style: in place
 		choice images:
-			earth: {if card.rarity=="ultimate rare" then "uearth.png" else if styling.language=="japanese" then "jpball/earth.png" else if styling.language=="chinese simplified" or styling.language=="chinese traditional" or styling.language=="chinese duel links traditional" or styling.language=="chinese duel links simplified" then "cnball/earth.png" else "earth.png"}
-			water: {if card.rarity=="ultimate rare" then "uwater.png" else if styling.language=="japanese" then "jpball/water.png" else if styling.language=="chinese simplified" or styling.language=="chinese traditional" or styling.language=="chinese duel links traditional" or styling.language=="chinese duel links simplified" then "cnball/water.png" else "water.png"}
-			fire: {if card.rarity=="ultimate rare" then "ufire.png" else if styling.language=="japanese" then "jpball/fire.png" else if styling.language=="chinese simplified" or styling.language=="chinese traditional" or styling.language=="chinese duel links traditional" or styling.language=="chinese duel links simplified" then "cnball/fire.png" else "fire.png"}
-			wind: {if card.rarity=="ultimate rare" then "uwind.png" else if styling.language=="japanese" then "jpball/wind.png" else if styling.language=="chinese simplified" or styling.language=="chinese traditional" or styling.language=="chinese duel links traditional" or styling.language=="chinese duel links simplified" then "cnball/wind.png" else "wind.png"}
-			light: {if card.rarity=="ultimate rare" then "ulight.png" else if styling.language=="japanese" then "jpball/light.png" else if styling.language=="chinese simplified" or styling.language=="chinese traditional" or styling.language=="chinese duel links traditional" or styling.language=="chinese duel links simplified" then "cnball/light.png" else "light.png"}
+			earth: {if card.rarity=="ultimate rare" then "uearth.png" else if styling.language=="japanese" then "jpball/earth.png" else if styling.language=="chinese simplified" or styling.language=="chinese traditional" or styling.language=="chinese duel links traditional" or styling.language=="chinese duel links simplified" or styling.language=="chinese ocg official" then "cnball/earth.png" else "earth.png"}
+			water: {if card.rarity=="ultimate rare" then "uwater.png" else if styling.language=="japanese" then "jpball/water.png" else if styling.language=="chinese simplified" or styling.language=="chinese traditional" or styling.language=="chinese duel links traditional" or styling.language=="chinese duel links simplified" or styling.language=="chinese ocg official" then "cnball/water.png" else "water.png"}
+			fire: {if card.rarity=="ultimate rare" then "ufire.png" else if styling.language=="japanese" then "jpball/fire.png" else if styling.language=="chinese simplified" or styling.language=="chinese traditional" or styling.language=="chinese duel links traditional" or styling.language=="chinese duel links simplified" or styling.language=="chinese ocg official" then "cnball/fire.png" else "fire.png"}
+			wind: {if card.rarity=="ultimate rare" then "uwind.png" else if styling.language=="japanese" then "jpball/wind.png" else if styling.language=="chinese simplified" or styling.language=="chinese traditional" or styling.language=="chinese duel links traditional" or styling.language=="chinese duel links simplified" or styling.language=="chinese ocg official" then "cnball/wind.png" else "wind.png"}
+			light: {if card.rarity=="ultimate rare" then "ulight.png" else if styling.language=="japanese" then "jpball/light.png" else if styling.language=="chinese simplified" or styling.language=="chinese traditional" or styling.language=="chinese duel links traditional" or styling.language=="chinese duel links simplified" or styling.language=="chinese ocg official" then "cnball/light.png" else "light.png"}
 			time: {if card.rarity=="ultimate rare" then "utime.png" else "time.png"}
-			dark: {if card.rarity=="ultimate rare" then "udark.png" else if styling.language=="japanese" then "jpball/dark.png" else if styling.language=="chinese simplified" or styling.language=="chinese traditional" or styling.language=="chinese duel links traditional" or styling.language=="chinese duel links simplified" then "cnball/dark.png" else "dark.png"}
-			divine: {if card.rarity=="ultimate rare" then "udivine.png" else if styling.language=="japanese" then "jpball/divine.png" else if styling.language=="chinese simplified" or styling.language=="chinese traditional" or styling.language=="chinese duel links traditional" or styling.language=="chinese duel links simplified" then "cnball/divine.png" else "divine.png"}
-			spell: {if card.rarity=="ultimate rare" then "uspell.png" else if styling.language=="japanese" then "jpball/spell.png" else if styling.language=="chinese simplified" or styling.language=="chinese traditional" or styling.language=="chinese duel links traditional" or styling.language=="chinese duel links simplified" then "cnball/spell.png" else "spell.png"}
-			trap: {if card.rarity=="ultimate rare" then "utrap.png" else if styling.language=="japanese" then "jpball/trap.png" else if styling.language=="chinese simplified" or styling.language=="chinese traditional" or styling.language=="chinese duel links traditional" or styling.language=="chinese duel links simplified" then "cnball/trap.png" else "trap.png"}
+			dark: {if card.rarity=="ultimate rare" then "udark.png" else if styling.language=="japanese" then "jpball/dark.png" else if styling.language=="chinese simplified" or styling.language=="chinese traditional" or styling.language=="chinese duel links traditional" or styling.language=="chinese duel links simplified" or styling.language=="chinese ocg official" then "cnball/dark.png" else "dark.png"}
+			divine: {if card.rarity=="ultimate rare" then "udivine.png" else if styling.language=="japanese" then "jpball/divine.png" else if styling.language=="chinese simplified" or styling.language=="chinese traditional" or styling.language=="chinese duel links traditional" or styling.language=="chinese duel links simplified" or styling.language=="chinese ocg official" then "cnball/divine.png" else "divine.png"}
+			spell: {if card.rarity=="ultimate rare" then "uspell.png" else if styling.language=="japanese" then "jpball/spell.png" else if styling.language=="chinese simplified" or styling.language=="chinese traditional" or styling.language=="chinese duel links traditional" or styling.language=="chinese duel links simplified" or styling.language=="chinese ocg official" then "cnball/spell.png" else "spell.png"}
+			trap: {if card.rarity=="ultimate rare" then "utrap.png" else if styling.language=="japanese" then "jpball/trap.png" else if styling.language=="chinese simplified" or styling.language=="chinese traditional" or styling.language=="chinese duel links traditional" or styling.language=="chinese duel links simplified" or styling.language=="chinese ocg official" then "cnball/trap.png" else "trap.png"}
 			trell: {if card.rarity=="ultimate rare" then "utrell.png" else "trell.png"}
 
 	conjoint_val:
@@ -513,7 +600,7 @@ card style:
 		visible: {if is_conjoint() then true else false }
 
 	level:
-		left: { if is_nmonster() then 42 else 43 }
+		left: { if is_nmonster() and styling.language=="chinese ocg official" then 56 else if is_nmonster() then 42 else 43 }
 		top : { if is_nmonster() then 74 else if styling.template_style=="actual style" then 73 else 76}
 		#width: { if is_nmonster() then 327 else if card.card_type=="link monster" then 0 else 334 }
 		width: { if is_nmonster() then 338 else if card.card_type=="link monster" or (card.card_type == "link monster" and is_conjoint()) then 0 else 334 }
@@ -528,8 +615,9 @@ card style:
 				else if styling.language=="chinese traditional" then "DFPLiShuW5-B5" 	
 				else if styling.language=="chinese duel links traditional" then "DFPTanLiW5-B5"
 				else if styling.language=="chinese duel links simplified" then "DFPTanLiW5-GB"				
+				else if styling.language=="chinese ocg official" then "DFKaiW5-A"				
 				else "Stone Serif Sem SC ITC TT"
-			size: 15
+			size: { if is_nmonster() and styling.language=="chinese ocg official" then 19.5 else 15}
 			color: rgb(0,0,0)
 		symbol font:
 			name: yugioh-standard-levels
@@ -539,9 +627,9 @@ card style:
 	############################# Image
 	image:
 		left: { if is_pendulum() and styling.template_style=="actual style" then 25 else if is_pendulum() then 28 else if card.card_type=="pandemonium monster" then 27 else if styling.image_frame then 44 else if card.card_type=="link monster" and ( styling.extended_artwork=="yes" and styling.template_style=="actual style" ) then 23 else if card.card_type=="link monster" and styling.extended_artwork=="yes" then 28 else if styling.extended_artwork=="yes" and styling.template_style=="actual style" then 24 else if styling.extended_artwork=="yes" then 28 else if styling.template_style=="actual style" then 47 else 51 }
-		top: { if is_pendulum() and styling.template_style=="actual style" then 109.5 else if is_pendulum() then 110 else if styling.image_frame then 106 else if card.card_type=="link monster" and ( styling.extended_artwork=="yes" and styling.template_style=="actual style" ) then 102 else if card.card_type=="link monster" and styling.extended_artwork=="yes" then 99 else if styling.extended_artwork=="yes" and styling.template_style=="actual style" then 108 else if styling.extended_artwork=="yes" then 110 else if styling.template_style=="actual style" then 110 else 113 }
+		top: { if is_pendulum() and styling.template_style=="actual style" then 107 else if is_pendulum() then 110 else if styling.image_frame then 106 else if card.card_type=="link monster" and ( styling.extended_artwork=="yes" and styling.template_style=="actual style" ) then 102 else if card.card_type=="link monster" and styling.extended_artwork=="yes" then 99 else if styling.extended_artwork=="yes" and styling.template_style=="actual style" then 108 else if styling.extended_artwork=="yes" then 110 else if styling.template_style=="actual style" then 110 else 113 }
 		width: { if is_pendulum() and styling.template_style=="actual style" then 371 else if is_pendulum() then 365 else if styling.image_frame then 333 else if card.card_type=="link monster" and ( styling.extended_artwork=="yes" and styling.template_style=="actual style" ) then 374 else if styling.extended_artwork=="yes" and styling.template_style=="actual style" then 373 else if styling.extended_artwork=="yes" then 366 else if styling.template_style=="actual style" then 326 else 320 }
-		height: { if is_pendulum() then ( if styling.pendulum_transparency then ( if styling.pendulum_size=="more" then 368 else 347 ) ) else if styling.image_frame then 333 else if card.card_type=="link monster" and ( styling.extended_artwork=="yes" and styling.template_style=="actual style" ) then 483 else if card.card_type=="link monster" and styling.extended_artwork=="yes" then 479 else if styling.extended_artwork=="yes" and styling.template_style=="actual style" then 474 else if styling.extended_artwork=="yes" then 470 else if styling.template_style=="actual style" then 326 else 320 }
+		height: { if is_pendulum() then ( if styling.pendulum_transparency then ( if styling.pendulum_size=="more" then 370.5 else 349.5 ) ) else if styling.image_frame then 333 else if card.card_type=="link monster" and ( styling.extended_artwork=="yes" and styling.template_style=="actual style" ) then 483 else if card.card_type=="link monster" and styling.extended_artwork=="yes" then 479 else if styling.extended_artwork=="yes" and styling.template_style=="actual style" then 474 else if styling.extended_artwork=="yes" then 470 else if styling.template_style=="actual style" then 326 else 320 }
 		z index: 1
 		mask: { if is_pendulum() and styling.template_style=="actual style" then "" else if is_pendulum() and styling.template_style=="proxy-like" then ( if styling.pendulum_transparency then ( if styling.pendulum_size=="less" then "mask-p_less.png" else if styling.pendulum_size=="more" then "mask-p_more.png" else "mask-p.png" ) else ( if styling.pendulum_size=="less" then "mask-p_opaque_less.png" else "mask-p_opaque.png" ) ) else if styling.template_style=="actual style" and styling.extended_artwork=="yes" then ( if card.card_type=="spell card" or card.card_type=="trap card" or card.card_type=="conjoint spell card" or card.card_type=="conjoint trap card" or card.card_type=="skill card" then "new/maskex5.png" else if card.card_type=="link monster" then "new/maskex3.png" else "new/maskex4.png" ) else if styling.extended_artwork=="yes" then (if card.card_type=="spell card" or card.card_type=="trap card" then "maskex1.png" else if card.card_type=="link monster" then "maskex2.png" else "maskex.png") else "" }
 	############################# Pendulum Border
@@ -558,13 +646,13 @@ card style:
 	############################# Link Marker Border INDENTS MATTER
 	linkborder:
 		left: 
-			script: if card.card_type=="link monster" or card.card_type == "link conjoint monster" or styling.is_link_card then 0 else 5 # 50
+			script: if is_link() then 0 else 5 # 50
 		top: 
-			script: if card.card_type=="link monster" or card.card_type == "link conjoint monster" or styling.is_link_card then 0 else 5 # 113
+			script: if is_link() then 0 else 5 # 113
 		width: 
-			script: if card.card_type=="link monster" or card.card_type == "link conjoint monster" or styling.is_link_card then 422 else 0 # 322
+			script: if is_link() then 422 else 0 # 322
 		height: 
-			script: if card.card_type=="link monster" or card.card_type == "link conjoint monster" or styling.is_link_card then 615 else 0 # 321
+			script: if is_link() then 615 else 0 # 321
 		z index: 6
 		render style: image
 		popup style: in place
@@ -575,13 +663,13 @@ card style:
 	############################# Link Markers
 	linkul:
 		left:
-			script: if card.card_type=="link monster" and ( styling.extended_artwork=="yes" and styling.template_style=="actual style" ) then 14 else if card.card_type=="link monster" and styling.extended_artwork=="yes" then 18 else if card.card_type=="link monster" and styling.template_style=="actual style" or card.card_type == "link conjoint monster" then 30 else if card.card_type=="link monster" then 36 else 5
+			script: if card.card_type=="link monster" and ( styling.extended_artwork=="yes" and styling.template_style=="actual style" ) then 14 else if card.card_type=="link monster" and styling.extended_artwork=="yes" then 18 else if card.card_type=="link monster" and styling.template_style=="actual style" then 30 else if card.card_type=="link monster" then 36 else 5
 		top:
-			script: if card.card_type=="link monster" and ( styling.extended_artwork=="yes" and styling.template_style=="actual style" ) then 94 else if card.card_type=="link monster" and styling.extended_artwork=="yes" then 92 else if card.card_type=="link monster" and styling.template_style=="actual style" or card.card_type == "link conjoint monster" then 94 else if card.card_type=="link monster" then 99 else 5
+			script: if card.card_type=="link monster" and ( styling.extended_artwork=="yes" and styling.template_style=="actual style" ) then 94 else if card.card_type=="link monster" and styling.extended_artwork=="yes" then 92 else if card.card_type=="link monster" and styling.template_style=="actual style" then 94 else if card.card_type=="link monster" then 99 else 5
 		width:
-			script: if card.card_type=="link monster" and styling.extended_artwork=="yes" then 43 else if card.card_type=="link monster" and styling.template_style=="actual style" or card.card_type == "link conjoint monster" then 44 else if card.card_type=="link monster" then 38 else 0
+			script: if card.card_type=="link monster" and styling.extended_artwork=="yes" then 43 else if card.card_type=="link monster" and styling.template_style=="actual style" then 44 else if card.card_type=="link monster" then 38 else 0
 		height:
-			script: if card.card_type=="link monster" and styling.extended_artwork=="yes" then 43 else if card.card_type=="link monster" and styling.template_style=="actual style" or card.card_type == "link conjoint monster" then 43 else if card.card_type=="link monster" then 38 else 0
+			script: if card.card_type=="link monster" and styling.extended_artwork=="yes" then 43 else if card.card_type=="link monster" and styling.template_style=="actual style" then 43 else if card.card_type=="link monster" then 38 else 0
 		z index: 7
 		render style: image
 		popup style: in place
@@ -590,13 +678,13 @@ card style:
 			on: {if styling.extended_artwork=="yes" then "linkulonex.png" else if styling.template_style=="actual style" then "new/linkulon.png" else "linkulon.png" }
 	linku:
 		left:
-			script: if card.card_type=="link monster" and ( styling.extended_artwork=="yes" and styling.template_style=="actual style" ) then 162 else if card.card_type=="link monster" and styling.extended_artwork=="yes" then 162 else if card.card_type=="link monster" and styling.template_style=="actual style" or card.card_type == "link conjoint monster" then 165 else if card.card_type=="link monster" then 164 else 5
+			script: if card.card_type=="link monster" and ( styling.extended_artwork=="yes" and styling.template_style=="actual style" ) then 162 else if card.card_type=="link monster" and styling.extended_artwork=="yes" then 162 else if card.card_type=="link monster" and styling.template_style=="actual style" then 165 else if card.card_type=="link monster" then 164 else 5
 		top:
-			script: if card.card_type=="link monster" and ( styling.extended_artwork=="yes" and styling.template_style=="actual style" ) then 88 else if card.card_type=="link monster" and styling.extended_artwork=="yes" then 85 else if card.card_type=="link monster" and styling.template_style=="actual style" or card.card_type == "link conjoint monster" then 84 else if card.card_type=="link monster" then 92 else 5
+			script: if card.card_type=="link monster" and ( styling.extended_artwork=="yes" and styling.template_style=="actual style" ) then 88 else if card.card_type=="link monster" and styling.extended_artwork=="yes" then 85 else if card.card_type=="link monster" and styling.template_style=="actual style" then 84 else if card.card_type=="link monster" then 92 else 5
 		width:
-			script: if card.card_type=="link monster" and styling.extended_artwork=="yes" then 94 else if card.card_type=="link monster" and styling.template_style=="actual style" or card.card_type == "link conjoint monster" then 97 else if card.card_type=="link monster" then 94 else 0
+			script: if card.card_type=="link monster" and styling.extended_artwork=="yes" then 94 else if card.card_type=="link monster" and styling.template_style=="actual style" then 97 else if card.card_type=="link monster" then 94 else 0
 		height:
-			script: if card.card_type=="link monster" and styling.extended_artwork=="yes" then 19 else if card.card_type=="link monster" and styling.template_style=="actual style" or card.card_type == "link conjoint monster" then 24 else if card.card_type=="link monster" then 22 else 0
+			script: if card.card_type=="link monster" and styling.extended_artwork=="yes" then 19 else if card.card_type=="link monster" and styling.template_style=="actual style" then 24 else if card.card_type=="link monster" then 22 else 0
 		z index: 7
 		render style: image
 		popup style: in place
@@ -605,13 +693,13 @@ card style:
 			on: {if styling.extended_artwork=="yes" then "linkuonex.png" else if styling.template_style=="actual style" then "new/linkuon.png" else "linkuon.png" }
 	linkur:
 		left:
-			script: if card.card_type=="link monster" and ( styling.extended_artwork=="yes" and styling.template_style=="actual style" ) then 362 else if card.card_type=="link monster" and styling.extended_artwork=="yes" then 359 else if card.card_type=="link monster" and styling.template_style=="actual style" or card.card_type == "link conjoint monster" then 347 else if card.card_type=="link monster" then 349 else 5
+			script: if card.card_type=="link monster" and ( styling.extended_artwork=="yes" and styling.template_style=="actual style" ) then 362 else if card.card_type=="link monster" and styling.extended_artwork=="yes" then 359 else if card.card_type=="link monster" and styling.template_style=="actual style" then 347 else if card.card_type=="link monster" then 349 else 5
 		top:
-			script: if card.card_type=="link monster" and ( styling.extended_artwork=="yes" and styling.template_style=="actual style" ) then 94 else if card.card_type=="link monster" and styling.extended_artwork=="yes" then 92 else if card.card_type=="link monster" and styling.template_style=="actual style" or card.card_type == "link conjoint monster" then 94 else if card.card_type=="link monster" then 99 else 5
+			script: if card.card_type=="link monster" and ( styling.extended_artwork=="yes" and styling.template_style=="actual style" ) then 94 else if card.card_type=="link monster" and styling.extended_artwork=="yes" then 92 else if card.card_type=="link monster" and styling.template_style=="actual style" then 94 else if card.card_type=="link monster" then 99 else 5
 		width:
-			script: if card.card_type=="link monster" and styling.extended_artwork=="yes" then 44 else if card.card_type=="link monster" and styling.template_style=="actual style" or card.card_type == "link conjoint monster" then 45 else if card.card_type=="link monster" then 38 else 0
+			script: if card.card_type=="link monster" and styling.extended_artwork=="yes" then 44 else if card.card_type=="link monster" and styling.template_style=="actual style" then 45 else if card.card_type=="link monster" then 38 else 0
 		height:
-			script: if card.card_type=="link monster" and styling.extended_artwork=="yes" then 43 else if card.card_type=="link monster" and styling.template_style=="actual style" or card.card_type == "link conjoint monster" then 43 else if card.card_type=="link monster" then 38 else 0
+			script: if card.card_type=="link monster" and styling.extended_artwork=="yes" then 43 else if card.card_type=="link monster" and styling.template_style=="actual style" then 43 else if card.card_type=="link monster" then 38 else 0
 		z index: 7
 		render style: image
 		popup style: in place
@@ -620,13 +708,13 @@ card style:
 			on: {if styling.extended_artwork=="yes" then "linkuronex.png" else if styling.template_style=="actual style" then "new/linkuron.png" else "linkuron.png" }
 	linkl:
 		left:
-			script: if card.card_type=="link monster" and ( styling.extended_artwork=="yes" and styling.template_style=="actual style" ) then 8 else if card.card_type=="link monster" and styling.extended_artwork=="yes" then 13 else if card.card_type=="link monster" and styling.template_style=="actual style" or card.card_type == "link conjoint monster" then 24 else if card.card_type=="link monster" then 30 else 5
+			script: if card.card_type=="link monster" and ( styling.extended_artwork=="yes" and styling.template_style=="actual style" ) then 8 else if card.card_type=="link monster" and styling.extended_artwork=="yes" then 13 else if card.card_type=="link monster" and styling.template_style=="actual style" then 24 else if card.card_type=="link monster" then 30 else 5
 		top:
-			script: if card.card_type=="link monster" and ( styling.extended_artwork=="yes" and styling.template_style=="actual style" ) then 287 else if card.card_type=="link monster" and styling.extended_artwork=="yes" then 284 else if card.card_type=="link monster" and styling.template_style=="actual style" or card.card_type == "link conjoint monster" then 225 else if card.card_type=="link monster" then 225 else 5
+			script: if card.card_type=="link monster" and ( styling.extended_artwork=="yes" and styling.template_style=="actual style" ) then 287 else if card.card_type=="link monster" and styling.extended_artwork=="yes" then 284 else if card.card_type=="link monster" and styling.template_style=="actual style" then 225 else if card.card_type=="link monster" then 225 else 5
 		width:
-			script: if card.card_type=="link monster" and styling.extended_artwork=="yes" then 18 else if card.card_type=="link monster" and styling.template_style=="actual style" or card.card_type == "link conjoint monster" then 24 else if card.card_type=="link monster" then 22 else 0
+			script: if card.card_type=="link monster" and styling.extended_artwork=="yes" then 18 else if card.card_type=="link monster" and styling.template_style=="actual style" then 24 else if card.card_type=="link monster" then 22 else 0
 		height:
-			script: if card.card_type=="link monster" and styling.extended_artwork=="yes" then 96 else if card.card_type=="link monster" and styling.template_style=="actual style" or card.card_type == "link conjoint monster" then 97 else if card.card_type=="link monster" then 94 else 0
+			script: if card.card_type=="link monster" and styling.extended_artwork=="yes" then 96 else if card.card_type=="link monster" and styling.template_style=="actual style" then 97 else if card.card_type=="link monster" then 94 else 0
 		z index: 7
 		render style: image
 		popup style: in place
@@ -635,13 +723,13 @@ card style:
 			on: {if styling.extended_artwork=="yes" then "linklonex.png" else if styling.template_style=="actual style" then "new/linklon.png" else "linklon.png" }
 	linkdl:
 		left:
-			script: if card.card_type=="link monster" and ( styling.extended_artwork=="yes" and styling.template_style=="actual style" ) then 14 else if card.card_type=="link monster" and styling.extended_artwork=="yes" then 18 else if card.card_type=="link monster" and styling.template_style=="actual style" or card.card_type == "link conjoint monster" then 30 else if card.card_type=="link monster" then 36 else 5
+			script: if card.card_type=="link monster" and ( styling.extended_artwork=="yes" and styling.template_style=="actual style" ) then 14 else if card.card_type=="link monster" and styling.extended_artwork=="yes" then 18 else if card.card_type=="link monster" and styling.template_style=="actual style" then 30 else if card.card_type=="link monster" then 36 else 5
 		top:
-			script: if card.card_type=="link monster" and ( styling.extended_artwork=="yes" and styling.template_style=="actual style" ) then 547 else if card.card_type=="link monster" and styling.extended_artwork=="yes" then 545 else if card.card_type=="link monster" and styling.template_style=="actual style" or card.card_type == "link conjoint monster" then 408 else if card.card_type=="link monster" then 409 else 5
+			script: if card.card_type=="link monster" and ( styling.extended_artwork=="yes" and styling.template_style=="actual style" ) then 547 else if card.card_type=="link monster" and styling.extended_artwork=="yes" then 545 else if card.card_type=="link monster" and styling.template_style=="actual style" then 408 else if card.card_type=="link monster" then 409 else 5
 		width:
-			script: if card.card_type=="link monster" and styling.extended_artwork=="yes" then 42 else if card.card_type=="link monster" and styling.template_style=="actual style" or card.card_type == "link conjoint monster" then 43 else if card.card_type=="link monster" then 38 else 0
+			script: if card.card_type=="link monster" and styling.extended_artwork=="yes" then 42 else if card.card_type=="link monster" and styling.template_style=="actual style" then 43 else if card.card_type=="link monster" then 38 else 0
 		height:
-			script: if card.card_type=="link monster" and styling.extended_artwork=="yes" then 43 else if card.card_type=="link monster" and styling.template_style=="actual style" or card.card_type == "link conjoint monster" then 43 else if card.card_type=="link monster" then 38 else 0
+			script: if card.card_type=="link monster" and styling.extended_artwork=="yes" then 43 else if card.card_type=="link monster" and styling.template_style=="actual style" then 43 else if card.card_type=="link monster" then 38 else 0
 		z index: 7
 		render style: image
 		popup style: in place
@@ -650,13 +738,13 @@ card style:
 			on: {if styling.extended_artwork=="yes" then "linkdlonex.png" else if styling.template_style=="actual style" then "new/linkdlon.png" else "linkdlon.png" }
 	linkr:
 		left:
-			script: if card.card_type=="link monster" and ( styling.extended_artwork=="yes" and styling.template_style=="actual style" ) then 393 else if card.card_type=="link monster" and styling.extended_artwork=="yes" then 389 else if card.card_type=="link monster" and styling.template_style=="actual style" or card.card_type == "link conjoint monster" then 373 else if card.card_type=="link monster" then 371 else 5
+			script: if card.card_type=="link monster" and ( styling.extended_artwork=="yes" and styling.template_style=="actual style" ) then 393 else if card.card_type=="link monster" and styling.extended_artwork=="yes" then 389 else if card.card_type=="link monster" and styling.template_style=="actual style" then 373 else if card.card_type=="link monster" then 371 else 5
 		top:
-			script: if card.card_type=="link monster" and ( styling.extended_artwork=="yes" and styling.template_style=="actual style" ) then 287 else if card.card_type=="link monster" and styling.extended_artwork=="yes" then 284 else if card.card_type=="link monster" and styling.template_style=="actual style" or card.card_type == "link conjoint monster" then 225 else if card.card_type=="link monster" then 225 else 5
+			script: if card.card_type=="link monster" and ( styling.extended_artwork=="yes" and styling.template_style=="actual style" ) then 287 else if card.card_type=="link monster" and styling.extended_artwork=="yes" then 284 else if card.card_type=="link monster" and styling.template_style=="actual style" then 225 else if card.card_type=="link monster" then 225 else 5
 		width:
-			script: if card.card_type=="link monster" and styling.extended_artwork=="yes" then 18 else if card.card_type=="link monster" and styling.template_style=="actual style" or card.card_type == "link conjoint monster" then 25 else if card.card_type=="link monster" then 22 else 0
+			script: if card.card_type=="link monster" and styling.extended_artwork=="yes" then 18 else if card.card_type=="link monster" and styling.template_style=="actual style" then 25 else if card.card_type=="link monster" then 22 else 0
 		height:
-			script: if card.card_type=="link monster" and styling.extended_artwork=="yes" then 96 else if card.card_type=="link monster" and styling.template_style=="actual style" or card.card_type == "link conjoint monster" then 96 else if card.card_type=="link monster" then 94 else 0
+			script: if card.card_type=="link monster" and styling.extended_artwork=="yes" then 96 else if card.card_type=="link monster" and styling.template_style=="actual style" then 96 else if card.card_type=="link monster" then 94 else 0
 		z index: 7
 		render style: image
 		popup style: in place
@@ -665,13 +753,13 @@ card style:
 			on: {if styling.extended_artwork=="yes" then "linkronex.png" else if styling.template_style=="actual style" then "new/linkron.png" else "linkron.png" }
 	linkd:
 		left:
-			script: if card.card_type=="link monster" and ( styling.extended_artwork=="yes" and styling.template_style=="actual style" ) then 162 else if card.card_type=="link monster" and styling.extended_artwork=="yes" then 162 else if card.card_type=="link monster" and styling.template_style=="actual style" or card.card_type == "link conjoint monster" then 164 else if card.card_type=="link monster" then 164 else 5
+			script: if card.card_type=="link monster" and ( styling.extended_artwork=="yes" and styling.template_style=="actual style" ) then 162 else if card.card_type=="link monster" and styling.extended_artwork=="yes" then 162 else if card.card_type=="link monster" and styling.template_style=="actual style" then 164 else if card.card_type=="link monster" then 164 else 5
 		top:
-			script: if card.card_type=="link monster" and ( styling.extended_artwork=="yes" and styling.template_style=="actual style" ) then 578 else if card.card_type=="link monster" and styling.extended_artwork=="yes" then 575 else if card.card_type=="link monster" and styling.template_style=="actual style" or card.card_type == "link conjoint monster" then 434 else if card.card_type=="link monster" then 431 else 5
+			script: if card.card_type=="link monster" and ( styling.extended_artwork=="yes" and styling.template_style=="actual style" ) then 578 else if card.card_type=="link monster" and styling.extended_artwork=="yes" then 575 else if card.card_type=="link monster" and styling.template_style=="actual style" then 434 else if card.card_type=="link monster" then 431 else 5
 		width:
-			script: if card.card_type=="link monster" and styling.extended_artwork=="yes" then 94 else if card.card_type=="link monster" and styling.template_style=="actual style" or card.card_type == "link conjoint monster" then 97 else if card.card_type=="link monster" then 94 else 0
+			script: if card.card_type=="link monster" and styling.extended_artwork=="yes" then 94 else if card.card_type=="link monster" and styling.template_style=="actual style" then 97 else if card.card_type=="link monster" then 94 else 0
 		height:
-			script: if card.card_type=="link monster" and styling.extended_artwork=="yes" then 18 else if card.card_type=="link monster" and styling.template_style=="actual style" or card.card_type == "link conjoint monster" then 24 else if card.card_type=="link monster" then 22 else 0
+			script: if card.card_type=="link monster" and styling.extended_artwork=="yes" then 18 else if card.card_type=="link monster" and styling.template_style=="actual style" then 24 else if card.card_type=="link monster" then 22 else 0
 		z index: 7
 		render style: image
 		popup style: in place
@@ -680,13 +768,13 @@ card style:
 			on: {if styling.extended_artwork=="yes" then "linkdonex.png" else if styling.template_style=="actual style" then "new/linkdon.png" else "linkdon.png" }
 	linkdr:
 		left:
-			script: if card.card_type=="link monster" and ( styling.extended_artwork=="yes" and styling.template_style=="actual style" ) then 363 else if card.card_type=="link monster" and styling.extended_artwork=="yes" then 359 else if card.card_type=="link monster" and styling.template_style=="actual style" or card.card_type == "link conjoint monster" then 347 else if card.card_type=="link monster" then 349 else 5
+			script: if card.card_type=="link monster" and ( styling.extended_artwork=="yes" and styling.template_style=="actual style" ) then 363 else if card.card_type=="link monster" and styling.extended_artwork=="yes" then 359 else if card.card_type=="link monster" and styling.template_style=="actual style" then 347 else if card.card_type=="link monster" then 349 else 5
 		top:
-			script: if card.card_type=="link monster" and ( styling.extended_artwork=="yes" and styling.template_style=="actual style" ) then 548 else if card.card_type=="link monster" and styling.extended_artwork=="yes" then 545 else if card.card_type=="link monster" and styling.template_style=="actual style" or card.card_type == "link conjoint monster" then 408 else if card.card_type=="link monster" then 409 else 5
+			script: if card.card_type=="link monster" and ( styling.extended_artwork=="yes" and styling.template_style=="actual style" ) then 548 else if card.card_type=="link monster" and styling.extended_artwork=="yes" then 545 else if card.card_type=="link monster" and styling.template_style=="actual style" then 408 else if card.card_type=="link monster" then 409 else 5
 		width:
-			script: if card.card_type=="link monster" and styling.extended_artwork=="yes" then 44 else if card.card_type=="link monster" and styling.template_style=="actual style" or card.card_type == "link conjoint monster" then 45 else if card.card_type=="link monster" then 38 else 0
+			script: if card.card_type=="link monster" and styling.extended_artwork=="yes" then 44 else if card.card_type=="link monster" and styling.template_style=="actual style" then 45 else if card.card_type=="link monster" then 38 else 0
 		height:
-			script: if card.card_type=="link monster" and styling.extended_artwork=="yes" then 42 else if card.card_type=="link monster" and styling.template_style=="actual style" or card.card_type == "link conjoint monster" then 44 else if card.card_type=="link monster" then 38 else 0
+			script: if card.card_type=="link monster" and styling.extended_artwork=="yes" then 42 else if card.card_type=="link monster" and styling.template_style=="actual style" then 44 else if card.card_type=="link monster" then 38 else 0
 		z index: 7
 		render style: image
 		popup style: in place
@@ -710,6 +798,7 @@ card style:
 				else if styling.language=="chinese traditional" then "DFPLiShuW5-B5" 
 				else if styling.language=="chinese duel links traditional" then "DFPTanLiW5-B5"
 				else if styling.language=="chinese duel links simplified" then "DFPTanLiW5-GB"
+				else if styling.language=="chinese ocg official" then "DFKaiW5-A"
 				else "Yu-Gi-Oh!ITCStoneSerifSmallCaps"
 			size: { if styling.large_type then 13.1 else if styling.language=="japanese" or styling.language=="chinese simplified" or styling.language=="chinese traditional" or styling.language=="chinese duel links" then 13 else 11.4 }
 			color: rgb(0,0,0)
@@ -757,8 +846,9 @@ card style:
 				else if styling.language=="chinese traditional" then "DFPLiShuW5-B5" 
 				else if styling.language=="chinese duel links traditional" then "DFPTanLiW5-B5"
 				else if styling.language=="chinese duel links simplified" then "DFPTanLiW5-GB"
+				else if styling.language=="chinese ocg official" then "DFKaiW5-A"
 				else "Yu-Gi-Oh! Matrix Book"
-			italic name: { if styling.language=="japanese" then "Yu-Gi-Oh! DF Leisho 3" else if styling.language=="chinese simplified" then "方正隶变_GBK" else if styling.language=="chinese traditional" then "DFPLiShuW5-B5" else if styling.language=="chinese duel links traditional" then "DFPTanLiW5-B5" else if styling.language=="chinese duel links simplified" then "DFPTanLiW5-GB" else "Stone Serif ITC Medium Italic" }
+			italic name: { if styling.language=="japanese" then "Yu-Gi-Oh! DF Leisho 3" else if styling.language=="chinese simplified" then "方正隶变_GBK" else if styling.language=="chinese traditional" then "DFPLiShuW5-B5" else if styling.language=="chinese duel links traditional" then "DFPTanLiW5-B5" else if styling.language=="chinese duel links simplified" then "DFPTanLiW5-GB" else if styling.language=="chinese ocg official" then "DFKaiW5-A" else "Stone Serif ITC Medium Italic" }
 			size: { if is_nmonster() and styling.text_size=="large" then "10" else if is_nmonster() and styling.text_size=="small" then "9.2" else if styling.bold_effect_text then "8.2" else if styling.text_size=="large" then "9.8" else "9.2" }
 			scale down to: 4
 			color: rgb(0,0,0)
@@ -804,17 +894,14 @@ card style:
 		visible: { if is_nmonster() then false else true }
 	defense:
 		#left: { if card.card_type=="link monster" then 351 else 348 }
-		left: { if card.card_type=="link monster" or card.card_type == "link conjoint monster" and styling.extended_artwork=="yes" then 338 else if card.card_type=="link monster" then 351 else 348 }
-		top: { if card.card_type=="link monster" and ( styling.extended_artwork=="yes" and styling.template_style=="actual style" ) then 561 else if card.card_type=="link monster" and styling.extended_artwork=="yes" then 559 else if card.card_type=="pandemonium monster" then 560 else if styling.template_style=="actual style" or card.card_type == "link conjoint monster" then 561 else 558 }
+		left: { if card.card_type=="link monster" and styling.extended_artwork=="yes" then 338 else if card.card_type=="link monster" then 351 else 348 }
+		top: { if card.card_type=="link monster" and ( styling.extended_artwork=="yes" and styling.template_style=="actual style" ) then 561 else if card.card_type=="link monster" and styling.extended_artwork=="yes" then 559 else if card.card_type=="pandemonium monster" then 560 else if styling.template_style=="actual style" then 561 else 558 }
 		width: 38
 		height: 18
 		z index: 2
 		alignment: right middle shrink-overflow
 		font:
-			#name: { if card.card_type=="link monster" then "Eurostile Candy W01 Semibold" else "MatrixBoldFractions" }
-			#name: { if card.card_type=="link monster" then "YGOLinkNumber" else "MatrixBoldFractions" }
-			#name: { if card.card_type=="link monster" then "IDroid" else "MatrixBoldFractions" }
-			name: { if card.card_type=="link monster" or card.card_type == "link conjoint monster" then "IDroid" else "MatrixBoldSmallCaps" }
+			name: { if card.card_type=="link monster" then "IDroid" else "MatrixBoldSmallCaps" }
 			italic name: Matrix-Bold
 			size: { if card.card_type=="link monster" then 14 else 14 }
 			color: rgb(0,0,0)
@@ -838,6 +925,7 @@ card style:
 				else if styling.language=="chinese traditional" then "DFPLiShuW5-B5" 
 				else if styling.language=="chinese duel links traditional" then "DFPTanLiW5-B5"
 				else if styling.language=="chinese duel links simplified" then "DFPTanLiW5-GB"
+				else if styling.language=="chinese ocg official" then "DFKaiW5-A"
 				else "Yu-Gi-Oh! Matrix Book"
 			size: { if styling.pendulum_size=="less" then 10.4 else 9.7 }
 			#9.5 for regular, 6.9 for medium size
@@ -898,7 +986,7 @@ card style:
 		font:
 			name: Stone Serif
 			size: 8.5
-			color: { if card.card_type=="xyz monster" or card.card_type=="dark synchro monster" or card.card_type=="bigbang monster" then rgb(255,255,255) else rgb(0,0,0) }
+			color: { if styling.copyright_color_override then styling.copyright_color else if card.card_type=="xyz monster" or card.card_type=="dark synchro monster" or card.card_type=="bigbang monster" then rgb(255,255,255) else rgb(0,0,0) }
 	rarity:
 		left: 388
 		top : 580
@@ -938,7 +1026,7 @@ card style:
 		font:
 			name: Stone Serif
 			size: 8.5
-			color: { if card.card_type=="xyz monster" or card.card_type=="dark synchro monster" or card.card_type=="bigbang monster" then rgb(255,255,255) else rgb(0,0,0) }
+			color: { if styling.copyright_color_override then styling.copyright_color else if card.card_type=="xyz monster" or card.card_type=="dark synchro monster" or card.card_type=="bigbang monster" then rgb(255,255,255) else rgb(0,0,0) }
 ############################################extra card field:
 extra card field:
 	type: choice
@@ -1035,17 +1123,17 @@ extra card style:
 					else "blank2.png"
 		visible: script: if is_pendulum() then true else false
 	pendulum border:
-		left: -3
+		left: 0
 		top: 0
-		width: 427
-		height: 617
+		width: 421
+		height: 614
 		z index: 1
 		render style:image
 		choice images:
 			image:
 				script:
-					if contains(card.pendulum, match: "pendulum pandemonium") and styling.pendulum_size == "less" and is_conjoint() then masked_blend(dark: "pendulum/pendulum_csm.png", light: "pendulum/pandemonium_csm.png", mask: "mask-half-h.png")
-					else if contains(card.pendulum, match: "pendulum pandemonium") and is_conjoint() then masked_blend(dark: "pendulum/pendulum_cmd.png", light: "pendulum/pandemonium_cmd.png", mask: "mask-half-h.png")
+					if contains(card.pendulum, match: "pendulum pandemonium") and styling.pendulum_size == "less" and is_conjoint() then masked_blend(dark: "pendulum/pendulum_csm.png", light: "pendulum/pandemonium_csm.png", mask: "mask-half-hp.png")
+					else if contains(card.pendulum, match: "pendulum pandemonium") and is_conjoint() then masked_blend(dark: "pendulum/pendulum_cmd.png", light: "pendulum/pandemonium_cmd.png", mask: "mask-half-hp.png")
 					else if contains(card.pendulum, match: "pendulum") and is_conjoint() and styling.pendulum_size=="more" then "pendulum/pendulum_clg.png" 
 					else if contains(card.pendulum, match: "pandemonium") and is_conjoint() and styling.pendulum_size=="more" then "pendulum/pandemonium_clg.png" 
 					else if contains(card.pendulum, match: "pandemonium") and is_conjoint() and styling.pendulum_size=="less" then "pendulum/pandemonium_csm.png"
@@ -1054,15 +1142,15 @@ extra card style:
 					else if contains(card.pendulum, match: "relay") and is_conjoint() then "pendulum/card-conjoint-relay.png"
 					else if contains(card.pendulum, match: "pandemonium") and is_conjoint() then "pendulum/pandemonium_cmd.png" 
 					else if contains(card.pendulum, match: "pendulum") and is_conjoint() then "pendulum/pendulum_cmd.png"
-					else if card.pendulum == "pendulum pandemonium" and styling.pendulum_size == "more" then masked_blend(dark: "pendulum/pendulum_lg.png", light: "pendulum/pandemonium_lg.png", mask: "mask-half-h.png")
+					else if card.pendulum == "pendulum pandemonium" and styling.pendulum_size == "more" then masked_blend(dark: "pendulum/pendulum_lg.png", light: "pendulum/pandemonium_lg.png", mask: "mask-half-hp.png")
 					else if card.pendulum == "pendulum pandemonium" and styling.pendulum_size == "less" then masked_blend(dark: "pendulum/pendulum_sm.png", light: "pendulum/pandemonium_sm.png", mask: "mask-half-h.png")
-					else if card.pendulum == "pendulum pandemonium" then masked_blend(dark: "pendulum/pendulum_md.png", light: "pendulum/pandemonium_md.png", mask: "mask-half-h.png")
-					else if card.pendulum == "pendulum pandemonium" and styling.pendulum_size == "more" and is_conjoint() then masked_blend(dark: "pendulum/pendulum_clg.png", light: "pendulum/pandemonium_clg.png", mask: "mask-half-h.png")
+					else if card.pendulum == "pendulum pandemonium" then masked_blend(dark: "pendulum/pendulum_md.png", light: "pendulum/pandemonium_md.png", mask: "mask-half-hp.png")
+					else if card.pendulum == "pendulum pandemonium" and styling.pendulum_size == "more" and is_conjoint() then masked_blend(dark: "pendulum/pendulum_clg.png", light: "pendulum/pandemonium_clg.png", mask: "mask-half-hp.png")
 					else if card.pendulum == "pendulum" and styling.pendulum_size=="more" then "pendulum/pendulum_lg.png" 
 					else if card.pendulum == "pandemonium" and styling.pendulum_size=="more" then "pendulum/pandemonium_lg.png" 
 					else if card.pendulum == "pandemonium" and styling.pendulum_size=="less" then "pendulum/pandemonium_sm.png"
-					else if card.pendulum == "pendulum" then "pendulum/pendulum_md.png"
 					else if card.pendulum == "pendulum" and styling.pendulum_size=="less" then "pendulum/pendulum_sm.png"
+					else if card.pendulum == "pendulum" then "pendulum/pendulum_md.png"
 					else if card.pendulum == "relay" then "pendulum/card-relay.png"
 					else if card.pendulum == "pandemonium" then "pendulum/pandemonium_md.png" 
 					else if card.pendulum == "pendulum" then "pendulum/pendulum_md.png"

@@ -112,7 +112,7 @@ symbol:
 symbol:
 	code: *
 	image: estar.png
-	enabled: {card.card_type=="xyz monster"}
+	enabled: {card.card_type=="xyz monster" or card.card_type=="pendulum xyz monster"}
 	image font size: 17
 symbol:
 	code: *
