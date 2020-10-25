@@ -89,6 +89,17 @@ card field:
 	choice: conjoint pandemonium
 	choice: conjoint relay
 	choice: conjoint pendulum pandemonium
+#Making Lyris' changes work with the original variant.
+	script:
+		if card.card_type == "pendulum normal monster" or
+		card.card_type == "pendulum effect monster" or
+		card.card_type == "pendulum fusion monster" or
+		card.card_type == "pendulum ritual monster" or
+		card.card_type == "pendulum synchro monster" or
+		card.card_type == "pendulum dark synchro monster" or
+		card.card_type == "pendulum xyz monster"
+		then "pendulum" 
+		else "none"
 
 ############################# Link Marker Border
 card field:
