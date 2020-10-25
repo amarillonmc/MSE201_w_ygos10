@@ -31,7 +31,7 @@ init script:
 	is_monster := {card.card_type == "normal monster" or card.card_type == "effect monster" or card.card_type == "ritual monster" or card.card_type == "synchro monster" or card.card_type == "dark synchro monster" or card.card_type == "xyz monster" or card.card_type == "xros monster" or card.card_type == "link monster" or card.card_type == "dlc monster" or card.card_type == "evolute monster" or card.card_type == "fusion monster" or card.card_type == "token monster" or card.card_type == "obelisk card" or card.card_type == "slifer card" or card.card_type == "ra card" or is_spatial()}
 	is_spatial := {card.card_type == "origin spatial monster" or card.card_type == "altered spatial monster"}
 	is_conjoint := {contains(card.pendulum, match: "conjoint") and not contains(card.card_type, match: "conjoint")}
-	overleveled := {if contains(card.level, match: "*") then (number_of_items(in: replace(replace(card.level, match:"<sym-auto>", replace:""), match:"</sym-auto>", replace:"")) > 13) else (card.level != "" and card.level != "1" and card.level != "2" and card.level != "3" and card.level != "4" and card.level != "5" and card.level != "6" and card.level != "7" and card.level != "8" and card.level != "9" and card.level != "10" and card.level != "11" and card.level != "12" and card.level != "13")}
+	overleveled := {if contains(card.level, match: "*") then (number_of_items(in: replace(replace(card.level, match:"<sym-auto>", replace:""), match:"</sym-auto>", replace:"")) > 13) else (card.level != "" and not contains(card.level, match: "1") and not contains(card.level, match: "2") and not contains(card.level, match: "3") and not contains(card.level, match: "4") and not contains(card.level, match: "5") and not contains(card.level, match: "6") and not contains(card.level, match: "7") and not contains(card.level, match: "8") and not contains(card.level, match: "9") and not contains(card.level, match: "0") or to_number(replace(replace(replace(replace(replace(card.level, match:"<sym-auto>", replace:""), match:"</sym-auto>", replace:""), match:"<sym>", replace:""), match:"</sym>", replace:""), match:" ", replace:"")) > 13)}
 ############################################################## Extra style
 styling field:
 	type: info
@@ -616,7 +616,7 @@ extra card style:
 						else if card.card_type == "timeleap monster" then "levels/rdfuture-"+number_of_items(in: replace(replace(card.level, match:"<sym-auto>", replace:""), match:"</sym-auto>", replace:""))+".png"
 						else "levels/rdlevel-"+number_of_items(in: replace(replace(card.level, match:"<sym-auto>", replace:""), match:"</sym-auto>", replace:""))+".png"
 					else
-						if card.card_type == "evolute monster" then "levels/rdstage-"+card.level+".png"
+						if card.card_type == "evolute monster" then "levels/rdstage-"+replace(replace(replace(replace(replace(card.level, match:"<sym-auto>", replace:""), match:"</sym-auto>", replace:""), match:"<sym>", replace:""), match:"</sym>", replace:""), match:" ", replace:"")+".png"
 						else if card.card_type == "xyz monster" then "levels/rdrank-"+card.level+".png"
 						else if card.card_type == "origin spatial monster" then "levels/rdorigin-"+card.level+".png"
 						else if card.card_type == "altered spatial monster" then "levels/rdaltered-"+card.level+".png"
