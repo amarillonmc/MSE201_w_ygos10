@@ -35,6 +35,8 @@ card field:
 	choice: conjoint trap card
 	choice: trell card
 	choice: skill card
+	choice: xros monster
+	choice: dual xros monster
 	default: card_type()
 	choice colors cardlist:
 		normal monster         :  rgb(197,179,53)
@@ -76,6 +78,52 @@ card field:
 	editable: false
 	choice: none
 	choice: sdoverlay image
+card field:
+	type: text
+	name: grade
+card field:
+	type: text
+	name: gate
+card field:
+	type: choice
+	name: gate 1
+	choice: none
+	choice: bigbang
+	choice: dsynchro
+	choice: effect
+	choice: evolute
+	choice: fusion
+	choice: link
+	choice: normal
+	choice: relay
+	choice: ritual
+	choice: spatial
+	choice: spell
+	choice: synchro
+	choice: timeleap
+	choice: trap
+	choice: xros
+	choice: xyz
+card field:
+	type: choice
+	name: gate 2
+	choice: none
+	choice: bigbang
+	choice: dsynchro
+	choice: effect
+	choice: evolute
+	choice: fusion
+	choice: link
+	choice: normal
+	choice: relay
+	choice: ritual
+	choice: spatial
+	choice: spell
+	choice: synchro
+	choice: timeleap
+	choice: trap
+	choice: xros
+	choice: xyz
 card field:
 	type: choice
 	name: pendulum
