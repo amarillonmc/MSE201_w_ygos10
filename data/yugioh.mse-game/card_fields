@@ -91,15 +91,26 @@ card field:
 	choice: conjoint pendulum pandemonium
 #Making Lyris' changes work with the original variant.
 	script:
-		if card.card_type == "pendulum normal monster" or
-		card.card_type == "pendulum effect monster" or
-		card.card_type == "pendulum fusion monster" or
-		card.card_type == "pendulum ritual monster" or
-		card.card_type == "pendulum synchro monster" or
-		card.card_type == "pendulum dark synchro monster" or
-		card.card_type == "pendulum xyz monster"
-		then "pendulum" 
-		else "none"
+		#if card.stylesheet == "series10" and contains(card.card_type, match: "pendulum") then "pendulum"
+		#if card.stylesheet == "yugioh-series10" and 
+		#(card.card_type=="pendulum normal monster" or 
+		#"pendulum effect monster" or 
+		#"pendulum fusion monster" or 
+		#"pendulum ritual monster" or 
+		#"pendulum synchro monster" or 
+		#"pendulum dark synchro monster" or
+		#"pendulum xyz monster")
+		#then "pendulum"
+		#if card.stylesheet == "series10" then
+			if card.card_type == "pendulum normal monster" or
+			card.card_type == "pendulum effect monster" or
+			card.card_type == "pendulum fusion monster" or
+			card.card_type == "pendulum ritual monster" or
+			card.card_type == "pendulum synchro monster" or
+			card.card_type == "pendulum dark synchro monster" or
+			card.card_type == "pendulum xyz monster"
+			then "pendulum" 
+			#else "none"
 
 ############################# Link Marker Border
 card field:
