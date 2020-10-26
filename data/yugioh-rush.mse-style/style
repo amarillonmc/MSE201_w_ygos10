@@ -67,6 +67,11 @@ styling field:
 	choice: default
 	choice: less
 	choice: more
+styling field:
+	type: boolean
+	name: disable hologram
+	description: 移除右下标识 Disable the Eye of Anubis hologram, to make it more similar to Konami's official proxies.
+	initial: no
 ############################################################## Card fields
 card style:
 	card type:
@@ -94,6 +99,12 @@ card style:
 			trap card               : cardrd-trap.png
 			xros monster            : cardrd-xros.png
 			dual xros monster       : cardrd-xros.png
+			pendulum normal monster	: cardrd-normal.png
+			pendulum effect monster	: cardrd-effect.png
+			pendulum fusion monster	: cardrd-fusion.png
+			pendulum ritual monster	: cardrd-ritual.png
+			pendulum synchro monster	: cardrd-synchro.png
+			pendulum xyz monster	: cardrd-xyz.png
 	sdoverlay:
 		left: 0
 		top: 0
@@ -330,7 +341,7 @@ card style:
 		visible: {not is_nmonster()}
 	number:
 		left: 242
-		top : 573
+		top : 575
 		width: 140
 		height: 16
 		z index: 2
@@ -402,9 +413,9 @@ card style:
 		visible: {not is_nmonster()}
 	pendulum text:
 		left: 30
-		top : {if contains(card.card_type, match: "xros") then 373 else if styling.pendulum_size == "more" then 339 else if styling.pendulum_size == "less" then 360 else 373}
+		top : {if contains(card.card_type, match: "xros") then 373 else if styling.pendulum_size == "more" then 339 else if styling.pendulum_size == "less" then 390 else 373}
 		width: 360
-		height: {if contains(card.card_type, match: "xros") then 47 else if styling.pendulum_size == "more" then 80 else if styling.pendulum_size == "less" then 29.5 else 47}
+		height: {if contains(card.card_type, match: "xros") then 47 else if styling.pendulum_size == "more" then 80 else if styling.pendulum_size == "less" then 35 else 47}
 		visible: {is_pendulum() or contains(card.card_type, match: "xros monster")}
 		font:
 			name: Yu-Gi-Oh! Matrix Book
@@ -429,7 +440,8 @@ card style:
 		line height line max: 0.73
 	blue scale:
 		left: 40
-		top: {if styling.pendulum_size == "more" then 427 else if styling.pendulum_size == "less" then 424 else 414.5}
+		#top: {if styling.pendulum_size == "more" then 427 else if styling.pendulum_size == "less" then 424 else 414.5}
+		top: 415.5
 		width: 35
 		height: 35
 		visible: {is_pendulum()}
@@ -441,7 +453,8 @@ card style:
 			color: rgb(255,255,255)
 	red scale:
 		left: 340
-		top: {if styling.pendulum_size == "more" then 427 else if styling.pendulum_size == "less" then 424 else 414.5}
+		#top: {if styling.pendulum_size == "more" then 427 else if styling.pendulum_size == "less" then 424 else 414.5}
+		top: 415.5
 		width: 35
 		height: 35
 		visible: {is_pendulum()}
@@ -450,7 +463,7 @@ card style:
 		font:
 			name: Ro GSan Serif Std B
 			size: 13
-			color: rgb(30,30,30)
+			color: rgb(255,255,255)
 	gamecode:
 		left: 15
 		top: 575
@@ -472,10 +485,10 @@ card style:
 		render style: image list
 		choice images:
 			stamp:
-				script: if card.edition!="" then "cornerfirst.png" else "cornerunlimited.png"
+				script: if styling.disable_hologram then "blank2.png" else if card.edition!="" then "cornerfirst.png" else "cornerunlimited.png"
 	copyright:
 		left: 24
-		top: 573
+		top: 575
 		width: 135
 		height: 17
 		z index: 4
