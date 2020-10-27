@@ -25,7 +25,9 @@ card height: 614
 card dpi: 178.0156
 
 ############################################################## Extra scripts
-
+#This is a template with legacy pendulum implemention - its frame is together with card frame
+init script:
+	is_legacy_pendulum:= {true}
 ############################################################## Extra style
 styling field:
 	type: info

@@ -33,6 +33,7 @@ init script:
 	is_monster := {card.card_type == "normal monster" or card.card_type == "effect monster" or card.card_type == "ritual monster" or card.card_type == "synchro monster" or card.card_type == "dark synchro monster" or card.card_type == "xyz monster" or card.card_type == "link monster" or card.card_type == "dlc monster" or card.card_type == "fusion monster" or card.card_type == "token monster" or card.card_type == "obelisk card" or card.card_type == "slifer card" or card.card_type == "ra card" or is_spatial()}
 	is_spatial := {card.card_type == "origin spatial monster" or card.card_type == "altered spatial monster"}
 	is_conjoint := {contains(card.pendulum, match: "conjoint") and not contains(card.card_type, match: "conjoint")}
+	is_legacy_pendulum:= {false}
 ############################################################## Extra style
 styling field:
 	type: info
