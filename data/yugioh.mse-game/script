@@ -2,7 +2,7 @@
 	is_tw := { styling.language == "chinese traditional" }
 	is_cn := { styling.language == "chinese simplified" }
 	is_en := { styling.language == "english" }
-	is_jp := { styling.language == "japanese" }
+	is_jp := { styling.language == "japanese" or styling.language == "OCG style english"}
 	#Let's place this =true in every template that has pendulum frame together with the card frame.
 	is_legacy_pendulum := {false}
 
