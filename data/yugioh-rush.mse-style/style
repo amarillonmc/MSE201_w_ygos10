@@ -1,7 +1,7 @@
 ﻿mse version: 2.0.0
 game: yugioh
 short name: Rush Duel
-full name: With i18n
+full name: RD-Like With i18n
 installer group: Yugioh/Series10
 icon: card-sample.png
 position hint: 01
@@ -339,7 +339,7 @@ card style:
 	monster type:
 		left: 26
 		#top : 436
-		top: { if styling.language=="japanese" then 438 else if styling.language=="OCG style english" then 436 else if styling.language=="chinese simplified" then 438 else if styling.language=="chinese traditional" then 438 else 436 }
+		top: { if styling.language=="japanese" then 438 else if styling.language=="OCG style english" then 438 else if styling.language=="chinese simplified" then 438 else if styling.language=="chinese traditional" then 438 else 436 }
 		width: 313
 		height: 30
 		alignment: middle left
@@ -357,7 +357,7 @@ card style:
 			size: 
 				script:
 					if styling.language=="japanese" then 14 
-					else if styling.language=="OCG style english" then 16
+					else if styling.language=="OCG style english" then 14
 					else if styling.language=="chinese simplified" then 14 
 					else if styling.language=="chinese traditional" then 14 
 					else 16
@@ -648,7 +648,7 @@ extra card style:
 	rdlevel:
 		left: {if is_link() then 13 else 19}
 		top : {if card.card_type == "evolute monster" then 67 else if is_pendulum() then (if styling.pendulum_size == "less" then 313 else if styling.pendulum_size == "more" then 263 else 296) else if is_link() then 362 else 366}
-		width: {if is_link() then 88 else 76}
+		width: {if is_link() then 88 else 75}
 		height: {if is_link() then 88 else 71}
 		z index: 5
 		render style: image
