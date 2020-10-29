@@ -198,7 +198,7 @@ card style:
 			dark: {if contains(card.card_type, match: "xros monster") then "grade-dark.png" else if styling.language == "japanese" then "attribute/jpball/dark_rd.png" else if styling.language == "chinese traditional" or styling.language=="chinese simplified" then "attribute/cnball/dark_rd.png" else "attribute/dark_rd.png"}
 			spell: {if styling.language == "japanese" then "attribute/jpball/spell_rd.png" else if styling.language == "chinese traditional" or styling.language=="chinese simplified" then "attribute/cnball/spell_rd.png" else "attribute/spell_rd.png" }
 			trap: {if styling.language == "japanese" then "attribute/jpball/trap_rd.png" else if styling.language == "chinese traditional" or styling.language=="chinese simplified" then "attribute/cnball/trap_rd.png" else "attribute/trap_rd.png" }
-			divine: trap: {if styling.language == "japanese" then "attribute/jpball/divine_rd.png" else if styling.language == "chinese traditional" or styling.language=="chinese simplified" then "attribute/cnball/divine_rd.png" else "attribute/divine_rd.png" }
+			divine: {if styling.language == "japanese" then "attribute/jpball/divine_rd.png" else if styling.language == "chinese traditional" or styling.language=="chinese simplified" then "attribute/cnball/divine_rd.png" else "attribute/divine_rd.png" }
 	level:
 		left: 17
 		top : {if card.card_type == "evolute monster" then 67 else if is_pendulum() then (if styling.pendulum_size == "less" then 313 else if styling.pendulum_size == "more" then 263 else 296) else 366}
