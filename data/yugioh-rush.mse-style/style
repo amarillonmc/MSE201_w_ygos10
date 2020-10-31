@@ -394,7 +394,8 @@ card style:
 					else if styling.language=="chinese simplified" then "Tensentype JiaLiDaHeiJ" 
 					else if styling.language=="chinese traditional" then "Tensentype JiaLiDaHeiF" 
 					else "Yu-Gi-Oh! Matrix Book"
-			size: 13
+			#size: 13
+			size: { if styling.language!="english" then 10 else 13 }
 			scale down to: 4
 			color: rgb(0,0,0)
 		symbol font:
