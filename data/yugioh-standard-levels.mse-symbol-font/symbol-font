@@ -141,6 +141,11 @@ symbol:
 	image font size: 17
 symbol:
 	code: *
+	image: sealed-level.png
+	enabled: {card.card_type=="perdition monster"}
+	image font size: 17
+symbol:
+	code: *
 	image: star.png
 	image font size: 17
 

@@ -106,6 +106,12 @@ word list:
 	word: 幻竜族
 	word: サイバース族
 word list:
+	name: nonmonster
+	word: Spell Card
+	word: Spell Card    
+	word: Trap Card
+	word: Trap Card    
+word list:
 	name: card
 	word: Normal
 	word: Dark Synchro
@@ -144,7 +150,6 @@ word list:
 	word: Chroma
 	word: Perdition
 	word: Impure
-	word: Runic
 	word: 通常
 	word: 同调
 	word: 超量
