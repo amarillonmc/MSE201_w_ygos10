@@ -37,6 +37,7 @@ card field:
 	choice: skill card
 	choice: xros monster
 	choice: dual xros monster
+	choice: perdition monster
 	default: card_type()
 	choice colors cardlist:
 		normal monster         :  rgb(197,179,53)
