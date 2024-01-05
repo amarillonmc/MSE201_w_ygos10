@@ -14,6 +14,7 @@ word list:
 	word: Fairy
 	word: Fiend
 	word: Fish
+	word: Illusion
 	word: Insect
 	word: Legendary Dragon
 	word: Machine
@@ -55,6 +56,7 @@ word list:
 	word: 创造神族
 	word: 幻龙族
 	word: 电子界族
+	word: 幻想魔族
 	word: 戰士族
 	word: 魔法師族
 	word: 天使族
@@ -80,6 +82,7 @@ word list:
 	word: 創造神族
 	word: 幻龍族
 	word: 電子界族
+	word: 幻想魔族
 	word: 水族
 	word: 炎族
 	word: 獣族
@@ -105,6 +108,7 @@ word list:
 	word: 創造神族
 	word: 幻竜族
 	word: サイバース族
+	word: 幻想魔族
 word list:
 	name: nonmonster
 	word: Spell Card
