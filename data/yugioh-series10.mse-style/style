@@ -25,7 +25,9 @@ card height: 614
 card dpi: 178.0156
 
 ############################################################## Extra scripts
-
+#This is a template with legacy pendulum implemention - its frame is together with card frame
+init script:
+	is_legacy_pendulum:= {true}
 ############################################################## Extra style
 styling field:
 	type: info
@@ -42,6 +44,7 @@ styling field:
 	choice: chinese duel links traditional
 	choice: chinese duel links simplified
 	choice: chinese ocg official
+	choice: japanese rubytext experimental
 styling field:
 	type: choice
 	name: template style
@@ -179,6 +182,12 @@ styling field:
 	choice: ultrafoil
 	choice: ygojpoverlay
 	choice: ygojpoverlayp
+	choice: ygojp2overlay
+	choice: ygojp2overlayp	
+	choice: ygosampleoverlay
+	choice: ygosampleoverlayp
+	choice: ygojumpoverlay
+	choice: ygojumpoverlayp
 	choice: 20thser
 	choice: 20thserpendulum
 styling field:
@@ -309,6 +318,7 @@ styling style:
 			chinese duel links traditional: /yugioh.mse-game/icons/language-tw.png
 			chinese duel links simplified: /yugioh.mse-game/icons/language-zh.png
 			chinese ocg official: /yugioh.mse-game/icons/language-zh.png
+			japanese rubytext experimental: /yugioh.mse-game/icons/language-ja.png
 	template style:
 		render style: both
 		choice images:
@@ -400,10 +410,10 @@ card style:
 			else "blank2.png"
 		combine: normal
 	foils:
-		left: { if card.rarity=="parallel rare" or card.rarity=="star rare" or card.rarity=="mosaic rare" or card.rarity=="gold rare" or card.rarity=="ultimate rare" or styling.custom_foil=="ygojpoverlay" or styling.custom_foil=="ygojpoverlayp" then 0 else if card.rarity=="promo" or card.rarity=="secret rare" or card.rarity=="ultra rare" or card.rarity=="super rare" and styling.template_style=="actual style" and is_pendulum() then 25 else if is_pendulum() then 28 else if card.card_type=="link monster" and ( styling.extended_artwork=="yes" and styling.template_style=="actual style" ) then 23 else if card.card_type=="link monster" and styling.extended_artwork=="yes" then 28 else if styling.extended_artwork=="yes" and styling.template_style=="actual style" then 24 else if styling.image_frame then 44 else if styling.extended_artwork=="yes" then 28 else if styling.template_style=="actual style" then 47 else 51 }
-		top: { if card.rarity=="parallel rare" or card.rarity=="star rare" or card.rarity=="mosaic rare" or card.rarity=="gold rare" or card.rarity=="ultimate rare" or styling.custom_foil=="ygojpoverlay" or styling.custom_foil=="ygojpoverlayp" then 0 else if card.rarity=="promo" or card.rarity=="secret rare" or card.rarity=="ultra rare" or card.rarity=="super rare" and is_pendulum() and styling.template_style=="actual style" then 109.5 else if is_pendulum() then 110 else if styling.image_frame then 106 else if card.card_type=="link monster" and ( styling.extended_artwork=="yes" and styling.template_style=="actual style" ) then 102 else if card.card_type=="link monster" and styling.extended_artwork=="yes" then 99 else if styling.extended_artwork=="yes" then 110 else if styling.extended_artwork=="yes" and styling.template_style=="actual style" then 111 else if styling.template_style=="actual style" then 110 else 113 }
-		width: { if card.rarity=="parallel rare" or card.rarity=="star rare" or card.rarity=="mosaic rare" or card.rarity=="gold rare" or card.rarity=="ultimate rare" or styling.custom_foil=="ygojpoverlay" or styling.custom_foil=="ygojpoverlayp" then 421 else if card.rarity=="promo" or card.rarity=="secret rare" or card.rarity=="ultra rare" or card.rarity=="super rare" and is_pendulum() and styling.template_style=="actual style" then 371 else if is_pendulum() then 364 else if styling.image_frame then "333" else if card.card_type=="link monster" and ( styling.extended_artwork=="yes" and styling.template_style=="actual style" ) then 374 else if styling.extended_artwork=="yes" and styling.template_style=="actual style" then 373 else if styling.extended_artwork=="yes" then 366 else if styling.template_style=="actual style" then 326 else 320 }
-		height: { if card.rarity=="parallel rare" or card.rarity=="star rare" or card.rarity=="mosaic rare" or card.rarity=="gold rare" or card.rarity=="ultimate rare" or styling.custom_foil=="ygojpoverlay" or styling.custom_foil=="ygojpoverlayp" then 614 else if card.rarity=="promo" or card.rarity=="secret rare" or card.rarity=="ultra rare" or card.rarity=="super rare" and is_pendulum() and styling.template_style=="actual style" then ( if styling.pendulum_transparency then ( if styling.pendulum_size=="more" then 368 else 347 ) ) else if is_pendulum() then ( if styling.pendulum_transparency then ( if styling.pendulum_size=="more" then 363 else 347 ) ) else if styling.image_frame then 333 else if card.card_type=="link monster" and ( styling.extended_artwork=="yes" and styling.template_style=="actual style" ) then 483 else if card.card_type=="link monster" and styling.extended_artwork=="yes" then 479 else if styling.extended_artwork=="yes" and styling.template_style=="actual style" then 474 else if styling.extended_artwork=="yes" then 470 else if styling.template_style=="actual style" then 326 else 320 }
+		left: { if card.rarity=="parallel rare" or card.rarity=="star rare" or card.rarity=="mosaic rare" or card.rarity=="gold rare" or card.rarity=="ultimate rare" or styling.custom_foil=="ygojpoverlay" or styling.custom_foil=="ygojpoverlayp" or styling.custom_foil=="ygojp2overlay" or styling.custom_foil=="ygojp2overlayp" or styling.custom_foil=="ygojumpoverlay" or styling.custom_foil=="ygojumpoverlayp" or styling.custom_foil=="ygosampleoverlay" or styling.custom_foil=="ygosampleoverlayp" then 0 else if card.rarity=="promo" or card.rarity=="secret rare" or card.rarity=="ultra rare" or card.rarity=="super rare" and styling.template_style=="actual style" and is_pendulum() then 25 else if is_pendulum() then 28 else if card.card_type=="link monster" and ( styling.extended_artwork=="yes" and styling.template_style=="actual style" ) then 23 else if card.card_type=="link monster" and styling.extended_artwork=="yes" then 28 else if styling.extended_artwork=="yes" and styling.template_style=="actual style" then 24 else if styling.image_frame then 44 else if styling.extended_artwork=="yes" then 28 else if styling.template_style=="actual style" then 47 else 51 }
+		top: { if card.rarity=="parallel rare" or card.rarity=="star rare" or card.rarity=="mosaic rare" or card.rarity=="gold rare" or card.rarity=="ultimate rare" or styling.custom_foil=="ygojpoverlay" or styling.custom_foil=="ygojpoverlayp" or styling.custom_foil=="ygojp2overlay" or styling.custom_foil=="ygojp2overlayp" or styling.custom_foil=="ygojumpoverlay" or styling.custom_foil=="ygojumpoverlayp" or styling.custom_foil=="ygosampleoverlay" or styling.custom_foil=="ygosampleoverlayp" then 0 else if card.rarity=="promo" or card.rarity=="secret rare" or card.rarity=="ultra rare" or card.rarity=="super rare" and is_pendulum() and styling.template_style=="actual style" then 109.5 else if is_pendulum() then 110 else if styling.image_frame then 106 else if card.card_type=="link monster" and ( styling.extended_artwork=="yes" and styling.template_style=="actual style" ) then 102 else if card.card_type=="link monster" and styling.extended_artwork=="yes" then 99 else if styling.extended_artwork=="yes" then 110 else if styling.extended_artwork=="yes" and styling.template_style=="actual style" then 111 else if styling.template_style=="actual style" then 110 else 113 }
+		width: { if card.rarity=="parallel rare" or card.rarity=="star rare" or card.rarity=="mosaic rare" or card.rarity=="gold rare" or card.rarity=="ultimate rare" or styling.custom_foil=="ygojpoverlay" or styling.custom_foil=="ygojpoverlayp" or styling.custom_foil=="ygojp2overlay" or styling.custom_foil=="ygojp2overlayp" or styling.custom_foil=="ygojumpoverlay" or styling.custom_foil=="ygojumpoverlayp" or styling.custom_foil=="ygosampleoverlay" or styling.custom_foil=="ygosampleoverlayp" then 421 else if card.rarity=="promo" or card.rarity=="secret rare" or card.rarity=="ultra rare" or card.rarity=="super rare" and is_pendulum() and styling.template_style=="actual style" then 371 else if is_pendulum() then 364 else if styling.image_frame then "333" else if card.card_type=="link monster" and ( styling.extended_artwork=="yes" and styling.template_style=="actual style" ) then 374 else if styling.extended_artwork=="yes" and styling.template_style=="actual style" then 373 else if styling.extended_artwork=="yes" then 366 else if styling.template_style=="actual style" then 326 else 320 }
+		height: { if card.rarity=="parallel rare" or card.rarity=="star rare" or card.rarity=="mosaic rare" or card.rarity=="gold rare" or card.rarity=="ultimate rare" or styling.custom_foil=="ygojpoverlay" or styling.custom_foil=="ygojpoverlayp" or styling.custom_foil=="ygojp2overlay" or styling.custom_foil=="ygojp2overlayp" or styling.custom_foil=="ygojumpoverlay" or styling.custom_foil=="ygojumpoverlayp" or styling.custom_foil=="ygosampleoverlay" or styling.custom_foil=="ygosampleoverlayp" then 614 else if card.rarity=="promo" or card.rarity=="secret rare" or card.rarity=="ultra rare" or card.rarity=="super rare" and is_pendulum() and styling.template_style=="actual style" then ( if styling.pendulum_transparency then ( if styling.pendulum_size=="more" then 368 else 347 ) ) else if is_pendulum() then ( if styling.pendulum_transparency then ( if styling.pendulum_size=="more" then 363 else 347 ) ) else if styling.image_frame then 333 else if card.card_type=="link monster" and ( styling.extended_artwork=="yes" and styling.template_style=="actual style" ) then 483 else if card.card_type=="link monster" and styling.extended_artwork=="yes" then 479 else if styling.extended_artwork=="yes" and styling.template_style=="actual style" then 474 else if styling.extended_artwork=="yes" then 470 else if styling.template_style=="actual style" then 326 else 320 }
 		z index: 5
 		render style: image
 		popup style: in place
@@ -428,6 +438,12 @@ card style:
 					if styling.custom_foil=="ultrafoil" then "customfoils/ultrafoil.png" else
 					if styling.custom_foil=="ygojpoverlay" then "customfoils/ygojpoverlay.png" else
 					if styling.custom_foil=="ygojpoverlayp" then "customfoils/ygojpoverlayp.png" else
+					if styling.custom_foil=="ygojp2overlay" then "customfoils/ygojp2overlay.png" else
+					if styling.custom_foil=="ygojp2overlayp" then "customfoils/ygojp2overlayp.png" else
+					if styling.custom_foil=="ygosampleoverlay" then "customfoils/ygosampleoverlay.png" else
+					if styling.custom_foil=="ygosampleoverlayp" then "customfoils/ygosampleoverlayp.png" else
+					if styling.custom_foil=="ygojumpoverlay" then "customfoils/ygojumpoverlay.png" else
+					if styling.custom_foil=="ygojumpoverlayp" then "customfoils/ygojumpoverlayp.png" else
 					if styling.custom_foil=="20thser" then "customfoils/20thser.png" else
 					if styling.custom_foil=="20thserpendulum" then "customfoils/20thserpendulum.png" else
 					"customfoils/defaultfoil.png"
@@ -507,10 +523,11 @@ card style:
 				else if styling.language=="chinese duel links traditional" then "DFPTanLiW5-B5"
 				else if styling.language=="chinese duel links simplified" then "DFPTanLiW5-GB"
 				else if styling.language=="chinese ocg official" then "DFKaiW5-A"
+				else if styling.language=="japanese rubytext experimental" then "YGODIY-JP"
 				else if card.card_type=="skill card" then "Arial Narrow"
 				else "Yu-Gi-Oh! Matrix Small Caps 2"
 			size: 
-				script: if styling.language=="japanese" or styling.language=="chinese simplified" or styling.language=="chinese traditional" or styling.language=="chinese duel links traditional" or styling.language=="chinese duel links simplified" or card.card_type=="skill card" then 27 else if styling.language=="chinese ocg official" then 26 else 35
+				script: if styling.language=="japanese" or styling.language=="japanese rubytext experimental" or styling.language=="chinese simplified" or styling.language=="chinese traditional" or styling.language=="chinese duel links traditional" or styling.language=="chinese duel links simplified" or card.card_type=="skill card" then 27 else if styling.language=="chinese ocg official" then 26 else 35
 			color:
 				script: if styling.name_color_override then styling.name_color 
 				else if card.rarity=="rare" then rgb(133,168,169)
@@ -553,16 +570,16 @@ card style:
 		render style: image
 		popup style: in place
 		choice images:
-			earth: {if card.rarity=="ultimate rare" then "uearth.png" else if styling.language=="japanese" then "jpball/earth.png" else if styling.language=="chinese simplified" or styling.language=="chinese traditional" or styling.language=="chinese duel links traditional" or styling.language=="chinese duel links simplified" or styling.language=="chinese ocg official" then "cnball/earth.png" else "earth.png"}
-			water: {if card.rarity=="ultimate rare" then "uwater.png" else if styling.language=="japanese" then "jpball/water.png" else if styling.language=="chinese simplified" or styling.language=="chinese traditional" or styling.language=="chinese duel links traditional" or styling.language=="chinese duel links simplified" or styling.language=="chinese ocg official" then "cnball/water.png" else "water.png"}
-			fire: {if card.rarity=="ultimate rare" then "ufire.png" else if styling.language=="japanese" then "jpball/fire.png" else if styling.language=="chinese simplified" or styling.language=="chinese traditional" or styling.language=="chinese duel links traditional" or styling.language=="chinese duel links simplified" or styling.language=="chinese ocg official" then "cnball/fire.png" else "fire.png"}
-			wind: {if card.rarity=="ultimate rare" then "uwind.png" else if styling.language=="japanese" then "jpball/wind.png" else if styling.language=="chinese simplified" or styling.language=="chinese traditional" or styling.language=="chinese duel links traditional" or styling.language=="chinese duel links simplified" or styling.language=="chinese ocg official" then "cnball/wind.png" else "wind.png"}
-			light: {if card.rarity=="ultimate rare" then "ulight.png" else if styling.language=="japanese" then "jpball/light.png" else if styling.language=="chinese simplified" or styling.language=="chinese traditional" or styling.language=="chinese duel links traditional" or styling.language=="chinese duel links simplified" or styling.language=="chinese ocg official" then "cnball/light.png" else "light.png"}
+			earth: {if card.rarity=="ultimate rare" then "uearth.png" else if styling.language=="japanese" or styling.language=="japanese rubytext experimental" then "jpball/earth.png" else if styling.language=="chinese simplified" or styling.language=="chinese traditional" or styling.language=="chinese duel links traditional" or styling.language=="chinese duel links simplified" or styling.language=="chinese ocg official" then "cnball/earth.png" else "earth.png"}
+			water: {if card.rarity=="ultimate rare" then "uwater.png" else if styling.language=="japanese" or styling.language=="japanese rubytext experimental" then "jpball/water.png" else if styling.language=="chinese simplified" or styling.language=="chinese traditional" or styling.language=="chinese duel links traditional" or styling.language=="chinese duel links simplified" or styling.language=="chinese ocg official" then "cnball/water.png" else "water.png"}
+			fire: {if card.rarity=="ultimate rare" then "ufire.png" else if styling.language=="japanese" or styling.language=="japanese rubytext experimental" then "jpball/fire.png" else if styling.language=="chinese simplified" or styling.language=="chinese traditional" or styling.language=="chinese duel links traditional" or styling.language=="chinese duel links simplified" or styling.language=="chinese ocg official" then "cnball/fire.png" else "fire.png"}
+			wind: {if card.rarity=="ultimate rare" then "uwind.png" else if styling.language=="japanese" or styling.language=="japanese rubytext experimental" then "jpball/wind.png" else if styling.language=="chinese simplified" or styling.language=="chinese traditional" or styling.language=="chinese duel links traditional" or styling.language=="chinese duel links simplified" or styling.language=="chinese ocg official" then "cnball/wind.png" else "wind.png"}
+			light: {if card.rarity=="ultimate rare" then "ulight.png" else if styling.language=="japanese" or styling.language=="japanese rubytext experimental" then "jpball/light.png" else if styling.language=="chinese simplified" or styling.language=="chinese traditional" or styling.language=="chinese duel links traditional" or styling.language=="chinese duel links simplified" or styling.language=="chinese ocg official" then "cnball/light.png" else "light.png"}
 			time: {if card.rarity=="ultimate rare" then "utime.png" else "time.png"}
-			dark: {if card.rarity=="ultimate rare" then "udark.png" else if styling.language=="japanese" then "jpball/dark.png" else if styling.language=="chinese simplified" or styling.language=="chinese traditional" or styling.language=="chinese duel links traditional" or styling.language=="chinese duel links simplified" or styling.language=="chinese ocg official" then "cnball/dark.png" else "dark.png"}
-			divine: {if card.rarity=="ultimate rare" then "udivine.png" else if styling.language=="japanese" then "jpball/divine.png" else if styling.language=="chinese simplified" or styling.language=="chinese traditional" or styling.language=="chinese duel links traditional" or styling.language=="chinese duel links simplified" or styling.language=="chinese ocg official" then "cnball/divine.png" else "divine.png"}
-			spell: {if card.rarity=="ultimate rare" then "uspell.png" else if styling.language=="japanese" then "jpball/spell.png" else if styling.language=="chinese simplified" or styling.language=="chinese traditional" or styling.language=="chinese duel links traditional" or styling.language=="chinese duel links simplified" or styling.language=="chinese ocg official" then "cnball/spell.png" else "spell.png"}
-			trap: {if card.rarity=="ultimate rare" then "utrap.png" else if styling.language=="japanese" then "jpball/trap.png" else if styling.language=="chinese simplified" or styling.language=="chinese traditional" or styling.language=="chinese duel links traditional" or styling.language=="chinese duel links simplified" or styling.language=="chinese ocg official" then "cnball/trap.png" else "trap.png"}
+			dark: {if card.rarity=="ultimate rare" then "udark.png" else if styling.language=="japanese" or styling.language=="japanese rubytext experimental" then "jpball/dark.png" else if styling.language=="chinese simplified" or styling.language=="chinese traditional" or styling.language=="chinese duel links traditional" or styling.language=="chinese duel links simplified" or styling.language=="chinese ocg official" then "cnball/dark.png" else "dark.png"}
+			divine: {if card.rarity=="ultimate rare" then "udivine.png" else if styling.language=="japanese" or styling.language=="japanese rubytext experimental" then "jpball/divine.png" else if styling.language=="chinese simplified" or styling.language=="chinese traditional" or styling.language=="chinese duel links traditional" or styling.language=="chinese duel links simplified" or styling.language=="chinese ocg official" then "cnball/divine.png" else "divine.png"}
+			spell: {if card.rarity=="ultimate rare" then "uspell.png" else if styling.language=="japanese" or styling.language=="japanese rubytext experimental" then "jpball/spell.png" else if styling.language=="chinese simplified" or styling.language=="chinese traditional" or styling.language=="chinese duel links traditional" or styling.language=="chinese duel links simplified" or styling.language=="chinese ocg official" then "cnball/spell.png" else "spell.png"}
+			trap: {if card.rarity=="ultimate rare" then "utrap.png" else if styling.language=="japanese" or styling.language=="japanese rubytext experimental" then "jpball/trap.png" else if styling.language=="chinese simplified" or styling.language=="chinese traditional" or styling.language=="chinese duel links traditional" or styling.language=="chinese duel links simplified" or styling.language=="chinese ocg official" then "cnball/trap.png" else "trap.png"}
 			trell: {if card.rarity=="ultimate rare" then "utrell.png" else "trell.png"}
 
 	level:
@@ -581,7 +598,8 @@ card style:
 				else if styling.language=="chinese traditional" then "DFPLiShuW5-B5" 	
 				else if styling.language=="chinese duel links traditional" then "DFPTanLiW5-B5"
 				else if styling.language=="chinese duel links simplified" then "DFPTanLiW5-GB"
-				else if styling.language=="chinese ocg official" then "DFKaiW5-A"				
+				else if styling.language=="chinese ocg official" then "DFKaiW5-A"
+				else if styling.language=="japanese rubytext experimental" then "YGODIY-JP"
 				else "Stone Serif Sem SC ITC TT"
 			size: 15
 			size: { if is_nmonster() and styling.language=="chinese ocg official" then 19.5 else 15}
@@ -755,8 +773,9 @@ card style:
 				else if styling.language=="chinese duel links traditional" then "DFPTanLiW5-B5"
 				else if styling.language=="chinese duel links simplified" then "DFPTanLiW5-GB"
 				else if styling.language=="chinese ocg official" then "DFKaiW5-A"
+				else if styling.language=="japanese rubytext experimental" then "YGODIY-JP"
 				else "Yu-Gi-Oh!ITCStoneSerifSmallCaps"
-			size: { if styling.large_type then 13.1 else if styling.language=="japanese" or styling.language=="chinese simplified" or styling.language=="chinese traditional" or styling.language=="chinese duel links" then 13 else 11.4 }
+			size: { if styling.large_type then 13.1 else if styling.language=="japanese" or styling.language=="japanese rubytext experimental" or styling.language=="chinese simplified" or styling.language=="chinese traditional" or styling.language=="chinese duel links" then 13 else 11.4 }
 			color: rgb(0,0,0)
 		symbol font:
 			name: yugioh-text-replacements
@@ -803,8 +822,9 @@ card style:
 				else if styling.language=="chinese duel links traditional" then "DFPTanLiW5-B5"
 				else if styling.language=="chinese duel links simplified" then "DFPTanLiW5-GB"
 				else if styling.language=="chinese ocg official" then "DFKaiW5-A"
+				else if styling.language=="japanese rubytext experimental" then "YGODIY-JP"
 				else "Yu-Gi-Oh! Matrix Book"
-			italic name: { if styling.language=="japanese" then "Yu-Gi-Oh! DF Leisho 3" else if styling.language=="chinese simplified" then "方正隶变_GBK" else if styling.language=="chinese traditional" then "DFPLiShuW5-B5" else if styling.language=="chinese duel links traditional" then "DFPTanLiW5-B5" else if styling.language=="chinese duel links simplified" then "DFPTanLiW5-GB" else if styling.language=="chinese ocg official" then "DFKaiW5-A" else "Stone Serif ITC Medium Italic" }
+			italic name: { if styling.language=="japanese" then "Yu-Gi-Oh! DF Leisho 3" else if styling.language=="japanese rubytext experimental" then "YGODIY-JP" else if styling.language=="chinese simplified" then "方正隶变_GBK" else if styling.language=="chinese traditional" then "DFPLiShuW5-B5" else if styling.language=="chinese duel links traditional" then "DFPTanLiW5-B5" else if styling.language=="chinese duel links simplified" then "DFPTanLiW5-GB" else if styling.language=="chinese ocg official" then "DFKaiW5-A" else "Stone Serif ITC Medium Italic" }
 			size: { if is_nmonster() and styling.text_size=="large" then "10" else if is_nmonster() and styling.text_size=="small" then "9.2" else if styling.bold_effect_text then "8.2" else if styling.text_size=="large" then "9.8" else "9.2" }
 			scale down to: 4
 			color: rgb(0,0,0)
@@ -825,9 +845,9 @@ card style:
 		#line height hard max: { if is_nmonster() then 0.8 else if styling.max_line_space and (styling.language=="japanese" or styling.language=="chinese simplified" or styling.language=="chinese traditional") then 1.2 else if styling.max_line_space then 1 else if styling.text_size=="large" then 0.72 else 0.76 }
 		#line height soft max: { if styling.max_line_space and (styling.language=="japanese" or styling.language=="chinese simplified" or styling.language=="chinese traditional") then 1.2 else if styling.max_line_space then 1 else if styling.max_line_space and styling.language=="japanese" or styling.language=="chinese simplified" or styling.language=="chinese traditional" then 1.5 else if is_nmonster() then 0.8 else if styling.text_size=="large" then 0.72 else 0.76 }
 		#line height line max: { if styling.max_line_space and (styling.language=="japanese" or styling.language=="chinese simplified" or styling.language=="chinese traditional") then 1.2 else if styling.max_line_space then 1 else if styling.max_line_space and styling.language=="japanese" or styling.language=="chinese simplified" or styling.language=="chinese traditional" then 1.5 else if is_nmonster() then 0.8 else if styling.text_size=="large" then 0.72 else 0.76 }
-		line height hard max: { if styling.max_line_space then 1 else if is_nmonster() then 0.8 else if styling.text_size=="large" then 0.72 else 0.76 }
-		line height soft max: { if styling.max_line_space then 1 else if is_nmonster() then 0.8 else if styling.text_size=="large" then 0.72 else 0.76 }
-		line height line max: { if styling.max_line_space then 1 else if is_nmonster() then 0.8 else if styling.text_size=="large" then 0.72 else 0.76 }
+		line height hard max: { if styling.max_line_space then 1 else if is_nmonster() then 0.8 else if styling.language=="japanese rubytext experimental" then 1.8 else if styling.text_size=="large" then 0.72 else 0.76 }
+		line height soft max: { if styling.max_line_space then 1 else if is_nmonster() then 0.8 else if styling.language=="japanese rubytext experimental" then 1.8 else if styling.text_size=="large" then 0.72 else 0.76 }
+		line height line max: { if styling.max_line_space then 1 else if is_nmonster() then 0.8 else if styling.language=="japanese rubytext experimental" then 1.8 else if styling.text_size=="large" then 0.72 else 0.76 }
 	############################# Attack/Defense/Pendulum Scale/Spell Effect
 	attack:
 		#left: 262
@@ -885,6 +905,7 @@ card style:
 				else if styling.language=="chinese duel links traditional" then "DFPTanLiW5-B5"
 				else if styling.language=="chinese duel links simplified" then "DFPTanLiW5-GB"
 				else if styling.language=="chinese ocg official" then "DFKaiW5-A"
+				else if styling.language=="japanese rubytext experimental" then "YGODIY-JP"
 				else "Yu-Gi-Oh! Matrix Book"
 			size: { if styling.pendulum_size=="less" then 10.4 else 9.7 }
 			#9.5 for regular, 6.9 for medium size
@@ -903,9 +924,9 @@ card style:
 		line height hard: 0.73
 		line height line: 0.73
 		line height soft: 0.73
-		line height hard max: { if styling.max_line_space then 1 else 0.73 }
-		line height soft max: { if styling.max_line_space then 1 else 0.73 }
-		line height line max: { if styling.max_line_space then 1 else 0.73 }
+		line height hard max: { if styling.max_line_space then 1 else if styling.language=="japanese rubytext experimental" then 1.8 else 0.73 }
+		line height soft max: { if styling.max_line_space then 1 else if styling.language=="japanese rubytext experimental" then 1.8 else 0.73 }
+		line height line max: { if styling.max_line_space then 1 else if styling.language=="japanese rubytext experimental" then 1.8 else 0.73 }
 	blue scale:
 	#may need further adjustement after OSUME's new template arrives. <-Already Arrived
 		left: { if is_pendulum() and styling.template_style="actual style" then true and 27 else if is_pendulum() then true and 30 }

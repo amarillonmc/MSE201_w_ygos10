@@ -1,0 +1,699 @@
+﻿mse version: 2.0.0
+game: yugioh
+short name: Rush Duel
+full name: RD-Like With i18n
+installer group: Yugioh/Series10
+icon: card-sample.png
+position hint: 01
+
+version: 2017-06-26
+depends on:
+	package: yugioh.mse-game
+	version: 2017-06-26
+depends on:
+	package: yugioh-standard-levels.mse-symbol-font
+	version: 2014-04-11
+depends on:
+	package: yugioh-text-replacements.mse-symbol-font
+	version: 2014-04-11
+depends on:
+	package: yugioh-text-replacements2.mse-symbol-font
+	version: 2014-04-11
+depends on:
+	package: yugioh-text-numbers.mse-symbol-font
+	version: 2014-04-11
+
+card width: 421
+card height: 614
+card dpi: 178.0156
+init script:
+	is_link := {card.card_type == "link monster" or card.card_type == "link conjoint monster"}
+	is_monster := {card.card_type == "normal monster" or card.card_type == "effect monster" or card.card_type == "ritual monster" or card.card_type == "synchro monster" or card.card_type == "dark synchro monster" or card.card_type == "xyz monster" or card.card_type == "xros monster" or card.card_type == "link monster" or card.card_type == "dlc monster" or card.card_type == "evolute monster" or card.card_type == "fusion monster" or card.card_type == "token monster" or card.card_type == "obelisk card" or card.card_type == "slifer card" or card.card_type == "ra card" or is_spatial()}
+	is_spatial := {card.card_type == "origin spatial monster" or card.card_type == "altered spatial monster"}
+	is_conjoint := {contains(card.pendulum, match: "conjoint") and not contains(card.card_type, match: "conjoint")}
+	overleveled := {if contains(card.level, match: "*") then (number_of_items(in: replace(replace(card.level, match:"<sym-auto>", replace:""), match:"</sym-auto>", replace:"")) > 13) else (card.level != "" and not contains(card.level, match: "1") and not contains(card.level, match: "2") and not contains(card.level, match: "3") and not contains(card.level, match: "4") and not contains(card.level, match: "5") and not contains(card.level, match: "6") and not contains(card.level, match: "7") and not contains(card.level, match: "8") and not contains(card.level, match: "9") and not contains(card.level, match: "0") or to_number(replace(replace(replace(replace(replace(card.level, match:"<sym-auto>", replace:""), match:"</sym-auto>", replace:""), match:"<sym>", replace:""), match:"</sym>", replace:""), match:" ", replace:"")) > 13)}
+############################################################## Extra style
+styling field:
+	type: info
+	name: Look & Feel
+styling field:
+	type: choice
+	name: language
+	description: 卡片语言 Language of the card, supports English, Japanese and Chinese (Simplified or Traditional).
+	initial: english
+	choice: english
+	choice: OCG style english
+	choice: japanese
+	choice: chinese simplified
+	choice: chinese traditional
+styling field:
+	type: info
+	name: Customizations
+styling field:
+	type: boolean
+	name: lorebox watermark
+	description: 效果框内是否有水印 Choosing "Yes" will apply A custom watermark on the card, used for making 20thser or Speed Duel Cards.
+	initial: no
+styling field:
+	type: choice
+	name: custom watermark
+	description: 选择效果框水印 Choose from 1 of the following watermark to display in the lorebox.
+	initial: speedduel
+	choice: speedduel
+	choice: 20thser
+	choice: custom1
+	choice: customvirtualsan
+styling field:
+	type: choice
+	name: pendulum size
+	description: 灵摆区域大小 TCG用 Pick one of three available sizes for pendulum monsters (Warning, this may change image size.)
+	initial: default
+	choice: default
+	choice: less
+	choice: more
+styling field:
+	type: boolean
+	name: disable hologram
+	description: 移除右下标识 Disable the Eye of Anubis hologram, to make it more similar to Konami's official proxies.
+	initial: no
+############################################################## Card fields
+card style:
+	card type:
+		left: 0
+		top: 0
+		width: 421
+		height: 614
+		z index: -2
+		render style: image
+		popup style: in place
+		choice images:
+			normal monster          : cardrd-normal.png
+			effect monster          : cardrd-effect.png
+			fusion monster          : cardrd-fusion.png
+			ritual monster          : cardrd-ritual.png
+			synchro monster         : cardrd-synchro.png
+			xyz monster             : cardrd-xyz.png
+			bigbang monster         : cardrd-bigbang.png
+			link monster            : cardrd-link.png
+			evolute monster         : cardrd-evolute.png
+			time leap monster       : cardrd-timeleap.png
+			origin spatial monster  : cardrd-spatial.png
+			altered spatial monster : cardrd-spatial.png
+			spell card              : cardrd-spell.png
+			trap card               : cardrd-trap.png
+			xros monster            : cardrd-xros.png
+			dual xros monster       : cardrd-xros.png
+			pendulum normal monster	: cardrd-normal.png
+			pendulum effect monster	: cardrd-effect.png
+			pendulum fusion monster	: cardrd-fusion.png
+			pendulum ritual monster	: cardrd-ritual.png
+			pendulum synchro monster	: cardrd-synchro.png
+			pendulum xyz monster	: cardrd-xyz.png
+	sdoverlay:
+		left: 0
+		top: 0
+		width: 421
+		height: 614
+		z index: -1
+		render style: image
+		popup style: in place
+		image:
+			script:
+				if styling.lorebox_watermark then(
+					if styling.custom_watermark=="speedduel" then "lorebox/speeddueloverlay.png" else
+					if styling.custom_watermark=="20thser" then "lorebox/20seroverlay.png" else
+					if styling.custom_watermark=="custom1" then "lorebox/customoverlay_1.png" else
+					if styling.custom_watermark=="customvirtualsan" then "lorebox/customoverlay_virtualsan.png" else
+					"speeddueloverlay.png"
+				)
+				else "blank2.png"
+		combine: normal
+	name:
+		left: 20
+		top : 17
+		width: 315
+		height: 40
+		alignment: middle shrink-overflow
+		padding bottom: 0
+		z index: 2
+		font:
+			shadow displacement x: 0.3
+			shadow displacement y: 1.2
+			#name: Yu-Gi-Oh! Matrix Small Caps 2
+			name: 
+				script:
+					if styling.language=="japanese" then "Chiaro-E-TT" 
+					else if styling.language=="OCG style english" then "Chiaro-E-TT"
+					else if styling.language=="chinese simplified" then "Tensentype QinYuanJ-W4" 
+					else if styling.language=="chinese traditional" then "Chiaro-E-TT" 
+					else "Yu-Gi-Oh! Matrix Small Caps 2"
+			#size: 35
+			size:
+				script: if styling.language=="japanese" or styling.language=="chinese simplified" or styling.language=="chinese traditional" then 27 else if styling.language=="OCG style english" then 26 else 35
+			color:
+				script: if is_pendulum() and (card.card_type=="xros monster" or card.card_type=="dual xros monster" or card.card_type=="xyz monster" or card.card_type=="link monster" or card.card_type=="evolute monster" or card.card_type=="bigbang monster" or card.card_type=="dark synchro monster") then rgb(255,255,255)
+				else if card.card_type=="xros monster" or card.card_type=="dual xros monster" or card.card_type=="xyz monster" or card.card_type=="dark synchro monster" or card.card_type=="link monster" or card.card_type=="evolute monster" or card.card_type=="bigbang monster" or card.card_type=="skill card" or is_nmonster() then rgb(255,255,255)
+				else rgb(0,0,0)
+		symbol font:
+			name: yugioh-text-replacements
+			alignment: bottom center
+	#grade:
+	#	left: 351
+	#	top: 22
+	#	width: 48
+	#	height: 46
+	#	z index: 3
+	#	alignment: middle center shrink-overflow
+	#	font:
+	#		name: Grades
+	#		size: 15
+	#		color: rgb(255,255,255)
+	#	visible: {contains(card.card_type, match: "xros monster")}
+	#gate:
+	#	left: -91.2
+	#	top: 423.5
+	#	width: 600
+	#	height: 15
+	#	z index: 4
+	#	alignment: center shrink-overflow
+	#	font:
+	#		name: Ro GSan Serif Std B
+	#		size: 10
+	#		color: rgb(255,255,255)
+	#	visible: {contains(card.card_type, match: "xros monster")}
+	attribute:
+		left: {if contains(card.card_type, match: "xros") then 337 else 338}
+		top: {if contains(card.card_type, match: "xros") then 13 else 15}
+		width: {if contains(card.card_type, match: "xros") then 70 else 68}
+		height: {if contains(card.card_type, match: "xros") then 70 else 68}
+		z index: 2
+		render style: image
+		popup style: in place
+		choice images:
+			earth: {if contains(card.card_type, match: "xros monster") then "grade-earth.png" else if styling.language == "japanese" then "attribute/jpball/earth_rd.png" else if styling.language == "chinese traditional" or styling.language=="chinese simplified" then "attribute/cnball/earth_rd.png" else "attribute/earth_rd.png"}
+			water: {if contains(card.card_type, match: "xros monster") then "grade-water.png" else if styling.language == "japanese" then "attribute/jpball/water_rd.png" else if styling.language == "chinese traditional" or styling.language=="chinese simplified" then "attribute/cnball/water_rd.png" else "attribute/water_rd.png"}
+			fire: {if contains(card.card_type, match: "xros monster") then "grade-fire.png" else if styling.language == "japanese" then "attribute/jpball/fire_rd.png" else if styling.language == "chinese traditional" or styling.language=="chinese simplified" then "attribute/cnball/fire_rd.png" else "attribute/fire_rd.png"}
+			wind: {if contains(card.card_type, match: "xros monster") then "grade-wind.png" else if styling.language == "japanese" then "attribute/jpball/wind_rd.png" else if styling.language == "chinese traditional" or styling.language=="chinese simplified" then "attribute/cnball/wind_rd.png" else "attribute/wind_rd.png"}
+			light: {if contains(card.card_type, match: "xros monster") then "grade-light.png" else if styling.language == "japanese" then "attribute/jpball/light_rd.png" else if styling.language == "chinese traditional" or styling.language=="chinese simplified" then "attribute/cnball/light_rd.png" else "attribute/light_rd.png"}
+			dark: {if contains(card.card_type, match: "xros monster") then "grade-dark.png" else if styling.language == "japanese" then "attribute/jpball/dark_rd.png" else if styling.language == "chinese traditional" or styling.language=="chinese simplified" then "attribute/cnball/dark_rd.png" else "attribute/dark_rd.png"}
+			spell: {if styling.language == "japanese" then "attribute/jpball/spell_rd.png" else if styling.language == "chinese traditional" or styling.language=="chinese simplified" then "attribute/cnball/spell_rd.png" else "attribute/spell_rd.png" }
+			trap: {if styling.language == "japanese" then "attribute/jpball/trap_rd.png" else if styling.language == "chinese traditional" or styling.language=="chinese simplified" then "attribute/cnball/trap_rd.png" else "attribute/trap_rd.png" }
+			divine: {if styling.language == "japanese" then "attribute/jpball/divine_rd.png" else if styling.language == "chinese traditional" or styling.language=="chinese simplified" then "attribute/cnball/divine_rd.png" else "attribute/divine_rd.png" }
+	level:
+		left: 17
+		top : {if card.card_type == "evolute monster" then 67 else if is_pendulum() then (if styling.pendulum_size == "less" then 313 else if styling.pendulum_size == "more" then 263 else 296) else 366}
+		width: 80
+		height: 71
+		alignment: middle center shrink-overflow
+		z index: 2
+		font:
+			name: Stone Serif Sem SC ITC TT
+			size: 15
+			color: rgba(0,0,0,0)
+		visible: true
+	image:
+		left: 22
+		top: 61
+		width: 379
+		height: 379
+		z index: 1
+		mask: {if contains(card.card_type, match: "xros monster") then "mask-xros.png" else "mask-art.png"}
+	pendulum:
+		left: 14.5
+		top: 350
+		width: 392
+		height: 86
+		z index: -1
+		render style:image list
+		popup style: in place
+		choice images:
+		visible: {not is_nmonster()}
+	#gate 1:
+	#	left: 14.5
+	#	top: 340
+	#	width: 98
+	#	height: 106
+	#	z index: 1
+	#	render style:image list
+	#	popup style: in place
+	#	choice images:
+	#	visible: {contains(card.card_type, match: "xros")}
+	#gate 2:
+	#	right: 406.5
+	#	top: 340
+	#	width: 98
+	#	height: 106
+	#	z index: 1
+	#	render style:image list
+	#	popup style: in place
+	#	choice images:
+	#	visible: {contains(card.card_type, match: "xros")}
+	linkul:
+		left: {13+18}
+		top: {362+18-(if is_pendulum() then (if styling.pendulum_size == "less" then 55 else if styling.pendulum_size == "more" then 105 else 72) else 0)}
+		width: 15
+		height: 15
+		z index: 7
+		render style: image
+		popup style: in place
+		visible: {is_link()}
+		choice images:
+			on: rdlink-8.png
+	linku:
+		left: {13+35}
+		top: {362+11-(if is_pendulum() then (if styling.pendulum_size == "less" then 55 else if styling.pendulum_size == "more" then 105 else 72) else 0)}
+		width: 17
+		height: 11
+		z index: 7
+		render style: image
+		popup style: in place
+		visible: {is_link()}
+		choice images:
+			on: rdlink-1.png
+	linkur:
+		left: {13+55}
+		top: {362+18-(if is_pendulum() then (if styling.pendulum_size == "less" then 55 else if styling.pendulum_size == "more" then 105 else 72) else 0)}
+		width: 15
+		height: 15
+		z index: 7
+		render style: image
+		popup style: in place
+		visible: {is_link()}
+		choice images:
+			on: rdlink-2.png
+	linkl:
+		left: {13+10}
+		top: {362+35-(if is_pendulum() then (if styling.pendulum_size == "less" then 55 else if styling.pendulum_size == "more" then 105 else 72) else 0)}
+		width: 11
+		height: 19
+		z index: 7
+		render style: image
+		popup style: in place
+		visible: {is_link()}
+		choice images:
+			on: rdlink-7.png
+	linkdl:
+		left: {13+18}
+		top: {362+55-(if is_pendulum() then (if styling.pendulum_size == "less" then 55 else if styling.pendulum_size == "more" then 105 else 72) else 0)}
+		width: 15
+		height: 15
+		z index: 7
+		render style: image
+		popup style: in place
+		visible: {is_link()}
+		choice images:
+			on: rdlink-6.png
+	linkr:
+		left: {13+67}
+		top: {362+35-(if is_pendulum() then (if styling.pendulum_size == "less" then 55 else if styling.pendulum_size == "more" then 105 else 72) else 0)}
+		width: 11
+		height: 19
+		z index: 7
+		render style: image
+		popup style: in place
+		visible: {is_link()}
+		choice images:
+			on: rdlink-3.png
+	linkd:
+		left: {13+35}
+		top: {363+67-(if is_pendulum() then (if styling.pendulum_size == "less" then 55 else if styling.pendulum_size == "more" then 105 else 72) else 0)}
+		width: 19
+		height: 11
+		z index: 7
+		render style: image
+		popup style: in place
+		visible: {is_link()}
+		choice images:
+			on: rdlink-5.png
+	linkdr:
+		left: {13+55}
+		top: {363+55-(if is_pendulum() then (if styling.pendulum_size == "less" then 55 else if styling.pendulum_size == "more" then 105 else 72) else 0)}
+		width: 15
+		height: 15
+		z index: 7
+		render style: image
+		popup style: in place
+		visible: {is_link()}
+		choice images:
+			on: rdlink-4.png
+	monster type:
+		left: 26
+		#top : 436
+		top: { if styling.language=="japanese" then 438 else if styling.language=="OCG style english" then 438 else if styling.language=="chinese simplified" then 438 else if styling.language=="chinese traditional" then 438 else 436 }
+		width: 313
+		height: 30
+		alignment: middle left
+		z index: 2
+		font:
+			#name: Yu-Gi-Oh!ITCStoneSerifSmallCaps
+			name:
+				script:
+					if styling.language=="japanese" then "MS Gothic" 
+					else if styling.language=="OCG style english" then "Yu-Gi-Oh!ITCStoneSerifSmallCaps"
+					else if styling.language=="chinese simplified" then "Tensentype JiaLiDaHeiJ" 
+					else if styling.language=="chinese traditional" then "Tensentype JiaLiDaHeiF" 
+					else "Yu-Gi-Oh!ITCStoneSerifSmallCaps"
+			#size: 16
+			size: 
+				script:
+					if styling.language=="japanese" then 14 
+					else if styling.language=="OCG style english" then 14
+					else if styling.language=="chinese simplified" then 14 
+					else if styling.language=="chinese traditional" then 14 
+					else 16
+			color: {if card.card_type=="xros monster" or card.card_type=="dual xros monster" or card.card_type=="xyz monster" or card.card_type=="link monster" or card.card_type=="evolute monster" or card.card_type=="bigbang monster" or card.card_type=="dark synchro monster" then rgb(255,255,255) else rgb(0,0,0)}
+		symbol font:
+			#name: yugioh-text-replacements
+			name: yugioh-standard-levels
+			alignment: middle center
+			size: 3.5
+		visible: {not is_nmonster()}
+	number:
+		left: 242
+		top : 575
+		width: 140
+		height: 16
+		z index: 2
+		alignment: right middle shrink-overflow
+		font:
+			name: Stone Serif
+			size: 10
+			color: rgb(255,255,255)
+	rule text:
+		left: 30
+		#top : 463
+		top : { if styling.language=="japanese" then 466 else if styling.language=="OCG style english" then 466 else if styling.language=="chinese simplified" then 466 else if styling.language=="chinese traditional" then 466 else 463 }
+		width: 359
+		height: 101
+		font:
+			#name: Yu-Gi-Oh! Matrix Book
+			name:
+				script:
+					if styling.language=="japanese" then "MS Gothic" 
+					else if styling.language=="OCG style english" then "MS Gothic"
+					else if styling.language=="chinese simplified" then "Tensentype JiaLiDaHeiJ" 
+					else if styling.language=="chinese traditional" then "Tensentype JiaLiDaHeiF" 
+					else "Yu-Gi-Oh! Matrix Book"
+			#size: 13
+			size: { if styling.language!="english" then 10 else 13 }
+			scale down to: 4
+			color: rgb(0,0,0)
+		symbol font:
+			name: yugioh-text-numbers
+			alignment: bottom center
+			size: 6
+		alignment: left top shrink-overflow
+		z index: 3
+		padding left: 1
+		padding top: 1
+		padding right: 0
+		padding bottom: 0
+		line height hard: { if is_nmonster() then 0.8 else 0.76 }
+		line height line: { if is_nmonster() then 0.8 else 0.76 }
+		line height soft: { if is_nmonster() then 0.8 else 0.76 }
+		line height hard max: { if styling.language!="english" then 1 else if is_nmonster() then 0.8 else 0.76 }
+		line height soft max: { if styling.language!="english" then 1 else if is_nmonster() then 0.8 else 0.76 }
+		line height line max: { if styling.language!="english" then 1 else if is_nmonster() then 0.8 else 0.76 }
+	attack:
+		left: 150
+		top: {if contains(card.card_type, match: "xros monster") then 338 else if is_pendulum() then (if styling.pendulum_size == "less" then 355 else if styling.pendulum_size == "more" then 305 else 338) else 408}
+		width: 70
+		height: 27
+		z index: 5
+		alignment: right middle shrink-overflow
+		##Fixed size to better match original template
+		font:
+			name: Ro GSan Serif Std B
+			size: 17
+			color: rgb(255,255,255)
+		#don't really need this.
+		#symbol font:
+		#	name: yugioh-text-replacements
+		#	alignment: middle center
+		#	size: 6
+		visible: {not is_nmonster()}
+	defense:
+		left: 280
+		top: {if contains(card.card_type, match: "xros monster") then 338 else if is_pendulum() then (if styling.pendulum_size == "less" then 355 else if styling.pendulum_size == "more" then 305 else 338) else 408}
+		width: 70
+		height: 27
+		z index: 5
+		alignment: right middle shrink-overflow
+		##same.
+		font:
+			name: Ro GSan Serif Std B
+			size: 17
+			color: rgb(255,255,255)
+		#symbol font:
+		#	name: yugioh-text-replacements
+		#	alignment: middle center
+		#	size: 6
+		visible: {not is_nmonster()}
+	pendulum text:
+		left: 30
+		top : {if contains(card.card_type, match: "xros") then 373 else if styling.pendulum_size == "more" then 339 else if styling.pendulum_size == "less" then 390 else 373}
+		width: 360
+		height: {if contains(card.card_type, match: "xros") then 47 else if styling.pendulum_size == "more" then 80 else if styling.pendulum_size == "less" then 35 else 47}
+		visible: {is_pendulum() or contains(card.card_type, match: "xros monster")}
+		font:
+			#name: Yu-Gi-Oh! Matrix Book
+			name:
+				script:
+					if styling.language=="japanese" then "MS Gothic" 
+					else if styling.language=="OCG style english" then "MS Gothic"
+					else if styling.language=="chinese simplified" then "Tensentype JiaLiDaHeiJ" 
+					else if styling.language=="chinese traditional" then "Tensentype JiaLiDaHeiF" 
+					else "Yu-Gi-Oh! Matrix Book"
+			size: {if is_pendulum() then 12 else 13}
+			scale down to: 4
+			color: rgb(0,0,0)
+		symbol font:
+			name: yugioh-text-numbers
+			alignment: bottom center
+			size: 4
+		alignment: left top shrink-overflow
+		z index: 3
+		padding left: 1
+		padding top: 1
+		padding right: 1
+		padding bottom: 1
+		line height hard: 0.73
+		line height line: 0.73
+		line height soft: 0.73
+		line height hard max: 0.73
+		line height soft max: 0.73
+		line height line max: 0.73
+	blue scale:
+		left: 40
+		#top: {if styling.pendulum_size == "more" then 427 else if styling.pendulum_size == "less" then 424 else 414.5}
+		top: 415.5
+		width: 35
+		height: 35
+		visible: {is_pendulum()}
+		z index: 2
+		alignment: "middle center"
+		font:
+			name: Ro GSan Serif Std B
+			size: 13
+			color: rgb(255,255,255)
+	red scale:
+		left: 340
+		#top: {if styling.pendulum_size == "more" then 427 else if styling.pendulum_size == "less" then 424 else 414.5}
+		top: 415.5
+		width: 35
+		height: 35
+		visible: {is_pendulum()}
+		z index: 2
+		alignment: "middle center"
+		font:
+			name: Ro GSan Serif Std B
+			size: 13
+			color: rgb(255,255,255)
+	gamecode:
+		left: 15
+		top: 575
+		width: 100
+		height: 30
+		alignment: middle left
+		z index: 2
+		visible: true
+		font:
+			name: Stone Serif
+			size: 8.5
+			color: rgba(0,0,0,0)
+	corner foil:
+		left: 388
+		top : 580
+		height: 23
+		width: 23
+		z index: 2
+		render style: image list
+		choice images:
+			stamp:
+				script: if styling.disable_hologram then "blank2.png" else if card.edition!="" then "cornerfirst.png" else "cornerunlimited.png"
+	copyright:
+		left: 24
+		top: 575
+		width: 135
+		height: 17
+		z index: 4
+		alignment: middle left
+		font:
+			name: Stone Serif
+			size: 10
+			color: rgb(255,255,255)
+############################################extra card field:
+extra card field:
+	type: choice
+	name: bar
+	choice: bar
+	editable: false
+extra card field:
+	type: choice
+	name: atkoverlay
+	choice: image
+	editable: false
+extra card field:
+	type: choice
+	name: defoverlay
+	choice: image
+	editable: false
+extra card field:
+	type: text
+	name: pendulum text
+	description: ¹=(1), ²=(2), ³=(3), £=(4), ¢=(5), ~=infinity, ?=question mark, *=dot
+	script: circled_numbers(value)
+	multi line: true
+	save value: true
+	show statistics: false
+extra card field:
+	type: choice
+	name: pendulum border
+	choice: image
+	editable: false
+extra card field:
+	type: choice
+	name: rdlevel
+	choice: image
+	editable: false
+extra card field:
+	type: choice
+	name: rdlabel
+	choice: off
+	choice: on
+	save value: true
+	editable: true
+
+extra card style:
+	bar:
+		left: 0
+		top: {if contains(card.card_type, match: "xros monster") then -69 else if is_pendulum() then (if styling.pendulum_size == "less" then -52 else if styling.pendulum_size == "more" then -102 else -69) else 2}
+		width: 421
+		height: 610
+		z index: 4
+		render style: image list
+		choice images:
+			bar: rd-bar.png
+		visible: script: if is_nmonster() then false else true
+	atkoverlay:
+		left: 0
+		top: {if contains(card.card_type, match: "xros monster") then -70 else if is_pendulum() then (if styling.pendulum_size == "less" then -54 else if styling.pendulum_size == "more" then -104 else -70) else 0}
+		width: 421
+		height: 610
+		z index: 5
+		render style: image
+		choice images:
+			image: rd-atk.png
+		visible: {not is_nmonster()}
+	defoverlay:
+		left: 0
+		top: {if contains(card.card_type, match: "xros monster") then -70 else if is_pendulum() then (if styling.pendulum_size == "less" then -54 else if styling.pendulum_size == "more" then -104 else -70) else 0}
+		width: 421
+		height: 610
+		z index: 55
+		render style: image
+		choice images:
+			image:
+				script: if is_link() then "rd-lnk.png" else "rd-def.png"
+		visible: {not is_nmonster()}
+	pendulum border:
+		left: 0
+		top: 0
+		width: 421
+		height: 614
+		z index: 1
+		render style: image
+		choice images:
+			image:
+				script:
+					if card.pendulum == "pendulum pandemonium" and styling.pendulum_size == "more" then masked_blend(dark: "pendulum/rdpendulum_big.png", light: "pendulum/rdpendulum_pandeb.png", mask: "mask-half-h.png")
+					else if card.pendulum == "pendulum pandemonium" and styling.pendulum_size == "less" then masked_blend(dark: "pendulum/rdpendulum_small.png", light: "pendulum/rdpendulum_pandes.png", mask: "mask-half-h.png")
+					else if card.pendulum == "pendulum pandemonium" then masked_blend(dark: "pendulum/rdpendulum_normal.png", light: "pendulum/rdpendulum_pandemed.png", mask: "mask-half-h.png")
+					else if card.pendulum == "pendulum" and styling.pendulum_size=="more" then "pendulum/rdpendulum_big.png" 
+					else if card.pendulum == "pandemonium" and styling.pendulum_size=="more" then "pendulum/rdpendulum_pandeb.png" 
+					else if card.pendulum == "pandemonium" and styling.pendulum_size=="less" then "pendulum/rdpendulum_pandes.png"
+					else if card.pendulum == "pendulum" and styling.pendulum_size=="less" then "pendulum/rdpendulum_small.png"
+					else if card.pendulum == "relay" then "pendulum/rdpendulum_relay.png"
+					else if card.pendulum == "pandemonium" then "pendulum/rdpendulum_pandemed.png" 
+					else if card.pendulum == "pendulum" then "pendulum/rdpendulum_normal.png"
+					else if contains(card.card_type, match: "xros monster") then
+						if card.gate_1 != "none" and card.gate_2 != "none" then masked_blend(dark: "pendulum/rdgate-"+card.gate_1+".png", light: "pendulum/rdgate-"+card.gate_2+".png", mask: "mask-half-h.png")
+						else if card.gate_1 != "none" and card.gate_2 == "none" then "pendulum/rdgate-"+card.gate_1+".png"
+						else if card.gate_1 == "none" and card.gate_2 != "none" then "pendulum/rdgate-"+card.gate_2+".png"
+						else "blank2.png"
+					else "blank2.png"
+		#visible: {is_pendulum() or card.pendulum == "relay" or contains(card.card_type, match: "xros monster")}
+		#visible: {if card.pendulum != "none" then true else false}
+		visible: true
+		mask: {if contains(card.card_type, match: "xros monster") then "mask-gate.png" else ""}
+	rdlevel:
+		left: {if is_link() then 13 else 19}
+		top : {if card.card_type == "evolute monster" then 67 else if is_pendulum() then (if styling.pendulum_size == "less" then 313 else if styling.pendulum_size == "more" then 263 else 296) else if is_link() then 362 else 366}
+		width: {if is_link() then 88 else 75}
+		height: {if is_link() then 88 else 71}
+		z index: 5
+		render style: image
+		choice images:
+			image:
+				script:
+					if is_nmonster() then
+						if card.card_type == "trap card" and contains(card.level, match: "!") then "stmark/counter.png"
+						else if card.card_type == "spell card" and contains(card.level, match: "+") then "stmark/equip.png"
+						else if card.card_type == "spell card" and contains(card.level, match: "&") then "stmark/field.png"
+						else if card.card_type == "spell card" and contains(card.level, match: "$") then "stmark/quickplay.png"
+						else if card.card_type == "spell card" and contains(card.level, match: "#") then "stmark/ritual.png"
+						else if contains(card.level, match: "%") then "stmark/continuous.png"
+						else ""
+					else if is_link() then "levels/rdlink-0.png"
+					else if card.level == "" or overleveled() then
+						if card.card_type == "evolute monster" then "levels/rdstage-0.png"
+						else if card.card_type == "xyz monster" then "levels/rdrank-0.png"
+						else if card.card_type == "origin spatial monster" then "levels/rdorigin-0.png"
+						else if card.card_type == "altered spatial monster" then "levels/rdaltered-0.png"
+						else if card.card_type == "timeleap monster" then "levels/rdfuture-0.png"
+						else "levels/rdlevel-0.png"
+					else if contains(card.level, match: "*") then
+						if card.card_type == "evolute monster" then "levels/rdstage-"+number_of_items(in: replace(replace(card.level, match:"<sym-auto>", replace:""), match:"</sym-auto>", replace:""))+".png"
+						else if card.card_type == "xyz monster" then "levels/rdrank-"+number_of_items(in: replace(replace(card.level, match:"<sym-auto>", replace:""), match:"</sym-auto>", replace:""))+".png"
+						else if card.card_type == "origin spatial monster" then "levels/rdorigin-"+number_of_items(in: replace(replace(card.level, match:"<sym-auto>", replace:""), match:"</sym-auto>", replace:""))+".png"
+						else if card.card_type == "altered spatial monster" then "levels/rdaltered-"+number_of_items(in: replace(replace(card.level, match:"<sym-auto>", replace:""), match:"</sym-auto>", replace:""))+".png"
+						else if card.card_type == "timeleap monster" then "levels/rdfuture-"+number_of_items(in: replace(replace(card.level, match:"<sym-auto>", replace:""), match:"</sym-auto>", replace:""))+".png"
+						else "levels/rdlevel-"+number_of_items(in: replace(replace(card.level, match:"<sym-auto>", replace:""), match:"</sym-auto>", replace:""))+".png"
+					else
+						if card.card_type == "evolute monster" then "levels/rdstage-"+replace(replace(replace(replace(replace(card.level, match:"<sym-auto>", replace:""), match:"</sym-auto>", replace:""), match:"<sym>", replace:""), match:"</sym>", replace:""), match:" ", replace:"")+".png"
+						else if card.card_type == "xyz monster" then "levels/rdrank-"+card.level+".png"
+						else if card.card_type == "origin spatial monster" then "levels/rdorigin-"+card.level+".png"
+						else if card.card_type == "altered spatial monster" then "levels/rdaltered-"+card.level+".png"
+						else if card.card_type == "timeleap monster" then "levels/rdfuture-"+card.level+".png"
+						else "levels/rdlevel-"+card.level+".png"
+		visible: {not contains(card.card_type, match: "xros monster")}
+	rdlabel:
+		left: 152
+		top: 583
+		width: 116
+		height: 15
+		z index: 5
+		render style: image
+		choice images:
+			on: rushlabel.png
+		visible: true

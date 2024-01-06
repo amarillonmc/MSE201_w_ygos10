@@ -35,6 +35,9 @@ card field:
 	choice: conjoint trap card
 	choice: trell card
 	choice: skill card
+	choice: xros monster
+	choice: dual xros monster
+	choice: perdition monster
 	default: card_type()
 	choice colors cardlist:
 		normal monster         :  rgb(197,179,53)
@@ -77,6 +80,52 @@ card field:
 	choice: none
 	choice: sdoverlay image
 card field:
+	type: text
+	name: grade
+card field:
+	type: text
+	name: gate
+card field:
+	type: choice
+	name: gate 1
+	choice: none
+	choice: bigbang
+	choice: dsynchro
+	choice: effect
+	choice: evolute
+	choice: fusion
+	choice: link
+	choice: normal
+	choice: relay
+	choice: ritual
+	choice: spatial
+	choice: spell
+	choice: synchro
+	choice: timeleap
+	choice: trap
+	choice: xros
+	choice: xyz
+card field:
+	type: choice
+	name: gate 2
+	choice: none
+	choice: bigbang
+	choice: dsynchro
+	choice: effect
+	choice: evolute
+	choice: fusion
+	choice: link
+	choice: normal
+	choice: relay
+	choice: ritual
+	choice: spatial
+	choice: spell
+	choice: synchro
+	choice: timeleap
+	choice: trap
+	choice: xros
+	choice: xyz
+card field:
 	type: choice
 	name: pendulum
 	choice: none
@@ -91,15 +140,17 @@ card field:
 	choice: conjoint pendulum pandemonium
 #Making Lyris' changes work with the original variant.
 	script:
-		if card.card_type == "pendulum normal monster" or
-		card.card_type == "pendulum effect monster" or
-		card.card_type == "pendulum fusion monster" or
-		card.card_type == "pendulum ritual monster" or
-		card.card_type == "pendulum synchro monster" or
-		card.card_type == "pendulum dark synchro monster" or
-		card.card_type == "pendulum xyz monster"
-		then "pendulum" 
-		else "none"
+		if is_legacy_pendulum() then
+			if card.card_type == "pendulum normal monster" or
+			card.card_type == "pendulum effect monster" or
+			card.card_type == "pendulum fusion monster" or
+			card.card_type == "pendulum ritual monster" or
+			card.card_type == "pendulum synchro monster" or
+			card.card_type == "pendulum dark synchro monster" or
+			card.card_type == "pendulum xyz monster"
+			then "pendulum" 
+			else "none"
+		else value
 
 ############################# Link Marker Border
 card field:

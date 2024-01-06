@@ -14,6 +14,7 @@ word list:
 	word: Fairy
 	word: Fiend
 	word: Fish
+	word: Illusion
 	word: Insect
 	word: Legendary Dragon
 	word: Machine
@@ -28,6 +29,7 @@ word list:
 	word: Warrior
 	word: Winged Beast
 	word: Wyrm
+	word: Xros
 	word: Zombie
 	word: 战士族
 	word: 魔法师族
@@ -54,6 +56,7 @@ word list:
 	word: 创造神族
 	word: 幻龙族
 	word: 电子界族
+	word: 幻想魔族
 	word: 戰士族
 	word: 魔法師族
 	word: 天使族
@@ -79,6 +82,7 @@ word list:
 	word: 創造神族
 	word: 幻龍族
 	word: 電子界族
+	word: 幻想魔族
 	word: 水族
 	word: 炎族
 	word: 獣族
@@ -104,6 +108,13 @@ word list:
 	word: 創造神族
 	word: 幻竜族
 	word: サイバース族
+	word: 幻想魔族
+word list:
+	name: nonmonster
+	word: Spell Card
+	word: Spell Card    
+	word: Trap Card
+	word: Trap Card    
 word list:
 	name: card
 	word: Normal
@@ -114,7 +125,6 @@ word list:
 	word: Fusion
 	word: Gemini
 	word: Pendulum
-	word: Pandemonium
 	word: Ritual
 	word: Spirit
 	word: Synchro
@@ -124,6 +134,26 @@ word list:
 	word: Xyz
 	word: Link
 	word: Skill
+	word: Evolute
+	word: Conjoint
+	word: Pandemonium
+	word: Polarity
+	word: Spatial
+	word: Origin
+	word: Altered
+	word: Corona
+	word: Bigbang
+	word: Timeleap
+	word: Relay
+	word: Deck Master
+	word: Harmony
+	word: Accent
+	word: Bypath
+	word: Toxia
+	word: Annotee
+	word: Chroma
+	word: Perdition
+	word: Impure
 	word: 通常
 	word: 同调
 	word: 超量
