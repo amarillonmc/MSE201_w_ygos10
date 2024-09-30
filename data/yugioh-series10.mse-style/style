@@ -222,6 +222,14 @@ styling field:
 	choice: 20thser
 	choice: custom1
 	choice: customvirtualsan
+	choice: kfoverlay
+	choice: kf2overlay
+	choice: kf3overlay
+	choice: kf3twoverlay
+	choice: kfkoverlay
+	choice: kfpppoverlay
+	choice: kfjaparidanoverlay
+	choice: kfvoverlay
 styling field:
 	type: info
 	name: Text Formatting
@@ -405,6 +413,14 @@ card style:
 				if styling.custom_watermark=="20thser" then "lorebox/20seroverlay.png" else
 				if styling.custom_watermark=="custom1" then "lorebox/customoverlay_1.png" else
 				if styling.custom_watermark=="customvirtualsan" then "lorebox/customoverlay_virtualsan.png" else
+				if styling.custom_watermark=="kfoverlay" then "lorebox/kfoverlay.png" else
+				if styling.custom_watermark=="kf2overlay" then "lorebox/kf2overlay.png" else
+				if styling.custom_watermark=="kf3overlay" then "lorebox/kf3overlay.png" else
+				if styling.custom_watermark=="kf3twoverlay" then "lorebox/kf3twoverlay.png" else
+				if styling.custom_watermark=="kfkoverlay" then "lorebox/kfkoverlay.png" else
+				if styling.custom_watermark=="kfpppoverlay" then "lorebox/kfpppoverlay.png" else
+				if styling.custom_watermark=="kfjaparidanoverlay" then "lorebox/kfjaparidanoverlay.png" else
+				if styling.custom_watermark=="kfvoverlay" then "lorebox/kfvoverlay.png" else
 				"speeddueloverlay.png"
 			)
 			else "blank2.png"
